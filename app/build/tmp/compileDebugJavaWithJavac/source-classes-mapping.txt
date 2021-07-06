@@ -1,0 +1,4 @@
+in/gamernation/app/MainActivity.java
+ in.gamernation.app.MainActivity
+in/gamernation/app/BuildConfig.java
+ in.gamernation.app.BuildConfig
