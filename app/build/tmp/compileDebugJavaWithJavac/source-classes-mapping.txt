@@ -1,4 +1,23 @@
-in/gamernation/app/MainActivity.java
- in.gamernation.app.MainActivity
 in/gamernation/app/BuildConfig.java
  in.gamernation.app.BuildConfig
+in/gamernation/app/Fragments/leaderboardFragment.java
+ in.gamernation.app.Fragments.leaderboardFragment
+in/gamernation/app/MainActivity.java
+ in.gamernation.app.MainActivity
+in/gamernation/app/Startup/Splash.java
+ in.gamernation.app.Startup.Splash
+ in.gamernation.app.Startup.Splash$1
+in/gamernation/app/Fragments/walletFragment.java
+ in.gamernation.app.Fragments.walletFragment
+in/gamernation/app/Fragments/myprofileFragment.java
+ in.gamernation.app.Fragments.myprofileFragment
+in/gamernation/app/Fragments/homeFragment.java
+ in.gamernation.app.Fragments.homeFragment
+in/gamernation/app/Home/HomeActivity.java
+ in.gamernation.app.Home.HomeActivity
+in/gamernation/app/Interfaces/navController.java
+ in.gamernation.app.Interfaces.navController
+ in.gamernation.app.Interfaces.navController$drawerControl
+ in.gamernation.app.Interfaces.navController$toolbarController
+in/gamernation/app/Fragments/mystatsFragment.java
+ in.gamernation.app.Fragments.mystatsFragment

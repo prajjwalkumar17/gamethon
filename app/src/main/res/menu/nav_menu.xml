@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu_profile"
+            android:icon="@drawable/nav_menu_profile"
+            android:iconTint="@color/white"
+            android:menuCategory="secondary"
+            android:title="My Profile" />
+
+        <item
+            android:id="@+id/nav_menu_mystats"
+            android:icon="@drawable/nav_menu_mystats"
+            android:iconTint="@color/white"
+            android:menuCategory="secondary"
+
+            android:title="My Stats" />
+        <item
+            android:id="@+id/nav_menu_mywallet"
+            android:icon="@drawable/nav_menu_mywallet"
+            android:iconTint="@color/white"
+            android:menuCategory="secondary"
+
+            android:title="Wallet" />
+        <item
+            android:id="@+id/nav_menu_leaderboard"
+            android:icon="@drawable/nav_menu_leaderboard"
+            android:iconTint="@color/white"
+            android:menuCategory="secondary"
+
+            android:title="Leaderboard" />
+        <item
+            android:id="@+id/nav_menu_myplayedquiz"
+            android:icon="@drawable/nav_menu_myplayedquiz"
+            android:iconTint="@color/white"
+            android:menuCategory="secondary"
+
+            android:title="Played Quizes" />
+        <item
+            android:id="@+id/nav_menu_myreferrals"
+            android:icon="@drawable/nav_menu_myreferrals"
+            android:iconTint="@color/white"
+            android:menuCategory="secondary"
+
+            android:title="Referrals" />
+        <item
+            android:id="@+id/nav_menu_settings"
+            android:icon="@drawable/nav_menu_settings"
+            android:iconTint="@color/white"
+            android:menuCategory="secondary"
+
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_menu_tutorial"
+            android:icon="@drawable/nav_menu_tutorial"
+            android:iconTint="@color/white"
+            android:menuCategory="secondary"
+
+            android:title="Tutorials" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:menuCategory="secondary"
+            android:title="Social Handles">
+            <menu>
+                <item
+                    android:id="@+id/nav_menu_telegram"
+                    android:icon="@drawable/nav_menu_add"
+                    android:title="Telegram" />
+                <item
+                    android:id="@+id/nav_menu_Instagram"
+                    android:icon="@drawable/nav_menu_add"
+                    android:title="Instagram" />
+                <item
+                    android:id="@+id/nav_menu_Youtube"
+                    android:icon="@drawable/nav_menu_add"
+                    android:title="Youtube" />
+            </menu>
+
+
+        </item>
+    </group>
+
+</menu>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="@color/master">
+    android:background="@color/master_primary">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:src="@drawable/splash_logo"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nandan Keshav"
-        android:textColor="@color/white"
+        android:textColor="@color/master_secondary"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -51,7 +51,7 @@
         android:text="50/100"
         app:layout_constraintBottom_toTopOf="@+id/progressBar2"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/white"
+        android:textColor="@color/master_secondary"
         app:layout_constraintHorizontal_bias="0.85"
         android:layout_marginBottom="3dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +64,7 @@
         android:layout_height="2dp"
         android:layout_marginHorizontal="30dp"
         android:indeterminateTint="@color/black"
+        android:progressTint="@color/master_secondary"
         android:progress="30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="in.gamernation.app.Fragments.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_myprofileFragment"
+            app:destination="@id/myprofileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mystatsFragment"
+            app:destination="@id/mystatsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myprofileFragment"
+        android:name="in.gamernation.app.Fragments.myprofileFragment"
+        android:label="fragment_myprofile"
+        tools:layout="@layout/fragment_myprofile" />
+    <fragment
+        android:id="@+id/mystatsFragment"
+        android:name="in.gamernation.app.Fragments.mystatsFragment"
+        android:label="fragment_mystats"
+        tools:layout="@layout/fragment_mystats" />
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="in.gamernation.app.Fragments.leaderboardFragment"
+        android:label="fragment_leaderboard"
+        tools:layout="@layout/fragment_leaderboard" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="in.gamernation.app.Fragments.walletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" />
+
+
+</navigation>
