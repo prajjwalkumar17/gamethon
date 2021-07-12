@@ -1,5 +1,15 @@
 package in.gamernation.app.Home;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -7,21 +17,27 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import in.gamernation.app.Fragments.contactusFragment;
+import in.gamernation.app.Fragments.homeFragment;
+import in.gamernation.app.Fragments.leaderboardFragment;
+import in.gamernation.app.Fragments.myleaguesFragment;
+import in.gamernation.app.Fragments.myprofileFragment;
+import in.gamernation.app.Fragments.mystatsFragment;
+import in.gamernation.app.Fragments.playedquizzesFragment;
+import in.gamernation.app.Fragments.referralsFragment;
+import in.gamernation.app.Fragments.settingsFragment;
+import in.gamernation.app.Fragments.tutorialsFragment;
+import in.gamernation.app.Fragments.walletFragment;
+import in.gamernation.app.Interfaces.botnavController;
 import in.gamernation.app.Interfaces.navController;
 import in.gamernation.app.R;
 
-public class HomeActivity extends AppCompatActivity implements navController.drawerControl, navController.toolbarController {
+public class HomeActivity extends AppCompatActivity implements navController.drawerControl,
+        navController.toolbarController, NavigationView.OnNavigationItemSelectedListener, botnavController.botVisibilityController {
     NavigationView nav_view;
     DrawerLayout drawer;
     ImageView navBotimg;
@@ -29,6 +45,7 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
     NavController navController;
     Animation rotate;
     BottomNavigationView botnav;
+    BottomAppBar completebotnav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +55,7 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
 
         //FUNCTIONS
 
+        defaultfragmentonstartup(savedInstanceState);
         muticals();
 
 
@@ -52,11 +70,43 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
         navController = Navigation.findNavController(this, R.id.fragmentContainerView);
         rotate = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
         botnav = findViewById(R.id.botnav);
+        completebotnav = findViewById(R.id.completebotnav);
 
 
         NavigationUI.setupWithNavController(nav_view, navController);
         NavigationUI.setupWithNavController(botnav, navController);
+        nav_view.setNavigationItemSelectedListener(this);
+        manageBottomNavigation(botnav);
+        botnav.getMenu().findItem(R.id.botnav_menu_home).setChecked(true);
 
+
+    }
+
+    private void manageBottomNavigation(BottomNavigationView botnav) {
+        botnav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.botnav_menu_my_leagues:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new myleaguesFragment()).addToBackStack(null).commit();
+                        break;
+                    case R.id.botnav_menu_home:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new homeFragment()).addToBackStack(null).commit();
+                        break;
+                    case R.id.botnav_menu_contact_us:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new contactusFragment()).addToBackStack(null).commit();
+                        break;
+                }
+                return true;
+            }
+        });
+    }
+
+    private void defaultfragmentonstartup(Bundle savedInstanceState) {
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new homeFragment()).commit();
+        }
     }
 
     public void clickMenu(View view) {
@@ -107,4 +157,61 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
         tool.setVisibility(View.VISIBLE);
     }
 
+
+    /**
+     * Called when an item in the navigation menu is selected.
+     *
+     * @param item The selected item
+     * @return true to display the item as the selected item
+     */
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_menu_profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new myprofileFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.nav_menu_mystats:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new mystatsFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.nav_menu_mywallet:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new walletFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.nav_menu_leaderboard:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new leaderboardFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.nav_menu_myplayedquiz:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new playedquizzesFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.nav_menu_myreferrals:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new referralsFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.nav_menu_settings:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new settingsFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.nav_menu_tutorial:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new tutorialsFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.nav_menu_telegram:
+                break;
+            case R.id.nav_menu_Instagram:
+                break;
+            case R.id.nav_menu_Youtube:
+                break;
+        }
+        closeDrawer(drawer);
+        return true;
+    }
+
+    @Override
+    public void setbotInvisible() {
+        botnav.setVisibility(View.INVISIBLE);
+        completebotnav.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void setbotVisible() {
+        botnav.setVisibility(View.INVISIBLE);
+        completebotnav.setVisibility(View.VISIBLE);
+
+    }
 }
