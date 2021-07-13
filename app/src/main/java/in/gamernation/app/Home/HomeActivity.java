@@ -128,6 +128,8 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
             closeDrawer(drawer);
         } else {
             super.onBackPressed();
+            botnav.getMenu().findItem(R.id.botnav_menu_home).setChecked(true);
+
         }
     }
 
@@ -210,7 +212,7 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
 
     @Override
     public void setbotVisible() {
-        botnav.setVisibility(View.INVISIBLE);
+        botnav.setVisibility(View.VISIBLE);
         completebotnav.setVisibility(View.VISIBLE);
 
     }

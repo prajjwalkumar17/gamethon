@@ -12,6 +12,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_tutorial.xml"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_homequizes.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_homequizes.xml"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
@@ -40,12 +44,16 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/backbot.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_leaderboard.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_leaderboard.xml"
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_img_slider.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/img_slider.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_hometoolbar.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/hometoolbar.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_leaderboard.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_leaderboard.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_myreferrals.xml.flat",
@@ -64,6 +72,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_pager2.jpg.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/pager2.jpg"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
@@ -78,6 +90,10 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_mystats.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_mystats.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_homegames.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_homegames.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_myprofile.xml.flat",
@@ -102,6 +118,10 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_slider_layout.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/slider_layout.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_nav_header.xml.flat",
@@ -148,12 +168,12 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/toolbar.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_myplayedquiz.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_myplayedquiz.xml"
-    },
-    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_linearback.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/linearback.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_myplayedquiz.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_myplayedquiz.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
@@ -172,6 +192,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_pager3.png.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/pager3.png"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
@@ -184,20 +208,28 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/activity_splash.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_mywallet.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_mywallet.xml"
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_stats_card.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/stats_card.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/menu_nav_menu.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/menu/nav_menu.xml"
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_mywallet.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_mywallet.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/menu_nav_menu.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/menu/nav_menu.xml"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/xml_root_preferences.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/xml/root_preferences.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_pager4.jpg.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/pager4.jpg"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_tutorials.xml.flat",
@@ -216,6 +248,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/share.xml"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_pager5.jpeg.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/pager5.jpeg"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_myleagues.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_myleagues.xml"
     },
@@ -226,6 +262,10 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_activity_home.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_pager1.jpg.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/pager1.jpg"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",

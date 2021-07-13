@@ -1100,6 +1100,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color master_pale
@@ -1728,10 +1729,16 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notificon
 drawable notify_panel_notification_icon_bg
+drawable pager1
+drawable pager2
+drawable pager3
+drawable pager4
+drawable pager5
 drawable preference_list_divider_material
 drawable progress_circle
 drawable share
 drawable splash_logo
+drawable stats_card
 drawable test_custom_background
 drawable tool_navicon
 drawable toolbar
@@ -1929,6 +1936,7 @@ id home
 id homeAsUp
 id homeFragment
 id home_nav
+id home_pager
 id hometool
 id honorRequest
 id icon
@@ -2091,6 +2099,10 @@ id showTitle
 id sin
 id skipCollapsed
 id slide
+id slider
+id sliderdotcontainer
+id sliderimg
+id sliderpager
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -2113,6 +2125,11 @@ id startHorizontal
 id startVertical
 id staticLayout
 id staticPostLayout
+id statscard1
+id statscard2
+id statscard3
+id statsnamelinear
+id statstoolbar
 id status_bar_latest_event_content
 id stop
 id stretch
@@ -2120,6 +2137,7 @@ id submenuarrow
 id submit_area
 id switchWidget
 id tabMode
+id tab_layout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -2272,6 +2290,8 @@ layout design_text_input_start_icon
 layout expand_button
 layout fragment_contactus
 layout fragment_home
+layout fragment_homegames
+layout fragment_homequizes
 layout fragment_leaderboard
 layout fragment_myleagues
 layout fragment_myprofile
@@ -2282,6 +2302,7 @@ layout fragment_tutorials
 layout fragment_wallet
 layout hometoolbar
 layout image_frame
+layout img_slider
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2345,6 +2366,7 @@ layout preference_widget_switch_compat
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout slider_layout
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius

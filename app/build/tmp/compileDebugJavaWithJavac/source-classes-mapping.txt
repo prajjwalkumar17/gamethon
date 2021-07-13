@@ -2,14 +2,25 @@ in/gamernation/app/Fragments/referralsFragment.java
  in.gamernation.app.Fragments.referralsFragment
 in/gamernation/app/MainActivity.java
  in.gamernation.app.MainActivity
+in/gamernation/app/Fragments/homegamesFragment.java
+ in.gamernation.app.Fragments.homegamesFragment
 in/gamernation/app/Fragments/walletFragment.java
  in.gamernation.app.Fragments.walletFragment
+in/gamernation/app/Fragments/homequizesFragment.java
+ in.gamernation.app.Fragments.homequizesFragment
 in/gamernation/app/Fragments/contactusFragment.java
  in.gamernation.app.Fragments.contactusFragment
 in/gamernation/app/Fragments/myprofileFragment.java
  in.gamernation.app.Fragments.myprofileFragment
+in/gamernation/app/Adapters/HomefragAdapter.java
+ in.gamernation.app.Adapters.HomefragAdapter
 in/gamernation/app/Fragments/homeFragment.java
  in.gamernation.app.Fragments.homeFragment
+ in.gamernation.app.Fragments.homeFragment$1
+ in.gamernation.app.Fragments.homeFragment$1$1
+ in.gamernation.app.Fragments.homeFragment$2
+ in.gamernation.app.Fragments.homeFragment$3
+ in.gamernation.app.Fragments.homeFragment$4
 in/gamernation/app/Fragments/settingsFragment.java
  in.gamernation.app.Fragments.settingsFragment
 in/gamernation/app/BuildConfig.java
@@ -25,6 +36,9 @@ in/gamernation/app/Fragments/tutorialsFragment.java
  in.gamernation.app.Fragments.tutorialsFragment
 in/gamernation/app/Fragments/mystatsFragment.java
  in.gamernation.app.Fragments.mystatsFragment
+in/gamernation/app/Adapters/SliderAdapter.java
+ in.gamernation.app.Adapters.SliderAdapter
+ in.gamernation.app.Adapters.SliderAdapter$MyViewHolder
 in/gamernation/app/Fragments/leaderboardFragment.java
  in.gamernation.app.Fragments.leaderboardFragment
 in/gamernation/app/Startup/Splash.java
