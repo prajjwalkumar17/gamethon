@@ -1188,6 +1188,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color pale_red
 color preference_fallback_accent_color
 color primary_dark_material_dark
 color primary_dark_material_light
@@ -1221,6 +1222,7 @@ color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
 color white
+color yellow_pale
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1664,6 +1666,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable backbot
+drawable botforward
 drawable botnav_menu_contact_us
 drawable botnav_menu_home
 drawable botnav_menu_my_leagues
@@ -1682,6 +1685,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable edit
+drawable forwardbot
 drawable ic_arrow_down_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1716,6 +1720,7 @@ drawable nav_menu_profile
 drawable nav_menu_settings
 drawable nav_menu_tutorial
 drawable navigation_empty_icon
+drawable normalcurvedbot
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1736,6 +1741,9 @@ drawable pager4
 drawable pager5
 drawable preference_list_divider_material
 drawable progress_circle
+drawable referaalbot
+drawable referallicon
+drawable referalltool
 drawable share
 drawable splash_logo
 drawable stats_card
@@ -1744,6 +1752,7 @@ drawable tool_navicon
 drawable toolbar
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable walleticon
 font baloo_bhaina
 id ALT
 id BOTTOM_END
@@ -2060,6 +2069,14 @@ id radio
 id ratio
 id rectangles
 id recycler_view
+id referaalfooter
+id referaalheader
+id referaaltool
+id referralbot
+id referralfrag
+id referralmoreshare
+id referralreferraallcode
+id referralwhatsappshare
 id restart
 id reverse
 id reverseSawtooth
@@ -2292,6 +2309,7 @@ layout fragment_contactus
 layout fragment_home
 layout fragment_homegames
 layout fragment_homequizes
+layout fragment_invitefriends
 layout fragment_leaderboard
 layout fragment_myleagues
 layout fragment_myprofile
@@ -2363,6 +2381,7 @@ layout preference_widget_seekbar
 layout preference_widget_seekbar_material
 layout preference_widget_switch
 layout preference_widget_switch_compat
+layout referaaltool
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

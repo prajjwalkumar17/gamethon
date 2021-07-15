@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.invitefriendsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include
+        android:id="@+id/referaaltool"
+        layout="@layout/referaaltool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/referaalheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/referaaltool"
+        android:background="@color/yellow_pale"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:src="@drawable/walleticon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/baloo_bhaina"
+            android:text="Refer friends and\nEarn 5 coins\nfor each referral"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/referaalfooter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/referaalheader"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:text="Your invite code is" />
+
+        <TextView
+            android:id="@+id/referralreferraallcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Pk7765qw"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/referralwhatsappshare"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_marginTop="80dp"
+            android:layout_weight="2"
+            android:background="@drawable/referaalbot"
+            android:backgroundTint="#28602B"
+            android:drawableStart="@drawable/referallicon"
+            android:padding="10dp"
+            android:text="INVITE VIA WHATSAPP"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/referralmoreshare"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="2"
+            android:background="@drawable/referaalbot"
+            android:backgroundTint="@color/red"
+            android:drawableStart="@drawable/share"
+            android:padding="10dp"
+            android:text="MORE SHARING OPTIONS"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_weight="1"
+                android:text="total Friends Joined" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/normalcurvedbot"
+                android:backgroundTint="@color/red"
+                android:text="VIEW" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

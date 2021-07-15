@@ -52,7 +52,6 @@ public class homeFragment extends Fragment {
 
         return root;
     }
-
     @Override
     public void onAttach(@NonNull Context context) {
         myContext = (HomeActivity) context;

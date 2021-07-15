@@ -1187,6 +1187,7 @@ int color mtrl_textinput_hovered_box_stroke_color 0x7f0600b1
 int color notification_action_color_filter 0x7f0600b2
 int color notification_icon_bg_color 0x7f0600b3
 int color notification_material_background_media_default_color 0x7f0600b4
+int color pale_red 0x7f0600d6
 int color preference_fallback_accent_color 0x7f0600b5
 int color primary_dark_material_dark 0x7f0600b6
 int color primary_dark_material_light 0x7f0600b7
@@ -1220,6 +1221,7 @@ int color test_mtrl_calendar_day_selected 0x7f0600d2
 int color tooltip_background_dark 0x7f0600d3
 int color tooltip_background_light 0x7f0600d4
 int color white 0x7f0600d5
+int color yellow_pale 0x7f0600d7
 int dimen abc_action_bar_content_inset_material 0x7f070000
 int dimen abc_action_bar_content_inset_with_nav 0x7f070001
 int dimen abc_action_bar_default_height_material 0x7f070002
@@ -1663,6 +1665,7 @@ int drawable abc_vector_test 0x7f08005c
 int drawable avd_hide_password 0x7f08005d
 int drawable avd_show_password 0x7f08005e
 int drawable backbot 0x7f08005f
+int drawable botforward 0x7f0800b2
 int drawable botnav_menu_contact_us 0x7f080060
 int drawable botnav_menu_home 0x7f080061
 int drawable botnav_menu_my_leagues 0x7f080062
@@ -1681,6 +1684,7 @@ int drawable design_ic_visibility_off 0x7f08006e
 int drawable design_password_eye 0x7f08006f
 int drawable design_snackbar_background 0x7f080070
 int drawable edit 0x7f080071
+int drawable forwardbot 0x7f0800b3
 int drawable ic_arrow_down_24dp 0x7f080072
 int drawable ic_launcher_background 0x7f080073
 int drawable ic_launcher_foreground 0x7f080074
@@ -1715,6 +1719,7 @@ int drawable nav_menu_profile 0x7f080090
 int drawable nav_menu_settings 0x7f080091
 int drawable nav_menu_tutorial 0x7f080092
 int drawable navigation_empty_icon 0x7f080093
+int drawable normalcurvedbot 0x7f0800b4
 int drawable notification_action_background 0x7f080094
 int drawable notification_bg 0x7f080095
 int drawable notification_bg_low 0x7f080096
@@ -1735,6 +1740,9 @@ int drawable pager4 0x7f0800b0
 int drawable pager5 0x7f0800b1
 int drawable preference_list_divider_material 0x7f0800a1
 int drawable progress_circle 0x7f0800a2
+int drawable referaalbot 0x7f0800b5
+int drawable referallicon 0x7f0800b6
+int drawable referalltool 0x7f0800b7
 int drawable share 0x7f0800a3
 int drawable splash_logo 0x7f0800a4
 int drawable stats_card 0x7f0800a5
@@ -1743,6 +1751,7 @@ int drawable tool_navicon 0x7f0800a7
 int drawable toolbar 0x7f0800a8
 int drawable tooltip_frame_dark 0x7f0800a9
 int drawable tooltip_frame_light 0x7f0800aa
+int drawable walleticon 0x7f0800b8
 int font baloo_bhaina 0x7f090000
 int id ALT 0x7f0a0000
 int id BOTTOM_END 0x7f0a0001
@@ -2059,6 +2068,14 @@ int id radio 0x7f0a0137
 int id ratio 0x7f0a0138
 int id rectangles 0x7f0a0139
 int id recycler_view 0x7f0a013a
+int id referaalfooter 0x7f0a01cf
+int id referaalheader 0x7f0a01d0
+int id referaaltool 0x7f0a01d1
+int id referralbot 0x7f0a01cd
+int id referralfrag 0x7f0a01ce
+int id referralmoreshare 0x7f0a01d2
+int id referralreferraallcode 0x7f0a01d3
+int id referralwhatsappshare 0x7f0a01d4
 int id restart 0x7f0a013b
 int id reverse 0x7f0a013c
 int id reverseSawtooth 0x7f0a013d
@@ -2291,6 +2308,7 @@ int layout fragment_contactus 0x7f0d0031
 int layout fragment_home 0x7f0d0032
 int layout fragment_homegames 0x7f0d0033
 int layout fragment_homequizes 0x7f0d0034
+int layout fragment_invitefriends 0x7f0d008f
 int layout fragment_leaderboard 0x7f0d0035
 int layout fragment_myleagues 0x7f0d0036
 int layout fragment_myprofile 0x7f0d0037
@@ -2362,6 +2380,7 @@ int layout preference_widget_seekbar 0x7f0d0078
 int layout preference_widget_seekbar_material 0x7f0d0079
 int layout preference_widget_switch 0x7f0d007a
 int layout preference_widget_switch_compat 0x7f0d007b
+int layout referaaltool 0x7f0d0090
 int layout select_dialog_item_material 0x7f0d007c
 int layout select_dialog_multichoice_material 0x7f0d007d
 int layout select_dialog_singlechoice_material 0x7f0d007e
