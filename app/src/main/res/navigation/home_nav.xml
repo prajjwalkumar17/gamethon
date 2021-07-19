@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="in.gamernation.app.Fragments.homeFragment"
+        android:name="in.gamernation.app.Fragments.home.homeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action

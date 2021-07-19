@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#14E642"
     android:orientation="vertical"
-    tools:context=".Fragments.homeFragment">
+    tools:context=".Fragments.home.homeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <include

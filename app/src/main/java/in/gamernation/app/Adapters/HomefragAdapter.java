@@ -6,8 +6,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import in.gamernation.app.Fragments.homegamesFragment;
-import in.gamernation.app.Fragments.homequizesFragment;
+import in.gamernation.app.Fragments.home.homegamesFragment;
+import in.gamernation.app.Fragments.home.homequizesFragment;
 
 public class HomefragAdapter extends FragmentStateAdapter {
 

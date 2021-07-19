@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/master_pale"
     android:gravity="center"
-    tools:context=".Fragments.homegamesFragment">
+    tools:context=".Fragments.home.homegamesFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

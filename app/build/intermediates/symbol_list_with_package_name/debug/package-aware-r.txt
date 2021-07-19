@@ -1678,6 +1678,10 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cardbotcurved
+drawable circleback
+drawable crowncurved
+drawable crowncurvedwhite
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1734,6 +1738,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notificon
 drawable notify_panel_notification_icon_bg
+drawable outlinedbot
 drawable pager1
 drawable pager2
 drawable pager3
@@ -1879,6 +1884,7 @@ id content
 id contentPanel
 id coordinator
 id cos
+id crown1img
 id custom
 id customPanel
 id cut
@@ -2011,6 +2017,14 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id myleagues1sticon
+id myleagues2ndicon
+id myleagues3rdicon
+id myleaguesbotgrp
+id myleaguesfooter
+id myleaguesheader
+id myleaguesswitch
+id myleaguesswitchgrp
 id myprofileFragment
 id mystatsFragment
 id nav_controller_view_tag
@@ -2179,6 +2193,7 @@ id textView11
 id textView2
 id textView3
 id textView4
+id textView5
 id textView7
 id textView8
 id textView9

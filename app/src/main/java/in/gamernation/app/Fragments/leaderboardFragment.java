@@ -20,6 +20,7 @@ public class leaderboardFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_leaderboard, container, false);
         ((HomeActivity) getActivity()).setToolbarInvisible();
         ((HomeActivity) getActivity()).setDrawerLocked();
+        ((HomeActivity) getActivity()).setbotInvisible();
         return root;
     }
 }
