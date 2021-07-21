@@ -20,7 +20,6 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.Timer;
-import java.util.TimerTask;
 
 import in.gamernation.app.Adapters.HomefragAdapter;
 import in.gamernation.app.Adapters.SliderAdapter;
@@ -70,28 +69,28 @@ public class homeFragment extends Fragment {
         swipemanagerforpager(homepager, tabLayout);
         dotlayout = root.findViewById(R.id.sliderdotcontainer);
         sliderpager = root.findViewById(R.id.sliderpager);
-        timer = new Timer();
-        handler = new Handler();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        int i = sliderpager.getCurrentItem();
-                        if (i == noofimganddots - 1) {
-                            i = 0;
-                            sliderpager.setCurrentItem(i, true);
-                        } else {
-                            i++;
-                            sliderpager.setCurrentItem(i, true);
-                        }
-
-                    }
-                });
-            }
-        }, 4000, 5000);
-
+//        timer = new Timer();
+//        handler = new Handler();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                handler.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        int i = sliderpager.getCurrentItem();
+//                        if (i == noofimganddots - 1) {
+//                            i = 0;
+//                            sliderpager.setCurrentItem(i, true);
+//                        } else {
+//                            i++;
+//                            sliderpager.setCurrentItem(i, true);
+//                        }
+//
+//                    }
+//                });
+//            }
+//        }, 4000, 5000);
+//
 
         dot = new TextView[noofimganddots];
         imageofslider(sliderimg, dot);
