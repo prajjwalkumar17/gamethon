@@ -40,7 +40,7 @@ public class homegamesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, new freefirepubgFragment()).addToBackStack(null).commit();
+                        .replace(R.id.fragmentContainerView, new freefirenormFragment()).addToBackStack(null).commit();
 
             }
         });
@@ -63,14 +63,14 @@ public class homegamesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, new freefirepubgFragment()).addToBackStack(null).commit();
+                        .replace(R.id.fragmentContainerView, new freefireclashsquadFragment()).addToBackStack(null).commit();
             }
         });
         crd5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, new freefirepubgFragment()).addToBackStack(null).commit();
+                        .replace(R.id.fragmentContainerView, new pubgnormFragment()).addToBackStack(null).commit();
             }
         });
         crd6.setOnClickListener(new View.OnClickListener() {
