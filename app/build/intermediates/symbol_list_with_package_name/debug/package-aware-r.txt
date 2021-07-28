@@ -2049,6 +2049,7 @@ id myleaguesheader
 id myleaguesswitch
 id myleaguesswitchgrp
 id myprofileFragment
+id myprofile_name
 id mystatsFragment
 id nav_controller_view_tag
 id nav_host_fragment_container
@@ -2211,7 +2212,6 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
 id textView10
 id textView11
 id textView2

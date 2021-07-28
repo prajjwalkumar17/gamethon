@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
 
-import in.gamernation.app.Home.HomeActivity;
+import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 
 public class freefirenormFragment extends Fragment {

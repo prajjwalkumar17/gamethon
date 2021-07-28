@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-30:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/233f29e05d3f62c91d94717ecf57158d/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.preference:preference:1.1.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/294c6b9f4a36309a96edfa3a4dcb76c5/preference-1.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/964bbc8f20eb7c96ad970a8ac9ea4eac/navigation-ui-2.3.5/AndroidManifest.xml:17:1-24:12
@@ -50,25 +50,33 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/hangsai/.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/64b70a68e7f77255649dcf7bb7164809/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/69846ae0a25a5c26a4168a449d371740/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/8b1826e082b884f9fc593d27a9580a45/annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:3:5-33
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-28:12
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-30:12
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-28:12
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-30:12
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:4:5-66
+	android:name
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:5:22-76
 application
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:5:5-26:19
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:7:5-28:19
 MERGED from [com.google.android.material:material:1.2.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/e822c6e541770b57899944d7b2242c98/material-1.2.1/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/e822c6e541770b57899944d7b2242c98/material-1.2.1/AndroidManifest.xml:22:5-20
 MERGED from [com.airbnb.android:lottie:3.4.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/433e726e00c0bb706301639ecb35ee45/lottie-3.4.0/AndroidManifest.xml:9:5-20
@@ -84,45 +92,45 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/hang
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/fe05db651979b39875ef014855ff51f0/core-1.3.1/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:7:9-54
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:8:9-45
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:10:9-45
 	android:allowBackup
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:11:9-49
-activity#in.gamernation.app.Home.HomeActivity
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:12:9-64
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:13:9-49
+activity#in.gamernation.app.Activities.HomeActivity
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:14:9-70
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:12:19-52
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:14:19-58
 activity#in.gamernation.app.Startup.Splash
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:13:9-19:20
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:9-21:20
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:13:19-49
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:14:13-18:29
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:17-69
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:25-66
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:17-77
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:27-74
 activity#in.gamernation.app.MainActivity
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:9-21:20
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:22:9-23:20
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:19-47
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:22:19-47
 meta-data#preloaded_fonts
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:23:9-25:57
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:25:9-27:57
 	android:resource
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:25:13-54
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:27:13-54
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:24:13-43
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:13-43
 uses-sdk
 INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml

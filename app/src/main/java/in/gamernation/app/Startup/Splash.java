@@ -8,7 +8,7 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import in.gamernation.app.Home.HomeActivity;
+import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 
 public class Splash extends AppCompatActivity {

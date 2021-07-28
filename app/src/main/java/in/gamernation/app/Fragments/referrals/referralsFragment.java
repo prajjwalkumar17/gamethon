@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
-import in.gamernation.app.Home.HomeActivity;
+import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 
 

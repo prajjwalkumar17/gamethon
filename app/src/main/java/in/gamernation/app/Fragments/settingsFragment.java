@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.preference.PreferenceFragmentCompat;
 
-import in.gamernation.app.Home.HomeActivity;
+import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 
 public class settingsFragment extends PreferenceFragmentCompat {

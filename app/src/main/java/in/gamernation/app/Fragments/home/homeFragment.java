@@ -21,9 +21,9 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.Timer;
 
+import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.Adapters.HomefragAdapter;
 import in.gamernation.app.Adapters.SliderAdapter;
-import in.gamernation.app.Home.HomeActivity;
 import in.gamernation.app.R;
 
 public class homeFragment extends Fragment {

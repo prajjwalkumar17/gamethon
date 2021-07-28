@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/master_primary"
     tools:openDrawer="start"
-    tools:context=".Home.HomeActivity">
+    tools:context=".Activities.HomeActivity">
 
     <include
         layout="@layout/hometoolbar"

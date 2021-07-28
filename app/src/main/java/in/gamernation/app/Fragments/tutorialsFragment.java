@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import in.gamernation.app.Home.HomeActivity;
+import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 
 public class tutorialsFragment extends Fragment {
