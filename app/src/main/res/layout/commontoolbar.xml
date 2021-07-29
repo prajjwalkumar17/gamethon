@@ -23,7 +23,7 @@
                 android:layout_height="50dp"
                 android:padding="2dp"
                 android:src="@drawable/backbot"
-                android:tint="@color/master_primary"
+                app:tint="@color/master_primary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
