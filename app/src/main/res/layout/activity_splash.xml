@@ -7,17 +7,6 @@
     android:background="#45BFF6"
     tools:context=".Startup.Splash">
 
-    <!--    <ImageView-->
-    <!--        android:id="@+id/imageView"-->
-    <!--        android:layout_width="100dp"-->
-    <!--        android:layout_height="100dp"-->
-    <!--        android:layout_marginTop="44dp"-->
-    <!--        android:src="@drawable/splash_logo"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/progressBar"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView"
@@ -31,6 +20,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <ProgressBar
         android:id="@+id/progressBar"

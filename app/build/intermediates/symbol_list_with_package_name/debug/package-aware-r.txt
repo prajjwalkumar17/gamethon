@@ -1977,6 +1977,7 @@ id home_nav
 id home_pager
 id hometool
 id honorRequest
+id httpcheck
 id icon
 id icon_frame
 id icon_group
@@ -2326,6 +2327,7 @@ layout abc_tooltip
 layout activity_home
 layout activity_main
 layout activity_splash
+layout activity_test
 layout commontoolbar
 layout custom_dialog
 layout design_bottom_navigation_item
