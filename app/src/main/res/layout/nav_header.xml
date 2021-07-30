@@ -25,18 +25,18 @@
         android:layout_height="wrap_content"
         android:text="Nandan Keshav"
         android:textColor="@color/master_secondary"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/myprofile_place"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/myprofile_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="nandankeshav1234@gmail.com"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/myprofile_progress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
 
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/myprofile_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="50/100"
@@ -54,7 +54,7 @@
         app:layout_constraintHorizontal_bias="0.85"
         android:layout_marginBottom="3dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/myprofile_place" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
@@ -70,6 +70,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         android:layout_marginBottom="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/myprofile_progress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

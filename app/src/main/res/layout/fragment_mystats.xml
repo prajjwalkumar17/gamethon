@@ -53,14 +53,14 @@
                 android:textColor="@color/master_primary" />
 
             <TextView
-                android:id="@+id/username"
+                android:id="@+id/myprofile_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Username:hangsai" />
 
             <TextView
-                android:id="@+id/toolHome"
+                android:id="@+id/myprofile_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

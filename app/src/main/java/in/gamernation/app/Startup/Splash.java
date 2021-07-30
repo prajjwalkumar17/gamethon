@@ -7,13 +7,15 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
-import in.gamernation.app.Test.TestActivity;
+
+import static in.gamernation.app.Utils.Constants.SPLASH_TIMEOUT;
 
 public class Splash extends AppCompatActivity {
 
 
-    private static final int SPLASH_TIMEOUT = 2000;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 //make changes for onboarding
-                startActivity(new Intent(getApplicationContext(), TestActivity.class));
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
             }
         }, SPLASH_TIMEOUT);
     }

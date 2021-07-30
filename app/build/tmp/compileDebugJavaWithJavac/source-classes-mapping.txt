@@ -3,8 +3,9 @@ in/gamernation/app/Fragments/home/freefirenormFragment.java
  in.gamernation.app.Fragments.home.freefirenormFragment$1
 in/gamernation/app/Adapters/HomefragAdapter.java
  in.gamernation.app.Adapters.HomefragAdapter
-in/gamernation/app/Fragments/myprofileFragment.java
- in.gamernation.app.Fragments.myprofileFragment
+in/gamernation/app/Interfaces/botnavController.java
+ in.gamernation.app.Interfaces.botnavController
+ in.gamernation.app.Interfaces.botnavController$botVisibilityController
 in/gamernation/app/Fragments/home/freefireclashsquadFragment.java
  in.gamernation.app.Fragments.home.freefireclashsquadFragment
 in/gamernation/app/APICalls/APICalls.java
@@ -30,8 +31,9 @@ in/gamernation/app/Adapters/SliderAdapter.java
  in.gamernation.app.Adapters.SliderAdapter$MyViewHolder
 in/gamernation/app/Fragments/leaderboardFragment.java
  in.gamernation.app.Fragments.leaderboardFragment
-in/gamernation/app/Fragments/home/freefireclashsquadopenedFragment.java
- in.gamernation.app.Fragments.home.freefireclashsquadopenedFragment
+in/gamernation/app/Startup/Splash.java
+ in.gamernation.app.Startup.Splash
+ in.gamernation.app.Startup.Splash$1
 in/gamernation/app/Fragments/playedquizzesFragment.java
  in.gamernation.app.Fragments.playedquizzesFragment
 in/gamernation/app/Fragments/referrals/invitefriendsFragment.java
@@ -42,20 +44,25 @@ in/gamernation/app/Fragments/home/homequizesFragment.java
  in.gamernation.app.Fragments.home.homequizesFragment
 in/gamernation/app/MainActivity.java
  in.gamernation.app.MainActivity
-in/gamernation/app/Interfaces/botnavController.java
- in.gamernation.app.Interfaces.botnavController
- in.gamernation.app.Interfaces.botnavController$botVisibilityController
+in/gamernation/app/Fragments/home/homeFragment.java
+ in.gamernation.app.Fragments.home.homeFragment
+ in.gamernation.app.Fragments.home.homeFragment$1
+ in.gamernation.app.Fragments.home.homeFragment$2
+ in.gamernation.app.Fragments.home.homeFragment$3
+in/gamernation/app/Fragments/myleaguesFragment.java
+ in.gamernation.app.Fragments.myleaguesFragment
 in/gamernation/app/Fragments/home/ludokingFragment.java
  in.gamernation.app.Fragments.home.ludokingFragment
+in/gamernation/app/Utils/Constants.java
+ in.gamernation.app.Utils.Constants
 in/gamernation/app/Fragments/walletFragment.java
  in.gamernation.app.Fragments.walletFragment
 in/gamernation/app/Fragments/contactusFragment.java
  in.gamernation.app.Fragments.contactusFragment
 in/gamernation/app/APICalls/APICommonMethods.java
  in.gamernation.app.APICalls.APICommonMethods
-in/gamernation/app/Activities/HomeActivity.java
- in.gamernation.app.Activities.HomeActivity
- in.gamernation.app.Activities.HomeActivity$1
+in/gamernation/app/Fragments/home/freefireclashsquadopenedFragment.java
+ in.gamernation.app.Fragments.home.freefireclashsquadopenedFragment
 in/gamernation/app/Fragments/home/pubgnormFragment.java
  in.gamernation.app.Fragments.home.pubgnormFragment
 in/gamernation/app/Fragments/home/pubgnormopenedFragment.java
@@ -69,18 +76,17 @@ in/gamernation/app/Interfaces/navController.java
  in.gamernation.app.Interfaces.navController$toolbarController
 in/gamernation/app/Fragments/tutorialsFragment.java
  in.gamernation.app.Fragments.tutorialsFragment
-in/gamernation/app/CommonMethods/CommonMethods.java
- in.gamernation.app.CommonMethods.CommonMethods
-in/gamernation/app/Fragments/home/homeFragment.java
- in.gamernation.app.Fragments.home.homeFragment
- in.gamernation.app.Fragments.home.homeFragment$1
- in.gamernation.app.Fragments.home.homeFragment$2
- in.gamernation.app.Fragments.home.homeFragment$3
-in/gamernation/app/Fragments/myleaguesFragment.java
- in.gamernation.app.Fragments.myleaguesFragment
 in/gamernation/app/Test/TestActivity.java
  in.gamernation.app.Test.TestActivity
  in.gamernation.app.Test.TestActivity$async
-in/gamernation/app/Startup/Splash.java
- in.gamernation.app.Startup.Splash
- in.gamernation.app.Startup.Splash$1
+in/gamernation/app/Utils/CommonMethods.java
+ in.gamernation.app.Utils.CommonMethods
+in/gamernation/app/Routes/MyprofileRoutes.java
+ in.gamernation.app.Routes.MyprofileRoutes
+in/gamernation/app/Fragments/myprofileFragment.java
+ in.gamernation.app.Fragments.myprofileFragment
+ in.gamernation.app.Fragments.myprofileFragment$1
+ in.gamernation.app.Fragments.myprofileFragment$asyncqueires
+in/gamernation/app/Activities/HomeActivity.java
+ in.gamernation.app.Activities.HomeActivity
+ in.gamernation.app.Activities.HomeActivity$1

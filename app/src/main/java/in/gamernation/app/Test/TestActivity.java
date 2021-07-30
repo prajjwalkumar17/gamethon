@@ -7,8 +7,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import in.gamernation.app.APICalls.APICalls;
-import in.gamernation.app.CommonMethods.CommonMethods;
 import in.gamernation.app.R;
+import in.gamernation.app.Utils.CommonMethods;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -75,7 +75,6 @@ public class TestActivity extends AppCompatActivity {
             }
             return null;
         }
-
         @Override
         protected void onPostExecute(Void unused) {
             super.onPostExecute(unused);

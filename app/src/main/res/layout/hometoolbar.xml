@@ -18,7 +18,7 @@
 
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/commontoolbar_backbot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="2dp"
@@ -41,7 +41,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView3"
                 app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/commontoolbar_backbot"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView

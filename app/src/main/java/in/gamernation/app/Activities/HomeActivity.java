@@ -65,7 +65,7 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
     private void muticals() {
         nav_view = findViewById(R.id.nav_view);
         drawer = findViewById(R.id.drawer);
-        navBotimg = findViewById(R.id.imageView2);
+        navBotimg = findViewById(R.id.commontoolbar_backbot);
         tool = findViewById(R.id.tool);
         navController = Navigation.findNavController(this, R.id.fragmentContainerView);
         rotate = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
