@@ -17,16 +17,26 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.jetbrains.annotations.NotNull;
 
+import in.gamernation.app.APICalls.APICalls;
 import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
-import in.gamernation.app.Routes.MyprofileRoutes;
 import in.gamernation.app.Utils.CommonMethods;
 
 
 public class myprofileFragment extends Fragment {
 
-    private static String myprofile_name_route, myprofile_username_route, myprofile_email_route, myprofile_place_route,
-            myprofile_progress_route, myprofile_phoneno_route, myprofile_password_route, myprofile_birthdate_route, myprofile_panno_route, myprofile_refferalcode_route;
+//    private static String myprofile_name_route, myprofile_username_route, myprofile_email_route, myprofile_place_route,
+//            myprofile_progress_route, myprofile_phoneno_route, myprofile_password_route, myprofile_birthdate_route, myprofile_panno_route, myprofile_refferalcode_route;
+
+
+    //TODO CHANGEABLE
+    private static String fetchedProfileData;
+    private static String madeurl;
+    private static String ID;
+    private static String pathsegment = "users";
+    //TODO
+
+
     private static Context thiscontext;
     private static ImageView commontoolbar_backbot;
     private static ImageView myprofile_sharerefferalcodebot;
@@ -41,13 +51,17 @@ public class myprofileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_myprofile, container, false);
-        ((HomeActivity) getActivity()).setToolbarInvisible();
-        ((HomeActivity) getActivity()).setDrawerLocked();
-        ((HomeActivity) getActivity()).setbotInvisible();
+        initscreen();
         initializers();
         findviews(root);
         initfunctions();
         return root;
+    }
+
+    private void initscreen() {
+        ((HomeActivity) getActivity()).setToolbarInvisible();
+        ((HomeActivity) getActivity()).setDrawerLocked();
+        ((HomeActivity) getActivity()).setbotInvisible();
     }
 
     private void initfunctions() {
@@ -55,18 +69,19 @@ public class myprofileFragment extends Fragment {
     }
 
     private void initializers() {
-        myprofile_name_route = MyprofileRoutes.myprofile_name_route;
-        myprofile_username_route = MyprofileRoutes.myprofile_username_route;
-        myprofile_email_route = MyprofileRoutes.myprofile_email_route;
-        myprofile_place_route = MyprofileRoutes.myprofile_place_route;
-        myprofile_progress_route = MyprofileRoutes.myprofile_progress_route;
-        myprofile_phoneno_route = MyprofileRoutes.myprofile_phoneno_route;
-        myprofile_password_route = MyprofileRoutes.myprofile_password_route;
-        myprofile_birthdate_route = MyprofileRoutes.myprofile_birthdate_route;
-        myprofile_panno_route = MyprofileRoutes.myprofile_panno_route;
-        myprofile_refferalcode_route = MyprofileRoutes.myprofile_refferalcode_route;
+//        myprofile_name_route = MyprofileRoutes.myprofile_name_route;
+//        myprofile_username_route = MyprofileRoutes.myprofile_username_route;
+//        myprofile_email_route = MyprofileRoutes.myprofile_email_route;
+//        myprofile_place_route = MyprofileRoutes.myprofile_place_route;
+//        myprofile_progress_route = MyprofileRoutes.myprofile_progress_route;
+//        myprofile_phoneno_route = MyprofileRoutes.myprofile_phoneno_route;
+//        myprofile_password_route = MyprofileRoutes.myprofile_password_route;
+//        myprofile_birthdate_route = MyprofileRoutes.myprofile_birthdate_route;
+//        myprofile_panno_route = MyprofileRoutes.myprofile_panno_route;
+//        myprofile_refferalcode_route = MyprofileRoutes.myprofile_refferalcode_route;
 
-        new asyncqueires().execute();
+
+        new datafetcherasyncqueires().execute();
 
 
     }
@@ -112,7 +127,7 @@ public class myprofileFragment extends Fragment {
         thiscontext = context;
     }
 
-    static class asyncqueires extends AsyncTask<Void, Void, Void> {
+    static class datafetcherasyncqueires extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected void onPreExecute() {
@@ -123,7 +138,12 @@ public class myprofileFragment extends Fragment {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-//                    ty= APICalls.gethttpRequest(url);
+
+
+                madeurl = APICalls.buildhttpurlforgetreq(pathsegment, ID);
+                fetchedProfileData = APICalls.gethttpRequest(madeurl);
+
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
