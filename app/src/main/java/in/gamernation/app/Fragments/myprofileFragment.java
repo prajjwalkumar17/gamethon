@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONObject;
 
 import in.gamernation.app.APICalls.APICalls;
 import in.gamernation.app.Activities.HomeActivity;
@@ -142,6 +143,7 @@ public class myprofileFragment extends Fragment {
 
                 madeurl = APICalls.buildhttpurlforgetreq(pathsegment, ID);
                 fetchedProfileData = APICalls.gethttpRequest(madeurl);
+                JSONObject object = new JSONObject(fetchedProfileData);
 
 
             } catch (Exception e) {

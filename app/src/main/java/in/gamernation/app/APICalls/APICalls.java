@@ -20,7 +20,6 @@ public class APICalls {
         httpRequest = new Request.Builder().url(getURL).build();
         httpResponse = httpClient.newCall(httpRequest).execute();
         return httpResponse.body().string();
-
     }
 
     public static String buildhttpurlforgetreq(String pathsegment, String querycode) throws IOException {
@@ -30,11 +29,15 @@ public class APICalls {
                 .addPathSegment(pathsegment)
 //                .addPathSegment("v1")
 //                .addPathSegment("students")
-                .addPathSegment(querycode) // <- id here for query
-//                .addQueryParameter("auth_token", "71x23768234hgjwqguygqew")
+                .addPathSegment(querycode)
+
+                // <- id here for query
+                // .addQueryParameter("auth_token", "71x23768234hgjwqguygqew")
                 // Each addPathSegment separated add a / symbol to the final url
                 // finally my Full URL is:
-                // https://subdomain.apiweb.com/api/v1/students/8873?auth_token=71x23768234hgjwqguygqew
+                // https://gamernation.w3api.net/api/v1/students/8873?auth_token=71x23768234hgjwqguygqew
+                // https://gamernation.w3api.net/users/id_of_particular_user
+
                 .build();
         return httpUrl.toString();
 

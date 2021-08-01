@@ -7,13 +7,14 @@ public class Myprofile_userData {
     public String myprofile_name;
     public String myprofile_username;
     public String myprofile_email;
-    public String myprofile_place;
+    public String myprofile_placecityandcoutry;
     public String myprofile_progress;
     public String myprofile_phoneno;
     public String myprofile_password;
     public String myprofile_birthdate;
     public String myprofile_panno;
     public String myprofile_refferalcode;
+    public String myprofile_isemailverified;
 
     public Myprofile_userData() {
     }
@@ -22,26 +23,29 @@ public class Myprofile_userData {
                               String myprofile_name,
                               String myprofile_username,
                               String myprofile_email,
-                              String myprofile_place,
+                              String myprofile_placecityandcoutry,
                               String myprofile_progress,
                               String myprofile_phoneno,
                               String myprofile_password,
                               String myprofile_birthdate,
                               String myprofile_panno,
-                              String myprofile_refferalcode) {
+                              String myprofile_refferalcode,
+                              String myprofile_isemailverified) {
 
         this.myprofile_picture = myprofile_picture;
         this.myprofile_name = myprofile_name;
         this.myprofile_username = myprofile_username;
         this.myprofile_email = myprofile_email;
-        this.myprofile_place = myprofile_place;
+        this.myprofile_placecityandcoutry = myprofile_placecityandcoutry;
         this.myprofile_progress = myprofile_progress;
         this.myprofile_phoneno = myprofile_phoneno;
         this.myprofile_password = myprofile_password;
         this.myprofile_birthdate = myprofile_birthdate;
         this.myprofile_panno = myprofile_panno;
         this.myprofile_refferalcode = myprofile_refferalcode;
+        this.myprofile_isemailverified = myprofile_isemailverified;
     }
+
 
     public String getMyprofile_picture() {
         return myprofile_picture;
@@ -75,12 +79,12 @@ public class Myprofile_userData {
         this.myprofile_email = myprofile_email;
     }
 
-    public String getMyprofile_place() {
-        return myprofile_place;
+    public String getMyprofile_placecityandcoutry() {
+        return myprofile_placecityandcoutry;
     }
 
-    public void setMyprofile_place(String myprofile_place) {
-        this.myprofile_place = myprofile_place;
+    public void setMyprofile_placecityandcoutry(String myprofile_placecityandcoutry) {
+        this.myprofile_placecityandcoutry = myprofile_placecityandcoutry;
     }
 
     public String getMyprofile_progress() {
@@ -129,6 +133,14 @@ public class Myprofile_userData {
 
     public void setMyprofile_refferalcode(String myprofile_refferalcode) {
         this.myprofile_refferalcode = myprofile_refferalcode;
+    }
+
+    public String getMyprofile_isemailverified() {
+        return myprofile_isemailverified;
+    }
+
+    public void setMyprofile_isemailverified(String myprofile_isemailverified) {
+        this.myprofile_isemailverified = myprofile_isemailverified;
     }
 }
 
