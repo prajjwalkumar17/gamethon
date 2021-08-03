@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamernation">
-        <activity android:name=".Test.TestActivity"></activity>
+        <activity android:name=".Startup.Login"></activity>
+        <activity android:name=".Test.TestActivity" />
         <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Startup.Splash">
             <intent-filter>
@@ -21,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

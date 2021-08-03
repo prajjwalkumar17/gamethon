@@ -7,7 +7,6 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 
 import static in.gamernation.app.Utils.Constants.SPLASH_TIMEOUT;
@@ -28,7 +27,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 //make changes for onboarding
-                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                startActivity(new Intent(getApplicationContext(), Login.class));
             }
         }, SPLASH_TIMEOUT);
     }

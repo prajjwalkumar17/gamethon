@@ -13,6 +13,7 @@ import in.gamernation.app.R;
 
 public class freefirenormFragment extends Fragment {
     LinearLayout tempclick;
+    View dummy;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,7 +24,15 @@ public class freefirenormFragment extends Fragment {
         ((HomeActivity) getActivity()).setDrawerLocked();
         ((HomeActivity) getActivity()).setbotInvisible();
         tempclick = root.findViewById(R.id.tempclick);
+        dummy = root.findViewById(R.id.dummy);
         tempclick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new freefirenormopenedFragment()).addToBackStack(null).commit();
+            }
+        });
+        dummy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction()

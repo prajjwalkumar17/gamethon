@@ -18,7 +18,7 @@
 12-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:6:22-76
 13
 14    <application
-14-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:8:5-29:19
+14-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:8:5-30:19
 15        android:allowBackup="true"
 15-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -36,36 +36,39 @@
 23        android:testOnly="true"
 24        android:theme="@style/Theme.Gamernation" >
 24-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:14:9-49
-25        <activity android:name="in.gamernation.app.Test.TestActivity" />
-25-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:9-64
-25-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:19-52
-26        <activity android:name="in.gamernation.app.Activities.HomeActivity" />
-26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:9-61
-26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:19-58
-27        <activity android:name="in.gamernation.app.Startup.Splash" >
-27-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:9-23:20
-27-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:19-49
-28            <intent-filter>
-28-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:18:13-22:29
-29                <action android:name="android.intent.action.MAIN" />
-29-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:17-69
-29-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:25-66
-30
-31                <category android:name="android.intent.category.LAUNCHER" />
-31-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:17-77
-31-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:27-74
-32            </intent-filter>
-33        </activity>
-34        <activity android:name="in.gamernation.app.MainActivity" />
-34-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:24:9-59
-34-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:24:19-47
-35
-36        <meta-data
-36-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:9-28:57
-37            android:name="preloaded_fonts"
-37-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:27:13-43
-38            android:resource="@array/preloaded_fonts" />
-38-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:28:13-54
-39    </application>
-40
-41</manifest>
+25        <activity android:name="in.gamernation.app.Startup.Login" />
+25-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:9-60
+25-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:19-48
+26        <activity android:name="in.gamernation.app.Test.TestActivity" />
+26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:9-55
+26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:19-52
+27        <activity android:name="in.gamernation.app.Activities.HomeActivity" />
+27-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:9-61
+27-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:19-58
+28        <activity android:name="in.gamernation.app.Startup.Splash" >
+28-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:18:9-24:20
+28-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:18:19-49
+29            <intent-filter>
+29-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:13-23:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:17-69
+30-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:22:17-77
+32-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:22:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity android:name="in.gamernation.app.MainActivity" />
+35-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:25:9-50
+35-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:25:19-47
+36
+37        <meta-data
+37-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:27:9-29:57
+38            android:name="preloaded_fonts"
+38-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:28:13-43
+39            android:resource="@array/preloaded_fonts" />
+39-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:29:13-54
+40    </application>
+41
+42</manifest>

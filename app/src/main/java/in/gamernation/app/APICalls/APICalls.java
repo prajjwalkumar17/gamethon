@@ -22,6 +22,14 @@ public class APICalls {
         return httpResponse.body().string();
     }
 
+
+    public static String gethttpRequestwithoutclient(String getURL, OkHttpClient httpClient) throws IOException {
+        httpRequest = new Request.Builder().url(getURL).build();
+        httpResponse = httpClient.newCall(httpRequest).execute();
+        return httpResponse.body().string();
+    }
+
+
     public static String buildhttpurlforgetreq(String pathsegment, String querycode) throws IOException {
         HttpUrl httpUrl = new HttpUrl.Builder()
                 .scheme(Constants.w3devScheme)

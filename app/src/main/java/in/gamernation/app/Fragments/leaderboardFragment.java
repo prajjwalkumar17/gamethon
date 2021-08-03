@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import in.gamernation.app.Activities.HomeActivity;
-import in.gamernation.app.R;
+
+import static in.gamernation.app.R.layout;
 
 public class leaderboardFragment extends Fragment {
 
@@ -17,10 +18,12 @@ public class leaderboardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_leaderboard, container, false);
+        View root = inflater.inflate(layout.fragment_leaderboard, container, false);
         ((HomeActivity) getActivity()).setToolbarInvisible();
         ((HomeActivity) getActivity()).setDrawerLocked();
         ((HomeActivity) getActivity()).setbotInvisible();
         return root;
     }
+
+
 }

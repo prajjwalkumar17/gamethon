@@ -1690,6 +1690,7 @@ int drawable crd6 0x7f080075
 int drawable crdbond 0x7f080076
 int drawable crowncurved 0x7f080077
 int drawable crowncurvedwhite 0x7f080078
+int drawable curvedradiusblackbg 0x7f0800ca
 int drawable design_bottom_navigation_item_background 0x7f080079
 int drawable design_fab_background 0x7f08007a
 int drawable design_ic_visibility 0x7f08007b
@@ -1751,6 +1752,7 @@ int drawable notification_tile_bg 0x7f0800b2
 int drawable notificon 0x7f0800b3
 int drawable notify_panel_notification_icon_bg 0x7f0800b4
 int drawable outlinedbot 0x7f0800b5
+int drawable outlinedbotfull 0x7f0800cb
 int drawable pager1 0x7f0800b6
 int drawable pager2 0x7f0800b7
 int drawable pager3 0x7f0800b8
@@ -1935,6 +1937,7 @@ int id dragStart 0x7f0a009f
 int id dragUp 0x7f0a00a0
 int id drawer 0x7f0a00a1
 int id dropdown_menu 0x7f0a00a2
+int id dummy 0x7f0a01eb
 int id easeIn 0x7f0a00a3
 int id easeInOut 0x7f0a00a4
 int id easeOut 0x7f0a00a5
@@ -2004,6 +2007,9 @@ int id line3 0x7f0a00e4
 int id linear 0x7f0a00e5
 int id listMode 0x7f0a00e6
 int id list_item 0x7f0a00e7
+int id loginbot 0x7f0a01ec
+int id loginemail 0x7f0a01ed
+int id loginpass 0x7f0a01ee
 int id lottie_layer_name 0x7f0a00e8
 int id masked 0x7f0a00e9
 int id media_actions 0x7f0a00ea
@@ -2325,6 +2331,7 @@ int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
 int layout activity_home 0x7f0d001c
+int layout activity_login 0x7f0d009e
 int layout activity_main 0x7f0d001d
 int layout activity_splash 0x7f0d001e
 int layout activity_test 0x7f0d001f
@@ -2372,6 +2379,7 @@ int layout freefirenormcard 0x7f0d0048
 int layout hometoolbar 0x7f0d0049
 int layout image_frame 0x7f0d004a
 int layout img_slider 0x7f0d004b
+int layout leaderboarditems 0x7f0d009d
 int layout mtrl_alert_dialog 0x7f0d004c
 int layout mtrl_alert_dialog_actions 0x7f0d004d
 int layout mtrl_alert_dialog_title 0x7f0d004e

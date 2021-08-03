@@ -1691,6 +1691,7 @@ drawable crd6
 drawable crdbond
 drawable crowncurved
 drawable crowncurvedwhite
+drawable curvedradiusblackbg
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1752,6 +1753,7 @@ drawable notification_tile_bg
 drawable notificon
 drawable notify_panel_notification_icon_bg
 drawable outlinedbot
+drawable outlinedbotfull
 drawable pager1
 drawable pager2
 drawable pager3
@@ -1936,6 +1938,7 @@ id dragStart
 id dragUp
 id drawer
 id dropdown_menu
+id dummy
 id easeIn
 id easeInOut
 id easeOut
@@ -2005,6 +2008,9 @@ id line3
 id linear
 id listMode
 id list_item
+id loginbot
+id loginemail
+id loginpass
 id lottie_layer_name
 id masked
 id media_actions
@@ -2326,6 +2332,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_home
+layout activity_login
 layout activity_main
 layout activity_splash
 layout activity_test
@@ -2373,6 +2380,7 @@ layout freefirenormcard
 layout hometoolbar
 layout image_frame
 layout img_slider
+layout leaderboarditems
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
