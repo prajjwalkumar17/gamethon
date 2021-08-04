@@ -2,18 +2,43 @@ package in.gamernation.app.APICalls;
 
 import java.io.IOException;
 
+import in.gamernation.app.Interfaces.LoginUserService;
 import in.gamernation.app.Utils.Constants;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class APICalls {
     private static OkHttpClient httpClient = new OkHttpClient();
     private static Request httpRequest;
     private static Response httpResponse;
     private static String baseurl;
+
+    private static Retrofit getRetrofit() {
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        Retrofit retrofit = new Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(Constants.w3devbaseurl)
+                .client(okHttpClient)
+                .build();
+
+        return retrofit;
+    }
+
+    public static LoginUserService getUserLogginService() {
+        LoginUserService loginUserService = getRetrofit().create(LoginUserService.class);
+
+        return loginUserService;
+
+
+    }
 
 
     public static String gethttpRequest(String getURL) throws IOException {
