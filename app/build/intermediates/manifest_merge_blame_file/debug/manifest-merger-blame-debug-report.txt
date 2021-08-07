@@ -69,6 +69,15 @@
 38-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:28:13-43
 39            android:resource="@array/preloaded_fonts" />
 39-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:29:13-54
-40    </application>
-41
-42</manifest>
+40
+41        <provider
+41-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:8:9-11:40
+42            android:name="com.squareup.picasso.PicassoProvider"
+42-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:9:13-64
+43            android:authorities="in.gamernation.app.com.squareup.picasso"
+43-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:10:13-72
+44            android:exported="false" />
+44-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:11:13-37
+45    </application>
+46
+47</manifest>

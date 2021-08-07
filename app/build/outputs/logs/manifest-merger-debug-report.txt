@@ -13,6 +13,7 @@ MERGED from [com.airbnb.android:lottie:3.4.0] /Users/hangsai/.gradle/caches/tran
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/1d7e9fd91787b67e581a3c9368312805/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/20cb719c6e7f450c785cfe641873baec/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/6e6b2202c5487b92a37f9fbb3f25b45b/circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.media:media:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/1e1f894f3187e0e4737e7e00626d423c/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/b913b577636afb646741ffd904028e15/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/1e3214591e5f847e6b5b2333c34f548f/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -50,6 +51,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/hangsai/.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/64b70a68e7f77255649dcf7bb7164809/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/69846ae0a25a5c26a4168a449d371740/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/8b1826e082b884f9fc593d27a9580a45/annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:exifinterface:27.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/ec1012362b92f58178780c15d49016bb/exifinterface-27.1.0/AndroidManifest.xml:17:1-22:12
 INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-32:12
 INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-32:12
 INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-32:12
@@ -85,6 +87,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/hangsai/.g
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/1d7e9fd91787b67e581a3c9368312805/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/6e6b2202c5487b92a37f9fbb3f25b45b/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/6e6b2202c5487b92a37f9fbb3f25b45b/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:7:5-12:19
 MERGED from [androidx.core:core:1.3.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/fe05db651979b39875ef014855ff51f0/core-1.3.1/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/fe05db651979b39875ef014855ff51f0/core-1.3.1/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/c7739dfe0a1efd64a0dd260a875d3ca5/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
@@ -161,6 +165,8 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/hangsai/.gradle/caches/t
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/20cb719c6e7f450c785cfe641873baec/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/6e6b2202c5487b92a37f9fbb3f25b45b/circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/6e6b2202c5487b92a37f9fbb3f25b45b/circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:5:5-44
 MERGED from [androidx.media:media:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/1e1f894f3187e0e4737e7e00626d423c/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/1e1f894f3187e0e4737e7e00626d423c/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/b913b577636afb646741ffd904028e15/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
@@ -235,6 +241,8 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hangsai/.gradle/cache
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/69846ae0a25a5c26a4168a449d371740/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/8b1826e082b884f9fc593d27a9580a45/annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/8b1826e082b884f9fc593d27a9580a45/annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:exifinterface:27.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/ec1012362b92f58178780c15d49016bb/exifinterface-27.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/ec1012362b92f58178780c15d49016bb/exifinterface-27.1.0/AndroidManifest.xml:20:5-44
 INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -245,3 +253,11 @@ INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/Andr
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:9:13-64

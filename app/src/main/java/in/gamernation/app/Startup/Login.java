@@ -1,6 +1,8 @@
 package in.gamernation.app.Startup;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -10,9 +12,9 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 
 import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APIRequests.UserLoginRequest;
 import in.gamernation.app.Activities.HomeActivity;
-import in.gamernation.app.Classes.UserLoginRequest;
-import in.gamernation.app.Classes.UserLoginResponse;
+import in.gamernation.app.ModalClasses.UserLoginResponse;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -26,6 +28,7 @@ public class Login extends AppCompatActivity {
     private static AppCompatEditText loginemail, loginpass;
     private static AppCompatButton loginbot;
     private static String username, password, authtoken;
+    SharedPreferences sharedPreferences;
     //    private static final OkHttpClient.Builder client = new OkHttpClient.Builder();
     private static OkHttpClient httpClient = new OkHttpClient();
 
@@ -35,7 +38,11 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         findViews();
-//        new asyncquery().execute();
+        initializers();
+        onloginbotpressed();
+    }
+
+    private void onloginbotpressed() {
         loginbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,12 +51,20 @@ public class Login extends AppCompatActivity {
                 if (username.length() == 0 || password.length() == 0) {
                     CommonMethods.DisplayLongTOAST(getApplicationContext(), "No text found !!");
                 } else {
-
                     Loginwithcreds();
-
                 }
             }
         });
+    }
+
+    private void findViews() {
+        loginbot = findViewById(R.id.loginbot);
+        loginemail = findViewById(R.id.loginemail);
+        loginpass = findViewById(R.id.loginpass);
+    }
+
+    private void initializers() {
+        sharedPreferences = getSharedPreferences(Constants.LOGINPREFS, Context.MODE_PRIVATE);
     }
 
     private void Loginwithcreds() {
@@ -68,8 +83,10 @@ public class Login extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
-                            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                            if (userLoginResponse != null) {
+                                Sharethedateusingprefs(userLoginResponse.getToken());
+                                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                            }
                         }
                     }, Constants.delaybeforelogin);
                 } else {
@@ -86,9 +103,11 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    private void findViews() {
-        loginbot = findViewById(R.id.loginbot);
-        loginemail = findViewById(R.id.loginemail);
-        loginpass = findViewById(R.id.loginpass);
+    private void Sharethedateusingprefs(String token) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(Constants.TOKENUSINGPREFS, token);
+        editor.apply();
     }
+
+
 }

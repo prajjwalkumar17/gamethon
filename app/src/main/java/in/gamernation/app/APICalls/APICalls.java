@@ -2,7 +2,8 @@ package in.gamernation.app.APICalls;
 
 import java.io.IOException;
 
-import in.gamernation.app.Interfaces.LoginUserService;
+import in.gamernation.app.Interfaces.APILoginInterfaces;
+import in.gamernation.app.Interfaces.APIMyprofileDataFetchInterface;
 import in.gamernation.app.Utils.Constants;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -32,12 +33,14 @@ public class APICalls {
         return retrofit;
     }
 
-    public static LoginUserService getUserLogginService() {
-        LoginUserService loginUserService = getRetrofit().create(LoginUserService.class);
+    public static APILoginInterfaces getUserLogginService() {
+        APILoginInterfaces APILoginInterfaces = getRetrofit().create(APILoginInterfaces.class);
+        return APILoginInterfaces;
+    }
 
-        return loginUserService;
-
-
+    public static APIMyprofileDataFetchInterface getmyprofiledata() {
+        APIMyprofileDataFetchInterface apiMyprofileDataFetchInterface = getRetrofit().create(APIMyprofileDataFetchInterface.class);
+        return apiMyprofileDataFetchInterface;
     }
 
 
