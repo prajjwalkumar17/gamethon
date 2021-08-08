@@ -39,9 +39,9 @@
 25        <activity android:name="in.gamernation.app.Startup.Login" />
 25-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:9-60
 25-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:19-48
-26        <activity android:name="in.gamernation.app.Test.TestActivity" />
-26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:9-55
-26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:19-52
+26        <activity android:name="in.gamernation.app.ZTest.TestActivity" />
+26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:9-56
+26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:19-53
 27        <activity android:name="in.gamernation.app.Activities.HomeActivity" />
 27-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:9-61
 27-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:19-58

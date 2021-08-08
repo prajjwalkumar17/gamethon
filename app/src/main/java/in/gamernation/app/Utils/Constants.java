@@ -7,7 +7,7 @@ public class Constants {
     public static String TOKENUSINGPREFS = "token";
     public static String w3devScheme = "https";
     public static int delaybeforelogin = 1;
-    public static String myprofileroute = "https://gamernation.w3api.net/user/my_profile";
-    public static String loginroute = "https://gamernation.w3api.net/v1/login";
     public static String LOG = "###-----------LOG IS HEre BIG ONE-------------------###############";
+
+
 }

@@ -13,8 +13,8 @@ import androidx.appcompat.widget.AppCompatEditText;
 
 import in.gamernation.app.APICalls.APICalls;
 import in.gamernation.app.APIRequests.UserLoginRequest;
+import in.gamernation.app.APIResponses.UserLoginResponse;
 import in.gamernation.app.Activities.HomeActivity;
-import in.gamernation.app.ModalClasses.UserLoginResponse;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -27,9 +27,8 @@ public class Login extends AppCompatActivity {
 
     private static AppCompatEditText loginemail, loginpass;
     private static AppCompatButton loginbot;
-    private static String username, password, authtoken;
+    private static String username, password;
     SharedPreferences sharedPreferences;
-    //    private static final OkHttpClient.Builder client = new OkHttpClient.Builder();
     private static OkHttpClient httpClient = new OkHttpClient();
 
 
@@ -37,6 +36,10 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        allfunctions();
+    }
+
+    private void allfunctions() {
         findViews();
         initializers();
         onloginbotpressed();
@@ -77,21 +80,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onResponse(Call<UserLoginResponse> call, Response<UserLoginResponse> response) {
 
-                if (response.isSuccessful()) {
-                    CommonMethods.DisplayLongTOAST(getApplicationContext(), "Login sucessfull");
-                    UserLoginResponse userLoginResponse = response.body();//pass to get token
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (userLoginResponse != null) {
-                                Sharethedateusingprefs(userLoginResponse.getToken());
-                                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                            }
-                        }
-                    }, Constants.delaybeforelogin);
-                } else {
-                    CommonMethods.DisplayLongTOAST(getApplicationContext(), "Login Failed");
-                }
+                LoginSUcessfull(call, response);
 
             }
 
@@ -101,6 +90,32 @@ public class Login extends AppCompatActivity {
                 CommonMethods.DisplayLongTOAST(getApplicationContext(), "Login Failed  " + t);
             }
         });
+    }
+
+    private void LoginSUcessfull(Call<UserLoginResponse> call, Response<UserLoginResponse> response) {
+        if (response.isSuccessful()) {
+            CommonMethods.DisplayLongTOAST(getApplicationContext(), "Login sucessfull");
+            UserLoginResponse userLoginResponse = response.body();//pass to get token
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    saveuserToken(userLoginResponse);
+
+                }
+            }, Constants.delaybeforelogin);
+        } else {
+            CommonMethods.DisplayLongTOAST(getApplicationContext(), "Login Failed");
+        }
+    }
+
+    private void saveuserToken(UserLoginResponse userLoginResponse) {
+        if (userLoginResponse != null) {
+            Sharethedateusingprefs(userLoginResponse.getToken());
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        } else {
+            CommonMethods.DisplayLongTOAST(getApplicationContext(), "Error Occured in Login");
+
+        }
     }
 
     private void Sharethedateusingprefs(String token) {

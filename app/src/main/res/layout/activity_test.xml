@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".Test.TestActivity">
+    tools:context=".ZTest.TestActivity">
+
     <TextView
         android:id="@+id/httpcheck"
         android:layout_width="match_parent"

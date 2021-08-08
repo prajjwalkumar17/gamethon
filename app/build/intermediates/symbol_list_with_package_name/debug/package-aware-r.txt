@@ -1780,6 +1780,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id HomeRecycler
 id META
 id NO_DEBUG
 id SHIFT
@@ -1901,12 +1902,6 @@ id content
 id contentPanel
 id coordinator
 id cos
-id crd1
-id crd2
-id crd3
-id crd4
-id crd5
-id crd6
 id crown1img
 id custom
 id customPanel
@@ -1978,6 +1973,8 @@ id homeAsUp
 id homeFragment
 id home_nav
 id home_pager
+id homegamesimg
+id homegamesitemcontainer
 id hometool
 id honorRequest
 id httpcheck
@@ -2377,6 +2374,7 @@ layout fragment_tutorials
 layout fragment_wallet
 layout freefireclashsquadcard
 layout freefirenormcard
+layout homegamesitem
 layout hometoolbar
 layout image_frame
 layout img_slider

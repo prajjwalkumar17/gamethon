@@ -21,6 +21,8 @@ import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import in.gamernation.app.CommonInterfaces.botnavController;
+import in.gamernation.app.CommonInterfaces.navController;
 import in.gamernation.app.Fragments.contactusFragment;
 import in.gamernation.app.Fragments.home.homeFragment;
 import in.gamernation.app.Fragments.leaderboardFragment;
@@ -32,8 +34,6 @@ import in.gamernation.app.Fragments.referrals.referralsFragment;
 import in.gamernation.app.Fragments.settingsFragment;
 import in.gamernation.app.Fragments.tutorialsFragment;
 import in.gamernation.app.Fragments.walletFragment;
-import in.gamernation.app.Interfaces.botnavController;
-import in.gamernation.app.Interfaces.navController;
 import in.gamernation.app.R;
 
 public class HomeActivity extends AppCompatActivity implements navController.drawerControl,

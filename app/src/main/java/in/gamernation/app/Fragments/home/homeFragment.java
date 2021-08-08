@@ -22,7 +22,7 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.Timer;
 
 import in.gamernation.app.Activities.HomeActivity;
-import in.gamernation.app.Adapters.HomefragAdapter;
+import in.gamernation.app.Adapters.HomeActivitySliderAdapter;
 import in.gamernation.app.Adapters.SliderAdapter;
 import in.gamernation.app.R;
 
@@ -30,7 +30,7 @@ public class homeFragment extends Fragment {
     final int noofimganddots = 5;
     TabLayout tabLayout;
     ViewPager2 homepager;
-    HomefragAdapter homefragAdapter;
+    HomeActivitySliderAdapter homeActivitySliderAdapter;
     LinearLayout dotlayout;
     SliderAdapter sliderAdapter;
     ViewPager2 sliderpager;
@@ -61,8 +61,8 @@ public class homeFragment extends Fragment {
         tabLayout = root.findViewById(R.id.tab_layout);
         homepager = root.findViewById(R.id.home_pager);
         FragmentManager fragmentManager = getChildFragmentManager();
-        homefragAdapter = new HomefragAdapter(fragmentManager, getLifecycle());
-        homepager.setAdapter(homefragAdapter);
+        homeActivitySliderAdapter = new HomeActivitySliderAdapter(fragmentManager, getLifecycle());
+        homepager.setAdapter(homeActivitySliderAdapter);
         tabLayout.addTab(tabLayout.newTab().setText("GAMES"));
         tabLayout.addTab(tabLayout.newTab().setText("QUIZES"));
         managetabs(tabLayout);

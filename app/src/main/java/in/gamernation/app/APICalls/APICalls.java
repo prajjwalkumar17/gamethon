@@ -2,8 +2,9 @@ package in.gamernation.app.APICalls;
 
 import java.io.IOException;
 
-import in.gamernation.app.Interfaces.APILoginInterfaces;
-import in.gamernation.app.Interfaces.APIMyprofileDataFetchInterface;
+import in.gamernation.app.APInterfaces.APIHomedashboardgamesItem;
+import in.gamernation.app.APInterfaces.APILoginInterfaces;
+import in.gamernation.app.APInterfaces.APIMyprofileDataFetchInterface;
 import in.gamernation.app.Utils.Constants;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -41,6 +42,11 @@ public class APICalls {
     public static APIMyprofileDataFetchInterface getmyprofiledata() {
         APIMyprofileDataFetchInterface apiMyprofileDataFetchInterface = getRetrofit().create(APIMyprofileDataFetchInterface.class);
         return apiMyprofileDataFetchInterface;
+    }
+
+    public static APIHomedashboardgamesItem gethomedashboardsitem() {
+        APIHomedashboardgamesItem apiHomedashboardgamesItem = getRetrofit().create(APIHomedashboardgamesItem.class);
+        return apiHomedashboardgamesItem;
     }
 
 

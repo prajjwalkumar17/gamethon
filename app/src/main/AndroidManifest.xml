@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamernation">
         <activity android:name=".Startup.Login"></activity>
-        <activity android:name=".Test.TestActivity" />
+        <activity android:name=".ZTest.TestActivity" />
         <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Startup.Splash">
             <intent-filter>

@@ -22,8 +22,8 @@ import org.jetbrains.annotations.NotNull;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APIResponses.MyProfileResponse;
 import in.gamernation.app.Activities.HomeActivity;
-import in.gamernation.app.ModalClasses.MyProfileResponse;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -38,7 +38,6 @@ public class myprofileFragment extends Fragment {
 
 
     //TODO
-
 
     private static Context thiscontext;
     private static String usrtoken;
@@ -55,7 +54,6 @@ public class myprofileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_myprofile, container, false);
         allfunctions(root);
         return root;
@@ -166,8 +164,6 @@ public class myprofileFragment extends Fragment {
     }
 
     private void setMyProfileViews(MyProfileResponse myProfileResponse) {
-
-
         myprofile_name.setText(myProfileResponse.getName());
         myprofile_birthdate.setText(myProfileResponse.getDate_of_Birth());
         myprofile_email.setText(myProfileResponse.getEmail());
@@ -185,8 +181,6 @@ public class myprofileFragment extends Fragment {
             myprofile_phoneverifieidbot.setTextColor(Color.RED);
             myprofile_phoneverifieidbot.setText("Not-Verified");
         }
-
-
     }
 
 

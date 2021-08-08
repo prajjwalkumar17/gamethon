@@ -23,7 +23,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Gamernation" >
         <activity android:name="in.gamernation.app.Startup.Login" />
-        <activity android:name="in.gamernation.app.Test.TestActivity" />
+        <activity android:name="in.gamernation.app.ZTest.TestActivity" />
         <activity android:name="in.gamernation.app.Activities.HomeActivity" />
         <activity android:name="in.gamernation.app.Startup.Splash" >
             <intent-filter>
