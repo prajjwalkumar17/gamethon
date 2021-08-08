@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/master_primary"
     tools:openDrawer="start"
+    android:background="@color/master_primary"
     tools:context=".Activities.HomeActivity">
 
     <include
@@ -38,13 +38,19 @@
             android:id="@+id/completebotnav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/final_master"
             android:layout_gravity="bottom"
-            android:background="@color/master_primary">
+            android:backgroundTint="@color/final_master">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/botnav"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/final_master"
+                android:backgroundTint="@color/final_master"
+                app:itemIconTint="@color/final_secondary"
+                app:itemRippleColor="@color/final_secondary"
+                app:itemTextColor="@color/final_secondary"
                 android:layout_marginEnd="16dp"
                 app:menu="@menu/botnav_menu" />
         </com.google.android.material.bottomappbar.BottomAppBar>
@@ -55,6 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:headerLayout="@layout/nav_header"
+        android:backgroundTint="@color/final_master"
         android:scrollbarStyle="insideOverlay"
         android:layout_gravity="start"
         android:scrollbarAlwaysDrawVerticalTrack="true"

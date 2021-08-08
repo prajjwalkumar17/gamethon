@@ -4,7 +4,7 @@
     android:id="@+id/tempclick"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/final_master"
     android:orientation="vertical"
     tools:context=".Fragments.home.freefirenormFragment">
 
@@ -24,7 +24,7 @@
             android:layout_marginEnd="20dp"
             android:layout_weight="1"
             android:background="@drawable/normalcurvedbot"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/final_secondary"
             android:text="Solo" />
 
 
@@ -35,7 +35,7 @@
             android:layout_marginEnd="20dp"
             android:layout_weight="1"
             android:background="@drawable/normalcurvedbot"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/final_secondary"
             android:text="Duo" />
 
 
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/normalcurvedbot"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/final_secondary"
             android:text="Squad" />
 
 

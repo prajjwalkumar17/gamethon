@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
+    android:background="@color/final_master"
     tools:context=".Fragments.leaderboardFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/final_secondary"
         android:background="@drawable/cardbotcurved"
         android:elevation="2dp">
 
@@ -20,7 +21,7 @@
             android:layout_height="20dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/backbot"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView5"
             app:layout_constraintHorizontal_bias=".1"
@@ -283,7 +284,7 @@
             android:layout_weight="1"
             android:background="@drawable/outlinedbot"
             android:text="LUDO"
-            android:textColor="@color/master_primary"
+            android:textColor="@color/final_secondary"
             android:textSize="10sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -292,7 +293,7 @@
             android:layout_weight="1"
             android:background="@drawable/outlinedbot"
             android:text="FREE FIRE"
-            android:textColor="@color/master_primary"
+            android:textColor="@color/final_secondary"
             android:textSize="10sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -301,7 +302,7 @@
             android:layout_weight="1"
             android:background="@drawable/outlinedbot"
             android:text="CLASHSQUAD"
-            android:textColor="@color/master_primary"
+            android:textColor="@color/final_secondary"
             android:textSize="10sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -310,7 +311,7 @@
             android:layout_weight="1"
             android:background="@drawable/outlinedbot"
             android:text="QUIZ"
-            android:textColor="@color/master_primary"
+            android:textColor="@color/final_secondary"
             android:textSize="10sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -319,7 +320,7 @@
             android:layout_weight="1"
             android:background="@drawable/outlinedbot"
             android:text="FAN BATTLE"
-            android:textColor="@color/master_primary"
+            android:textColor="@color/final_secondary"
             android:textSize="10sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -329,7 +330,7 @@
             android:layout_weight="1"
             android:background="@drawable/outlinedbot"
             android:text="BGMI"
-            android:textColor="@color/master_primary"
+            android:textColor="@color/final_secondary"
             android:textSize="10sp" />
 
 

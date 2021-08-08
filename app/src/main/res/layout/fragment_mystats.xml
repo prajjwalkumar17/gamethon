@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/master_pale"
+    android:background="@color/final_master"
     tools:context=".Fragments.mystatsFragment">
 
     <include
@@ -49,8 +49,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_weight="1"
+                android:textColor="@color/white"
                 android:text="Nandan Keshav"
-                android:textColor="@color/master_primary" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/myprofile_username"
@@ -88,6 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/stats_card"
+            android:backgroundTint="@color/final_secondary"
             android:gravity="center"
             android:orientation="vertical"
             android:paddingTop="5dp"
@@ -194,6 +196,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/stats_card"
+            android:backgroundTint="@color/final_secondary"
             android:gravity="center"
             android:orientation="vertical"
             android:paddingTop="5dp"
@@ -204,7 +207,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ludo"
+                android:text="Quiz"
                 android:textColor="@color/white" />
         </LinearLayout>
 
@@ -301,6 +304,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/final_secondary"
             android:background="@drawable/stats_card"
             android:gravity="center"
             android:orientation="vertical"
@@ -312,7 +316,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ludo"
+                android:text="Gaming"
                 android:textColor="@color/white" />
         </LinearLayout>
 

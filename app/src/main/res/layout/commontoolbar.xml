@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/toolbar"
+        android:backgroundTint="@color/final_secondary"
         android:orientation="horizontal"
         android:padding="20dp">
 
@@ -23,7 +24,7 @@
                 android:layout_height="50dp"
                 android:padding="2dp"
                 android:src="@drawable/backbot"
-                app:tint="@color/master_primary"
+                app:tint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
@@ -38,7 +39,7 @@
                 android:padding="2dp"
                 android:text="Activity Programme"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

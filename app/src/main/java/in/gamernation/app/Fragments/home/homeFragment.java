@@ -94,6 +94,8 @@ public class homeFragment extends Fragment {
 
         dot = new TextView[noofimganddots];
         imageofslider(sliderimg, dot);
+
+
     }
 
     private void imageofslider(Drawable[] sliderimgs, TextView[] dot) {

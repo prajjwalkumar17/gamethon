@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:background="@drawable/curvedradiusblackbg"
-    android:backgroundTint="@color/black"
+    android:backgroundTint="#686363"
     android:orientation="horizontal"
     android:weightSum="7">
 

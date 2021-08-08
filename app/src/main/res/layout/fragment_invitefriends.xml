@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/referaaltool"
-        android:background="@color/yellow_pale"
+        android:background="@color/final_secondary"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -35,7 +35,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/baloo_bhaina"
             android:text="Refer friends and\nEarn 5 coins\nfor each referral"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <LinearLayout
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/referaalheader"
-        android:background="@color/black"
+        android:background="@color/final_master"
         android:gravity="center"
         android:orientation="vertical"
         android:weightSum="12">
@@ -59,7 +59,7 @@
             android:id="@+id/referralreferraallcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="Pk7765qw"
             android:textColor="@color/white"
             android:textSize="24sp" />
@@ -71,7 +71,7 @@
             android:layout_marginTop="80dp"
             android:layout_weight="2"
             android:background="@drawable/referaalbot"
-            android:backgroundTint="#28602B"
+            android:backgroundTint="@color/final_secondary"
             android:drawableStart="@drawable/referallicon"
             android:padding="10dp"
             android:text="INVITE VIA WHATSAPP"
@@ -84,7 +84,7 @@
             android:layout_marginTop="20dp"
             android:layout_weight="2"
             android:background="@drawable/referaalbot"
-            android:backgroundTint="@color/red"
+            android:backgroundTint="@color/final_secondary"
             android:drawableStart="@drawable/share"
             android:padding="10dp"
             android:text="MORE SHARING OPTIONS"
@@ -110,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:background="@drawable/normalcurvedbot"
-                android:backgroundTint="@color/red"
+                android:backgroundTint="#5A5555"
                 android:text="VIEW" />
 
 

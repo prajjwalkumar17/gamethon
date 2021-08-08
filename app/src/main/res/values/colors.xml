@@ -5,6 +5,11 @@
     <color name="master_pale">#239BF8</color>
     <color name="master_secondary">#FFDE03</color>
 
+
+    <color name="final_master">#070325</color>
+    <color name="final_secondary">#9E13B2</color>
+    <color name="final_itemcolor">#C4C4C4</color>
+
     <color name="red">#FF0303</color>
     <color name="pale_red">#EC2828</color>
     <color name="purple_500">#FF6200EE</color>

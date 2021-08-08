@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/final_master"
     tools:context=".Fragments.referrals.referralsFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,14 +13,14 @@
         android:layout_height="400dp"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:background="@color/red">
+        android:background="@color/final_secondary">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginStart="20dp"
             android:text="add all the text here"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -31,6 +31,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
+        android:backgroundTint="@color/final_secondary"
         android:background="@drawable/botforward"
         android:drawableEnd="@drawable/forwardbot"
         android:text="NEXT" />
