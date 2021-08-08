@@ -24,12 +24,12 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_img_slider.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/img_slider.xml"
-    },
-    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_backbot.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/backbot.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_img_slider.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/img_slider.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_leaderboard.xml.flat",
@@ -48,12 +48,12 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/leaderboarditems.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_referrals.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_referrals.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_freefirenormcard.xml.flat",
@@ -64,12 +64,12 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_homegames.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/ic_launcher_background.xml"
-    },
-    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable-v24_crd3.webp.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable-v24/crd3.webp"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/font_baloo_bhaina.xml.flat",
@@ -136,12 +136,12 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/ic_baseline_add_24.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_linearback.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/linearback.xml"
-    },
-    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_pubgnormopened.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_pubgnormopened.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_linearback.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/linearback.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",

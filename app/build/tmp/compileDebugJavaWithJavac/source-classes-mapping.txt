@@ -13,8 +13,10 @@ in/gamernation/app/Fragments/home/freefireclashsquadFragment.java
  in.gamernation.app.Fragments.home.freefireclashsquadFragment
 in/gamernation/app/APICalls/APICalls.java
  in.gamernation.app.APICalls.APICalls
-in/gamernation/app/Fragments/home/freefireclashsquadopenedFragment.java
- in.gamernation.app.Fragments.home.freefireclashsquadopenedFragment
+in/gamernation/app/Fragments/home/homegamesFragment.java
+ in.gamernation.app.Fragments.home.homegamesFragment
+ in.gamernation.app.Fragments.home.homegamesFragment$1
+ in.gamernation.app.Fragments.home.homegamesFragment$1$1
 in/gamernation/app/Fragments/settingsFragment.java
  in.gamernation.app.Fragments.settingsFragment
 in/gamernation/app/Fragments/home/fanbattleFragment.java
@@ -60,10 +62,10 @@ in/gamernation/app/Fragments/home/ludokingFragment.java
  in.gamernation.app.Fragments.home.ludokingFragment
 in/gamernation/app/Utils/Constants.java
  in.gamernation.app.Utils.Constants
-in/gamernation/app/Fragments/myleaguesFragment.java
- in.gamernation.app.Fragments.myleaguesFragment
-in/gamernation/app/APIRequests/UserLoginRequest.java
- in.gamernation.app.APIRequests.UserLoginRequest
+in/gamernation/app/APInterfaces/APIHomedashboardgamesItem.java
+ in.gamernation.app.APInterfaces.APIHomedashboardgamesItem
+in/gamernation/app/Adapters/HomeActivitySliderAdapter.java
+ in.gamernation.app.Adapters.HomeActivitySliderAdapter
 in/gamernation/app/Fragments/walletFragment.java
  in.gamernation.app.Fragments.walletFragment
 in/gamernation/app/Fragments/contactusFragment.java
@@ -75,8 +77,8 @@ in/gamernation/app/APIResponses/UserLoginResponse.java
  in.gamernation.app.APIResponses.UserLoginResponse
 in/gamernation/app/Fragments/home/pubgnormFragment.java
  in.gamernation.app.Fragments.home.pubgnormFragment
-in/gamernation/app/APInterfaces/APILoginInterfaces.java
- in.gamernation.app.APInterfaces.APILoginInterfaces
+in/gamernation/app/APIResponses/HomegamesitemResponse.java
+ in.gamernation.app.APIResponses.HomegamesitemResponse
 in/gamernation/app/Fragments/home/pubgnormopenedFragment.java
  in.gamernation.app.Fragments.home.pubgnormopenedFragment
 in/gamernation/app/Fragments/referrals/referralsFragment.java
@@ -91,20 +93,18 @@ in/gamernation/app/Fragments/tutorialsFragment.java
 in/gamernation/app/CommonInterfaces/botnavController.java
  in.gamernation.app.CommonInterfaces.botnavController
  in.gamernation.app.CommonInterfaces.botnavController$botVisibilityController
-in/gamernation/app/APInterfaces/APIHomedashboardgamesItem.java
- in.gamernation.app.APInterfaces.APIHomedashboardgamesItem
+in/gamernation/app/APIResponses/GamesResponse.java
+ in.gamernation.app.APIResponses.GamesResponse
 in/gamernation/app/Fragments/home/homeFragment.java
  in.gamernation.app.Fragments.home.homeFragment
  in.gamernation.app.Fragments.home.homeFragment$1
  in.gamernation.app.Fragments.home.homeFragment$2
  in.gamernation.app.Fragments.home.homeFragment$3
-in/gamernation/app/APIResponses/GamesResponse.java
- in.gamernation.app.APIResponses.GamesResponse
-in/gamernation/app/APIResponses/HomegamesitemResponse.java
- in.gamernation.app.APIResponses.HomegamesitemResponse
-in/gamernation/app/Adapters/HomeActivitySliderAdapter.java
- in.gamernation.app.Adapters.HomeActivitySliderAdapter
-in/gamernation/app/Fragments/home/homegamesFragment.java
- in.gamernation.app.Fragments.home.homegamesFragment
- in.gamernation.app.Fragments.home.homegamesFragment$1
- in.gamernation.app.Fragments.home.homegamesFragment$1$1
+in/gamernation/app/APInterfaces/APILoginInterfaces.java
+ in.gamernation.app.APInterfaces.APILoginInterfaces
+in/gamernation/app/Fragments/myleaguesFragment.java
+ in.gamernation.app.Fragments.myleaguesFragment
+in/gamernation/app/Fragments/home/freefireclashsquadopenedFragment.java
+ in.gamernation.app.Fragments.home.freefireclashsquadopenedFragment
+in/gamernation/app/APIRequests/UserLoginRequest.java
+ in.gamernation.app.APIRequests.UserLoginRequest
