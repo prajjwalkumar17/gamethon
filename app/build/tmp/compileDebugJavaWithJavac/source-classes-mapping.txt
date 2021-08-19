@@ -70,9 +70,8 @@ in/gamernation/app/Fragments/playedquizzesFragment.java
  in.gamernation.app.Fragments.playedquizzesFragment
 in/gamernation/app/Fragments/referrals/invitefriendsFragment.java
  in.gamernation.app.Fragments.referrals.invitefriendsFragment
-in/gamernation/app/Adapters/HomeFragGamesItemAdapter.java
- in.gamernation.app.Adapters.HomeFragGamesItemAdapter
- in.gamernation.app.Adapters.HomeFragGamesItemAdapter$Myadapter
+in/gamernation/app/Fragments/tutorialsFragment.java
+ in.gamernation.app.Fragments.tutorialsFragment
 in/gamernation/app/Fragments/home/freefirenormopenedFragment.java
  in.gamernation.app.Fragments.home.freefirenormopenedFragment
 in/gamernation/app/Fragments/home/homequizesFragment.java
@@ -100,12 +99,16 @@ in/gamernation/app/Fragments/home/pubgnormopenedFragment.java
 in/gamernation/app/Fragments/referrals/referralsFragment.java
  in.gamernation.app.Fragments.referrals.referralsFragment
  in.gamernation.app.Fragments.referrals.referralsFragment$1
-in/gamernation/app/Fragments/tutorialsFragment.java
- in.gamernation.app.Fragments.tutorialsFragment
+in/gamernation/app/Decoration/DecorationHomeRecyclerGamesItem.java
+ in.gamernation.app.Decoration.DecorationHomeRecyclerGamesItem
 in/gamernation/app/Adapters/HomeActivitySliderAdapter.java
  in.gamernation.app.Adapters.HomeActivitySliderAdapter
 in/gamernation/app/Fragments/home/homegamesFragment.java
  in.gamernation.app.Fragments.home.homegamesFragment
  in.gamernation.app.Fragments.home.homegamesFragment$1
-in/gamernation/app/Decoration/DecorationHomeRecyclerGamesItem.java
- in.gamernation.app.Decoration.DecorationHomeRecyclerGamesItem
+in/gamernation/app/Adapters/HomeFragGamesItemAdapter.java
+ in.gamernation.app.Adapters.HomeFragGamesItemAdapter
+ in.gamernation.app.Adapters.HomeFragGamesItemAdapter$Myadapter
+ in.gamernation.app.Adapters.HomeFragGamesItemAdapter$Myadapter$1
+in/gamernation/app/RecyclerClickInterfaces/ClicksHomeFraggames.java
+ in.gamernation.app.RecyclerClickInterfaces.ClicksHomeFraggames

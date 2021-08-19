@@ -18,18 +18,22 @@ import java.util.List;
 
 import in.gamernation.app.APIResponses.GamesResponse;
 import in.gamernation.app.R;
+import in.gamernation.app.RecyclerClickInterfaces.ClicksHomeFraggames;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
 
 public class HomeFragGamesItemAdapter extends RecyclerView.Adapter<HomeFragGamesItemAdapter.Myadapter> {
 
     private List<GamesResponse> list;
+    String category;
+    private ClicksHomeFraggames clicksHomeFraggames;
 
     public HomeFragGamesItemAdapter() {
     }
 
-    public HomeFragGamesItemAdapter(List<GamesResponse> list) {
+    public HomeFragGamesItemAdapter(List<GamesResponse> list, ClicksHomeFraggames clicksHomeFraggames) {
         this.list = list;
+        this.clicksHomeFraggames = clicksHomeFraggames;
     }
 
     @NonNull
@@ -44,7 +48,7 @@ public class HomeFragGamesItemAdapter extends RecyclerView.Adapter<HomeFragGames
     public void onBindViewHolder(@NonNull @NotNull Myadapter holder, int position) {
         ObjectId gameid = list.get(position).getId();
         String name = list.get(position).getName();
-        String category = list.get(position).getCategory();
+        category = list.get(position).getCategory();
         String profilepic = list.get(position).getThumb();
 
         holder.homegamesname.setText(name);
@@ -67,7 +71,7 @@ public class HomeFragGamesItemAdapter extends RecyclerView.Adapter<HomeFragGames
         return list.size();
     }
 
-    public static class Myadapter extends RecyclerView.ViewHolder {
+    public class Myadapter extends RecyclerView.ViewHolder {
         ImageView homegamesimg;
         TextView homegamesname;
 
@@ -75,6 +79,14 @@ public class HomeFragGamesItemAdapter extends RecyclerView.Adapter<HomeFragGames
             super(itemView);
             homegamesimg = itemView.findViewById(R.id.homegamesimg);
             homegamesname = itemView.findViewById(R.id.homegamesname);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    clicksHomeFraggames.onItemClick(getAdapterPosition());
+                }
+            });
         }
+
+
     }
 }

@@ -22,18 +22,20 @@ import in.gamernation.app.APIResponses.HomegamesitemResponse;
 import in.gamernation.app.Adapters.HomeFragGamesItemAdapter;
 import in.gamernation.app.Decoration.DecorationHomeRecyclerGamesItem;
 import in.gamernation.app.R;
+import in.gamernation.app.RecyclerClickInterfaces.ClicksHomeFraggames;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class homegamesFragment extends Fragment {
+public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
     private static SharedPreferences sharedPreferences;
     RecyclerView homerecycler;
     private Context thiscontext;
     private String usrtoken;
     private HomeFragGamesItemAdapter adapter;
+    private List<GamesResponse> list;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,9 +75,9 @@ public class homegamesFragment extends Fragment {
 //                 gamesrecievedoperation(response);
                     CommonMethods.DisplayLongTOAST(thiscontext, "games received sucesssfully");
                     assert response.body() != null;
-                    List<GamesResponse> list = response.body().getGamesResponse();
+                    list = response.body().getGamesResponse();
                     assert list != null;
-                    adapter = new HomeFragGamesItemAdapter(list);
+                    adapter = new HomeFragGamesItemAdapter(list, homegamesFragment.this);
                     homerecycler.setAdapter(adapter);
 
 
@@ -87,6 +89,13 @@ public class homegamesFragment extends Fragment {
                 CommonMethods.LOGthesite(Constants.LOG, "game fetch Failed  " + t);
             }
         });
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        CommonMethods.DisplayLongTOAST(thiscontext, list.get(position).getName());
+        CommonMethods.DisplayLongTOAST(thiscontext, list.get(position).getCategory());
+
     }
 
 //    private void gamesrecievedoperation(Response<HomegamesitemResponse> response) {
