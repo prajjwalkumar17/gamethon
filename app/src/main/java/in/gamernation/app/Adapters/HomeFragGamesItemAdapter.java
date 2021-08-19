@@ -51,10 +51,10 @@ public class HomeFragGamesItemAdapter extends RecyclerView.Adapter<HomeFragGames
 
         Picasso.get()
                 .load(profilepic)
-                .resize(86, 86)
+                .fit()
                 .placeholder(R.drawable.placeholder)
                 .error(R.drawable.dperror)
-                .centerCrop()
+                .centerInside()
                 .into(holder.homegamesimg);
 
         CommonMethods.LOGthesite(Constants.LOG, gameid.toString() + name + category + profilepic);

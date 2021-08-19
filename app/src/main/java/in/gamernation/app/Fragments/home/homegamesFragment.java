@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -20,6 +20,7 @@ import in.gamernation.app.APICalls.APICalls;
 import in.gamernation.app.APIResponses.GamesResponse;
 import in.gamernation.app.APIResponses.HomegamesitemResponse;
 import in.gamernation.app.Adapters.HomeFragGamesItemAdapter;
+import in.gamernation.app.Decoration.DecorationHomeRecyclerGamesItem;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -45,8 +46,9 @@ public class homegamesFragment extends Fragment {
 
     private void initviews(View root) {
         homerecycler = root.findViewById(R.id.HomeRecycler);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        homerecycler.setLayoutManager(linearLayoutManager);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 2, GridLayoutManager.VERTICAL, false);
+        homerecycler.setLayoutManager(gridLayoutManager);
+        homerecycler.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_2));
     }
 
     private void initmethods() {

@@ -173,7 +173,8 @@ public class myprofileFragment extends Fragment {
         myprofile_phoneno.setText(myProfileResponse.getPhone_no());
         Picasso.get()
                 .load(myProfileResponse.getProfile_Picture())
-                .resize(86, 86)
+                .placeholder(R.drawable.placeholder)
+                .fit()
                 .error(R.drawable.dperror)
                 .centerCrop()
                 .into(myprofile_dp);

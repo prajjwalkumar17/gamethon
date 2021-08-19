@@ -1533,6 +1533,9 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen dp_15
+dimen dp_2
+dimen dp_20
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -2001,6 +2004,7 @@ drawable pager2
 drawable pager3
 drawable pager4
 drawable pager5
+drawable placeholder
 drawable preference_list_divider_material
 drawable progress_circle
 drawable redoutlinedbot
