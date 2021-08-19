@@ -3,19 +3,23 @@ package in.gamernation.app.Fragments.home;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APIResponses.GamesResponse;
 import in.gamernation.app.APIResponses.HomegamesitemResponse;
+import in.gamernation.app.Adapters.HomeFragGamesItemAdapter;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -25,9 +29,10 @@ import retrofit2.Response;
 
 public class homegamesFragment extends Fragment {
     private static SharedPreferences sharedPreferences;
-    RecyclerView HomeRecycler;
+    RecyclerView homerecycler;
     private Context thiscontext;
     private String usrtoken;
+    private HomeFragGamesItemAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,12 +40,13 @@ public class homegamesFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_homegames, container, false);
         initviews(root);
         initmethods();
-
         return root;
     }
 
     private void initviews(View root) {
-        HomeRecycler = root.findViewById(R.id.HomeRecycler);
+        homerecycler = root.findViewById(R.id.HomeRecycler);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        homerecycler.setLayoutManager(linearLayoutManager);
     }
 
     private void initmethods() {
@@ -60,20 +66,16 @@ public class homegamesFragment extends Fragment {
         Call<HomegamesitemResponse> responseCall = APICalls.gethomedashboardsitem().FetchHomegamesItem("bearer " + usrtoken);
         responseCall.enqueue(new Callback<HomegamesitemResponse>() {
             @Override
-            public void onResponse(Call<HomegamesitemResponse> call, Response<HomegamesitemResponse> response) {
+            public void onResponse(@NotNull Call<HomegamesitemResponse> call, @NotNull Response<HomegamesitemResponse> response) {
                 if (response.isSuccessful()) {
+//                 gamesrecievedoperation(response);
                     CommonMethods.DisplayLongTOAST(thiscontext, "games received sucesssfully");
-                    HomegamesitemResponse homegamesitemResponse = response.body();
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (homegamesitemResponse != null) {
-                                Showgames(homegamesitemResponse);
-                            } else {
-                                CommonMethods.DisplayLongTOAST(thiscontext, "games failed");
-                            }
-                        }
-                    }, Constants.delaybeforelogin);
+                    assert response.body() != null;
+                    List<GamesResponse> list = response.body().getGamesResponse();
+                    assert list != null;
+                    adapter = new HomeFragGamesItemAdapter(list);
+                    homerecycler.setAdapter(adapter);
+
 
                 }
             }
@@ -83,20 +85,40 @@ public class homegamesFragment extends Fragment {
                 CommonMethods.LOGthesite(Constants.LOG, "game fetch Failed  " + t);
             }
         });
-
-
     }
 
-    private void Showgames(HomegamesitemResponse homegamesitemResponse) {
-        CommonMethods.LOGthesite(Constants.LOG, String.valueOf(homegamesitemResponse.getCount()));
-        CommonMethods.LOGthesite(Constants.LOG, String.valueOf(homegamesitemResponse.getGamesResponse().get(0).getId()));
-        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getName());
-        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getThumb());
-        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getCategory());
-
-    }
-
-
+//    private void gamesrecievedoperation(Response<HomegamesitemResponse> response) {
+//        CommonMethods.DisplayLongTOAST(thiscontext, "games received sucesssfully");
+////        HomegamesitemResponse homegamesitemResponse = response.body();
+//        List<GamesResponse> list=response.body().getGamesResponse();
+//        assert list != null;
+//
+//        adapter=new HomeFragGamesItemAdapter(list);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                if (list != null) {
+////                    Showgames(list);
+//                    CommonMethods.LOGthesite(Constants.LOG,list.get(0).getName());
+//
+//                } else {
+//                    CommonMethods.DisplayLongTOAST(thiscontext, "games failed");
+//                }
+//            }
+//        }, Constants.delaybeforelogin);
+//    }
+//    private void configrecyclerview(RecyclerView recyclerView,HomeFragGamesItemAdapter adapter){
+//        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//    }
+//    private void Showgames(GamesResponse homegamesitemResponse) {
+//        CommonMethods.LOGthesite(Constants.LOG, String.valueOf(homegamesitemResponse.getCount()));
+//        CommonMethods.LOGthesite(Constants.LOG, String.valueOf(homegamesitemResponse.getGamesResponse().get(0).getId()));
+//        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getName());
+//        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getThumb());
+//        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getCategory());
+//
+//    }
 //        crd1 = root.findViewById(R.id.crd1);
 //        crd2 = root.findViewById(R.id.crd2);
 //        crd3 = root.findViewById(R.id.crd3);

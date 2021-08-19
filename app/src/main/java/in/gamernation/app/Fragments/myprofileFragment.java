@@ -45,7 +45,8 @@ public class myprofileFragment extends Fragment {
     private static ImageView myprofile_sharerefferalcodebot;
     private static TextView commontoolbar_fragname;
     private static FloatingActionButton myprofile_updatebiocredsbot;
-    private static TextView myprofile_name, myprofile_username, myprofile_email, myprofile_place, myprofile_phoneno, myprofile_password, myprofile_birthdate, myprofile_panno, myprofile_refferalcode;
+    private static TextView myprofile_name, myprofile_username, myprofile_email, myprofile_place,
+            myprofile_phoneno, myprofile_password, myprofile_birthdate, myprofile_panno, myprofile_refferalcode;
     private static TextView myprofile_phoneverifieidbot, myprofile_passwordchangebot, myprofile_updatebirthdatebot, myprofile_updatepanno;
     private static ProgressBar progressBar2;
     private static CircleImageView myprofile_dp;
@@ -173,6 +174,7 @@ public class myprofileFragment extends Fragment {
         Picasso.get()
                 .load(myProfileResponse.getProfile_Picture())
                 .resize(86, 86)
+                .error(R.drawable.dperror)
                 .centerCrop()
                 .into(myprofile_dp);
         if (myProfileResponse.getEmail_Verified()) {

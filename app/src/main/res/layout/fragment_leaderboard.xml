@@ -375,18 +375,6 @@
         android:layout_marginEnd="10dp"
         android:orientation="vertical">
 
-        <!--            TODO-->
-        <!--            change to recycler view to make the views dynamic.-->
-
-
-        <!--            <androidx.recyclerview.widget.RecyclerView-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent"-->
-        <!--                android:layout_marginStart="20dp"-->
-        <!--                android:layout_marginTop="5dp"-->
-        <!--                android:layout_marginEnd="5dp"-->
-        <!--                android:layout_marginBottom="2dp" />-->
-
         <include layout="@layout/leaderboarditems" />
 
         <include layout="@layout/leaderboarditems" />
@@ -421,9 +409,4 @@
     </LinearLayout>
 </ScrollView>
     </LinearLayout>
-
-
 </RelativeLayout>
-
-
-    <!--TODO-->
