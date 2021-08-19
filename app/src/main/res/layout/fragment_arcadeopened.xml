@@ -6,7 +6,7 @@
     android:background="@color/pale_red"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".Fragments.home.freefirenormopenedFragment">
+    tools:context=".Fragments.home.arcadeopenedFragment">
 
     <ImageView
         android:layout_width="match_parent"

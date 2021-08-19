@@ -2701,12 +2701,9 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
+layout fragment_arcadegame
+layout fragment_arcadeopened
 layout fragment_contactus
-layout fragment_fanbattle
-layout fragment_freefireclashsquad
-layout fragment_freefireclashsquadopened
-layout fragment_freefirenorm
-layout fragment_freefirenormopened
 layout fragment_home
 layout fragment_homegames
 layout fragment_homequizes
@@ -2717,8 +2714,6 @@ layout fragment_myleagues
 layout fragment_myprofile
 layout fragment_mystats
 layout fragment_playedquizzes
-layout fragment_pubgnorm
-layout fragment_pubgnormopened
 layout fragment_referrals
 layout fragment_tutorials
 layout fragment_wallet

@@ -11,14 +11,14 @@ import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 
 
-public class freefirenormopenedFragment extends Fragment {
+public class arcadeopenedFragment extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_freefirenormopened, container, false);
+        View root = inflater.inflate(R.layout.fragment_arcadeopened, container, false);
         ((HomeActivity) getActivity()).setToolbarInvisible();
         ((HomeActivity) getActivity()).setDrawerLocked();
         ((HomeActivity) getActivity()).setbotInvisible();

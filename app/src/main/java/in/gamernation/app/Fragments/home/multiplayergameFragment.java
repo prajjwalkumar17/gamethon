@@ -10,14 +10,14 @@ import androidx.fragment.app.Fragment;
 import in.gamernation.app.R;
 
 
-public class ludokingFragment extends Fragment {
+public class multiplayergameFragment extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_ludoking, container, false);
-        return root;
+        // Inflate t he layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_multiplayergame, container, false);
+        return view;
     }
 }

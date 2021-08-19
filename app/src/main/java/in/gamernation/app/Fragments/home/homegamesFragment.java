@@ -72,15 +72,12 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
             @Override
             public void onResponse(@NotNull Call<HomegamesitemResponse> call, @NotNull Response<HomegamesitemResponse> response) {
                 if (response.isSuccessful()) {
-//                 gamesrecievedoperation(response);
                     CommonMethods.DisplayLongTOAST(thiscontext, "games received sucesssfully");
                     assert response.body() != null;
                     list = response.body().getGamesResponse();
                     assert list != null;
                     adapter = new HomeFragGamesItemAdapter(list, homegamesFragment.this);
                     homerecycler.setAdapter(adapter);
-
-
                 }
             }
 
@@ -95,12 +92,21 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
     public void onItemClick(int position) {
         CommonMethods.DisplayLongTOAST(thiscontext, list.get(position).getName());
         CommonMethods.DisplayLongTOAST(thiscontext, list.get(position).getCategory());
+        if (list.get(position).getCategory().equals(Constants.Gamecategoryarcade)) {
+            getActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragmentContainerView, new arcadegameFragment()).addToBackStack(null).commit();
+        } else if (list.get(position).getCategory().equals(Constants.Gamecategorymultiplayer)) {
+            getActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragmentContainerView, new multiplayergameFragment()).addToBackStack(null).commit();
+        } else if (list.get(position).getCategory().equals(Constants.Gamecategorycommingsoon)) {
+            CommonMethods.DisplayLongTOAST(thiscontext, Constants.Comingsoonmsg);
+        }
 
     }
 
 //    private void gamesrecievedoperation(Response<HomegamesitemResponse> response) {
 //        CommonMethods.DisplayLongTOAST(thiscontext, "games received sucesssfully");
-////        HomegamesitemResponse homegamesitemResponse = response.body();
+//       HomegamesitemResponse homegamesitemResponse = response.body();
 //        List<GamesResponse> list=response.body().getGamesResponse();
 //        assert list != null;
 //
@@ -109,7 +115,7 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
 //            @Override
 //            public void run() {
 //                if (list != null) {
-////                    Showgames(list);
+//                    Showgames(list);
 //                    CommonMethods.LOGthesite(Constants.LOG,list.get(0).getName());
 //
 //                } else {
@@ -149,8 +155,6 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
 //        crd2.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                getActivity().getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.fragmentContainerView, new fanbattleFragment()).addToBackStack(null).commit();
 //
 //            }
 //        });
@@ -183,4 +187,5 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
 //        });
 //
 //    }
+
 }

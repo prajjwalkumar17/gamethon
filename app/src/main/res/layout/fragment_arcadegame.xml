@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/final_master"
     android:orientation="vertical"
-    tools:context=".Fragments.home.freefirenormFragment">
+    tools:context=".Fragments.home.arcadegameFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
