@@ -109,7 +109,6 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
         SharedPreferences sharedPreferences = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(Constants.ARCADEGAMEIDPREF, list.get(position).getId());
-        CommonMethods.LOGthesite(Constants.LOG, list.get(position).getId());
         editor.apply();
     }
 

@@ -2005,6 +2005,7 @@ drawable pager3
 drawable pager4
 drawable pager5
 drawable placeholder
+drawable placeholder2
 drawable preference_list_divider_material
 drawable progress_circle
 drawable redoutlinedbot
@@ -2135,6 +2136,18 @@ id arcadeitemtotalentries
 id arcadeitemtotalentrieshead
 id arcadeitemtotalentriesimg
 id arcadeitemviewbot
+id arcadeopenedbonuscoins
+id arcadeopeneddate
+id arcadeopenedentryfee
+id arcadeopenedfullprizepool
+id arcadeopenedgamemode
+id arcadeopenedgamename
+id arcadeopenedkillcoins
+id arcadeopenedmap
+id arcadeopenedprizecoins
+id arcadeopenedprizepoolbreakup
+id arcadeopenedtopimg
+id arcadeopenedtotalparticipants
 id arcadesolobot
 id arcadesquadbot
 id asConfigured

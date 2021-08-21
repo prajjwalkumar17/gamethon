@@ -37,6 +37,8 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
     private Context thiscontext;
     private String gamemode;
     private List<ArcadeResponse.League> leagueList;
+    private String id, thumb, name, entrycoins, prizescoins, killcoins, filled, totalparticipants, map, startdate, league_pic;
+    private Integer bonus;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,7 +72,6 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
         usrtoken = sharedPreferences.getString(Constants.TOKENUSINGPREFS, "No data found!!!");
         SharedPreferences sharedPreferences1 = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
         arcadegameID = sharedPreferences1.getString(Constants.ARCADEGAMEIDPREF, "No data found!!!");
-        CommonMethods.LOGthesite(Constants.LOG, arcadegameID);
         fetchallarcadegames("SOLO");
         changedatasetonclicks();
     }
@@ -130,31 +131,40 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
 
     @Override
     public void onviewItemClick(int position) {
-        String id = leagueList.get(position).getId();
-        String thumb = leagueList.get(position).getThumb();
-        String name = leagueList.get(position).getName();
-        String entrycoins = leagueList.get(position).getEntry().toString();
-        String prizescoins = leagueList.get(position).getPrizes().toString();
-        String killcoins = leagueList.get(position).getKillCoins().toString();
-        String filled = leagueList.get(position).getFilled().toString();
-        String totalparticipants = leagueList.get(position).getTotalParticipant().toString();
-        String map = leagueList.get(position).getMap();
-        String startdate = leagueList.get(position).getStartDate();
+        id = leagueList.get(position).getId();
+        thumb = leagueList.get(position).getThumb();
+        name = leagueList.get(position).getName();
+        entrycoins = leagueList.get(position).getEntry().toString();
+        prizescoins = leagueList.get(position).getPrizes().toString();
+        killcoins = leagueList.get(position).getKillCoins().toString();
+        filled = leagueList.get(position).getFilled().toString();
+        totalparticipants = leagueList.get(position).getTotalParticipant().toString();
+        map = leagueList.get(position).getMap();
+        startdate = leagueList.get(position).getStartDate();
+        league_pic = leagueList.get(position).getLeague_pic();
+        bonus = leagueList.get(position).getBonus();
+        savedatatosharedpref();
 
-        SharedPreferences sharedPreferences = thiscontext.getSharedPreferences(Constants.ARCADEGAMEOPENEDPREF, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(Constants.arcadeopenedid, id);
-        editor.putString(Constants.arcadeopenedthumb, thumb);
-        editor.putString(Constants.arcadeopenedname, name);
-        editor.putString(Constants.arcadeopenedentrycoins, entrycoins);
-        editor.putString(Constants.arcadeopenedprizescoins, prizescoins);
-        editor.putString(Constants.arcadeopenedkillcoins, killcoins);
-        editor.putString(Constants.arcadeopenedfilled, filled);
-        editor.putString(Constants.arcadeopenedtotalparticipants, totalparticipants);
-        editor.putString(Constants.arcadeopenedmap, map);
-        editor.putString(Constants.arcadeopenedstartdate, startdate);
-        editor.apply();
         getActivity().getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragmentContainerView, new arcadeopenedFragment()).addToBackStack(null).commit();
+    }
+
+    private void savedatatosharedpref() {
+
+        SharedPreferences preferences = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(Constants.arcadeopenedid, id).apply();
+        editor.putString(Constants.arcadeopenedthumb, thumb).apply();
+        editor.putString(Constants.arcadeopenedname, name).apply();
+        editor.putString(Constants.arcadeopenedentrycoins, entrycoins).apply();
+        editor.putString(Constants.arcadeopenedprizescoins, prizescoins).apply();
+        editor.putString(Constants.arcadeopenedkillcoins, killcoins).apply();
+        editor.putString(Constants.arcadeopenedfilled, filled).apply();
+        editor.putString(Constants.arcadeopenedtotalparticipants, totalparticipants).apply();
+        editor.putString(Constants.arcadeopenedmap, map).apply();
+        editor.putString(Constants.arcadeopenedstartdate, startdate).apply();
+        editor.putString(Constants.arcadeopenedleaguepic, league_pic).apply();
+        editor.putString(Constants.arcadeopenedbonus, bonus.toString()).apply();
+
     }
 }

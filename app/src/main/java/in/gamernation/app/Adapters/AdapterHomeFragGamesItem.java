@@ -18,8 +18,6 @@ import java.util.List;
 import in.gamernation.app.APIResponses.GamesResponse;
 import in.gamernation.app.R;
 import in.gamernation.app.RecyclerClickInterfaces.ClicksHomeFraggames;
-import in.gamernation.app.Utils.CommonMethods;
-import in.gamernation.app.Utils.Constants;
 
 public class AdapterHomeFragGamesItem extends RecyclerView.Adapter<AdapterHomeFragGamesItem.Myadapter> {
 
@@ -61,7 +59,6 @@ public class AdapterHomeFragGamesItem extends RecyclerView.Adapter<AdapterHomeFr
                 .into(holder.homegamesimg);
 
 
-        CommonMethods.LOGthesite(Constants.LOG, gameid);
     }
 
 

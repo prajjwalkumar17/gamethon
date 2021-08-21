@@ -44,6 +44,9 @@ public class ArcadeResponse {
         @SerializedName("thumb")
         @Expose
         private String thumb;
+        @SerializedName("league_pic")
+        @Expose
+        private String league_pic;
         @SerializedName("name")
         @Expose
         private String name;
@@ -65,6 +68,9 @@ public class ArcadeResponse {
         @SerializedName("filled")
         @Expose
         private Integer filled;
+        @SerializedName("bonus")
+        @Expose
+        private Integer bonus;
         @SerializedName("map")
         @Expose
         private String map;
@@ -72,9 +78,10 @@ public class ArcadeResponse {
         @Expose
         private List<PrizePool> prizePool = null;
 
-        public League(String id, String thumb, String name, Integer entry, Integer prizes, Integer killCoins, String startDate, Integer totalParticipant, Integer filled, String map, List<PrizePool> prizePool) {
+        public League(String id, String thumb, String league_pic, String name, Integer entry, Integer prizes, Integer killCoins, String startDate, Integer totalParticipant, Integer filled, Integer bonus, String map, List<PrizePool> prizePool) {
             this.id = id;
             this.thumb = thumb;
+            this.league_pic = league_pic;
             this.name = name;
             this.entry = entry;
             this.prizes = prizes;
@@ -82,8 +89,25 @@ public class ArcadeResponse {
             this.startDate = startDate;
             this.totalParticipant = totalParticipant;
             this.filled = filled;
+            this.bonus = bonus;
             this.map = map;
             this.prizePool = prizePool;
+        }
+
+        public Integer getBonus() {
+            return bonus;
+        }
+
+        public void setBonus(Integer bonus) {
+            this.bonus = bonus;
+        }
+
+        public String getLeague_pic() {
+            return league_pic;
+        }
+
+        public void setLeague_pic(String league_pic) {
+            this.league_pic = league_pic;
         }
 
         public Integer getFilled() {

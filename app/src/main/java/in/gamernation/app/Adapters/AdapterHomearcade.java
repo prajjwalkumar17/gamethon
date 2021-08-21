@@ -23,6 +23,7 @@ import in.gamernation.app.RecyclerClickInterfaces.ClickArcadeGameItem;
 public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.recyclerlayout> {
     private List<ArcadeResponse.League> leagueList;
     private String id, thumb, name, map, startdate, entrycoins, prizescoins, filled, killcoins, totalparticipants;
+    private Integer bonuscoins;
     private ClickArcadeGameItem arcadeGameItemclick;
 
     public AdapterHomearcade() {
@@ -57,10 +58,10 @@ public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.re
 
         Picasso.get()
                 .load(thumb)
-                .fit()
                 .placeholder(R.drawable.placeholder)
+                .fit()
                 .error(R.drawable.dperror)
-                .centerInside()
+                .centerCrop()
                 .into(holder.arcadeitemgameimg);
 
 
@@ -77,6 +78,7 @@ public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.re
         totalparticipants = leagueList.get(position).getTotalParticipant().toString();
         map = leagueList.get(position).getMap();
         startdate = leagueList.get(position).getStartDate();
+        bonuscoins = leagueList.get(position).getBonus();
     }
 
     @NonNull

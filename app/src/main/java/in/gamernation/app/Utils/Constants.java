@@ -7,19 +7,19 @@ public class Constants {
     public static String AuthBearer = "bearer ";
     public static String ARCADEGAMEPREF = "arcadegame";
     public static String ARCADEGAMEIDPREF = "arcadegameID";
-    public static String ARCADEGAMEOPENEDPREF = "arcadegame";
 
-
-    public static String arcadeopenedid = "";
-    public static String arcadeopenedthumb = "";
-    public static String arcadeopenedname = "";
-    public static String arcadeopenedentrycoins = "";
-    public static String arcadeopenedprizescoins = "";
-    public static String arcadeopenedkillcoins = "";
-    public static String arcadeopenedfilled = "";
-    public static String arcadeopenedtotalparticipants = "";
-    public static String arcadeopenedmap = "";
-    public static String arcadeopenedstartdate = "";
+    public static String arcadeopenedid = "dummydata";
+    public static String arcadeopenedthumb = "dummydata1";
+    public static String arcadeopenedname = "dummydata2";
+    public static String arcadeopenedentrycoins = "dummydata3";
+    public static String arcadeopenedprizescoins = "dummydata4";
+    public static String arcadeopenedkillcoins = "dummydata5";
+    public static String arcadeopenedfilled = "dummydata6";
+    public static String arcadeopenedtotalparticipants = "dummydata7";
+    public static String arcadeopenedmap = "dummydata8";
+    public static String arcadeopenedstartdate = "dummydata9";
+    public static String arcadeopenedleaguepic = "dummydata22";
+    public static String arcadeopenedbonus = "bonus";
 
 
     public static String w3devbaseurl = "https://gamernation.w3api.net/";

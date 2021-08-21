@@ -2004,6 +2004,7 @@ int drawable pager3 0x7f0800b9
 int drawable pager4 0x7f0800ba
 int drawable pager5 0x7f0800bb
 int drawable placeholder 0x7f0800bc
+int drawable placeholder2 0x7f0800cc
 int drawable preference_list_divider_material 0x7f0800bd
 int drawable progress_circle 0x7f0800be
 int drawable redoutlinedbot 0x7f0800bf
@@ -2134,6 +2135,18 @@ int id arcadeitemtotalentries 0x7f0a006e
 int id arcadeitemtotalentrieshead 0x7f0a006f
 int id arcadeitemtotalentriesimg 0x7f0a0070
 int id arcadeitemviewbot 0x7f0a0071
+int id arcadeopenedbonuscoins 0x7f0a0266
+int id arcadeopeneddate 0x7f0a0267
+int id arcadeopenedentryfee 0x7f0a0268
+int id arcadeopenedfullprizepool 0x7f0a0269
+int id arcadeopenedgamemode 0x7f0a026a
+int id arcadeopenedgamename 0x7f0a026b
+int id arcadeopenedkillcoins 0x7f0a026c
+int id arcadeopenedmap 0x7f0a026d
+int id arcadeopenedprizecoins 0x7f0a026e
+int id arcadeopenedprizepoolbreakup 0x7f0a026f
+int id arcadeopenedtopimg 0x7f0a0270
+int id arcadeopenedtotalparticipants 0x7f0a0271
 int id arcadesolobot 0x7f0a0072
 int id arcadesquadbot 0x7f0a0073
 int id asConfigured 0x7f0a0074
