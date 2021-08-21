@@ -1,4 +1,4 @@
-#Sat Aug 21 11:54:36 IST 2021
+#Sat Aug 21 17:11:44 IST 2021
 path.4=12/classes.dex
 path.3=11/classes.dex
 path.2=1/classes.dex
@@ -8,6 +8,7 @@ renamed.8=classes9.dex
 path.8=4/classes.dex
 path.7=3/classes.dex
 path.6=2/classes.dex
+renamed.12=classes13.dex
 path.5=13/classes.dex
 renamed.11=classes12.dex
 renamed.10=classes11.dex
@@ -18,6 +19,7 @@ base.2=/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/
 base.1=/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.0=/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 renamed.3=classes4.dex
+path.12=classes2.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 path.10=7/classes.dex
@@ -33,5 +35,6 @@ renamed.5=classes6.dex
 base.6=/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
 renamed.4=classes5.dex
 base.5=/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
+base.12=/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 base.11=/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
 base.10=/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex

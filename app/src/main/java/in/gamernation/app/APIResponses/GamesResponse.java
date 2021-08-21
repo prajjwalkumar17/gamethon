@@ -3,13 +3,11 @@ package in.gamernation.app.APIResponses;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import org.bson.types.ObjectId;
-
 public class GamesResponse {
     //TODO changing the object id to normal is giving null pointer error and crashing the app and this initialisation is generating a new object  id instead of stored one in backend
-    @SerializedName("id")
+    @SerializedName("_id")
     @Expose
-    private ObjectId id = new ObjectId();
+    private String id;
     @SerializedName("name")
     @Expose
     private String name;
@@ -20,7 +18,7 @@ public class GamesResponse {
     @Expose
     private String category;
 
-    public GamesResponse(ObjectId id, String name, String thumb, String category) {
+    public GamesResponse(String id, String name, String thumb, String category) {
         this.id = id;
         this.name = name;
         this.thumb = thumb;
@@ -30,11 +28,11 @@ public class GamesResponse {
     public GamesResponse() {
     }
 
-    public ObjectId getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 

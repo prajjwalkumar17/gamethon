@@ -1,5 +1,7 @@
 package in.gamernation.app.APICalls;
 
+import com.facebook.stetho.okhttp3.StethoInterceptor;
+
 import java.io.IOException;
 
 import in.gamernation.app.APInterfaces.APIArcaderoomsInterface;
@@ -25,7 +27,7 @@ public class APICalls {
     private static Retrofit getRetrofit() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().addNetworkInterceptor(new StethoInterceptor()).addInterceptor(interceptor).build();
         Retrofit retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(Constants.w3devbaseurl)

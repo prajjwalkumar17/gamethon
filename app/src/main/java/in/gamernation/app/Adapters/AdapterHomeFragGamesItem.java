@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
-import org.bson.types.ObjectId;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -19,6 +18,8 @@ import java.util.List;
 import in.gamernation.app.APIResponses.GamesResponse;
 import in.gamernation.app.R;
 import in.gamernation.app.RecyclerClickInterfaces.ClicksHomeFraggames;
+import in.gamernation.app.Utils.CommonMethods;
+import in.gamernation.app.Utils.Constants;
 
 public class AdapterHomeFragGamesItem extends RecyclerView.Adapter<AdapterHomeFragGamesItem.Myadapter> {
 
@@ -44,7 +45,7 @@ public class AdapterHomeFragGamesItem extends RecyclerView.Adapter<AdapterHomeFr
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull Myadapter holder, int position) {
-        ObjectId gameid = list.get(position).getId();
+        String gameid = list.get(position).getId();
         String name = list.get(position).getName();
         category = list.get(position).getCategory();
         String profilepic = list.get(position).getThumb();
@@ -59,9 +60,8 @@ public class AdapterHomeFragGamesItem extends RecyclerView.Adapter<AdapterHomeFr
                 .centerInside()
                 .into(holder.homegamesimg);
 
-//        CommonMethods.LOGthesite(Constants.LOG, gameid.toString() + name + category + profilepic);
-//        CommonMethods.DisplayLongTOAST(gameid.toString() +name +category +profilepic);
-//        CommonMethods.LOGthesite(Constants.LOG,String.valueOf(gameid));
+
+        CommonMethods.LOGthesite(Constants.LOG, gameid);
     }
 
 

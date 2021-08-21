@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -19,6 +20,8 @@ import java.util.List;
 import in.gamernation.app.APICalls.APICalls;
 import in.gamernation.app.APIResponses.ArcadeResponse;
 import in.gamernation.app.Activities.HomeActivity;
+import in.gamernation.app.Adapters.AdapterHomearcade;
+import in.gamernation.app.Decoration.DecorationHomeRecyclerGamesItem;
 import in.gamernation.app.R;
 import in.gamernation.app.RecyclerClickInterfaces.ClickArcadeGameItem;
 import in.gamernation.app.Utils.CommonMethods;
@@ -33,6 +36,7 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
     private AppCompatButton arcadesolobot, arcadeduobot, arcadesquadbot;
     private Context thiscontext;
     private String gamemode;
+    private List<ArcadeResponse.League> leagueList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,10 +56,13 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
     }
 
     private void initviews(View root) {
-        arcadegamerecyclerview = root.findViewById(R.id.arcadegamerecyclerview);
         arcadesolobot = root.findViewById(R.id.arcadesolobot);
         arcadeduobot = root.findViewById(R.id.arcadeduobot);
         arcadesquadbot = root.findViewById(R.id.arcadesquadbot);
+        arcadegamerecyclerview = root.findViewById(R.id.arcadegamerecyclerview);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 1, GridLayoutManager.VERTICAL, false);
+        arcadegamerecyclerview.setLayoutManager(gridLayoutManager);
+        arcadegamerecyclerview.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_2));
     }
 
     private void allmethods() {
@@ -64,12 +71,11 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
         SharedPreferences sharedPreferences1 = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
         arcadegameID = sharedPreferences1.getString(Constants.ARCADEGAMEIDPREF, "No data found!!!");
         CommonMethods.LOGthesite(Constants.LOG, arcadegameID);
-        fetchallarcadegames();
+        fetchallarcadegames("SOLO");
+        changedatasetonclicks();
     }
 
-    private void fetchallarcadegames() {
-        gamemode = "SOLO";
-        changedatasetonclicks();
+    private void fetchallarcadegames(String gamemode) {
         Call<ArcadeResponse> responseCall = APICalls.getarcadegamerooms().FetchArcadeRooms(arcadegameID, Constants.arcadefiltergame + gamemode, Constants.AuthBearer + usrtoken);
         responseCall.enqueue(new Callback<ArcadeResponse>() {
             @Override
@@ -77,14 +83,15 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
                 if (response.isSuccessful()) {
                     CommonMethods.DisplayLongTOAST(thiscontext, "Arcade rooms received sucesssfully");
                     assert response.body() != null;
-                    List<ArcadeResponse.League> leagueList = response.body().getLeagues();
-
-//                  CommonMethods.LOGthesite(Constants.LOG,String.valueOf(response.body().getLeagues().get(0).getMap()));
+                    leagueList = response.body().getLeagues();
+                    AdapterHomearcade adapterHomearcade = new AdapterHomearcade(leagueList, arcadegameFragment.this);
+                    arcadegamerecyclerview.setAdapter(adapterHomearcade);
                 }
             }
 
             @Override
             public void onFailure(@NotNull Call<ArcadeResponse> call, Throwable t) {
+                CommonMethods.DisplayLongTOAST(thiscontext, "Error occured in fetch" + t.getMessage());
 
             }
         });
@@ -95,18 +102,21 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
             @Override
             public void onClick(View view) {
                 gamemode = "SOLO";
+                fetchallarcadegames(gamemode);
             }
         });
         arcadeduobot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gamemode = "DUO";
+                fetchallarcadegames(gamemode);
             }
         });
         arcadesquadbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gamemode = "SQUAD";
+                fetchallarcadegames(gamemode);
             }
         });
         return gamemode;
@@ -119,7 +129,8 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
     }
 
     @Override
-    public void onItemClick(int position) {
-
+    public void onviewItemClick(int position) {
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentContainerView, new arcadeopenedFragment()).addToBackStack(null).commit();
     }
 }

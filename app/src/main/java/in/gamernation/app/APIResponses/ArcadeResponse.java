@@ -62,6 +62,9 @@ public class ArcadeResponse {
         @SerializedName("total_participant")
         @Expose
         private Integer totalParticipant;
+        @SerializedName("filled")
+        @Expose
+        private Integer filled;
         @SerializedName("map")
         @Expose
         private String map;
@@ -69,7 +72,7 @@ public class ArcadeResponse {
         @Expose
         private List<PrizePool> prizePool = null;
 
-        public League(String id, String thumb, String name, Integer entry, Integer prizes, Integer killCoins, String startDate, Integer totalParticipant, String map, List<PrizePool> prizePool) {
+        public League(String id, String thumb, String name, Integer entry, Integer prizes, Integer killCoins, String startDate, Integer totalParticipant, Integer filled, String map, List<PrizePool> prizePool) {
             this.id = id;
             this.thumb = thumb;
             this.name = name;
@@ -78,8 +81,17 @@ public class ArcadeResponse {
             this.killCoins = killCoins;
             this.startDate = startDate;
             this.totalParticipant = totalParticipant;
+            this.filled = filled;
             this.map = map;
             this.prizePool = prizePool;
+        }
+
+        public Integer getFilled() {
+            return filled;
+        }
+
+        public void setFilled(Integer filled) {
+            this.filled = filled;
         }
 
         public String getId() {

@@ -10,16 +10,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 import in.gamernation.app.APIResponses.ArcadeResponse;
 import in.gamernation.app.R;
+import in.gamernation.app.RecyclerClickInterfaces.ClickArcadeGameItem;
 
 public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.recyclerlayout> {
     private List<ArcadeResponse.League> leagueList;
+    private String id, thumb, name, map, startdate, entrycoins, prizescoins, filled, killcoins, totalparticipants;
+    private ClickArcadeGameItem arcadeGameItemclick;
 
+    public AdapterHomearcade() {
+    }
+
+    public AdapterHomearcade(List<ArcadeResponse.League> leagueList, ClickArcadeGameItem arcadeGameItemclick) {
+        this.leagueList = leagueList;
+        this.arcadeGameItemclick = arcadeGameItemclick;
+    }
 
     @NotNull
     @Override
@@ -31,24 +43,72 @@ public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.re
     @NonNull
     @Override
     public void onBindViewHolder(@NonNull @NotNull recyclerlayout holder, int position) {
+        extractresourcesfromlist(position);
+        holder.arcadeitemgameheading.setText(name);
+        holder.arcadeitementrycoins.setText(entrycoins);
+        holder.arcadeitemprizescoins.setText(prizescoins);
+        holder.arcadeitemkillpointcoins.setText(killcoins);
+        holder.arcadeitemprogressparticipantsappliedalready.setText(filled);
+        holder.arcadeitemprogresstotalparticipants.setText(totalparticipants);
+        holder.arcadeitemtotalentries.setText(totalparticipants);
+        holder.arcadeitemmap.setText(map);
+        holder.arcadeitemstartdate.setText(startdate);
+        holder.arcadeitemprogressbar.setProgress(leagueList.get(position).getFilled() / leagueList.get(position).getTotalParticipant());
 
+        Picasso.get()
+                .load(thumb)
+                .fit()
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.dperror)
+                .centerInside()
+                .into(holder.arcadeitemgameimg);
+
+
+    }
+
+    private void extractresourcesfromlist(int position) {
+        id = leagueList.get(position).getId();
+        thumb = leagueList.get(position).getThumb();
+        name = leagueList.get(position).getName();
+        entrycoins = leagueList.get(position).getEntry().toString();
+        prizescoins = leagueList.get(position).getPrizes().toString();
+        killcoins = leagueList.get(position).getKillCoins().toString();
+        filled = leagueList.get(position).getFilled().toString();
+        totalparticipants = leagueList.get(position).getTotalParticipant().toString();
+        map = leagueList.get(position).getMap();
+        startdate = leagueList.get(position).getStartDate();
     }
 
     @NonNull
     @Override
     public int getItemCount() {
-        return 0;
+        return leagueList.size();
     }
 
     public class recyclerlayout extends RecyclerView.ViewHolder {
-        TextView arcadeitemgameheading, arcadeitementryhead, arcadeitementrycoins, arcadeitemprizeshead, arcadeitemprizescoins, arcadeitemkillpointhead, arcadeitemkillpointcoins, arcadeitemprogresstext,
-                arcadeitemprogressparticipantsappliedalready, arcadeitemprogresstotalparticipants, arcadeitemstartdatehead, arcadeitemstartdate, arcadeitemtotalentrieshead, arcadeitemtotalentries,
+        TextView arcadeitemgameheading, arcadeitementryhead, arcadeitementrycoins, arcadeitemprizeshead, arcadeitemprizescoins, arcadeitemkillpointhead,
+                arcadeitemkillpointcoins, arcadeitemprogresstext,
+                arcadeitemprogressparticipantsappliedalready, arcadeitemprogresstotalparticipants, arcadeitemstartdatehead, arcadeitemstartdate,
+                arcadeitemtotalentrieshead, arcadeitemtotalentries,
                 arcadeitemmaphead, arcadeitemmap, arcadeitemviewbot;
-        ImageView arcadeitemgameimg, arcadeitementrypic, arcadeitemprizesimg, arcadeitemkillpointimg, arcadeitemstartdateimg, arcadeitemtotalentriesimg, arcadeitemmapimg;
+        ImageView arcadeitemgameimg, arcadeitementrypic, arcadeitemprizesimg, arcadeitemkillpointimg, arcadeitemstartdateimg, arcadeitemtotalentriesimg,
+                arcadeitemmapimg;
         ProgressBar arcadeitemprogressbar;
 
         public recyclerlayout(@NonNull @NotNull View itemView) {
             super(itemView);
+            initviews(itemView);
+            arcadeitemviewbot.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    arcadeGameItemclick.onviewItemClick(getAdapterPosition());
+                }
+            });
+
+
+        }
+
+        private void initviews(View itemView) {
             arcadeitemgameheading = itemView.findViewById(R.id.arcadeitemgameheading);
             arcadeitementryhead = itemView.findViewById(R.id.arcadeitementryhead);
             arcadeitementrycoins = itemView.findViewById(R.id.arcadeitementrycoins);
@@ -76,9 +136,9 @@ public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.re
             arcadeitemmapimg = itemView.findViewById(R.id.arcadeitemmapimg);
 
             arcadeitemprogressbar = itemView.findViewById(R.id.arcadeitemprogressbar);
-
-
         }
     }
 
+
 }
+
