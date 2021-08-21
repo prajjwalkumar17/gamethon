@@ -19,7 +19,7 @@ import java.util.List;
 import in.gamernation.app.APICalls.APICalls;
 import in.gamernation.app.APIResponses.GamesResponse;
 import in.gamernation.app.APIResponses.HomegamesitemResponse;
-import in.gamernation.app.Adapters.HomeFragGamesItemAdapter;
+import in.gamernation.app.Adapters.AdapterHomeFragGamesItem;
 import in.gamernation.app.Decoration.DecorationHomeRecyclerGamesItem;
 import in.gamernation.app.R;
 import in.gamernation.app.RecyclerClickInterfaces.ClicksHomeFraggames;
@@ -34,7 +34,7 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
     RecyclerView homerecycler;
     private Context thiscontext;
     private String usrtoken;
-    private HomeFragGamesItemAdapter adapter;
+    private AdapterHomeFragGamesItem adapter;
     private List<GamesResponse> list;
 
     @Override
@@ -67,7 +67,7 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
 
     private void fetchgameitems() {
 
-        Call<HomegamesitemResponse> responseCall = APICalls.gethomedashboardsitem().FetchHomegamesItem("bearer " + usrtoken);
+        Call<HomegamesitemResponse> responseCall = APICalls.gethomedashboardsitem().FetchHomegamesItem(Constants.AuthBearer + usrtoken);
         responseCall.enqueue(new Callback<HomegamesitemResponse>() {
             @Override
             public void onResponse(@NotNull Call<HomegamesitemResponse> call, @NotNull Response<HomegamesitemResponse> response) {
@@ -76,8 +76,9 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
                     assert response.body() != null;
                     list = response.body().getGamesResponse();
                     assert list != null;
-                    adapter = new HomeFragGamesItemAdapter(list, homegamesFragment.this);
+                    adapter = new AdapterHomeFragGamesItem(list, homegamesFragment.this);
                     homerecycler.setAdapter(adapter);
+
                 }
             }
 
@@ -88,10 +89,10 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
         });
     }
 
+
     @Override
     public void onItemClick(int position) {
-        CommonMethods.DisplayLongTOAST(thiscontext, list.get(position).getName());
-        CommonMethods.DisplayLongTOAST(thiscontext, list.get(position).getCategory());
+        savedatatosharedprefforarcade(list, position);
         if (list.get(position).getCategory().equals(Constants.Gamecategoryarcade)) {
             getActivity().getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragmentContainerView, new arcadegameFragment()).addToBackStack(null).commit();
@@ -104,88 +105,95 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
 
     }
 
-//    private void gamesrecievedoperation(Response<HomegamesitemResponse> response) {
-//        CommonMethods.DisplayLongTOAST(thiscontext, "games received sucesssfully");
-//       HomegamesitemResponse homegamesitemResponse = response.body();
-//        List<GamesResponse> list=response.body().getGamesResponse();
-//        assert list != null;
-//
-//        adapter=new HomeFragGamesItemAdapter(list);
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                if (list != null) {
-//                    Showgames(list);
-//                    CommonMethods.LOGthesite(Constants.LOG,list.get(0).getName());
-//
-//                } else {
-//                    CommonMethods.DisplayLongTOAST(thiscontext, "games failed");
-//                }
-//            }
-//        }, Constants.delaybeforelogin);
-//    }
-//    private void configrecyclerview(RecyclerView recyclerView,HomeFragGamesItemAdapter adapter){
-//        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
-//        recyclerView.setLayoutManager(linearLayoutManager);
-//    }
-//    private void Showgames(GamesResponse homegamesitemResponse) {
-//        CommonMethods.LOGthesite(Constants.LOG, String.valueOf(homegamesitemResponse.getCount()));
-//        CommonMethods.LOGthesite(Constants.LOG, String.valueOf(homegamesitemResponse.getGamesResponse().get(0).getId()));
-//        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getName());
-//        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getThumb());
-//        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getCategory());
-//
-//    }
-//        crd1 = root.findViewById(R.id.crd1);
-//        crd2 = root.findViewById(R.id.crd2);
-//        crd3 = root.findViewById(R.id.crd3);
-//        crd4 = root.findViewById(R.id.crd4);
-//        crd5 = root.findViewById(R.id.crd5);
-//        crd6 = root.findViewById(R.id.crd6);
-//        clicklistnersoncards();
-//    private void clicklistnersoncards() {
-//        crd1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                getActivity().getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.fragmentContainerView, new freefirenormFragment()).addToBackStack(null).commit();
-//
-//            }
-//        });
-//        crd2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
-//        crd3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                getActivity().getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.fragmentContainerView, new ludokingFragment()).addToBackStack(null).commit();
-//            }
-//        });
-//        crd4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                getActivity().getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.fragmentContainerView, new freefireclashsquadFragment()).addToBackStack(null).commit();
-//            }
-//        });
-//        crd5.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                getActivity().getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.fragmentContainerView, new pubgnormFragment()).addToBackStack(null).commit();
-//            }
-//        });
-//        crd6.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
-//
-//    }
+    private void savedatatosharedprefforarcade(List<GamesResponse> list, int position) {
+        SharedPreferences sharedPreferences = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(Constants.ARCADEGAMEIDPREF, list.get(position).getId().toString());
+        editor.apply();
+    }
+
+/*    private void gamesrecievedoperation(Response<HomegamesitemResponse> response) {
+        CommonMethods.DisplayLongTOAST(thiscontext, "games received sucesssfully");
+       HomegamesitemResponse homegamesitemResponse = response.body();
+        List<GamesResponse> list=response.body().getGamesResponse();
+        assert list != null;
+
+        adapter=new HomeFragGamesItemAdapter(list);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (list != null) {
+                    Showgames(list);
+                    CommonMethods.LOGthesite(Constants.LOG,list.get(0).getName());
+
+                } else {
+                    CommonMethods.DisplayLongTOAST(thiscontext, "games failed");
+                }
+            }
+        }, Constants.delaybeforelogin);
+    }
+    private void configrecyclerview(RecyclerView recyclerView,HomeFragGamesItemAdapter adapter){
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+    }
+    private void Showgames(GamesResponse homegamesitemResponse) {
+        CommonMethods.LOGthesite(Constants.LOG, String.valueOf(homegamesitemResponse.getCount()));
+        CommonMethods.LOGthesite(Constants.LOG, String.valueOf(homegamesitemResponse.getGamesResponse().get(0).getId()));
+        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getName());
+        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getThumb());
+        CommonMethods.LOGthesite(Constants.LOG, homegamesitemResponse.getGamesResponse().get(0).getCategory());
+
+    }
+        crd1 = root.findViewById(R.id.crd1);
+        crd2 = root.findViewById(R.id.crd2);
+        crd3 = root.findViewById(R.id.crd3);
+        crd4 = root.findViewById(R.id.crd4);
+        crd5 = root.findViewById(R.id.crd5);
+        crd6 = root.findViewById(R.id.crd6);
+        clicklistnersoncards();
+    private void clicklistnersoncards() {
+        crd1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new freefirenormFragment()).addToBackStack(null).commit();
+
+            }
+        });
+        crd2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        crd3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new ludokingFragment()).addToBackStack(null).commit();
+            }
+        });
+        crd4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new freefireclashsquadFragment()).addToBackStack(null).commit();
+            }
+        });
+        crd5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new pubgnormFragment()).addToBackStack(null).commit();
+            }
+        });
+        crd6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+    }*/
 
 }

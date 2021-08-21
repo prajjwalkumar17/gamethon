@@ -22,17 +22,17 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.Timer;
 
 import in.gamernation.app.Activities.HomeActivity;
-import in.gamernation.app.Adapters.HomeActivitySliderAdapter;
-import in.gamernation.app.Adapters.SliderAdapter;
+import in.gamernation.app.Adapters.AdapterHomeActivitySlider;
+import in.gamernation.app.Adapters.AdapterHomeSlider;
 import in.gamernation.app.R;
 
 public class homeFragment extends Fragment {
     final int noofimganddots = 5;
     TabLayout tabLayout;
     ViewPager2 homepager;
-    HomeActivitySliderAdapter homeActivitySliderAdapter;
+    AdapterHomeActivitySlider adapterHomeActivitySlider;
     LinearLayout dotlayout;
-    SliderAdapter sliderAdapter;
+    AdapterHomeSlider adapterHomeSlider;
     ViewPager2 sliderpager;
     Drawable[] sliderimg;
     TextView[] dot;
@@ -61,8 +61,8 @@ public class homeFragment extends Fragment {
         tabLayout = root.findViewById(R.id.tab_layout);
         homepager = root.findViewById(R.id.home_pager);
         FragmentManager fragmentManager = getChildFragmentManager();
-        homeActivitySliderAdapter = new HomeActivitySliderAdapter(fragmentManager, getLifecycle());
-        homepager.setAdapter(homeActivitySliderAdapter);
+        adapterHomeActivitySlider = new AdapterHomeActivitySlider(fragmentManager, getLifecycle());
+        homepager.setAdapter(adapterHomeActivitySlider);
         tabLayout.addTab(tabLayout.newTab().setText("GAMES"));
         tabLayout.addTab(tabLayout.newTab().setText("QUIZES"));
         managetabs(tabLayout);
@@ -106,8 +106,8 @@ public class homeFragment extends Fragment {
         sliderimgs[3] = getResources().getDrawable(R.drawable.pager4);
         sliderimgs[4] = getResources().getDrawable(R.drawable.pager5);
 
-        sliderAdapter = new SliderAdapter(sliderimgs);
-        sliderpager.setAdapter(sliderAdapter);
+        adapterHomeSlider = new AdapterHomeSlider(sliderimgs);
+        sliderpager.setAdapter(adapterHomeSlider);
         dotindicator(dot);
         sliderpager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override

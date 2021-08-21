@@ -8,7 +8,7 @@ import org.bson.types.ObjectId;
 public class GamesResponse {
     @SerializedName("id")
     @Expose
-    private ObjectId id = ObjectId.get();
+    private ObjectId id;
     @SerializedName("name")
     @Expose
     private String name;

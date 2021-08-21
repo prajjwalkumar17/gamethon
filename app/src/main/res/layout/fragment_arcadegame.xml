@@ -7,7 +7,6 @@
     android:background="@color/final_master"
     android:orientation="vertical"
     tools:context=".Fragments.home.arcadegameFragment">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,10 +14,8 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="8">
-
-
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/freefirepubgsolobot"
+            android:id="@+id/arcadesolobot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
@@ -26,10 +23,8 @@
             android:background="@drawable/normalcurvedbot"
             android:backgroundTint="@color/final_secondary"
             android:text="Solo" />
-
-
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/freefirepubgduobot"
+            android:id="@+id/arcadeduobot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
@@ -37,96 +32,27 @@
             android:background="@drawable/normalcurvedbot"
             android:backgroundTint="@color/final_secondary"
             android:text="Duo" />
-
-
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/freefirepubgsquadbot"
+            android:id="@+id/arcadesquadbot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/normalcurvedbot"
             android:backgroundTint="@color/final_secondary"
             android:text="Squad" />
-
-
     </LinearLayout>
 
-    <!--    TODO-->
-    <!--    uncomment  the recycler view to make the views dynamic-->
-    <!--    again and delete else in this layout delete the scroll view-->
-    <!--    <androidx.recyclerview.widget.RecyclerView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:layout_margin="20dp" />-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="5dp">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/arcadegamerecyclerview"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="vertical">
-
-            <include
-                android:id="@+id/dummy"
-                layout="@layout/freefirenormcard" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp" />
-
-            <include layout="@layout/freefirenormcard" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp" />
-
-            <include layout="@layout/freefirenormcard" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp" />
-
-            <include layout="@layout/freefirenormcard" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp" />
-
-            <include layout="@layout/freefirenormcard" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp" />
-
-            <include layout="@layout/freefirenormcard" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp" />
-
-            <include layout="@layout/freefirenormcard" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp" />
-
-            <include layout="@layout/freefirenormcard" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp" />
-
-            <include layout="@layout/freefirenormcard" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp" />
-
-        </LinearLayout>
+            android:layout_marginEnd="20dp" />
     </ScrollView>
 </LinearLayout>

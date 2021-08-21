@@ -2,6 +2,7 @@ package in.gamernation.app.APICalls;
 
 import java.io.IOException;
 
+import in.gamernation.app.APInterfaces.APIArcaderoomsInterface;
 import in.gamernation.app.APInterfaces.APIHomedashboardgamesItem;
 import in.gamernation.app.APInterfaces.APILoginInterfaces;
 import in.gamernation.app.APInterfaces.APIMyprofileDataFetchInterface;
@@ -49,6 +50,10 @@ public class APICalls {
         return apiHomedashboardgamesItem;
     }
 
+    public static APIArcaderoomsInterface getarcadegamerooms() {
+        APIArcaderoomsInterface apiArcaderoomsInterface = getRetrofit().create(APIArcaderoomsInterface.class);
+        return apiArcaderoomsInterface;
+    }
 
     public static String gethttpRequest(String getURL) throws IOException {
         httpRequest = new Request.Builder().url(getURL).build();
