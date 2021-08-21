@@ -130,6 +130,30 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
 
     @Override
     public void onviewItemClick(int position) {
+        String id = leagueList.get(position).getId();
+        String thumb = leagueList.get(position).getThumb();
+        String name = leagueList.get(position).getName();
+        String entrycoins = leagueList.get(position).getEntry().toString();
+        String prizescoins = leagueList.get(position).getPrizes().toString();
+        String killcoins = leagueList.get(position).getKillCoins().toString();
+        String filled = leagueList.get(position).getFilled().toString();
+        String totalparticipants = leagueList.get(position).getTotalParticipant().toString();
+        String map = leagueList.get(position).getMap();
+        String startdate = leagueList.get(position).getStartDate();
+
+        SharedPreferences sharedPreferences = thiscontext.getSharedPreferences(Constants.ARCADEGAMEOPENEDPREF, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(Constants.arcadeopenedid, id);
+        editor.putString(Constants.arcadeopenedthumb, thumb);
+        editor.putString(Constants.arcadeopenedname, name);
+        editor.putString(Constants.arcadeopenedentrycoins, entrycoins);
+        editor.putString(Constants.arcadeopenedprizescoins, prizescoins);
+        editor.putString(Constants.arcadeopenedkillcoins, killcoins);
+        editor.putString(Constants.arcadeopenedfilled, filled);
+        editor.putString(Constants.arcadeopenedtotalparticipants, totalparticipants);
+        editor.putString(Constants.arcadeopenedmap, map);
+        editor.putString(Constants.arcadeopenedstartdate, startdate);
+        editor.apply();
         getActivity().getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragmentContainerView, new arcadeopenedFragment()).addToBackStack(null).commit();
     }
