@@ -4,7 +4,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class GamesResponse {
-    //TODO changing the object id to normal is giving null pointer error and crashing the app and this initialisation is generating a new object  id instead of stored one in backend
     @SerializedName("_id")
     @Expose
     private String id;

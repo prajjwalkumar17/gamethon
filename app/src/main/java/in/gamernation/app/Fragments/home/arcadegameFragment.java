@@ -165,6 +165,7 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
         editor.putString(Constants.arcadeopenedstartdate, startdate).apply();
         editor.putString(Constants.arcadeopenedleaguepic, league_pic).apply();
         editor.putString(Constants.arcadeopenedbonus, bonus.toString()).apply();
+        editor.putString(Constants.arcadeopenedgametype, gamemode).apply();
 
     }
 }

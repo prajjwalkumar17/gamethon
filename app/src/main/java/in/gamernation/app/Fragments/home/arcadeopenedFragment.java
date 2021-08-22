@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,21 +27,26 @@ public class arcadeopenedFragment extends Fragment {
     String league_pic;
     private ImageView arcadeopenedtopimg;
     private TextView arcadeopenedgamename, arcadeopenedentryfee, arcadeopenedtotalparticipants, arcadeopenedprizecoins, arcadeopenedkillcoins, arcadeopenedgamemode, arcadeopenedbonuscoins,
-            arcadeopenedmap, arcadeopeneddate;
+            arcadeopenedmap, arcadeopeneddate, arcadeopenedbottomparticiapantstext, arcadeopenedbottomjointext;
     private AppCompatButton arcadeopenedprizepoolbreakup, arcadeopenedfullprizepool;
     private Context thiscontext;
     private String thumb, id, name, entrycoins, prizescoins, killcoins, filled, totalparticipants, map, startdate, bonus;
+    private LinearLayout arcadeopenedbottomlinearlayout, arcadeopenedcreatetam, arcadeopenedjoinbot, arcadeopenedshowparticipants;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
+
         View root = inflater.inflate(R.layout.fragment_arcadeopened, container, false);
 
         initscreen();
         initviews(root);
+        viewparticipants();
         return root;
     }
+
 
     @Override
     public void onAttach(@NonNull @NotNull Context context) {
@@ -67,6 +73,12 @@ public class arcadeopenedFragment extends Fragment {
         arcadeopenedfullprizepool = root.findViewById(R.id.arcadeopenedfullprizepool);
         arcadeopeneddate = root.findViewById(R.id.arcadeopeneddate);
         arcadeopenedtopimg = root.findViewById(R.id.arcadeopenedtopimg);
+        arcadeopenedjoinbot = root.findViewById(R.id.arcadeopenedjoinbot);
+        arcadeopenedshowparticipants = root.findViewById(R.id.arcadeopenedshowparticipants);
+        arcadeopenedbottomlinearlayout = root.findViewById(R.id.arcadeopenedbottomlinearlayout);
+        arcadeopenedcreatetam = root.findViewById(R.id.arcadeopenedcreatetam);
+        arcadeopenedbottomparticiapantstext = root.findViewById(R.id.arcadeopenedbottomparticiapantstext);
+        arcadeopenedbottomjointext = root.findViewById(R.id.arcadeopenedbottomjointext);
 
 
         fetchdatafromsharedpref();
@@ -89,9 +101,24 @@ public class arcadeopenedFragment extends Fragment {
         bonus = preferences.getString(Constants.arcadeopenedbonus, "no data found!!!");
 
 
+        changedatatforduoandsquad();
         setdatatoviews();
 
 
+    }
+
+    private void changedatatforduoandsquad() {
+        SharedPreferences sharedPreferences = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
+        String gametype = sharedPreferences.getString(Constants.arcadeopenedgametype, "SOLO");
+        if (!gametype.equals("SOLO")) {
+            //TODO change screen for botoom layout and join team and create team
+            arcadeopenedbottomlinearlayout.setWeightSum(4);
+            arcadeopenedcreatetam.setVisibility(View.VISIBLE);
+            arcadeopenedbottomparticiapantstext.setText("Show Teams");
+            arcadeopenedbottomjointext.setText("Join Team");
+
+
+        }
     }
 
     private void setdatatoviews() {
@@ -111,6 +138,18 @@ public class arcadeopenedFragment extends Fragment {
                 .fit()
                 .error(R.drawable.dperror)
                 .into(arcadeopenedtopimg);
+    }
+
+
+    private void viewparticipants() {
+        arcadeopenedshowparticipants.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new arcadegameshowparticipantsFragment()).addToBackStack(null).commit();
+
+            }
+        });
 
 
     }

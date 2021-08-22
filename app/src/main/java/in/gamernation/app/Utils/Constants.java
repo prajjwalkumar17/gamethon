@@ -20,6 +20,7 @@ public class Constants {
     public static String arcadeopenedstartdate = "dummydata9";
     public static String arcadeopenedleaguepic = "dummydata22";
     public static String arcadeopenedbonus = "bonus";
+    public static String arcadeopenedgametype = "gametype";
 
 
     public static String w3devbaseurl = "https://gamernation.w3api.net/";

@@ -106,7 +106,7 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
     }
 
     private void savedatatosharedprefforarcade(List<GamesResponse> list, int position) {
-        SharedPreferences sharedPreferences = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
+         sharedPreferences = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(Constants.ARCADEGAMEIDPREF, list.get(position).getId());
         editor.apply();
