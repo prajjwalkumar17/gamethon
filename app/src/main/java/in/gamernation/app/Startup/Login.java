@@ -111,7 +111,7 @@ public class Login extends AppCompatActivity {
     private void saveuserToken(UserLoginResponse userLoginResponse) {
         if (userLoginResponse != null) {
             Sharethedateusingprefs(userLoginResponse.getToken());
-            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
         } else {
             CommonMethods.DisplayLongTOAST(getApplicationContext(), "Error Occured in Login");
 
