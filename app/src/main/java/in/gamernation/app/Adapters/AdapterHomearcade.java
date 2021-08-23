@@ -37,7 +37,7 @@ public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.re
     @NotNull
     @Override
     public recyclerlayout onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.arcadeleaguescarditem, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerarcadeleaguescarditem, parent, false);
         return new recyclerlayout(view);
     }
 
@@ -46,9 +46,9 @@ public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.re
     public void onBindViewHolder(@NonNull @NotNull recyclerlayout holder, int position) {
         extractresourcesfromlist(position);
         holder.arcadeitemgameheading.setText(name);
-        holder.arcadeitementrycoins.setText(entrycoins);
-        holder.arcadeitemprizescoins.setText(prizescoins);
-        holder.arcadeitemkillpointcoins.setText(killcoins);
+        holder.arcadeitementrycoins.setText(entrycoins + "\nCoins");
+        holder.arcadeitemprizescoins.setText(prizescoins + "\nCoins");
+        holder.arcadeitemkillpointcoins.setText(killcoins + "\nCoins");
         holder.arcadeitemprogressparticipantsappliedalready.setText(filled);
         holder.arcadeitemprogresstotalparticipants.setText(totalparticipants);
         holder.arcadeitemtotalentries.setText(totalparticipants);

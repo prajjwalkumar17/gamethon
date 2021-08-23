@@ -72,7 +72,7 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
             @Override
             public void onResponse(@NotNull Call<HomegamesitemResponse> call, @NotNull Response<HomegamesitemResponse> response) {
                 if (response.isSuccessful()) {
-                    CommonMethods.DisplayLongTOAST(thiscontext, "games received sucesssfully");
+//                    CommonMethods.DisplayLongTOAST(thiscontext, "games received sucesssfully");
                     assert response.body() != null;
                     list = response.body().getGamesResponse();
                     assert list != null;

@@ -50,6 +50,12 @@ public class arcadegameshowparticipantsFragment extends Fragment {
         return root;
     }
 
+    private void initscreen() {
+        ((HomeActivity) getActivity()).setToolbarInvisible();
+        ((HomeActivity) getActivity()).setDrawerLocked();
+        ((HomeActivity) getActivity()).setbotInvisible();
+    }
+
     @Override
     public void onAttach(@NonNull @NotNull Context context) {
         super.onAttach(context);
@@ -68,8 +74,9 @@ public class arcadegameshowparticipantsFragment extends Fragment {
         arcadegamesshowparticipantsrecyclerview.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_2));
         if (gametype.equals("SOLO")) {
             showparticipantforsolo();
+        } else {
+            showparticipantforother();
         }
-        showparticipantforother();
 
 
     }
@@ -121,9 +128,4 @@ public class arcadegameshowparticipantsFragment extends Fragment {
     }
 
 
-    private void initscreen() {
-        ((HomeActivity) getActivity()).setToolbarInvisible();
-        ((HomeActivity) getActivity()).setDrawerLocked();
-        ((HomeActivity) getActivity()).setbotInvisible();
-    }
 }

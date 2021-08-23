@@ -36,7 +36,7 @@ public class AdapterHomeFragGamesItem extends RecyclerView.Adapter<AdapterHomeFr
     @NonNull
     @Override
     public Myadapter onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.homegamesitem, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerhomegamesitem, parent, false);
         return new Myadapter(view);
     }
 

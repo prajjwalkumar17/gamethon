@@ -2734,7 +2734,6 @@ layout activity_login
 layout activity_main
 layout activity_splash
 layout activity_test
-layout arcadeleaguescarditem
 layout commontoolbar
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2752,6 +2751,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialogarcadejoingames
 layout expand_button
 layout fragment_arcadegame
 layout fragment_arcadegameshowparticipants
@@ -2772,7 +2772,6 @@ layout fragment_referrals
 layout fragment_tutorials
 layout fragment_wallet
 layout freefireclashsquadcard
-layout homegamesitem
 layout hometoolbar
 layout image_frame
 layout img_slider
@@ -2853,8 +2852,10 @@ layout preference_widget_seekbar_material
 layout preference_widget_switch
 layout preference_widget_switch_compat
 layout pubgnormcard
+layout recyclerarcadeleaguescarditem
 layout recyclerarcadeparticipantsitem
 layout recyclerarcadeviewteams
+layout recyclerhomegamesitem
 layout referaaltool
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

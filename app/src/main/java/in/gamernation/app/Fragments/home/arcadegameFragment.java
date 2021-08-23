@@ -64,10 +64,13 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
         arcadegamerecyclerview = root.findViewById(R.id.arcadegamerecyclerview);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 1, GridLayoutManager.VERTICAL, false);
         arcadegamerecyclerview.setLayoutManager(gridLayoutManager);
-        arcadegamerecyclerview.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_2));
+        arcadegamerecyclerview.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_15));
     }
 
     private void allmethods() {
+        arcadesolobot.setTextColor(getResources().getColor(R.color.black));
+        arcadesquadbot.setTextColor(getResources().getColor(R.color.white));
+        arcadeduobot.setTextColor(getResources().getColor(R.color.white));
         SharedPreferences sharedPreferences = thiscontext.getSharedPreferences(Constants.LOGINPREFS, Context.MODE_PRIVATE);
         usrtoken = sharedPreferences.getString(Constants.TOKENUSINGPREFS, "No data found!!!");
         SharedPreferences sharedPreferences1 = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
@@ -82,7 +85,7 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
             @Override
             public void onResponse(@NotNull Call<ArcadeResponse> call, @NotNull Response<ArcadeResponse> response) {
                 if (response.isSuccessful()) {
-                    CommonMethods.DisplayLongTOAST(thiscontext, "Arcade rooms received sucesssfully");
+//                    CommonMethods.DisplayLongTOAST(thiscontext, "Arcade rooms received sucesssfully");
                     assert response.body() != null;
                     leagueList = response.body().getLeagues();
                     AdapterHomearcade adapterHomearcade = new AdapterHomearcade(leagueList, arcadegameFragment.this);
@@ -104,6 +107,10 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
             public void onClick(View view) {
                 gamemode = "SOLO";
                 fetchallarcadegames(gamemode);
+                arcadesolobot.setTextColor(getResources().getColor(R.color.black));
+                arcadesquadbot.setTextColor(getResources().getColor(R.color.white));
+                arcadeduobot.setTextColor(getResources().getColor(R.color.white));
+
             }
         });
         arcadeduobot.setOnClickListener(new View.OnClickListener() {
@@ -111,6 +118,11 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
             public void onClick(View view) {
                 gamemode = "DUO";
                 fetchallarcadegames(gamemode);
+                arcadeduobot.setTextColor(getResources().getColor(R.color.black));
+                arcadesolobot.setTextColor(getResources().getColor(R.color.white));
+                arcadesquadbot.setTextColor(getResources().getColor(R.color.white));
+
+
             }
         });
         arcadesquadbot.setOnClickListener(new View.OnClickListener() {
@@ -118,6 +130,10 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
             public void onClick(View view) {
                 gamemode = "SQUAD";
                 fetchallarcadegames(gamemode);
+                arcadesquadbot.setTextColor(getResources().getColor(R.color.black));
+                arcadeduobot.setTextColor(getResources().getColor(R.color.white));
+                arcadesolobot.setTextColor(getResources().getColor(R.color.white));
+
             }
         });
         return gamemode;
