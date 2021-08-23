@@ -38,8 +38,7 @@ public class arcadegameshowparticipantsFragment extends Fragment {
     private Context thiscontext;
     private String usrtoken, gameid;
     private List<ArcadeSoloParticipantsResponse.Participant> list;
-    private ArcadeViewTeamsResponse teamslist;
-//    private List<ArcadeViewTeamsResponse> responseList;
+    private List<ArcadeViewTeamsResponse.Team> responseList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -106,12 +105,8 @@ public class arcadegameshowparticipantsFragment extends Fragment {
             @Override
             public void onResponse(Call<ArcadeViewTeamsResponse> call, Response<ArcadeViewTeamsResponse> response) {
                 assert response.body() != null;
-                teamslist = response.body();
-//                responseList=response.body().toString();
-                CommonMethods.LOGthesite(Constants.LOG, teamslist.getTeamName());
-
-
-                AdapterArcadeViewTeams adapterArcadeViewTeams = new AdapterArcadeViewTeams(teamslist);
+                responseList = response.body().getTeams();
+                AdapterArcadeViewTeams adapterArcadeViewTeams = new AdapterArcadeViewTeams(responseList);
                 arcadegamesshowparticipantsrecyclerview.setAdapter(adapterArcadeViewTeams);
 
             }

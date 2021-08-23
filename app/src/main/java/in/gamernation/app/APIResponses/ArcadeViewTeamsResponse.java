@@ -4,52 +4,86 @@ package in.gamernation.app.APIResponses;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class ArcadeViewTeamsResponse {
 
-    @SerializedName("slot")
+    @SerializedName("Teams")
     @Expose
-    private Integer slot;
-    @SerializedName("_id")
-    @Expose
-    private String id;
-    @SerializedName("team_name")
-    @Expose
-    private String teamName;
+    private List<Team> teams = null;
 
 
     public ArcadeViewTeamsResponse() {
     }
 
 
-    public ArcadeViewTeamsResponse(Integer slot, String id, String teamName) {
+    public ArcadeViewTeamsResponse(List<Team> teams) {
         super();
-        this.slot = slot;
-        this.id = id;
-        this.teamName = teamName;
+        this.teams = teams;
     }
 
-    public Integer getSlot() {
-        return slot;
+    public List<Team> getTeams() {
+        return teams;
     }
 
-    public void setSlot(Integer slot) {
-        this.slot = slot;
+    public void setTeams(List<Team> teams) {
+        this.teams = teams;
     }
 
-    public String getId() {
-        return id;
-    }
+    public class Team {
 
-    public void setId(String id) {
-        this.id = id;
-    }
+        @SerializedName("slot")
+        @Expose
+        private Integer slot;
+        @SerializedName("_id")
+        @Expose
+        private String id;
+        @SerializedName("team_name")
+        @Expose
+        private String teamName;
 
-    public String getTeamName() {
-        return teamName;
-    }
+        /**
+         * No args constructor for use in serialization
+         */
+        public Team() {
+        }
 
-    public void setTeamName(String teamName) {
-        this.teamName = teamName;
-    }
+        /**
+         * @param teamName
+         * @param slot
+         * @param id
+         */
+        public Team(Integer slot, String id, String teamName) {
+            super();
+            this.slot = slot;
+            this.id = id;
+            this.teamName = teamName;
+        }
 
+        public Integer getSlot() {
+            return slot;
+        }
+
+        public void setSlot(Integer slot) {
+            this.slot = slot;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getTeamName() {
+            return teamName;
+        }
+
+        public void setTeamName(String teamName) {
+            this.teamName = teamName;
+        }
+
+
+    }
 }

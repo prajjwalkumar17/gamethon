@@ -10,16 +10,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 import in.gamernation.app.APIResponses.ArcadeViewTeamsResponse;
 import in.gamernation.app.R;
 
 public class AdapterArcadeViewTeams extends RecyclerView.Adapter<AdapterArcadeViewTeams.recylerlist> {
-    private ArcadeViewTeamsResponse response;
+    private List<ArcadeViewTeamsResponse.Team> response;
 
     public AdapterArcadeViewTeams() {
     }
 
-    public AdapterArcadeViewTeams(ArcadeViewTeamsResponse response) {
+    public AdapterArcadeViewTeams(List<ArcadeViewTeamsResponse.Team> response) {
         this.response = response;
     }
 
@@ -33,13 +35,13 @@ public class AdapterArcadeViewTeams extends RecyclerView.Adapter<AdapterArcadeVi
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull recylerlist holder, int position) {
-        holder.arcadeviewteams.setText("Slot: " + response.getSlot().toString() + " " + response.getTeamName());
+        holder.arcadeviewteams.setText("Slot: " + response.get(position).getSlot().toString() + " " + response.get(position).getTeamName());
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return response.size();
     }
 
     public class recylerlist extends RecyclerView.ViewHolder {
