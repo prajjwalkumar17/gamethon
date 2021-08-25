@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
@@ -18,9 +21,13 @@ import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
 
+import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APIRequests.ArcadeSolojoingameRequest;
+import in.gamernation.app.APIResponses.ArcadeSolojoinResponse;
 import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.Constants;
+import retrofit2.Call;
 
 
 public class arcadeopenedFragment extends Fragment {
@@ -28,10 +35,19 @@ public class arcadeopenedFragment extends Fragment {
     private ImageView arcadeopenedtopimg;
     private TextView arcadeopenedgamename, arcadeopenedentryfee, arcadeopenedtotalparticipants, arcadeopenedprizecoins, arcadeopenedkillcoins, arcadeopenedgamemode, arcadeopenedbonuscoins,
             arcadeopenedmap, arcadeopeneddate, arcadeopenedbottomparticiapantstext, arcadeopenedbottomjointext;
-    private AppCompatButton arcadeopenedprizepoolbreakup, arcadeopenedfullprizepool;
+    private AppCompatButton arcadeopenedprizepoolbreakup, arcadeopenedfullprizepool, joindialoggamecancel, joindialoggamejoin;
     private Context thiscontext;
-    private String thumb, id, name, entrycoins, prizescoins, killcoins, filled, totalparticipants, map, startdate, bonus;
+    private EditText joindialoggamename, joindialoggameId;
+    private String thumb, id, name, entrycoins, prizescoins, gametype, killcoins, filled, totalparticipants, map, startdate, bonus, joingamename, joingameId;
     private LinearLayout arcadeopenedbottomlinearlayout, arcadeopenedcreatetam, arcadeopenedjoinbot, arcadeopenedshowparticipants;
+
+
+    //Walletdialog
+    private String walletbalforjoingame;
+    private TextView arcadejoinwalletentrycoins, arcadejoinwalletemainbal, arcadejoinwalletentdepositpluswin, arcadejoinwalletbonus, arcadejoinwallettotalcoins;
+    private AppCompatButton arcadejoinwalletcancelbot, arcadejoinwalletrechargebot;
+    private String depositpluswin, usrtoken;
+    private String totalmoneytoplay;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,6 +60,7 @@ public class arcadeopenedFragment extends Fragment {
         initscreen();
         initviews(root);
         viewparticipants();
+        joingame();
         return root;
     }
 
@@ -58,6 +75,8 @@ public class arcadeopenedFragment extends Fragment {
         ((HomeActivity) getActivity()).setToolbarInvisible();
         ((HomeActivity) getActivity()).setDrawerLocked();
         ((HomeActivity) getActivity()).setbotInvisible();
+        SharedPreferences sharedPreferences = thiscontext.getSharedPreferences(Constants.LOGINPREFS, Context.MODE_PRIVATE);
+        usrtoken = sharedPreferences.getString(Constants.TOKENUSINGPREFS, "No data found!!!");
     }
 
     private void initviews(View root) {
@@ -109,14 +128,13 @@ public class arcadeopenedFragment extends Fragment {
 
     private void changedatatforduoandsquad() {
         SharedPreferences sharedPreferences = thiscontext.getSharedPreferences(Constants.ARCADEGAMEPREF, Context.MODE_PRIVATE);
-        String gametype = sharedPreferences.getString(Constants.arcadeopenedgametype, "SOLO");
+        gametype = sharedPreferences.getString(Constants.arcadeopenedgametype, "SOLO");
         if (!gametype.equals("SOLO")) {
             //TODO change screen for botoom layout and join team and create team
             arcadeopenedbottomlinearlayout.setWeightSum(4);
             arcadeopenedcreatetam.setVisibility(View.VISIBLE);
             arcadeopenedbottomparticiapantstext.setText("Show Teams");
             arcadeopenedbottomjointext.setText("Join Team");
-
 
         }
     }
@@ -140,7 +158,6 @@ public class arcadeopenedFragment extends Fragment {
                 .into(arcadeopenedtopimg);
     }
 
-
     private void viewparticipants() {
         arcadeopenedshowparticipants.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,6 +168,133 @@ public class arcadeopenedFragment extends Fragment {
             }
         });
 
+
+    }
+
+    private void joingame() {
+        arcadeopenedjoinbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder joinalertdialog = new AlertDialog.Builder(thiscontext);
+                View joindialog = LayoutInflater.from(thiscontext).inflate(R.layout.dialogarcadejoingames, null);
+                joindialoggamename = joindialog.findViewById(R.id.joindialoggamename);
+                joindialoggameId = joindialog.findViewById(R.id.joindialoggameId);
+                joindialoggamecancel = joindialog.findViewById(R.id.joindialoggamecancel);
+                joindialoggamejoin = joindialog.findViewById(R.id.joindialoggamejoin);
+                joinalertdialog.setView(joindialog);
+                final AlertDialog d = joinalertdialog.show();
+                joindialoggamejoin.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        joingamename = joindialoggamename.getText().toString();
+                        joingameId = joindialoggameId.getText().toString();
+                        if (joingamename.isEmpty() || joingameId.isEmpty()) {
+                            Toast.makeText(thiscontext, "Fill Username and Id to continue", Toast.LENGTH_SHORT).show();
+                        } else {
+//                            if(Integer.parseInt(walletbalforjoingame)<Integer.parseInt(entrycoins)){
+//                                walletdialog();
+//                            }
+//                            else{
+                            //TODO join post request here
+                            if (gametype.equals("SOLO")) {
+                                joingameforsolo(id);
+                            } else {
+                                jointeam();
+                            }
+
+
+//                        }
+                            d.dismiss();
+
+                        }
+
+                    }
+                });
+                joindialoggamecancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        d.dismiss();
+                    }
+                });
+            }
+        });
+
+    }
+
+
+    private void createteam() {
+        arcadeopenedcreatetam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(thiscontext);
+                View layout = LayoutInflater.from(thiscontext).inflate(R.layout.dialogarcadecreateteam, null);
+//                joindialoggamename=layout.findViewById(R.id.joindialoggamename);
+//                builder.setView(layout);
+//                final AlertDialog d=builder.show();
+
+            }
+        });
+    }
+
+    private void jointeam() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(thiscontext);
+        View layout = LayoutInflater.from(thiscontext).inflate(R.layout.dialogarcadejointeam, null);
+//                joindialoggamename=layout.findViewById(R.id.joindialoggamename);
+//                builder.setView(layout);
+//                final AlertDialog d=builder.show();
+
+    }
+
+    private void joingameforsolo(String id) {
+        ArcadeSolojoingameRequest request = new ArcadeSolojoingameRequest();
+        request.setUserId(id);
+        request.setUsername(name);
+        Call<ArcadeSolojoinResponse> call = APICalls.getsolojoingame().userLogin(Constants.AuthBearer + usrtoken, id, request);
+//        call.enqueue(new Callback<ArcadeSolojoinResponse>() {
+//            @Override
+//            public void onResponse(Call<ArcadeSolojoinResponse> call, Response<ArcadeSolojoinResponse> response) {
+//                ArcadeSolojoinResponse arcadeSolojoinResponse=response.body();
+//                CommonMethods.LOGthesite(Constants.LOG,arcadeSolojoinResponse.getError());
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ArcadeSolojoinResponse> call, Throwable t) {
+//
+//            }
+//        });
+    }
+
+    private void walletdialog() {
+        AlertDialog.Builder walletalert = new AlertDialog.Builder(thiscontext);
+        View walletdialogview = LayoutInflater.from(thiscontext).inflate(R.layout.dialogarcadejoinwalletoptions, null);
+        arcadejoinwalletentrycoins = walletdialogview.findViewById(R.id.arcadejoinwalletentrycoins);
+        arcadejoinwalletemainbal = walletdialogview.findViewById(R.id.arcadejoinwalletemainbal);
+        arcadejoinwalletentdepositpluswin = walletdialogview.findViewById(R.id.arcadejoinwalletentdepositpluswin);
+        arcadejoinwalletbonus = walletdialogview.findViewById(R.id.arcadejoinwalletbonus);
+        arcadejoinwallettotalcoins = walletdialogview.findViewById(R.id.arcadejoinwallettotalcoins);
+        arcadejoinwalletcancelbot = walletdialogview.findViewById(R.id.arcadejoinwalletcancelbot);
+        arcadejoinwalletrechargebot = walletdialogview.findViewById(R.id.arcadejoinwalletrechargebot);
+        walletalert.setView(walletdialogview);
+        arcadejoinwalletentrycoins.setText(entrycoins);
+        arcadejoinwalletemainbal.setText(walletbalforjoingame);
+        arcadejoinwalletentdepositpluswin.setText(depositpluswin);
+        arcadejoinwalletbonus.setText(bonus);
+        arcadejoinwallettotalcoins.setText(totalmoneytoplay);
+        final AlertDialog walletdialog = walletalert.show();
+
+        arcadejoinwalletcancelbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                walletdialog.dismiss();
+            }
+        });
+
+        arcadejoinwalletrechargebot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO doo call wallet recharge here
+            }
+        });
 
     }
 

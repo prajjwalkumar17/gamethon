@@ -4,6 +4,7 @@ import com.facebook.stetho.okhttp3.StethoInterceptor;
 
 import java.io.IOException;
 
+import in.gamernation.app.APInterfaces.APIArcadeSOLOjoinGamepost;
 import in.gamernation.app.APInterfaces.APIArcadeSoloParticipantsget;
 import in.gamernation.app.APInterfaces.APIArcaderoomsInterface;
 import in.gamernation.app.APInterfaces.APIArcadeviewTeams;
@@ -67,6 +68,11 @@ public class APICalls {
     public static APIArcadeviewTeams getviewteams() {
         APIArcadeviewTeams apiArcadeviewTeams = getRetrofit().create(APIArcadeviewTeams.class);
         return apiArcadeviewTeams;
+    }
+
+    public static APIArcadeSOLOjoinGamepost getsolojoingame() {
+        APIArcadeSOLOjoinGamepost apiArcadeSOLOjoinGamepost = getRetrofit().create(APIArcadeSOLOjoinGamepost.class);
+        return apiArcadeSOLOjoinGamepost;
     }
 
     public static String gethttpRequest(String getURL) throws IOException {

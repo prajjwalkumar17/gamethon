@@ -25,7 +25,6 @@ import com.google.android.material.navigation.NavigationView;
 import in.gamernation.app.CommonInterfaces.botnavController;
 import in.gamernation.app.CommonInterfaces.navController;
 import in.gamernation.app.Fragments.contactusFragment;
-import in.gamernation.app.Fragments.home.arcadegameFragment;
 import in.gamernation.app.Fragments.home.homeFragment;
 import in.gamernation.app.Fragments.leaderboardFragment;
 import in.gamernation.app.Fragments.myleaguesFragment;
@@ -35,6 +34,7 @@ import in.gamernation.app.Fragments.playedquizzesFragment;
 import in.gamernation.app.Fragments.referrals.referralsFragment;
 import in.gamernation.app.Fragments.settingsFragment;
 import in.gamernation.app.Fragments.tutorialsFragment;
+import in.gamernation.app.Fragments.walletFragment;
 import in.gamernation.app.R;
 
 public class HomeActivity extends AppCompatActivity implements navController.drawerControl,
@@ -179,8 +179,8 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
                 break;
             case R.id.nav_menu_mywallet:
                 //TODO change
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new walletFragment()).addToBackStack(null).commit();
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new arcadegameFragment()).addToBackStack(null).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new walletFragment()).addToBackStack(null).commit();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new arcadegameFragment()).addToBackStack(null).commit();
                 break;
             case R.id.nav_menu_leaderboard:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new leaderboardFragment()).addToBackStack(null).commit();
