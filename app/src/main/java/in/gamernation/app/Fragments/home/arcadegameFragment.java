@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APICalls.APICallsRetrofit;
 import in.gamernation.app.APIResponses.ArcadeResponse;
 import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.Adapters.AdapterHomearcade;
@@ -80,7 +80,7 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
     }
 
     private void fetchallarcadegames(String gamemode) {
-        Call<ArcadeResponse> responseCall = APICalls.getarcadegamerooms().FetchArcadeRooms(arcadegameID, Constants.arcadefiltergame + gamemode, Constants.AuthBearer + usrtoken);
+        Call<ArcadeResponse> responseCall = APICallsRetrofit.getarcadegamerooms().FetchArcadeRooms(arcadegameID, Constants.arcadefiltergame + gamemode, Constants.AuthBearer + usrtoken);
         responseCall.enqueue(new Callback<ArcadeResponse>() {
             @Override
             public void onResponse(@NotNull Call<ArcadeResponse> call, @NotNull Response<ArcadeResponse> response) {

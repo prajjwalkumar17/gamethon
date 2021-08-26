@@ -52,10 +52,6 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/progress_circle.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_leaderboarditems.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/leaderboarditems.xml"
-    },
-    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_referrals.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_referrals.xml"
     },
@@ -226,6 +222,10 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_referaalbot.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/referaalbot.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_recyclerleaderboarditems.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/recyclerleaderboarditems.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",

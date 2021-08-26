@@ -21,7 +21,7 @@ import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
 
-import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APICalls.APICallsRetrofit;
 import in.gamernation.app.APIRequests.ArcadeSolojoingameRequest;
 import in.gamernation.app.APIResponses.ArcadeSolojoinResponse;
 import in.gamernation.app.Activities.HomeActivity;
@@ -221,7 +221,6 @@ public class arcadeopenedFragment extends Fragment {
 
     }
 
-
     private void createteam() {
         arcadeopenedcreatetam.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -249,7 +248,7 @@ public class arcadeopenedFragment extends Fragment {
         ArcadeSolojoingameRequest request = new ArcadeSolojoingameRequest();
         request.setUserId(id);
         request.setUsername(name);
-        Call<ArcadeSolojoinResponse> call = APICalls.getsolojoingame().userLogin(Constants.AuthBearer + usrtoken, id, request);
+        Call<ArcadeSolojoinResponse> call = APICallsRetrofit.getsolojoingame().userLogin(Constants.AuthBearer + usrtoken, id, request);
 //        call.enqueue(new Callback<ArcadeSolojoinResponse>() {
 //            @Override
 //            public void onResponse(Call<ArcadeSolojoinResponse> call, Response<ArcadeSolojoinResponse> response) {

@@ -21,7 +21,7 @@ import com.squareup.picasso.Picasso;
 import org.jetbrains.annotations.NotNull;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APICalls.APICallsRetrofit;
 import in.gamernation.app.APIResponses.MyProfileResponse;
 import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
@@ -129,7 +129,7 @@ public class myprofileFragment extends Fragment {
 
 
     public void showprofiledata() {
-        Call<MyProfileResponse> myProfileResponseCall = APICalls.getmyprofiledata().FetchProfileData("bearer " + usrtoken);
+        Call<MyProfileResponse> myProfileResponseCall = APICallsRetrofit.getmyprofiledata().FetchProfileData("bearer " + usrtoken);
         myProfileResponseCall.enqueue(new Callback<MyProfileResponse>() {
             @Override
             public void onResponse(@NotNull Call<MyProfileResponse> call, @NotNull Response<MyProfileResponse> response) {

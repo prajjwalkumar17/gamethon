@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APICalls.APICallsRetrofit;
 import in.gamernation.app.APIResponses.GamesResponse;
 import in.gamernation.app.APIResponses.HomegamesitemResponse;
 import in.gamernation.app.Adapters.AdapterHomeFragGamesItem;
@@ -67,7 +67,7 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
 
     private void fetchgameitems() {
 
-        Call<HomegamesitemResponse> responseCall = APICalls.gethomedashboardsitem().FetchHomegamesItem(Constants.AuthBearer + usrtoken);
+        Call<HomegamesitemResponse> responseCall = APICallsRetrofit.gethomedashboardsitem().FetchHomegamesItem(Constants.AuthBearer + usrtoken);
         responseCall.enqueue(new Callback<HomegamesitemResponse>() {
             @Override
             public void onResponse(@NotNull Call<HomegamesitemResponse> call, @NotNull Response<HomegamesitemResponse> response) {

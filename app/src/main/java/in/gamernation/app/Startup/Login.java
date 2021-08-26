@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 
-import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APICalls.APICallsRetrofit;
 import in.gamernation.app.APIRequests.UserLoginRequest;
 import in.gamernation.app.APIResponses.UserLoginResponse;
 import in.gamernation.app.Activities.HomeActivity;
@@ -74,7 +74,7 @@ public class Login extends AppCompatActivity {
         UserLoginRequest request = new UserLoginRequest();
         request.setEmail(username);
         request.setPassword(password);
-        Call<UserLoginResponse> loginResponseCall = APICalls.getUserLogginService().userLogin(request);
+        Call<UserLoginResponse> loginResponseCall = APICallsRetrofit.getUserLogginService().userLogin(request);
 
         loginResponseCall.enqueue(new Callback<UserLoginResponse>() {
             @Override

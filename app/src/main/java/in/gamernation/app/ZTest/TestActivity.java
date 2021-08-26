@@ -6,7 +6,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import in.gamernation.app.APICalls.APICalls;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import okhttp3.OkHttpClient;
@@ -66,7 +65,7 @@ public class TestActivity extends AppCompatActivity {
                 if (CommonMethods.isnetworkConnected(getApplicationContext())) {
 //                    httpRequest =new Request.Builder().url(url).build();
 //                    httpResponse=httpClient.newCall(httpRequest).execute();
-                    ty = APICalls.gethttpRequest(url);
+//                    ty = APICalls.gethttpRequest(url);
                 } else {
                     CommonMethods.DisplayLongTOAST(getApplicationContext(), "Check the network connectivity");
                 }

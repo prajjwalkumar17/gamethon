@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-import in.gamernation.app.APICalls.APICalls;
+import in.gamernation.app.APICalls.APICallsRetrofit;
 import in.gamernation.app.APIResponses.ArcadeSoloParticipantsResponse;
 import in.gamernation.app.APIResponses.ArcadeViewTeamsResponse;
 import in.gamernation.app.Activities.HomeActivity;
@@ -82,7 +82,7 @@ public class arcadegameshowparticipantsFragment extends Fragment {
     }
 
     private void showparticipantforsolo() {
-        Call<ArcadeSoloParticipantsResponse> call = APICalls.getarcadesoloparticipants().FetchSoloParticipants(gameid, Constants.AuthBearer + usrtoken);
+        Call<ArcadeSoloParticipantsResponse> call = APICallsRetrofit.getarcadesoloparticipants().FetchSoloParticipants(gameid, Constants.AuthBearer + usrtoken);
         call.enqueue(new Callback<ArcadeSoloParticipantsResponse>() {
             @Override
             public void onResponse(Call<ArcadeSoloParticipantsResponse> call, Response<ArcadeSoloParticipantsResponse> response) {
@@ -106,7 +106,7 @@ public class arcadegameshowparticipantsFragment extends Fragment {
     }
 
     private void showparticipantforother() {
-        Call<ArcadeViewTeamsResponse> call = APICalls.getviewteams().FetchOtherParticipants(gameid, Constants.AuthBearer + usrtoken);
+        Call<ArcadeViewTeamsResponse> call = APICallsRetrofit.getviewteams().FetchOtherParticipants(gameid, Constants.AuthBearer + usrtoken);
 
         call.enqueue(new Callback<ArcadeViewTeamsResponse>() {
             @Override

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/final_master"
     tools:context=".Fragments.leaderboardFragment">
 
@@ -12,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/final_secondary"
         android:background="@drawable/cardbotcurved"
+        android:backgroundTint="@color/final_secondary"
         android:elevation="2dp">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Leaderboardbackbot"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginTop="10dp"
@@ -49,13 +50,13 @@
             android:layout_marginTop="11dp"
             android:elevation="2dp"
             android:src="@drawable/crowncurved"
-            app:layout_constraintBottom_toTopOf="@+id/myleagues1sticon"
-            app:layout_constraintEnd_toEndOf="@+id/myleagues1sticon"
-            app:layout_constraintStart_toStartOf="@+id/myleagues1sticon"
+            app:layout_constraintBottom_toTopOf="@+id/leaderboard1strankdp"
+            app:layout_constraintEnd_toEndOf="@+id/leaderboard1strankdp"
+            app:layout_constraintStart_toStartOf="@+id/leaderboard1strankdp"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/myleagues1sticon"
+            android:id="@+id/leaderboard1strankdp"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginEnd="84dp"
@@ -64,9 +65,9 @@
             android:scaleType="centerCrop"
             android:src="@drawable/splash_logo"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/myleagues3rdicon"
+            app:layout_constraintEnd_toEndOf="@+id/leaderboard3rdrankdp"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/myleagues2ndicon"
+            app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias=".3" />
 
@@ -75,9 +76,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/myleagues1sticon"
-            app:layout_constraintStart_toStartOf="@+id/myleagues1sticon"
-            app:layout_constraintTop_toBottomOf="@id/myleagues1sticon"
+            app:layout_constraintEnd_toEndOf="@+id/leaderboard1strankdp"
+            app:layout_constraintStart_toStartOf="@+id/leaderboard1strankdp"
+            app:layout_constraintTop_toBottomOf="@id/leaderboard1strankdp"
             app:layout_constraintVertical_bias="0.02">
 
             <TextView
@@ -88,6 +89,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/leaderboard1strankname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Winner1"
@@ -101,9 +103,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/myleagues1sticon"
-            app:layout_constraintStart_toStartOf="@+id/myleagues1sticon"
-            app:layout_constraintTop_toBottomOf="@id/myleagues1sticon"
+            app:layout_constraintEnd_toEndOf="@+id/leaderboard1strankdp"
+            app:layout_constraintStart_toStartOf="@+id/leaderboard1strankdp"
+            app:layout_constraintTop_toBottomOf="@id/leaderboard1strankdp"
             app:layout_constraintVertical_bias="0.07">
 
             <TextView
@@ -113,6 +115,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/leaderboard1strankcoinswon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="2dp"
@@ -123,7 +126,7 @@
 
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/myleagues3rdicon"
+            android:id="@+id/leaderboard3rdrankdp"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:background="@drawable/circleback"
@@ -133,7 +136,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/myleagues2ndicon"
+            app:layout_constraintStart_toEndOf="@+id/leaderboard2ndrankdp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias=".75" />
 
@@ -142,9 +145,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/myleagues3rdicon"
-            app:layout_constraintStart_toStartOf="@+id/myleagues3rdicon"
-            app:layout_constraintTop_toBottomOf="@+id/myleagues3rdicon"
+            app:layout_constraintEnd_toEndOf="@+id/leaderboard3rdrankdp"
+            app:layout_constraintStart_toStartOf="@+id/leaderboard3rdrankdp"
+            app:layout_constraintTop_toBottomOf="@+id/leaderboard3rdrankdp"
             app:layout_constraintVertical_bias="0.02">
 
             <TextView
@@ -155,6 +158,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/leaderboard3rdrankname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Winner3"
@@ -168,9 +172,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/myleagues3rdicon"
-            app:layout_constraintStart_toStartOf="@+id/myleagues3rdicon"
-            app:layout_constraintTop_toBottomOf="@+id/myleagues3rdicon"
+            app:layout_constraintEnd_toEndOf="@+id/leaderboard3rdrankdp"
+            app:layout_constraintStart_toStartOf="@+id/leaderboard3rdrankdp"
+            app:layout_constraintTop_toBottomOf="@+id/leaderboard3rdrankdp"
             app:layout_constraintVertical_bias="0.2">
 
             <TextView
@@ -180,6 +184,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/leaderboard3rdrankcoinswon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="41402 coins"
@@ -195,14 +200,14 @@
             android:backgroundTint="@color/white"
             android:elevation="2dp"
             android:src="@drawable/crowncurvedwhite"
-            app:layout_constraintBottom_toTopOf="@+id/myleagues2ndicon"
-            app:layout_constraintEnd_toEndOf="@+id/myleagues2ndicon"
-            app:layout_constraintStart_toStartOf="@+id/myleagues2ndicon"
+            app:layout_constraintBottom_toTopOf="@+id/leaderboard2ndrankdp"
+            app:layout_constraintEnd_toEndOf="@+id/leaderboard2ndrankdp"
+            app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             app:layout_constraintVertical_bias="1" />
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/myleagues2ndicon"
+            android:id="@+id/leaderboard2ndrankdp"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:background="@drawable/circleback"
@@ -210,7 +215,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/splash_logo"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/myleagues3rdicon"
+            app:layout_constraintEnd_toStartOf="@+id/leaderboard3rdrankdp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -221,9 +226,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/myleagues2ndicon"
-            app:layout_constraintStart_toStartOf="@+id/myleagues2ndicon"
-            app:layout_constraintTop_toBottomOf="@+id/myleagues2ndicon"
+            app:layout_constraintEnd_toEndOf="@+id/leaderboard2ndrankdp"
+            app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
+            app:layout_constraintTop_toBottomOf="@+id/leaderboard2ndrankdp"
             app:layout_constraintVertical_bias="0.02">
 
             <TextView
@@ -234,6 +239,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/leaderboard2ndrankname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Winner2"
@@ -247,9 +253,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/myleagues2ndicon"
-            app:layout_constraintStart_toStartOf="@+id/myleagues2ndicon"
-            app:layout_constraintTop_toBottomOf="@+id/myleagues2ndicon"
+            app:layout_constraintEnd_toEndOf="@+id/leaderboard2ndrankdp"
+            app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
+            app:layout_constraintTop_toBottomOf="@+id/leaderboard2ndrankdp"
             app:layout_constraintVertical_bias="0.2">
 
             <TextView
@@ -259,6 +265,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/leaderboard2ndrankcoinswon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="41402 coins"
@@ -278,18 +285,10 @@
         android:weightSum="6">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Leaderboardfreefirebot"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginStart="3dp"
-            android:layout_weight="1"
-            android:background="@drawable/outlinedbot"
-            android:text="LUDO"
-            android:textColor="@color/final_secondary"
-            android:textSize="10sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="0dp"
-            android:layout_height="30dp"
             android:layout_weight="1"
             android:background="@drawable/outlinedbot"
             android:text="FREE FIRE"
@@ -297,15 +296,27 @@
             android:textSize="10sp" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Leaderboardludobot"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
             android:background="@drawable/outlinedbot"
-            android:text="CLASHSQUAD"
+            android:text="LUDO"
             android:textColor="@color/final_secondary"
             android:textSize="10sp" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Leaderboardclashsquadbot"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/outlinedbot"
+            android:text="CLASH SQUAD"
+            android:textColor="@color/final_secondary"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Leaderboardquizbot"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -315,6 +326,7 @@
             android:textSize="10sp" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Leaderboardfanbattlebot"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -324,6 +336,7 @@
             android:textSize="10sp" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Leaderboardbgmibot"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginEnd="3dp"
@@ -350,7 +363,7 @@
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/myleaguesswitch"
+                android:id="@+id/leaderboardswitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -363,50 +376,60 @@
                 android:text="Monthly"
                 android:textColor="@color/white" />
         </LinearLayout>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="3dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:orientation="vertical">
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
-
-        <include layout="@layout/leaderboarditems" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp">
 
 
-    </LinearLayout>
-</ScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/leaderboardrecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp" />
+        </ScrollView>
     </LinearLayout>
 </RelativeLayout>
+
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+    <!--        <include layout="@layout/leaderboarditems" />-->
+
+
+    <!--    </LinearLayout>-->

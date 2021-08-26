@@ -10,8 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -56,13 +54,6 @@ public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.re
         holder.arcadeitemstartdate.setText(startdate);
         holder.arcadeitemprogressbar.setProgress(leagueList.get(position).getFilled() / leagueList.get(position).getTotalParticipant());
 
-        Picasso.get()
-                .load(thumb)
-                .placeholder(R.drawable.placeholder)
-                .fit()
-                .error(R.drawable.dperror)
-                .centerCrop()
-                .into(holder.arcadeitemgameimg);
 
 
     }
