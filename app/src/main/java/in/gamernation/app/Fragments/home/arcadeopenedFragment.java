@@ -20,14 +20,19 @@ import androidx.fragment.app.Fragment;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import in.gamernation.app.APICalls.APICallsRetrofit;
-import in.gamernation.app.APIRequests.ArcadeSolojoingameRequest;
-import in.gamernation.app.APIResponses.ArcadeSolojoinResponse;
+import java.io.IOException;
+
+import in.gamernation.app.APICalls.APICallsOkHttp;
 import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
+import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
-import retrofit2.Call;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 
 public class arcadeopenedFragment extends Fragment {
@@ -41,6 +46,17 @@ public class arcadeopenedFragment extends Fragment {
     private String thumb, id, name, entrycoins, prizescoins, gametype, killcoins, filled, totalparticipants, map, startdate, bonus, joingamename, joingameId;
     private LinearLayout arcadeopenedbottomlinearlayout, arcadeopenedcreatetam, arcadeopenedjoinbot, arcadeopenedshowparticipants;
 
+    //jointeamdialog
+    private EditText jointeamdialoggamename, jointeamdialoggameId, jointeamdialogteamid;
+    private AppCompatButton jointeamdialogcancelbot, jointeamdialogsubmitbot;
+
+    //createteamresponsedetails
+    private TextView dialogitemcreateteammsgresponse, dialogitemcreateteamname, dialogitemcreateteammteamcode;
+
+    //createteamdialog
+    private EditText createteamdialoggamename, createteamdialoggameId, createteamdialogteamname;
+    private AppCompatButton createteamdialogcancelbot, createteamdialogjoinbot;
+    private TextView createteamdialogpayablecoin;
 
     //Walletdialog
     private String walletbalforjoingame;
@@ -60,7 +76,12 @@ public class arcadeopenedFragment extends Fragment {
         initscreen();
         initviews(root);
         viewparticipants();
-        joingame();
+        if (gametype.equals("SOLO")) {
+            solojoingame();
+        } else {
+            otherjointeam();
+            createteam();
+        }
         return root;
     }
 
@@ -171,7 +192,7 @@ public class arcadeopenedFragment extends Fragment {
 
     }
 
-    private void joingame() {
+    private void solojoingame() {
         arcadeopenedjoinbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -183,6 +204,7 @@ public class arcadeopenedFragment extends Fragment {
                 joindialoggamejoin = joindialog.findViewById(R.id.joindialoggamejoin);
                 joinalertdialog.setView(joindialog);
                 final AlertDialog d = joinalertdialog.show();
+
                 joindialoggamejoin.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -196,12 +218,7 @@ public class arcadeopenedFragment extends Fragment {
 //                            }
 //                            else{
                             //TODO join post request here
-                            if (gametype.equals("SOLO")) {
-                                joingameforsolo(id);
-                            } else {
-                                jointeam();
-                            }
-
+                            joingameforsolo(id);
 
 //                        }
                             d.dismiss();
@@ -216,9 +233,137 @@ public class arcadeopenedFragment extends Fragment {
                         d.dismiss();
                     }
                 });
+
+
             }
         });
 
+    }
+
+    private void joingameforsolo(String id) {
+        String url = Constants.w3devbaseurl + "games/join/" + id;
+        APICallsOkHttp.okhttpmaster().newCall(
+                APICallsOkHttp.requestwithpost(APICallsOkHttp.urlbuilderforhttp(url),
+                        usrtoken,
+                        APICallsOkHttp.buildrequestbodyforusernameandpassword(name, id))
+        ).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                CommonMethods.DisplayShortTOAST(thiscontext, e.getMessage());
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                final String myResponse = response.body().string();
+                CommonMethods.LOGthesite(Constants.LOG, myResponse);
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            JSONObject responsez = new JSONObject(myResponse);
+                            if (response.code() == 409) {
+                                CommonMethods.LOGthesite(Constants.LOG, responsez.getString("error"));
+                                CommonMethods.LOGthesite(Constants.LOG, String.valueOf(response.code()));
+                            } else {
+                                CommonMethods.LOGthesite(Constants.LOG, responsez.getString("message"));
+                                CommonMethods.LOGthesite(Constants.LOG, String.valueOf(response.code()));
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
+            }
+        });
+
+
+    }
+
+    private void otherjointeam() {
+        arcadeopenedjoinbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(thiscontext);
+                View layout = LayoutInflater.from(thiscontext).inflate(R.layout.dialogarcadejointeam, null);
+                jointeamdialoggamename = layout.findViewById(R.id.jointeamdialoggamename);
+                jointeamdialoggameId = layout.findViewById(R.id.jointeamdialoggameId);
+                jointeamdialogteamid = layout.findViewById(R.id.jointeamdialogteamid);
+                jointeamdialogcancelbot = layout.findViewById(R.id.jointeamdialogcancelbot);
+                jointeamdialogsubmitbot = layout.findViewById(R.id.jointeamdialogsubmitbot);
+                builder.setView(layout);
+                final AlertDialog i = builder.show();
+                jointeamdialogsubmitbot.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String username = jointeamdialoggamename.getText().toString();
+                        String userId = jointeamdialoggameId.getText().toString();
+                        String teamid = jointeamdialogteamid.getText().toString();
+                        if (username.isEmpty() || userId.isEmpty() || teamid.isEmpty()) {
+                            Toast.makeText(thiscontext, "Fill Username, Id and Team id to continue", Toast.LENGTH_SHORT).show();
+                        } else {
+//                            if(Integer.parseInt(walletbalforjoingame)<Integer.parseInt(entrycoins)){
+//                                walletdialog();
+//                            }
+//                            else{
+                            //TODO join post request here
+                            jointeamforothers(id, username, userId, teamid);
+//                        }
+                            i.dismiss();
+
+                        }
+
+                    }
+                });
+
+                jointeamdialogcancelbot.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        i.dismiss();
+                    }
+                });
+
+            }
+        });
+
+
+    }
+
+    private void jointeamforothers(String id, String username, String userId, String teamid) {
+        String url = Constants.w3devbaseurl + "games/join/team/" + id;
+        CommonMethods.LOGthesite(Constants.LOG, url);
+        APICallsOkHttp.okhttpmaster().newCall(
+                APICallsOkHttp.requestwithpost(APICallsOkHttp.urlbuilderforhttp(url),
+                        usrtoken,
+                        APICallsOkHttp.buildrequestbodyforusernameandpasswordteamid(username, userId, teamid))
+        ).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                CommonMethods.DisplayShortTOAST(thiscontext, e.getMessage());
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                final String myResponse = response.body().string();
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            JSONObject responsez = new JSONObject(myResponse);
+                            if (response.code() == 409) {
+                                CommonMethods.LOGthesite(Constants.LOG, responsez.getString("error"));
+                                CommonMethods.LOGthesite(Constants.LOG, String.valueOf(response.code()));
+                            } else {
+                                CommonMethods.LOGthesite(Constants.LOG, responsez.getString("message"));
+                                CommonMethods.LOGthesite(Constants.LOG, String.valueOf(response.code()));
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        });
     }
 
     private void createteam() {
@@ -227,40 +372,90 @@ public class arcadeopenedFragment extends Fragment {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(thiscontext);
                 View layout = LayoutInflater.from(thiscontext).inflate(R.layout.dialogarcadecreateteam, null);
-//                joindialoggamename=layout.findViewById(R.id.joindialoggamename);
-//                builder.setView(layout);
-//                final AlertDialog d=builder.show();
-
+                createteamdialoggamename = layout.findViewById(R.id.createteamdialoggamename);
+                createteamdialoggameId = layout.findViewById(R.id.createteamdialoggameId);
+                createteamdialogteamname = layout.findViewById(R.id.createteamdialogteamname);
+                createteamdialogcancelbot = layout.findViewById(R.id.createteamdialogcancelbot);
+                createteamdialogjoinbot = layout.findViewById(R.id.createteamdialogjoinbot);
+                createteamdialogpayablecoin = layout.findViewById(R.id.createteamdialogpayablecoin);
+                builder.setView(layout);
+                final AlertDialog d = builder.show();
+                createteamdialogjoinbot.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String name = createteamdialoggamename.getText().toString();
+                        String id = createteamdialoggameId.getText().toString();
+                        String teamname = createteamdialogteamname.getText().toString();
+                        createteamreqfetch(name, id, teamname, d);
+                        d.dismiss();
+                    }
+                });
+                createteamdialogcancelbot.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        d.dismiss();
+                    }
+                });
             }
         });
     }
 
-    private void jointeam() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(thiscontext);
-        View layout = LayoutInflater.from(thiscontext).inflate(R.layout.dialogarcadejointeam, null);
-//                joindialoggamename=layout.findViewById(R.id.joindialoggamename);
-//                builder.setView(layout);
-//                final AlertDialog d=builder.show();
+    private void createteamreqfetch(String name, String userid, String teamname, AlertDialog d) {
+        String url = Constants.w3devbaseurl + "games/team/" + id;
+        CommonMethods.LOGthesite(Constants.LOG, url);
+        APICallsOkHttp.okhttpmaster().newCall(
+                APICallsOkHttp.requestwithpost(APICallsOkHttp.urlbuilderforhttp(url),
+                        usrtoken,
+                        APICallsOkHttp.buildrequestbodyforusernameandpasswordteamname(name, userid, teamname))
+        ).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                CommonMethods.DisplayShortTOAST(thiscontext, e.getMessage());
+            }
 
-    }
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                final String myResponse = response.body().string();
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            JSONObject responsez = new JSONObject(myResponse);
+                            if (response.code() == 409) {
+                                CommonMethods.LOGthesite(Constants.LOG, responsez.getString("error"));
+                                CommonMethods.LOGthesite(Constants.LOG, String.valueOf(response.code()));
+                                CommonMethods.DisplayLongTOAST(thiscontext, responsez.getString("error"));
+                            } else {
+                                CommonMethods.LOGthesite(Constants.LOG, responsez.getString("message"));
+                                String msg = responsez.getString("message");
+                                String teamnamegot = responsez.getJSONObject("your_details").getString("team_name");
+                                String teamidtoshare = responsez.getJSONObject("your_details").getString("team_id");
+                                CommonMethods.LOGthesite(Constants.LOG, String.valueOf(response.code()));
+                                CommonMethods.LOGthesite(Constants.LOG, teamnamegot);
+                                CommonMethods.LOGthesite(Constants.LOG, teamidtoshare);
 
-    private void joingameforsolo(String id) {
-        ArcadeSolojoingameRequest request = new ArcadeSolojoingameRequest();
-        request.setUserId(id);
-        request.setUsername(name);
-        Call<ArcadeSolojoinResponse> call = APICallsRetrofit.getsolojoingame().userLogin(Constants.AuthBearer + usrtoken, id, request);
-//        call.enqueue(new Callback<ArcadeSolojoinResponse>() {
-//            @Override
-//            public void onResponse(Call<ArcadeSolojoinResponse> call, Response<ArcadeSolojoinResponse> response) {
-//                ArcadeSolojoinResponse arcadeSolojoinResponse=response.body();
-//                CommonMethods.LOGthesite(Constants.LOG,arcadeSolojoinResponse.getError());
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ArcadeSolojoinResponse> call, Throwable t) {
-//
-//            }
-//        });
+                                AlertDialog.Builder builder = new AlertDialog.Builder(thiscontext);
+                                View view = LayoutInflater.from(thiscontext).inflate(R.layout.dialogarcadecreateteamresponse, null);
+                                dialogitemcreateteammsgresponse = view.findViewById(R.id.dialogitemcreateteammsgresponse);
+                                dialogitemcreateteamname = view.findViewById(R.id.dialogitemcreateteamname);
+                                dialogitemcreateteammteamcode = view.findViewById(R.id.dialogitemcreateteammteamcode);
+
+                                dialogitemcreateteammsgresponse.setText(msg);
+                                dialogitemcreateteamname.setText(teamnamegot);
+                                dialogitemcreateteammteamcode.setText(teamidtoshare);
+
+
+                                builder.setView(view);
+                                final AlertDialog dialog = builder.show();
+
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        });
     }
 
     private void walletdialog() {
@@ -296,6 +491,5 @@ public class arcadeopenedFragment extends Fragment {
         });
 
     }
-
 
 }

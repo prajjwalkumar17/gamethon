@@ -97,6 +97,7 @@ public class leaderboardFragment extends Fragment {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 1, GridLayoutManager.VERTICAL, false);
         leaderboardrecyclerview.setLayoutManager(gridLayoutManager);
         leaderboardrecyclerview.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_2));
+        Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.white));
         fetchdata(Constants.leaderboardfiltergame + "FREE_FIRE");
         showdataaccordingtobotpresssed();
     }
@@ -106,43 +107,79 @@ public class leaderboardFragment extends Fragment {
         Leaderboardfreefirebot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.black));
+                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.white));
                 fetchdata(Constants.leaderboardfiltergame + "FREE_FIRE");
+
+                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
             }
         });
         Leaderboardludobot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Leaderboardludobot.setTextColor(getResources().getColor(R.color.black));
+                Leaderboardludobot.setTextColor(getResources().getColor(R.color.white));
                 fetchdata(Constants.leaderboardfiltergame + "LUDO");
+
+                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
             }
         });
         Leaderboardclashsquadbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.black));
+                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.white));
                 fetchdata(Constants.leaderboardfiltergame + "CLASHSQUAD");
+
+                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
             }
         });
         Leaderboardquizbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.black));
+                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.white));
                 fetchdata(Constants.leaderboardfiltergame + "QUIZ");
+
+                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
             }
         });
         Leaderboardfanbattlebot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.black));
+                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.white));
                 fetchdata(Constants.leaderboardfiltergame + "CRICKET_LEAGUE");
+
+                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
             }
         });
         Leaderboardbgmibot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.black));
+                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.white));
                 fetchdata(Constants.leaderboardfiltergame + "BGMI");
+
+                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
             }
         });
 
@@ -232,55 +269,6 @@ public class leaderboardFragment extends Fragment {
 }
 
 
-//        Request request = new Request.Builder()
-//                .header("Authorization", Constants.AuthBearer + usrtoken)
-//                .url(url)
-//                .build();
-//
-//        okHttpClient.newCall(request).enqueue(new Callback() {
-//
-//            @Override
-//            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-//
-//
-// /*               getActivity().runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        try {
-//                            JSONObject responselist = new JSONObject(myResponse);
-//                            JSONArray responses = responselist.getJSONArray("Leaderboard");
-//
-//                            for (int r = 0; r < responses.length(); r++) {
-//                                JSONObject object = responses.getJSONObject(r);
-//                                CommonMethods.LOGthesite(Constants.LOG, object.getString("_id"));
-//                                CommonMethods.LOGthesite(Constants.LOG, object.getString("won"));
-//
-//                                JSONObject user=object.getJSONObject("user");
-//                                CommonMethods.LOGthesite(Constants.LOG, user.getString("picture"));
-//                                CommonMethods.LOGthesite(Constants.LOG, user.getString("name"));
-//                                CommonMethods.LOGthesite(Constants.LOG, user.getString("id"));
-
-//
-//                            }
-//
-//
-//
-//
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                });*/
-//
-//
-//            }
-//
-//
-//            @Override
-//            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-//
-//            }
-//        });
 
 /*
         retrofit2.Call<JSONObject> call = APICallsRetrofit.getuserdataleaderboard().fetchleaderboardusers(Constants.leaderboardfiltergame+"FREE_FIRE", Constants.AuthBearer + usrtoken);

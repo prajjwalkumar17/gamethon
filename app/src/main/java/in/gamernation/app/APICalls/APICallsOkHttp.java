@@ -6,8 +6,10 @@ import java.util.Objects;
 
 import in.gamernation.app.Utils.Constants;
 import okhttp3.HttpUrl;
+import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 public class APICallsOkHttp {
@@ -32,5 +34,70 @@ public class APICallsOkHttp {
                 .build();
     }
 
+    public static Request requestwithpost(String url, String usrauthtoken, RequestBody requestBody) {
+        return new Request.Builder()
+                .header("Authorization", Constants.AuthBearer + usrauthtoken)
+                .url(url)
+                .post(requestBody)
+                .build();
+    }
+
+    public static RequestBody buildrequestbodyforusernameandpassword(String username, String userid) {
+        return new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("username", username)
+                .addFormDataPart("userId", userid)
+                .build();
+    }
+
+    public static RequestBody buildrequestbodyforusernameandpasswordteamid(String username, String userid, String teamid) {
+        return new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("username", username)
+                .addFormDataPart("userid", userid)
+                .addFormDataPart("teamid", teamid)
+                .build();
+    }
+
+    public static RequestBody buildrequestbodyforusernameandpasswordteamname(String username, String userid, String teamname) {
+        return new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("username", username)
+                .addFormDataPart("userId", userid)
+                .addFormDataPart("teamName", teamname)
+                .build();
+    }
+
 
 }
+
+/*Implementation for this Class
+ *        Request request = new Request.Builder()*/
+//                .header("Authorization", Constants.AuthBearer + usrtoken)
+//                .url(url)
+//                .build();
+//
+//        okHttpClient.newCall(request).enqueue(new Callback() {
+//
+//            @Override
+//            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+//
+//
+//               getActivity().runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        try {
+//                            JSONObject responselist = new JSONObject(myResponse);
+//                            JSONArray responses = responselist.getJSONArray("Leaderboard");
+//
+//                            for (int r = 0; r < responses.length(); r++) {
+//                                JSONObject object = responses.getJSONObject(r);
+//                                CommonMethods.LOGthesite(Constants.LOG, object.getString("_id"));
+//                                CommonMethods.LOGthesite(Constants.LOG, object.getString("won"));
+//
+//                                JSONObject user=object.getJSONObject("user");
+//                                CommonMethods.LOGthesite(Constants.LOG, user.getString("picture"));
+//                                CommonMethods.LOGthesite(Constants.LOG, user.getString("name"));
+//                                CommonMethods.LOGthesite(Constants.LOG, user.getString("id"));
+//
+//                            }

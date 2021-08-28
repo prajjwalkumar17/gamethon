@@ -97,3 +97,5 @@ public class AdapterLeaderboard extends RecyclerView.Adapter<AdapterLeaderboard.
         }
     }
 }
+
+

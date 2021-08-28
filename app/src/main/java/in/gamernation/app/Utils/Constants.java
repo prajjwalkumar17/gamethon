@@ -1,7 +1,7 @@
 package in.gamernation.app.Utils;
 
 public class Constants {
-    public static int SPLASH_TIMEOUT = 1000;
+    public static int SPLASH_TIMEOUT = 3000;
     public static String LOGINPREFS = "LOGINPREFS";
     public static String TOKENUSINGPREFS = "token";
     public static String AuthBearer = "bearer ";

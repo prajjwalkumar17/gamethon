@@ -34,7 +34,7 @@ import in.gamernation.app.Fragments.playedquizzesFragment;
 import in.gamernation.app.Fragments.referrals.referralsFragment;
 import in.gamernation.app.Fragments.settingsFragment;
 import in.gamernation.app.Fragments.tutorialsFragment;
-import in.gamernation.app.Fragments.walletFragment;
+import in.gamernation.app.Fragments.wallet.walletFragment;
 import in.gamernation.app.R;
 
 public class HomeActivity extends AppCompatActivity implements navController.drawerControl,

@@ -41,7 +41,7 @@
         tools:layout="@layout/fragment_leaderboard" />
     <fragment
         android:id="@+id/walletFragment"
-        android:name="in.gamernation.app.Fragments.walletFragment"
+        android:name="in.gamernation.app.Fragments.wallet.walletFragment"
         android:label="fragment_wallet"
         tools:layout="@layout/fragment_wallet" />
 
