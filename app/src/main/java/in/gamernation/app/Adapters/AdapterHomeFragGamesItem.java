@@ -48,7 +48,7 @@ public class AdapterHomeFragGamesItem extends RecyclerView.Adapter<AdapterHomeFr
         category = list.get(position).getCategory();
         String profilepic = list.get(position).getThumb();
 
-        holder.homegamesname.setText(name);
+//        holder.homegamesname.setText(name);
 
         Picasso.get()
                 .load(profilepic)
@@ -75,6 +75,7 @@ public class AdapterHomeFragGamesItem extends RecyclerView.Adapter<AdapterHomeFr
             super(itemView);
             homegamesimg = itemView.findViewById(R.id.homegamesimg);
             homegamesname = itemView.findViewById(R.id.homegamesname);
+            homegamesname.setText("");
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

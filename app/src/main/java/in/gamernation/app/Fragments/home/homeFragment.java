@@ -121,7 +121,7 @@ public class homeFragment extends Fragment {
     private void selectedIndicator(int position) {
         for (int i = 0; i < noofimganddots; i++) {
             if (i == position) {
-                dot[i].setTextColor(getResources().getColor(R.color.purple_700));
+                dot[i].setTextColor(getResources().getColor(R.color.final_secondary));
             } else {
                 dot[i].setTextColor(getResources().getColor(R.color.teal_700));
             }

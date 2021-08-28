@@ -2223,7 +2223,6 @@ int id clip_vertical 0x7f0a00c4
 int id clockwise 0x7f0a00c5
 int id closest 0x7f0a00c6
 int id collapseActionView 0x7f0a00c7
-int id commontoolbar_backbot 0x7f0a00c8
 int id commontoolbar_fragname 0x7f0a00c9
 int id completebotnav 0x7f0a00ca
 int id confirm_button 0x7f0a00cb
@@ -2339,7 +2338,6 @@ int id ifRoom 0x7f0a0138
 int id ignore 0x7f0a0139
 int id ignoreRequest 0x7f0a013a
 int id image 0x7f0a013b
-int id imageView3 0x7f0a013c
 int id immediateStop 0x7f0a013d
 int id included 0x7f0a013e
 int id info 0x7f0a013f
@@ -2535,6 +2533,11 @@ int id radio 0x7f0a01fc
 int id ratio 0x7f0a01fd
 int id rectangles 0x7f0a01fe
 int id recycler_view 0x7f0a01ff
+int id recyclerwallethistoryamount 0x7f0a02be
+int id recyclerwallethistoryorder 0x7f0a02bf
+int id recyclerwallethistoryorderid 0x7f0a02c0
+int id recyclerwallethistorystatus 0x7f0a02c1
+int id recyclerwallethistorytype 0x7f0a02c2
 int id recyclerwalletsumarry 0x7f0a0200
 int id recyclerwallettransaction 0x7f0a0201
 int id recyclerwallettransactionamount 0x7f0a0202
@@ -2661,7 +2664,6 @@ int id textSpacerNoTitle 0x7f0a027a
 int id textStart 0x7f0a027b
 int id textTop 0x7f0a027c
 int id textView 0x7f0a027d
-int id textView4 0x7f0a027e
 int id textView5 0x7f0a027f
 int id text_input_end_icon 0x7f0a0280
 int id text_input_error_icon 0x7f0a0281
@@ -2678,6 +2680,9 @@ int id titleDividerNoCustom 0x7f0a028b
 int id title_template 0x7f0a028c
 int id toggle 0x7f0a028d
 int id tool 0x7f0a028e
+int id toolwithbackbotbellicon 0x7f0a02c3
+int id toolwithbackbothead 0x7f0a02c4
+int id toolwithbackbotheadbot 0x7f0a02c5
 int id top 0x7f0a028f
 int id topPanel 0x7f0a0290
 int id touch_outside 0x7f0a0291
@@ -2703,6 +2708,8 @@ int id view_tree_view_model_store_owner 0x7f0a02a4
 int id visible 0x7f0a02a5
 int id visible_removing_fragment_view_tag 0x7f0a02a6
 int id walletFragment 0x7f0a02a7
+int id walletalltransactionrecycler 0x7f0a02ba
+int id walletalltransactionwinningcoin 0x7f0a02bb
 int id walletfragmentaddcoinsbot 0x7f0a02a8
 int id walletfragmentbonuscoins 0x7f0a02a9
 int id walletfragmentdepositedcoins 0x7f0a02aa
@@ -2712,6 +2719,8 @@ int id walletfragmentviewpaymenthistorybot 0x7f0a02ad
 int id walletfragmentviewtransactionbot 0x7f0a02ae
 int id walletfragmentwinningcoins 0x7f0a02af
 int id walletfragmentwithdrawcoinsbot 0x7f0a02b0
+int id walletpaymenthistoryrecycler 0x7f0a02bc
+int id walletpaymenthistorywinningcoin 0x7f0a02bd
 int id west 0x7f0a02b1
 int id withText 0x7f0a02b2
 int id withinBounds 0x7f0a02b3
@@ -2835,6 +2844,8 @@ int layout fragment_playedquizzes 0x7f0d0046
 int layout fragment_referrals 0x7f0d0047
 int layout fragment_tutorials 0x7f0d0048
 int layout fragment_wallet 0x7f0d0049
+int layout fragment_walletpaymenthistory 0x7f0d00b4
+int layout fragment_walletviewalltransacton 0x7f0d00b5
 int layout hometoolbar 0x7f0d004a
 int layout image_frame 0x7f0d004b
 int layout img_slider 0x7f0d004c
@@ -2920,6 +2931,7 @@ int layout recyclerarcadeviewteams 0x7f0d009b
 int layout recyclerhomegamesitem 0x7f0d009c
 int layout recyclerleaderboarditems 0x7f0d009d
 int layout recyclerwalletlasttransactionitem 0x7f0d009e
+int layout recyclerwalletpaymenthistoryitem 0x7f0d00b7
 int layout referaaltool 0x7f0d009f
 int layout select_dialog_item_material 0x7f0d00a0
 int layout select_dialog_multichoice_material 0x7f0d00a1
@@ -2941,6 +2953,7 @@ int layout text_view_with_line_height_from_layout 0x7f0d00b0
 int layout text_view_with_line_height_from_style 0x7f0d00b1
 int layout text_view_with_theme_line_height 0x7f0d00b2
 int layout text_view_without_line_height 0x7f0d00b3
+int layout toolbarwithbackandbell 0x7f0d00b6
 int menu botnav_menu 0x7f0e0000
 int menu nav_menu 0x7f0e0001
 int mipmap ic_launcher 0x7f0f0000

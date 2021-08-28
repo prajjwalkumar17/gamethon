@@ -40,7 +40,7 @@ public class AdapterWalletlasttransactions extends RecyclerView.Adapter<AdapterW
     @Override
     public void onBindViewHolder(@NonNull @NotNull recycleviews holder, int position) {
         try {
-            JSONArray transactionarray = object.getJSONArray("Recent_transactions");
+            JSONArray transactionarray = object.getJSONArray("wallet_transactions");
             JSONObject lasttransactions = transactionarray.getJSONObject(position);
             String deposit = lasttransactions.getString("deposit");
             String winning = lasttransactions.getString("winning");
@@ -58,25 +58,21 @@ public class AdapterWalletlasttransactions extends RecyclerView.Adapter<AdapterW
             holder.recyclerwallettransactionfor.setText(cause);
 
             if (type.equals("CREDIT")) {
-
                 holder.recyclerwallettransaction.setTextColor(thiscontext.getResources().getColor(R.color.green));
                 holder.recyclerwallettransaction.setText(type);
-
             } else {
                 holder.recyclerwallettransaction.setTextColor(thiscontext.getResources().getColor(R.color.red));
                 holder.recyclerwallettransaction.setText(type);
-
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
     public int getItemCount() {
         try {
-            length = object.getJSONArray("Recent_transactions").length();
+            length = object.getJSONArray("wallet_transactions").length();
             return length;
         } catch (JSONException e) {
             e.printStackTrace();

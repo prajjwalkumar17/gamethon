@@ -42,10 +42,6 @@ in/gamernation/app/ZTest/TestActivity.java
  in.gamernation.app.ZTest.TestActivity$async
 in/gamernation/app/APInterfaces/APIHomedashboardgamesItem.java
  in.gamernation.app.APInterfaces.APIHomedashboardgamesItem
-in/gamernation/app/Fragments/walletFragment.java
- in.gamernation.app.Fragments.walletFragment
- in.gamernation.app.Fragments.walletFragment$1
- in.gamernation.app.Fragments.walletFragment$1$1
 in/gamernation/app/Fragments/contactusFragment.java
  in.gamernation.app.Fragments.contactusFragment
 in/gamernation/app/Fragments/home/arcadegameFragment.java
@@ -54,6 +50,9 @@ in/gamernation/app/Fragments/home/arcadegameFragment.java
  in.gamernation.app.Fragments.home.arcadegameFragment$2
  in.gamernation.app.Fragments.home.arcadegameFragment$3
  in.gamernation.app.Fragments.home.arcadegameFragment$4
+in/gamernation/app/Adapters/AdapterWalletpaymenthistory.java
+ in.gamernation.app.Adapters.AdapterWalletpaymenthistory
+ in.gamernation.app.Adapters.AdapterWalletpaymenthistory$viewrecycler
 in/gamernation/app/CommonInterfaces/botnavController.java
  in.gamernation.app.CommonInterfaces.botnavController
  in.gamernation.app.CommonInterfaces.botnavController$botVisibilityController
@@ -62,6 +61,10 @@ in/gamernation/app/Adapters/AdapterHomeSlider.java
  in.gamernation.app.Adapters.AdapterHomeSlider$MyViewHolder
 in/gamernation/app/APIResponses/GamesResponse.java
  in.gamernation.app.APIResponses.GamesResponse
+in/gamernation/app/Fragments/wallet/walletpaymenthistoryFragment.java
+ in.gamernation.app.Fragments.wallet.walletpaymenthistoryFragment
+ in.gamernation.app.Fragments.wallet.walletpaymenthistoryFragment$1
+ in.gamernation.app.Fragments.wallet.walletpaymenthistoryFragment$1$1
 in/gamernation/app/APInterfaces/APILoginInterfaces.java
  in.gamernation.app.APInterfaces.APILoginInterfaces
 in/gamernation/app/Adapters/AdapterLeaderboard.java
@@ -102,6 +105,10 @@ in/gamernation/app/Fragments/leaderboardFragment.java
  in.gamernation.app.Fragments.leaderboardFragment$6
  in.gamernation.app.Fragments.leaderboardFragment$7
  in.gamernation.app.Fragments.leaderboardFragment$7$1
+in/gamernation/app/Fragments/wallet/walletviewalltransactonFragment.java
+ in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment
+ in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment$1
+ in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment$1$1
 in/gamernation/app/Startup/Login.java
  in.gamernation.app.Startup.Login
  in.gamernation.app.Startup.Login$1
@@ -151,6 +158,12 @@ in/gamernation/app/Utils/Constants.java
 in/gamernation/app/Activities/HomeActivity.java
  in.gamernation.app.Activities.HomeActivity
  in.gamernation.app.Activities.HomeActivity$1
+in/gamernation/app/Fragments/wallet/walletFragment.java
+ in.gamernation.app.Fragments.wallet.walletFragment
+ in.gamernation.app.Fragments.wallet.walletFragment$1
+ in.gamernation.app.Fragments.wallet.walletFragment$2
+ in.gamernation.app.Fragments.wallet.walletFragment$3
+ in.gamernation.app.Fragments.wallet.walletFragment$3$1
 in/gamernation/app/APIResponses/UserLoginResponse.java
  in.gamernation.app.APIResponses.UserLoginResponse
 in/gamernation/app/Fragments/referrals/referralsFragment.java

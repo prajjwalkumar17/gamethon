@@ -103,7 +103,7 @@ public class myprofileFragment extends Fragment {
         myprofile_dp = root.findViewById(R.id.myprofile_dp);
         myprofile_refferalcode = root.findViewById(R.id.myprofile_refferalcode);
         myprofile_updatebiocredsbot = root.findViewById(R.id.myprofile_updatebiocredsbot);
-        commontoolbar_backbot = root.findViewById(R.id.commontoolbar_backbot);
+        commontoolbar_backbot = root.findViewById(R.id.toolwithbackbotheadbot);
         commontoolbar_fragname = root.findViewById(R.id.commontoolbar_fragname);
         myprofile_sharerefferalcodebot = root.findViewById(R.id.myprofile_sharerefferalcodebot);
     }

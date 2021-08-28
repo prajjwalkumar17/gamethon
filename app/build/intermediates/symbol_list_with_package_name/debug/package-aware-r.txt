@@ -2224,7 +2224,6 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
-id commontoolbar_backbot
 id commontoolbar_fragname
 id completebotnav
 id confirm_button
@@ -2340,7 +2339,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView3
 id immediateStop
 id included
 id info
@@ -2536,6 +2534,11 @@ id radio
 id ratio
 id rectangles
 id recycler_view
+id recyclerwallethistoryamount
+id recyclerwallethistoryorder
+id recyclerwallethistoryorderid
+id recyclerwallethistorystatus
+id recyclerwallethistorytype
 id recyclerwalletsumarry
 id recyclerwallettransaction
 id recyclerwallettransactionamount
@@ -2662,7 +2665,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
-id textView4
 id textView5
 id text_input_end_icon
 id text_input_error_icon
@@ -2679,6 +2681,9 @@ id titleDividerNoCustom
 id title_template
 id toggle
 id tool
+id toolwithbackbotbellicon
+id toolwithbackbothead
+id toolwithbackbotheadbot
 id top
 id topPanel
 id touch_outside
@@ -2704,6 +2709,8 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id walletFragment
+id walletalltransactionrecycler
+id walletalltransactionwinningcoin
 id walletfragmentaddcoinsbot
 id walletfragmentbonuscoins
 id walletfragmentdepositedcoins
@@ -2713,6 +2720,8 @@ id walletfragmentviewpaymenthistorybot
 id walletfragmentviewtransactionbot
 id walletfragmentwinningcoins
 id walletfragmentwithdrawcoinsbot
+id walletpaymenthistoryrecycler
+id walletpaymenthistorywinningcoin
 id west
 id withText
 id withinBounds
@@ -2836,6 +2845,8 @@ layout fragment_playedquizzes
 layout fragment_referrals
 layout fragment_tutorials
 layout fragment_wallet
+layout fragment_walletpaymenthistory
+layout fragment_walletviewalltransacton
 layout hometoolbar
 layout image_frame
 layout img_slider
@@ -2921,6 +2932,7 @@ layout recyclerarcadeviewteams
 layout recyclerhomegamesitem
 layout recyclerleaderboarditems
 layout recyclerwalletlasttransactionitem
+layout recyclerwalletpaymenthistoryitem
 layout referaaltool
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -2942,6 +2954,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout toolbarwithbackandbell
 menu botnav_menu
 menu nav_menu
 mipmap ic_launcher

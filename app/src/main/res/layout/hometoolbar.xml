@@ -19,7 +19,7 @@
 
 
             <ImageView
-                android:id="@+id/commontoolbar_backbot"
+                android:id="@+id/toolwithbackbotheadbot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="2dp"
@@ -33,7 +33,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/toolwithbackbothead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/baloo_bhaina"
@@ -42,13 +42,13 @@
                 android:textColor="@color/white"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/toolwithbackbotbellicon"
                 app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toEndOf="@+id/commontoolbar_backbot"
+                app:layout_constraintStart_toEndOf="@+id/toolwithbackbotheadbot"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/toolwithbackbotbellicon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="2dp"
