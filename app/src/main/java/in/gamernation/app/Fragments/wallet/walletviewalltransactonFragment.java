@@ -32,7 +32,7 @@ public class walletviewalltransactonFragment extends Fragment {
     private SharedPreferences sharedPreferences;
     private String usrtoken;
     private Context thiscontext;
-    private TextView walletalltransactionwinningcoin;
+    private TextView walletalltransactionwinningcoin, toolwithbackbothead;
     private RecyclerView walletalltransactionrecycler;
     private AdapterWalletlasttransactions adapterWalletlasttransactions;
 
@@ -53,6 +53,9 @@ public class walletviewalltransactonFragment extends Fragment {
     private void initviews(View root) {
         walletalltransactionwinningcoin = root.findViewById(R.id.walletalltransactionwinningcoin);
         walletalltransactionrecycler = root.findViewById(R.id.walletalltransactionrecycler);
+        toolwithbackbothead = root.findViewById(R.id.toolwithbackbothead);
+
+        toolwithbackbothead.setText("All Transactions");
 
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 1, GridLayoutManager.VERTICAL, false);

@@ -34,7 +34,7 @@ public class walletFragment extends Fragment {
     private SharedPreferences sharedPreferences;
     private String usrtoken;
     private Context thiscontext;
-    private TextView walletfragmenttotalcoins, walletfragmentdepositedcoins, walletfragmentwinningcoins, walletfragmentbonuscoins, walletfragmentviewtransactionbot, walletfragmentviewpaymenthistorybot;
+    private TextView walletfragmenttotalcoins, walletfragmentdepositedcoins, walletfragmentwinningcoins, walletfragmentbonuscoins, walletfragmentviewtransactionbot, walletfragmentviewpaymenthistorybot, toolwithbackbothead;
     private RecyclerView walletfragmentrecyclerview;
     private LinearLayout walletfragmentaddcoinsbot, walletfragmentwithdrawcoinsbot;
     private AdapterWalletlasttransactions adapterWalletlasttransactions;
@@ -72,6 +72,9 @@ public class walletFragment extends Fragment {
         walletfragmentbonuscoins = root.findViewById(R.id.walletfragmentbonuscoins);
         walletfragmentaddcoinsbot = root.findViewById(R.id.walletfragmentaddcoinsbot);
         walletfragmentwithdrawcoinsbot = root.findViewById(R.id.walletfragmentwithdrawcoinsbot);
+        toolwithbackbothead = root.findViewById(R.id.toolwithbackbothead);
+
+        toolwithbackbothead.setText("My Wallet");
 
         walletfragmentrecyclerview = root.findViewById(R.id.walletfragmentrecyclerview);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 1, GridLayoutManager.VERTICAL, false);
