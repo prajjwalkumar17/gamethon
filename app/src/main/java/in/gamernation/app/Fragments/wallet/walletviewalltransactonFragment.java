@@ -96,25 +96,16 @@ public class walletviewalltransactonFragment extends Fragment {
                     @Override
                     public void run() {
                         try {
-
-
                             JSONObject object = new JSONObject(myResponse);
                             walletalltransactionwinningcoin.setText(String.valueOf(object.get("Balance_winning")));
                             adapterWalletlasttransactions = new AdapterWalletlasttransactions(object, thiscontext);
                             walletalltransactionrecycler.setAdapter(adapterWalletlasttransactions);
-
-
                         } catch (Exception exception) {
                             exception.printStackTrace();
                         }
                     }
-
                 });
-
             }
         });
-
     }
-
-
 }

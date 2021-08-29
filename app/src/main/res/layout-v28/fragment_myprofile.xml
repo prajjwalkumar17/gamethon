@@ -33,7 +33,7 @@
                 android:layout_marginTop="30dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/myprofile_dp"
+                    android:id="@+id/mystat_dp"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:elevation="4dp"
@@ -55,32 +55,32 @@
 
 
                 <TextView
-                    android:id="@+id/myprofile_name"
+                    android:id="@+id/mystat_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Nandan Keshav"
                     android:textColor="@color/master_pale"
-                    app:layout_constraintBottom_toTopOf="@+id/myprofile_username"
+                    app:layout_constraintBottom_toTopOf="@+id/mystat_username"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/myprofile_username"
+                    android:id="@+id/mystat_username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Username:hangsai"
-                    app:layout_constraintBottom_toTopOf="@+id/myprofile_email"
+                    app:layout_constraintBottom_toTopOf="@+id/mystat_email"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/myprofile_name" />
+                    app:layout_constraintTop_toBottomOf="@+id/mystat_name" />
 
                 <TextView
-                    android:id="@+id/myprofile_email"
+                    android:id="@+id/mystat_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -89,7 +89,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/myprofile_username" />
+                    app:layout_constraintTop_toBottomOf="@+id/mystat_username" />
 
                 <TextView
                     android:id="@+id/myprofile_place"
@@ -102,7 +102,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/myprofile_email" />
+                    app:layout_constraintTop_toBottomOf="@+id/mystat_email" />
 
                 <TextView
                     android:id="@+id/myprofile_progress"

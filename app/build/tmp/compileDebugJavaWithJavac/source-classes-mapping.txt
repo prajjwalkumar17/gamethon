@@ -95,6 +95,8 @@ in/gamernation/app/BuildConfig.java
  in.gamernation.app.BuildConfig
 in/gamernation/app/Fragments/mystatsFragment.java
  in.gamernation.app.Fragments.mystatsFragment
+ in.gamernation.app.Fragments.mystatsFragment$1
+ in.gamernation.app.Fragments.mystatsFragment$1$1
 in/gamernation/app/Fragments/leaderboardFragment.java
  in.gamernation.app.Fragments.leaderboardFragment
  in.gamernation.app.Fragments.leaderboardFragment$1

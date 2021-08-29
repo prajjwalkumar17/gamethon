@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.referrals.invitefriendsFragment">
-
     <!-- TODO: Update blank fragment layout -->
     <include
         android:id="@+id/referaaltool"
@@ -12,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true" />
-
     <LinearLayout
         android:id="@+id/referaalheader"
         android:layout_width="match_parent"
@@ -21,14 +19,12 @@
         android:background="@color/final_secondary"
         android:orientation="horizontal"
         android:weightSum="2">
-
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="20dp"
             android:src="@drawable/walleticon" />
-
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -38,7 +34,6 @@
             android:text="Refer friends and\nEarn 5 coins\nfor each referral"
             android:textColor="@color/white" />
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/referaalfooter"
         android:layout_width="match_parent"
@@ -48,14 +43,12 @@
         android:gravity="center"
         android:orientation="vertical"
         android:weightSum="12">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_weight="1"
             android:text="Your invite code is" />
-
         <TextView
             android:id="@+id/referralreferraallcode"
             android:layout_width="wrap_content"
@@ -64,7 +57,6 @@
             android:text="Pk7765qw"
             android:textColor="@color/white"
             android:textSize="24sp" />
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/referralwhatsappshare"
             android:layout_width="wrap_content"
@@ -77,7 +69,6 @@
             android:padding="10dp"
             android:text="INVITE VIA WHATSAPP"
             android:textSize="10sp" />
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/referralmoreshare"
             android:layout_width="wrap_content"
@@ -90,7 +81,6 @@
             android:padding="10dp"
             android:text="MORE SHARING OPTIONS"
             android:textSize="10sp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,26 +89,18 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="2">
-
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
                 android:layout_weight="1"
                 android:text="total Friends Joined" />
-
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:background="@drawable/normalcurvedbot"
                 android:backgroundTint="#5A5555"
                 android:text="VIEW" />
-
-
         </LinearLayout>
-
-
     </LinearLayout>
-
-
 </RelativeLayout>

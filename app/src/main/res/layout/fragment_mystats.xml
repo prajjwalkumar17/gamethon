@@ -26,7 +26,7 @@
             android:layout_weight="1">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/myprofile_dp"
+                android:id="@+id/mystat_dp"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="20dp"
@@ -44,7 +44,7 @@
 
 
             <TextView
-                android:id="@+id/myprofile_name"
+                android:id="@+id/mystat_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -54,14 +54,14 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/myprofile_username"
+                android:id="@+id/mystat_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Username:hangsai" />
+                android:text="" />
 
             <TextView
-                android:id="@+id/myprofile_email"
+                android:id="@+id/mystat_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -129,6 +129,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/mystat_ludocontest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -150,6 +151,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/mystat_ludowins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -171,6 +173,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/mystat_ludolosses"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -236,6 +239,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/mystat_quizcontest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -257,6 +261,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/mystat_quizwins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -278,6 +283,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/mystat_quizlosses"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -345,6 +351,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/mystat_gamingcontests"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -366,6 +373,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/mystat_gamingwins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -387,6 +395,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/mystat_gaminglosses"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"

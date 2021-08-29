@@ -487,6 +487,8 @@ public class arcadeopenedFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //TODO doo call wallet recharge here
+
+
             }
         });
 

@@ -87,9 +87,9 @@ public class myprofileFragment extends Fragment {
     }
 
     private void findviews(View root) {
-        myprofile_name = root.findViewById(R.id.myprofile_name);
-        myprofile_username = root.findViewById(R.id.myprofile_username);
-        myprofile_email = root.findViewById(R.id.myprofile_email);
+        myprofile_name = root.findViewById(R.id.mystat_name);
+        myprofile_username = root.findViewById(R.id.mystat_username);
+        myprofile_email = root.findViewById(R.id.mystat_email);
         myprofile_place = root.findViewById(R.id.myprofile_place);
         progressBar2 = root.findViewById(R.id.progressBar2);
         myprofile_phoneno = root.findViewById(R.id.myprofile_phoneno);
@@ -100,7 +100,7 @@ public class myprofileFragment extends Fragment {
         myprofile_updatebirthdatebot = root.findViewById(R.id.myprofile_updatebirthdatebot);
         myprofile_panno = root.findViewById(R.id.myprofile_panno);
         myprofile_updatepanno = root.findViewById(R.id.myprofile_updatepanno);
-        myprofile_dp = root.findViewById(R.id.myprofile_dp);
+        myprofile_dp = root.findViewById(R.id.mystat_dp);
         myprofile_refferalcode = root.findViewById(R.id.myprofile_refferalcode);
         myprofile_updatebiocredsbot = root.findViewById(R.id.myprofile_updatebiocredsbot);
         commontoolbar_backbot = root.findViewById(R.id.toolwithbackbotheadbot);
