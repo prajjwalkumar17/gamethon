@@ -74,6 +74,7 @@ public class TestActivity extends AppCompatActivity {
             }
             return null;
         }
+
         @Override
         protected void onPostExecute(Void unused) {
             super.onPostExecute(unused);
@@ -84,5 +85,46 @@ public class TestActivity extends AppCompatActivity {
             }
         }
     }
+
+
+//    {
+//    "Leagues": [
+//        {
+//            "_id": "6114d9bc5d2c60d169385898",
+//                "league": {
+//                              "_id": "6114d75d550143e178150aa3",
+//                              "game_type": "SOLO",
+//                               "name": "any name like freeform with guns",
+//                               "entry": 20,
+//                               "prizes": 100,
+//                               "kill_coins": 9,
+//                               "start_date": "2021-08-12T12:30:00.000Z",
+//                               "total_participant": 80,
+//                               "map": "Enrangle",
+//                               "__v": 0,
+//                              "bonus": 50
+//                              "game": {
+//                                          "_id": "610e261e5a865c1caa2b4379",
+//                                          "name": "Free_Fire",
+//                                          "thumb": "https://res.cloudinary.com/gamernation/image/upload/v1630130391/gamernation/games/freefire_square_dfypqn.png",
+//                                          "category": "ARCADE",
+//                                          "__v": 0,
+//                                          "league_pic": "https://res.cloudinary.com/gamernation/image/upload/v1630130826/gamernation/games/League_pics/freefire_knb89d.png"
+//                                      },
+//                             "prize_pool": [
+//                                                   {
+//                                                  "_id": "6114d75d550143e178150aa4",
+//                                                      "standing": "1-2",
+//                                                      "prize": 100
+//                                                   }
+//                                            ],
+//
+//                         }
+//          }
+//          ]
+//    }
+//}
+
+
 }
 

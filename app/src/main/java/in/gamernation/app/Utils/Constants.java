@@ -21,6 +21,7 @@ public class Constants {
     public static String arcadeopenedleaguepic = "dummydata22";
     public static String arcadeopenedbonus = "bonus";
     public static String arcadeopenedgametype = "gametype";
+    public static String myleaguedatafetched = "null";
 
 
     public static String w3devbaseurl = "https://gamernation.w3api.net/";
@@ -35,4 +36,7 @@ public class Constants {
     public static String LOG = "###-----------LOG IS HEre BIG ONE-------------------###############";
 
 
+    public static String whatsappAPIwithtextfilter = "http://api.whatsapp.com/send?text=";
+
+    public static String myleaguecateg = "null";
 }

@@ -140,6 +140,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/dialogarcadejoinwalletoptions.xml"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_dialogmyleagueliveromeidandpass.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/dialogmyleagueliveromeidandpass.xml"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_home.xml"
     },
@@ -182,6 +186,10 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_tutorials.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_tutorials.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_recyclermyleaguesitem.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/recyclermyleaguesitem.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_wallet.xml.flat",
@@ -280,12 +288,12 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/crdbond.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_playedquizzes.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_playedquizzes.xml"
-    },
-    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_toolbarwithbackandbell.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/toolbarwithbackandbell.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/layout_fragment_playedquizzes.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_playedquizzes.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_cardbotcurved.xml.flat",
@@ -408,12 +416,12 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/toolbar.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_myplayedquiz.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_myplayedquiz.xml"
-    },
-    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_cardbg.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/cardbg.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_nav_menu_myplayedquiz.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_myplayedquiz.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/res/merged/debug/drawable_tool_navicon.xml.flat",

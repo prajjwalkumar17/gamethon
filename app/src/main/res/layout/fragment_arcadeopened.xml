@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pale_red"
+    android:background="@color/final_master"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".Fragments.home.arcadeopenedFragment">
@@ -25,6 +25,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/final_secondary"
             android:text="Rules/How to play"
             android:textSize="10sp" />
 
@@ -308,7 +309,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.2"
-            android:background="@color/white" />
+            android:background="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -402,11 +403,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/teal_700"
+        android:background="@color/final_secondary"
         android:orientation="horizontal"
         android:weightSum="3">
 
         <LinearLayout
+            android:id="@+id/arcadeopenedmyleaguesopened"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

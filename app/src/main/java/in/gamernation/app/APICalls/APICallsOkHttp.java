@@ -27,14 +27,6 @@ public class APICallsOkHttp {
         return Objects.requireNonNull(HttpUrl.parse(url)).newBuilder().addQueryParameter(filtername, value).build().toString();
     }
 
-    public static String urlbuilderforhttpwithtwoquery(String url, String filtername1, String value1, String filtername2, String value2) {
-        return Objects.requireNonNull(HttpUrl.parse(url))
-                .newBuilder()
-                .addQueryParameter(filtername1, value1)
-                .addQueryParameter(filtername2, value2)
-                .build().toString();
-    }
-
     public static Request requestbuildwithauth(String url, String usrauthtoken) {
         return new Request.Builder()
                 .header("Authorization", Constants.AuthBearer + usrauthtoken)

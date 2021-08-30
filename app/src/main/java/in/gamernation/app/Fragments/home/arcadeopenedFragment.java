@@ -27,6 +27,7 @@ import java.io.IOException;
 
 import in.gamernation.app.APICalls.APICallsOkHttp;
 import in.gamernation.app.Activities.HomeActivity;
+import in.gamernation.app.Fragments.myleaguesFragment;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -43,8 +44,8 @@ public class arcadeopenedFragment extends Fragment {
     private AppCompatButton arcadeopenedprizepoolbreakup, arcadeopenedfullprizepool, joindialoggamecancel, joindialoggamejoin;
     private Context thiscontext;
     private EditText joindialoggamename, joindialoggameId;
-    private String thumb, id, name, entrycoins, prizescoins, gametype, killcoins, filled, totalparticipants, map, startdate, bonus, joingamename, joingameId;
-    private LinearLayout arcadeopenedbottomlinearlayout, arcadeopenedcreatetam, arcadeopenedjoinbot, arcadeopenedshowparticipants;
+    private String thumb, id, name, entrycoins, prizescoins, gametype, killcoins, filled, totalparticipants, map, startdate, bonus, joingamename, joingameId, myleaguedata, myleaguecateg;
+    private LinearLayout arcadeopenedbottomlinearlayout, arcadeopenedmyleaguesopened, arcadeopenedcreatetam, arcadeopenedjoinbot, arcadeopenedshowparticipants;
 
     //jointeamdialog
     private EditText jointeamdialoggamename, jointeamdialoggameId, jointeamdialogteamid;
@@ -76,15 +77,36 @@ public class arcadeopenedFragment extends Fragment {
         initscreen();
         initviews(root);
         viewparticipants();
-        if (gametype.equals("SOLO")) {
-            solojoingame();
+        showleagues();
+        if (myleaguedata.equals("null")) {
+            if (gametype.equals("SOLO")) {
+                solojoingame();
+            } else {
+                otherjointeam();
+                createteam();
+            }
         } else {
-            otherjointeam();
-            createteam();
+            if (myleaguecateg.equals("null"))
+                changeviewsformyleaguedata();
+            else
+                changedataformyleagueteam();
         }
         return root;
     }
 
+
+    private void changeviewsformyleaguedata() {
+        //TODO change views for my leagues fragment solo
+
+        arcadeopenedbottomlinearlayout.setWeightSum(1);
+        arcadeopenedmyleaguesopened.setVisibility(View.GONE);
+    }
+
+    private void changedataformyleagueteam() {
+        //TODO change views for my leagues fragment others
+        changeviewsformyleaguedata();
+        arcadeopenedbottomparticiapantstext.setText("View Teams");
+    }
 
     @Override
     public void onAttach(@NonNull @NotNull Context context) {
@@ -119,6 +141,7 @@ public class arcadeopenedFragment extends Fragment {
         arcadeopenedcreatetam = root.findViewById(R.id.arcadeopenedcreatetam);
         arcadeopenedbottomparticiapantstext = root.findViewById(R.id.arcadeopenedbottomparticiapantstext);
         arcadeopenedbottomjointext = root.findViewById(R.id.arcadeopenedbottomjointext);
+        arcadeopenedmyleaguesopened = root.findViewById(R.id.arcadeopenedmyleaguesopened);
 
 
         fetchdatafromsharedpref();
@@ -139,6 +162,8 @@ public class arcadeopenedFragment extends Fragment {
         filled = preferences.getString(Constants.arcadeopenedfilled, "no data found!!!");
         totalparticipants = preferences.getString(Constants.arcadeopenedtotalparticipants, "no data found!!!");
         bonus = preferences.getString(Constants.arcadeopenedbonus, "no data found!!!");
+        myleaguedata = preferences.getString(Constants.myleaguedatafetched, "null");
+        myleaguecateg = preferences.getString(Constants.myleaguecateg, "null");
 
 
         changedatatforduoandsquad();
@@ -191,6 +216,17 @@ public class arcadeopenedFragment extends Fragment {
 
 
     }
+
+    private void showleagues() {
+        arcadeopenedmyleaguesopened.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new myleaguesFragment()).addToBackStack(null).commit();
+            }
+        });
+    }
+
 
     private void solojoingame() {
         arcadeopenedjoinbot.setOnClickListener(new View.OnClickListener() {

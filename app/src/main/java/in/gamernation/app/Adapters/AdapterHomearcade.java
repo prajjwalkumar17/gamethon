@@ -111,7 +111,7 @@ public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.re
         }
 
         private void initviews(View itemView) {
-            arcadeitemgameheading = itemView.findViewById(R.id.arcadeitemgameheading);
+            arcadeitemgameheading = itemView.findViewById(R.id.myleaguesheading);
             arcadeitementryhead = itemView.findViewById(R.id.arcadeitementryhead);
             arcadeitementrycoins = itemView.findViewById(R.id.arcadeitementrycoins);
             arcadeitemprizeshead = itemView.findViewById(R.id.arcadeitemprizeshead);
@@ -129,8 +129,8 @@ public class AdapterHomearcade extends RecyclerView.Adapter<AdapterHomearcade.re
             arcadeitemmap = itemView.findViewById(R.id.arcadeitemmap);
             arcadeitemviewbot = itemView.findViewById(R.id.arcadeitemviewbot);
 
-            arcadeitemgameimg = itemView.findViewById(R.id.arcadeitemgameimg);
-            arcadeitementrypic = itemView.findViewById(R.id.arcadeitementrypic);
+            arcadeitemgameimg = itemView.findViewById(R.id.myleaguesgameimg);
+            arcadeitementrypic = itemView.findViewById(R.id.myleaguesentrypic);
             arcadeitemprizesimg = itemView.findViewById(R.id.arcadeitemprizesimg);
             arcadeitemkillpointimg = itemView.findViewById(R.id.arcadeitemkillpointimg);
             arcadeitemstartdateimg = itemView.findViewById(R.id.arcadeitemstartdateimg);
