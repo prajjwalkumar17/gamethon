@@ -27,7 +27,8 @@ import java.io.IOException;
 
 import in.gamernation.app.APICalls.APICallsOkHttp;
 import in.gamernation.app.Activities.HomeActivity;
-import in.gamernation.app.Fragments.myleaguesFragment;
+import in.gamernation.app.Fragments.myleagues.myleaguesFragment;
+import in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -45,7 +46,7 @@ public class arcadeopenedFragment extends Fragment {
     private Context thiscontext;
     private EditText joindialoggamename, joindialoggameId;
     private String thumb, id, name, entrycoins, prizescoins, gametype, killcoins, filled, totalparticipants, map, startdate, bonus, joingamename, joingameId, myleaguedata, myleaguecateg;
-    private LinearLayout arcadeopenedbottomlinearlayout, arcadeopenedmyleaguesopened, arcadeopenedcreatetam, arcadeopenedjoinbot, arcadeopenedshowparticipants;
+    private LinearLayout arcadeopenedbottomlinearlayout, arcadeopenedmyleaguesopened, arcadeopenedcreatetam, arcadeopenedjoinbot, arcadeopenedshowparticipants, myleagueshowmyteam;
 
     //jointeamdialog
     private EditText jointeamdialoggamename, jointeamdialoggameId, jointeamdialogteamid;
@@ -86,10 +87,11 @@ public class arcadeopenedFragment extends Fragment {
                 createteam();
             }
         } else {
-            if (myleaguecateg.equals("null"))
+            if (myleaguecateg.equals("SOLO")) {
                 changeviewsformyleaguedata();
-            else
+            } else {
                 changedataformyleagueteam();
+            }
         }
         return root;
     }
@@ -97,15 +99,29 @@ public class arcadeopenedFragment extends Fragment {
 
     private void changeviewsformyleaguedata() {
         //TODO change views for my leagues fragment solo
-
         arcadeopenedbottomlinearlayout.setWeightSum(1);
         arcadeopenedmyleaguesopened.setVisibility(View.GONE);
+        arcadeopenedbottomparticiapantstext.setText("View Participants");
     }
 
     private void changedataformyleagueteam() {
         //TODO change views for my leagues fragment others
         changeviewsformyleaguedata();
+        arcadeopenedbottomlinearlayout.setWeightSum(2);
         arcadeopenedbottomparticiapantstext.setText("View Teams");
+        myleagueshowmyteam.setVisibility(View.VISIBLE);
+        viewmyteamformyleague();
+    }
+
+    private void viewmyteamformyleague() {
+        myleagueshowmyteam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().
+                        replace(R.id.fragmentContainerView, new myleaguesviewteamFragment()).addToBackStack(null).commit();
+
+            }
+        });
     }
 
     @Override
@@ -142,6 +158,7 @@ public class arcadeopenedFragment extends Fragment {
         arcadeopenedbottomparticiapantstext = root.findViewById(R.id.arcadeopenedbottomparticiapantstext);
         arcadeopenedbottomjointext = root.findViewById(R.id.arcadeopenedbottomjointext);
         arcadeopenedmyleaguesopened = root.findViewById(R.id.arcadeopenedmyleaguesopened);
+        myleagueshowmyteam = root.findViewById(R.id.myleagueshowmyteam);
 
 
         fetchdatafromsharedpref();

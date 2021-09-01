@@ -7,6 +7,7 @@ public class Constants {
     public static String AuthBearer = "bearer ";
     public static String ARCADEGAMEPREF = "arcadegame";
     public static String ARCADEGAMEIDPREF = "arcadegameID";
+    public static String differpref = "differpref";
 
     public static String arcadeopenedid = "dummydata";
     public static String arcadeopenedthumb = "dummydata1";
@@ -22,6 +23,7 @@ public class Constants {
     public static String arcadeopenedbonus = "bonus";
     public static String arcadeopenedgametype = "gametype";
     public static String myleaguedatafetched = "null";
+    public static String myleaguecateg = "null";
 
 
     public static String w3devbaseurl = "https://gamernation.w3api.net/";
@@ -37,6 +39,7 @@ public class Constants {
 
 
     public static String whatsappAPIwithtextfilter = "http://api.whatsapp.com/send?text=";
+    public static String myleaguedifferforpast = "false";
 
-    public static String myleaguecateg = "null";
+    public static String differthepast = "false";
 }

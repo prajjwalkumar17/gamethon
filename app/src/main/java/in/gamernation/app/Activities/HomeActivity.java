@@ -27,7 +27,7 @@ import in.gamernation.app.CommonInterfaces.navController;
 import in.gamernation.app.Fragments.contactusFragment;
 import in.gamernation.app.Fragments.home.homeFragment;
 import in.gamernation.app.Fragments.leaderboardFragment;
-import in.gamernation.app.Fragments.myleaguesFragment;
+import in.gamernation.app.Fragments.myleagues.myleaguesFragment;
 import in.gamernation.app.Fragments.myprofileFragment;
 import in.gamernation.app.Fragments.mystatsFragment;
 import in.gamernation.app.Fragments.playedquizzesFragment;
