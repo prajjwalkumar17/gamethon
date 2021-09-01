@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -68,7 +69,17 @@ public class invitefriendsFragment extends Fragment {
         referralmoreshare = root.findViewById(R.id.referralmoreshare);
         referralviewfriends = root.findViewById(R.id.referralviewfriends);
         referralreferraallcode = root.findViewById(R.id.referralreferraallcode);
-        toolwithbackbothead.setText("All Transactions");
+        ImageView toolwithbackbotheadbot = root.findViewById(R.id.toolwithbackbotheadbot);
+
+        toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (getActivity() != null)
+                    getActivity().getSupportFragmentManager().popBackStackImmediate();
+            }
+        });
+
+        toolwithbackbothead.setText("Referrals");
         fetchandshowdata();
         joinedfriends();
     }

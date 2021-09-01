@@ -72,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Username:hangsai"
+                    android:text=""
                     app:layout_constraintBottom_toTopOf="@+id/mystat_email"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
@@ -409,10 +409,10 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="30dp"
         android:backgroundTint="@color/black"
-        android:outlineAmbientShadowColor="@color/master_secondary"
-        android:outlineSpotShadowColor="@color/master_secondary"
+        android:outlineAmbientShadowColor="@color/final_secondary"
+        android:outlineSpotShadowColor="@color/final_secondary"
         android:src="@drawable/edit"
-        app:rippleColor="@color/master_secondary"
+        app:rippleColor="@color/final_secondary"
         app:tint="@color/final_secondary" />
 
 </RelativeLayout>

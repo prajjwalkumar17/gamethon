@@ -68,6 +68,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         return root;
     }
 
+
     @Override
     public void onAttach(@NonNull @NotNull Context context) {
         super.onAttach(context);
@@ -207,11 +208,15 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 final String myresponse = response.body().string();
 //                CommonMethods.LOGthesite(Constants.LOG, myresponse);
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            object = new JSONObject(myresponse);
+                if (getActivity() == null) {
+                    return;
+                } else {
+
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                object = new JSONObject(myresponse);
 //                            CommonMethods.LOGthesite(Constants.LOG,object.toString());
 //                            JSONArray Leagues = object.getJSONArray("Leagues");
 //                            JSONObject leaguedetail = Leagues.getJSONObject(position);
@@ -253,13 +258,14 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
 //        String priizepoolprize=prizeobj.getString("prize");
 
 //                            CommonMethods.LOGthesite(Constants.LOG,game_type);
-                            adaptermyleagues = new Adaptermyleagues(object, thiscontext, gametype, myleaguesFragment.this);
-                            myleagurecycler.setAdapter(adaptermyleagues);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                                adaptermyleagues = new Adaptermyleagues(object, thiscontext, gametype, myleaguesFragment.this);
+                                myleagurecycler.setAdapter(adaptermyleagues);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
                         }
-                    }
-                });
+                    });
+
                 /*      CommonMethods.LOGthesite(Constants.LOG,
                             "\n"+id+"\n"+game_type
                                     +"\n"+entry
@@ -272,6 +278,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
                                     +"\n"+priizepoolprize
                     );
 */
+                }
             }
         });
     }

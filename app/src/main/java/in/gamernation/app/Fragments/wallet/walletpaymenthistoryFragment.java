@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -63,6 +64,15 @@ public class walletpaymenthistoryFragment extends Fragment {
         toolwithbackbothead = root.findViewById(R.id.toolwithbackbothead);
 
         toolwithbackbothead.setText("Payment History");
+        ImageView toolwithbackbotheadbot = root.findViewById(R.id.toolwithbackbotheadbot);
+
+        toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (getActivity() != null)
+                    getActivity().getSupportFragmentManager().popBackStackImmediate();
+            }
+        });
 
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 1, GridLayoutManager.VERTICAL, false);

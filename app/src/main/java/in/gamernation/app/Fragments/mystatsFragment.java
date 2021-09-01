@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,8 @@ public class mystatsFragment extends Fragment {
     private SharedPreferences sharedPreferences;
     private String usrtoken;
     private Context thiscontext;
+    private TextView commontoolbar_fragname;
+    private ImageView toolwithbackbotheadbot;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -79,6 +82,19 @@ public class mystatsFragment extends Fragment {
         mystat_gamingcontests = root.findViewById(R.id.mystat_gamingcontests);
         mystat_gamingwins = root.findViewById(R.id.mystat_gamingwins);
         mystat_gaminglosses = root.findViewById(R.id.mystat_gaminglosses);
+
+
+        commontoolbar_fragname = root.findViewById(R.id.commontoolbar_fragname);
+        commontoolbar_fragname.setText("My Stats");
+        toolwithbackbotheadbot = root.findViewById(R.id.toolwithbackbotheadbot);
+        toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+            }
+        });
+
+
     }
 
     private void fetchdata() {

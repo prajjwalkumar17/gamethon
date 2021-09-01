@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -53,9 +54,18 @@ public class walletviewalltransactonFragment extends Fragment {
     private void initviews(View root) {
         walletalltransactionwinningcoin = root.findViewById(R.id.walletalltransactionwinningcoin);
         walletalltransactionrecycler = root.findViewById(R.id.walletalltransactionrecycler);
-        toolwithbackbothead = root.findViewById(R.id.toolwithbackbothead);
 
+        toolwithbackbothead = root.findViewById(R.id.toolwithbackbothead);
         toolwithbackbothead.setText("All Transactions");
+        ImageView toolwithbackbotheadbot = root.findViewById(R.id.toolwithbackbotheadbot);
+
+        toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (getActivity() != null)
+                    getActivity().getSupportFragmentManager().popBackStackImmediate();
+            }
+        });
 
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 1, GridLayoutManager.VERTICAL, false);

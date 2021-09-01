@@ -8,11 +8,20 @@ public class MyProfileResponse {
     private String Phone_no;
     private String Email;
     private String Pan_details;
+    private String username;
     private String Invitation_code;
     private Boolean Email_Verified;
 
     public String getProfile_Picture() {
         return Profile_Picture;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setProfile_Picture(String profile_Picture) {

@@ -2260,9 +2260,13 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id dialog_button
+id dialogbonusbrac
+id dialogdepositwinbrac
 id dialogitemcreateteammsgresponse
 id dialogitemcreateteammteamcode
 id dialogitemcreateteamname
+id dialogtotalwalletbalbrac
+id dialogwalletresultmessage
 id dilogmyleaguecancelbot
 id dilogmyleaguecopybot
 id dilogmyleagueroomid
@@ -2542,6 +2546,9 @@ id mystat_quizwins
 id mystat_username
 id mystatsFragment
 id nav_controller_view_tag
+id nav_dp
+id nav_email
+id nav_filledandtotalentries
 id nav_host_fragment_container
 id nav_menu_Instagram
 id nav_menu_Youtube
@@ -2554,6 +2561,8 @@ id nav_menu_profile
 id nav_menu_settings
 id nav_menu_telegram
 id nav_menu_tutorial
+id nav_name
+id nav_progress
 id nav_view
 id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group

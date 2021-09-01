@@ -1,6 +1,7 @@
 package in.gamernation.app.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -19,8 +20,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import in.gamernation.app.APICalls.APICallsOkHttp;
 import in.gamernation.app.APICalls.APICallsRetrofit;
 import in.gamernation.app.APIResponses.MyProfileResponse;
 import in.gamernation.app.Activities.HomeActivity;
@@ -36,7 +42,6 @@ public class myprofileFragment extends Fragment {
 
     //TODO CHANGEABLE
 
-
     //TODO
 
     private static Context thiscontext;
@@ -51,6 +56,7 @@ public class myprofileFragment extends Fragment {
     private static ProgressBar progressBar2;
     private static CircleImageView myprofile_dp;
     private static SharedPreferences sharedPreferences;
+    private static MyProfileResponse myProfileResponse;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -75,6 +81,23 @@ public class myprofileFragment extends Fragment {
 
     private void initfunctions() {
         ontoolbarbackpressed();
+        onsharepressed();
+    }
+
+    private void onsharepressed() {
+        myprofile_sharerefferalcodebot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String msg = "Hi,Download this app and register through my referral code : " + myProfileResponse.getInvitation_code() + "\n"
+                        + "https://www.gamernation.in";
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_TEXT, msg);
+                intent.setType("text/plain");
+                intent = Intent.createChooser(intent, "Share by");
+                startActivity(intent);
+            }
+        });
     }
 
     private void initializers() {
@@ -106,6 +129,7 @@ public class myprofileFragment extends Fragment {
         commontoolbar_backbot = root.findViewById(R.id.toolwithbackbotheadbot);
         commontoolbar_fragname = root.findViewById(R.id.commontoolbar_fragname);
         myprofile_sharerefferalcodebot = root.findViewById(R.id.myprofile_sharerefferalcodebot);
+        commontoolbar_fragname.setText("My Profile");
     }
 
     private void ontoolbarbackpressed() {
@@ -127,6 +151,57 @@ public class myprofileFragment extends Fragment {
         thiscontext = context;
     }
 
+    private void fetchprofiledata() {
+        String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/my_profile");
+        APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestbuildwithauth(url, usrtoken)).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onFailure(@NotNull okhttp3.Call call, @NotNull IOException e) {
+            }
+
+            @Override
+            public void onResponse(@NotNull okhttp3.Call call, @NotNull okhttp3.Response response) throws IOException {
+                final String responsez = response.body().string();
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            JSONObject object = new JSONObject(responsez);
+                            String Profile_Picture = object.getString("Profile_Picture");
+                            String Name = object.getString("Name");
+                            String Username = object.getString("Username");
+                            String Progress = object.getString("Progress");
+                            String Email = object.getString("Email");
+
+
+//
+//                            nav_name = headerView.findViewById(R.id.nav_name);
+//                            nav_email = headerView.findViewById(R.id.nav_email);
+//                            nav_filledandtotalentries = headerView.findViewById(R.id.nav_filledandtotalentries);
+//                            nav_progress = headerView.findViewById(R.id.nav_progress);
+//                            nav_dp = headerView.findViewById(R.id.nav_dp);
+//
+//                            nav_name.setText(Name);
+//                            nav_email.setText(Email);
+//                            nav_filledandtotalentries.setText(Progress + "/100");
+//                            nav_progress.setProgress(Integer.parseInt(Progress));
+//                            Picasso.get()
+//                                    .load(Profile_Picture)
+//                                    .placeholder(R.drawable.placeholder)
+//                                    .fit()
+//                                    .error(R.drawable.dperror)
+//                                    .centerCrop()
+//                                    .into(nav_dp);
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        });
+    }
+
 
     public void showprofiledata() {
         Call<MyProfileResponse> myProfileResponseCall = APICallsRetrofit.getmyprofiledata().FetchProfileData("bearer " + usrtoken);
@@ -136,9 +211,7 @@ public class myprofileFragment extends Fragment {
 
 
                 if (response.isSuccessful()) {
-                    CommonMethods.DisplayLongTOAST(thiscontext, "Message received sucesssfully");
-                    MyProfileResponse myProfileResponse = response.body();
-
+                    myProfileResponse = response.body();
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -171,6 +244,7 @@ public class myprofileFragment extends Fragment {
         myprofile_refferalcode.setText(myProfileResponse.getInvitation_code());
         progressBar2.setProgress(myProfileResponse.getProgress());
         myprofile_phoneno.setText(myProfileResponse.getPhone_no());
+        myprofile_username.setText(myProfileResponse.getUsername());
         Picasso.get()
                 .load(myProfileResponse.getProfile_Picture())
                 .placeholder(R.drawable.placeholder)
@@ -178,6 +252,16 @@ public class myprofileFragment extends Fragment {
                 .error(R.drawable.dperror)
                 .centerCrop()
                 .into(myprofile_dp);
+
+//
+//        SharedPreferences sharedPreferences1 = getActivity().getSharedPreferences(Constants.navpref, Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPreferences1.edit();
+//        editor.putString(Constants.navheadername, myProfileResponse.getName()).apply();
+//        editor.putString(Constants.navheaddp, myProfileResponse.getProfile_Picture()).apply();
+//        editor.putString(Constants.navprogressbar, String.valueOf(myProfileResponse.getProgress())).apply();
+//        editor.putString(Constants.navemail, myProfileResponse.getEmail()).apply();
+//
+
         if (myProfileResponse.getEmail_Verified()) {
             myprofile_phoneverifieidbot.setText("verified");
         } else {
@@ -185,6 +269,4 @@ public class myprofileFragment extends Fragment {
             myprofile_phoneverifieidbot.setText("Not-Verified");
         }
     }
-
-
 }

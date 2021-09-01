@@ -40,7 +40,7 @@ import static in.gamernation.app.R.layout;
 public class leaderboardFragment extends Fragment {
     private CircleImageView leaderboard1strankdp, leaderboard3rdrankdp, leaderboard2ndrankdp;
     private TextView leaderboard1strankname, leaderboard1strankcoinswon, leaderboard3rdrankname, leaderboard3rdrankcoinswon, leaderboard2ndrankname, leaderboard2ndrankcoinswon;
-    private AppCompatButton Leaderboardfreefirebot, Leaderboardludobot, Leaderboardclashsquadbot, Leaderboardquizbot, Leaderboardfanbattlebot, Leaderboardbgmibot;
+    private AppCompatButton Leaderboardfreefirebot, Leaderboardludobot, Leaderboardclashsquadbot, Leaderboardquizbot, Leaderboardfanbattlebot, Leaderboardbgmibot, Leaderboardbackbot;
     private RecyclerView leaderboardrecyclerview;
     private SwitchCompat leaderboardswitch;
     private SharedPreferences sharedPreferences;
@@ -78,6 +78,7 @@ public class leaderboardFragment extends Fragment {
         leaderboard3rdrankdp = root.findViewById(R.id.leaderboard3rdrankdp);
         leaderboard2ndrankdp = root.findViewById(R.id.leaderboard2ndrankdp);
 
+
         leaderboard1strankname = root.findViewById(R.id.leaderboard1strankname);
         leaderboard1strankcoinswon = root.findViewById(R.id.leaderboard1strankcoinswon);
         leaderboard3rdrankname = root.findViewById(R.id.leaderboard3rdrankname);
@@ -98,8 +99,21 @@ public class leaderboardFragment extends Fragment {
         leaderboardrecyclerview.setLayoutManager(gridLayoutManager);
         leaderboardrecyclerview.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_2));
         Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.white));
+
+        Leaderboardbackbot = root.findViewById(R.id.Leaderboardbackbot);
+        Leaderboardbackbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (getActivity() != null)
+                    getActivity().getSupportFragmentManager().popBackStackImmediate();
+            }
+
+        });
+
+
         fetchdata(Constants.leaderboardfiltergame + "FREE_FIRE");
         showdataaccordingtobotpresssed();
+
     }
 
     private void showdataaccordingtobotpresssed() {

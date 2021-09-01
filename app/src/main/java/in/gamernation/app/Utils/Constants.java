@@ -8,6 +8,7 @@ public class Constants {
     public static String ARCADEGAMEPREF = "arcadegame";
     public static String ARCADEGAMEIDPREF = "arcadegameID";
     public static String differpref = "differpref";
+    public static String navpref = "pref";
 
     public static String arcadeopenedid = "dummydata";
     public static String arcadeopenedthumb = "dummydata1";
@@ -42,4 +43,9 @@ public class Constants {
     public static String myleaguedifferforpast = "false";
 
     public static String differthepast = "false";
+
+    public static String navheadername = "navname";
+    public static String navheaddp = "nav dpp";
+    public static String navprogressbar = "navprogress";
+    public static String navemail = "nav email";
 }

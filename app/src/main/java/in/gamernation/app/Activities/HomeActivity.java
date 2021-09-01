@@ -1,6 +1,8 @@
 package in.gamernation.app.Activities;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -8,6 +10,8 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +25,16 @@ import com.facebook.stetho.Stetho;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.squareup.picasso.Picasso;
 
+import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+
+import de.hdodenhof.circleimageview.CircleImageView;
+import in.gamernation.app.APICalls.APICallsOkHttp;
 import in.gamernation.app.CommonInterfaces.botnavController;
 import in.gamernation.app.CommonInterfaces.navController;
 import in.gamernation.app.Fragments.contactusFragment;
@@ -36,9 +49,15 @@ import in.gamernation.app.Fragments.settingsFragment;
 import in.gamernation.app.Fragments.tutorialsFragment;
 import in.gamernation.app.Fragments.wallet.walletFragment;
 import in.gamernation.app.R;
+import in.gamernation.app.Utils.Constants;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 public class HomeActivity extends AppCompatActivity implements navController.drawerControl,
-        navController.toolbarController, NavigationView.OnNavigationItemSelectedListener, botnavController.botVisibilityController {
+        navController.toolbarController,
+        NavigationView.OnNavigationItemSelectedListener,
+        botnavController.botVisibilityController {
     NavigationView nav_view;
     DrawerLayout drawer;
     ImageView navBotimg;
@@ -47,6 +66,10 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
     Animation rotate;
     BottomNavigationView botnav;
     BottomAppBar completebotnav;
+    TextView nav_name, nav_email, nav_filledandtotalentries;
+    ProgressBar nav_progress;
+    CircleImageView nav_dp;
+    String usrtoken;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,13 +77,65 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
         Stetho.initializeWithDefaults(this);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.LOGINPREFS, Context.MODE_PRIVATE);
+        usrtoken = sharedPreferences.getString(Constants.TOKENUSINGPREFS, "No data found!!!");
 
-        //FUNCTIONS
-
-        defaultfragmentonstartup(savedInstanceState);
         muticals();
+        defaultfragmentonstartup(savedInstanceState);
+
+        fetchprofiledata();
+
+    }
+
+    private void fetchprofiledata() {
+        String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/my_profile");
+        APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestbuildwithauth(url, usrtoken)).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                final String responsez = response.body().string();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            JSONObject object = new JSONObject(responsez);
+                            String Profile_Picture = object.getString("Profile_Picture");
+                            String Name = object.getString("Name");
+                            String Username = object.getString("Username");
+                            String Progress = object.getString("Progress");
+                            String Email = object.getString("Email");
+
+                            View headerView = nav_view.getHeaderView(0);
+
+                            nav_name = headerView.findViewById(R.id.nav_name);
+                            nav_email = headerView.findViewById(R.id.nav_email);
+                            nav_filledandtotalentries = headerView.findViewById(R.id.nav_filledandtotalentries);
+                            nav_progress = headerView.findViewById(R.id.nav_progress);
+                            nav_dp = headerView.findViewById(R.id.nav_dp);
+
+                            nav_name.setText(Name);
+                            nav_email.setText(Email);
+                            nav_filledandtotalentries.setText(Progress + "/100");
+                            nav_progress.setProgress(Integer.parseInt(Progress));
+                            Picasso.get()
+                                    .load(Profile_Picture)
+                                    .placeholder(R.drawable.placeholder)
+                                    .fit()
+                                    .error(R.drawable.dperror)
+                                    .centerCrop()
+                                    .into(nav_dp);
 
 
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        });
     }
 
 
@@ -133,6 +208,7 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
 
         }
     }
+
 
     /**
      * Interface Methods implemented

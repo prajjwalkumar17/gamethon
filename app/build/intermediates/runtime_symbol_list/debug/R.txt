@@ -2259,9 +2259,13 @@ int id design_menu_item_action_area_stub 0x7f0a00e8
 int id design_menu_item_text 0x7f0a00e9
 int id design_navigation_view 0x7f0a00ea
 int id dialog_button 0x7f0a00eb
+int id dialogbonusbrac 0x7f0a030b
+int id dialogdepositwinbrac 0x7f0a030c
 int id dialogitemcreateteammsgresponse 0x7f0a00ec
 int id dialogitemcreateteammteamcode 0x7f0a00ed
 int id dialogitemcreateteamname 0x7f0a00ee
+int id dialogtotalwalletbalbrac 0x7f0a030d
+int id dialogwalletresultmessage 0x7f0a030e
 int id dilogmyleaguecancelbot 0x7f0a02f2
 int id dilogmyleaguecopybot 0x7f0a02f3
 int id dilogmyleagueroomid 0x7f0a02f4
@@ -2541,6 +2545,9 @@ int id mystat_quizwins 0x7f0a01cf
 int id mystat_username 0x7f0a01d0
 int id mystatsFragment 0x7f0a01d1
 int id nav_controller_view_tag 0x7f0a01d2
+int id nav_dp 0x7f0a030f
+int id nav_email 0x7f0a0310
+int id nav_filledandtotalentries 0x7f0a0311
 int id nav_host_fragment_container 0x7f0a01d3
 int id nav_menu_Instagram 0x7f0a01d4
 int id nav_menu_Youtube 0x7f0a01d5
@@ -2553,6 +2560,8 @@ int id nav_menu_profile 0x7f0a01db
 int id nav_menu_settings 0x7f0a01dc
 int id nav_menu_telegram 0x7f0a01dd
 int id nav_menu_tutorial 0x7f0a01de
+int id nav_name 0x7f0a0312
+int id nav_progress 0x7f0a0313
 int id nav_view 0x7f0a01df
 int id navigation_bar_item_icon_view 0x7f0a01e0
 int id navigation_bar_item_labels_group 0x7f0a01e1
