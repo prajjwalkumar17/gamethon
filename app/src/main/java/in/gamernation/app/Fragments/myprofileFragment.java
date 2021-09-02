@@ -5,17 +5,19 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
@@ -27,15 +29,10 @@ import java.io.IOException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.gamernation.app.APICalls.APICallsOkHttp;
-import in.gamernation.app.APICalls.APICallsRetrofit;
-import in.gamernation.app.APIResponses.MyProfileResponse;
 import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 public class myprofileFragment extends Fragment {
@@ -45,7 +42,7 @@ public class myprofileFragment extends Fragment {
     //TODO
 
     private static Context thiscontext;
-    private static String usrtoken;
+    private static String usrtoken, Invitation_code;
     private static ImageView commontoolbar_backbot;
     private static ImageView myprofile_sharerefferalcodebot;
     private static TextView commontoolbar_fragname;
@@ -56,20 +53,24 @@ public class myprofileFragment extends Fragment {
     private static ProgressBar progressBar2;
     private static CircleImageView myprofile_dp;
     private static SharedPreferences sharedPreferences;
-    private static MyProfileResponse myProfileResponse;
+    //    private static MyProfileResponse myProfileResponse;
+    private ShimmerFrameLayout shimmerFrameLayout;
+    private ConstraintLayout profilemain;
+    private LinearLayout layoutbottompprofile;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_myprofile, container, false);
+
         allfunctions(root);
         return root;
     }
 
     private void allfunctions(View root) {
+        findviews(root);
         initscreen();
         initializers();
-        findviews(root);
         initfunctions();
     }
 
@@ -88,7 +89,7 @@ public class myprofileFragment extends Fragment {
         myprofile_sharerefferalcodebot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String msg = "Hi,Download this app and register through my referral code : " + myProfileResponse.getInvitation_code() + "\n"
+                String msg = "Hi,Download this app and register through my referral code : " + Invitation_code + "\n"
                         + "https://www.gamernation.in";
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_SEND);
@@ -103,10 +104,7 @@ public class myprofileFragment extends Fragment {
     private void initializers() {
         sharedPreferences = thiscontext.getSharedPreferences(Constants.LOGINPREFS, Context.MODE_PRIVATE);
         usrtoken = sharedPreferences.getString(Constants.TOKENUSINGPREFS, "No data found!!!");
-
-        showprofiledata();
-
-
+        fetchprofiledata();
     }
 
     private void findviews(View root) {
@@ -130,6 +128,14 @@ public class myprofileFragment extends Fragment {
         commontoolbar_fragname = root.findViewById(R.id.commontoolbar_fragname);
         myprofile_sharerefferalcodebot = root.findViewById(R.id.myprofile_sharerefferalcodebot);
         commontoolbar_fragname.setText("My Profile");
+
+
+        shimmerFrameLayout = root.findViewById(R.id.myprofileshimmer);
+        profilemain = root.findViewById(R.id.profilemain);
+        layoutbottompprofile = root.findViewById(R.id.layoutbottompprofile);
+        profilemain.setVisibility(View.GONE);
+        layoutbottompprofile.setVisibility(View.GONE);
+        shimmerFrameLayout.startShimmer();
     }
 
     private void ontoolbarbackpressed() {
@@ -156,24 +162,55 @@ public class myprofileFragment extends Fragment {
         APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestbuildwithauth(url, usrtoken)).enqueue(new okhttp3.Callback() {
             @Override
             public void onFailure(@NotNull okhttp3.Call call, @NotNull IOException e) {
+                CommonMethods.DisplayLongTOAST(thiscontext, "Data fetch failed" + e.getMessage());
             }
 
             @Override
             public void onResponse(@NotNull okhttp3.Call call, @NotNull okhttp3.Response response) throws IOException {
-                final String responsez = response.body().string();
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            JSONObject object = new JSONObject(responsez);
-                            String Profile_Picture = object.getString("Profile_Picture");
-                            String Name = object.getString("Name");
-                            String Username = object.getString("Username");
-                            String Progress = object.getString("Progress");
-                            String Email = object.getString("Email");
+                if (response != null) {
+                    final String responsez = response.body().string();
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                JSONObject object = new JSONObject(responsez);
+                                String Profile_Picture = object.getString("Profile_Picture");
+                                String Name = object.getString("Name");
+                                String Username = object.getString("Username");
+                                String Progress = object.getString("Progress");
+                                String Email = object.getString("Email");
+                                String DOB = object.getString("Date_of_Birth");
+                                String phno = object.getString("Phone_no");
+                                String Invitation_code = object.getString("Invitation_code");
+                                String Email_Verified = object.getString("Email_Verified");
+
+                                myprofile_name.setText(Name);
+                                myprofile_username.setText(Username);
+                                myprofile_birthdate.setText(DOB);
+                                myprofile_email.setText(Email);
+                                myprofile_refferalcode.setText(Invitation_code);
+                                myprofile_phoneno.setText(phno);
+                                progressBar2.setProgress(Integer.parseInt(Progress));
+                                Picasso.get()
+                                        .load(Profile_Picture)
+                                        .placeholder(R.drawable.placeholder)
+                                        .fit()
+                                        .error(R.drawable.dperror)
+                                        .centerCrop()
+                                        .into(myprofile_dp);
+                                if (Email_Verified.equals("true")) {
+                                    myprofile_phoneverifieidbot.setText("verified");
+                                } else {
+                                    myprofile_phoneverifieidbot.setTextColor(Color.RED);
+                                    myprofile_phoneverifieidbot.setText("Not-Verified");
+                                }
 
 
-//
+                                shimmerFrameLayout.hideShimmer();
+                                shimmerFrameLayout.setVisibility(View.GONE);
+                                profilemain.setVisibility(View.VISIBLE);
+                                layoutbottompprofile.setVisibility(View.VISIBLE);
+
 //                            nav_name = headerView.findViewById(R.id.nav_name);
 //                            nav_email = headerView.findViewById(R.id.nav_email);
 //                            nav_filledandtotalentries = headerView.findViewById(R.id.nav_filledandtotalentries);
@@ -193,16 +230,16 @@ public class myprofileFragment extends Fragment {
 //                                    .into(nav_dp);
 
 
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
         });
     }
-
-
+/*
     public void showprofiledata() {
         Call<MyProfileResponse> myProfileResponseCall = APICallsRetrofit.getmyprofiledata().FetchProfileData("bearer " + usrtoken);
         myProfileResponseCall.enqueue(new Callback<MyProfileResponse>() {
@@ -217,7 +254,7 @@ public class myprofileFragment extends Fragment {
                         @Override
                         public void run() {
                             if (myProfileResponse != null) {
-                                setMyProfileViews(myProfileResponse);
+//                                setMyProfileViews(myProfileResponse);
                             }
                         }
                     }, Constants.delaybeforelogin);
@@ -238,20 +275,19 @@ public class myprofileFragment extends Fragment {
     }
 
     private void setMyProfileViews(MyProfileResponse myProfileResponse) {
-        myprofile_name.setText(myProfileResponse.getName());
-        myprofile_birthdate.setText(myProfileResponse.getDate_of_Birth());
-        myprofile_email.setText(myProfileResponse.getEmail());
-        myprofile_refferalcode.setText(myProfileResponse.getInvitation_code());
-        progressBar2.setProgress(myProfileResponse.getProgress());
-        myprofile_phoneno.setText(myProfileResponse.getPhone_no());
-        myprofile_username.setText(myProfileResponse.getUsername());
-        Picasso.get()
-                .load(myProfileResponse.getProfile_Picture())
-                .placeholder(R.drawable.placeholder)
-                .fit()
-                .error(R.drawable.dperror)
-                .centerCrop()
-                .into(myprofile_dp);
+//        myprofile_birthdate.setText(myProfileResponse.getDate_of_Birth());
+//        myprofile_email.setText(myProfileResponse.getEmail());
+//        myprofile_refferalcode.setText(myProfileResponse.getInvitation_code());
+//        progressBar2.setProgress(myProfileResponse.getProgress());
+//        myprofile_phoneno.setText(myProfileResponse.getPhone_no());
+//        myprofile_username.setText(myProfileResponse.getUsername());
+//        Picasso.get()
+//                .load(myProfileResponse.getProfile_Picture())
+//                .placeholder(R.drawable.placeholder)
+//                .fit()
+//                .error(R.drawable.dperror)
+//                .centerCrop()
+//                .into(myprofile_dp);
 
 //
 //        SharedPreferences sharedPreferences1 = getActivity().getSharedPreferences(Constants.navpref, Context.MODE_PRIVATE);
@@ -268,5 +304,5 @@ public class myprofileFragment extends Fragment {
             myprofile_phoneverifieidbot.setTextColor(Color.RED);
             myprofile_phoneverifieidbot.setText("Not-Verified");
         }
-    }
+    }*/
 }
