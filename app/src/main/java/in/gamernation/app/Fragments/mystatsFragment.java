@@ -7,11 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
@@ -38,15 +40,36 @@ public class mystatsFragment extends Fragment {
     private TextView commontoolbar_fragname;
     private ImageView toolwithbackbotheadbot;
 
+
+    private LinearLayout statsnamelinear, statscard1, statscard2, statscard3;
+    private ShimmerFrameLayout shimmerFrameLayout;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_mystats, container, false);
         initscreen();
+        shimmersetup(root);
         initviews(root);
         fetchdata();
         return root;
+    }
+
+    private void shimmersetup(View root) {
+        statsnamelinear = root.findViewById(R.id.statsnamelinear);
+        statscard1 = root.findViewById(R.id.statscard1);
+        statscard2 = root.findViewById(R.id.statscard2);
+        statscard3 = root.findViewById(R.id.statscard3);
+        shimmerFrameLayout = root.findViewById(R.id.mystatsshimmer);
+        shimmerFrameLayout.setVisibility(View.VISIBLE);
+
+        statsnamelinear.setVisibility(View.GONE);
+        statscard1.setVisibility(View.GONE);
+        statscard2.setVisibility(View.GONE);
+        statscard3.setVisibility(View.GONE);
+        shimmerFrameLayout.startShimmer();
     }
 
     @Override
@@ -144,6 +167,8 @@ public class mystatsFragment extends Fragment {
                                 mystat_email.setText(object.getJSONObject("user").getString("email"));
                                 mystat_name.setText(object.getJSONObject("user").getString("name"));
 
+                                stopshimmer();
+
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -155,5 +180,14 @@ public class mystatsFragment extends Fragment {
             }
         });
 
+    }
+
+    private void stopshimmer() {
+        shimmerFrameLayout.hideShimmer();
+        shimmerFrameLayout.setVisibility(View.GONE);
+        statsnamelinear.setVisibility(View.VISIBLE);
+        statscard1.setVisibility(View.VISIBLE);
+        statscard2.setVisibility(View.VISIBLE);
+        statscard3.setVisibility(View.VISIBLE);
     }
 }

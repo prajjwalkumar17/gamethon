@@ -7,12 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
@@ -38,17 +41,35 @@ public class walletviewalltransactonFragment extends Fragment {
     private AdapterWalletlasttransactions adapterWalletlasttransactions;
 
 
+    private ShimmerFrameLayout mywallettranssshimmer;
+    private LinearLayout transfirstlayout;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_walletviewalltransacton, container, false);
         initScreen();
+        initshimmer(root);
         initviews(root);
         fetchwallet();
 
 
         return root;
+    }
+
+    private void initshimmer(View root) {
+
+        mywallettranssshimmer = root.findViewById(R.id.mywallettranssshimmer);
+        transfirstlayout = root.findViewById(R.id.transfirstlayout);
+        walletalltransactionrecycler = root.findViewById(R.id.walletalltransactionrecycler);
+        mywallettranssshimmer.setVisibility(View.VISIBLE);
+        mywallettranssshimmer.startShimmer();
+        transfirstlayout.setVisibility(View.GONE);
+        walletalltransactionrecycler.setVisibility(View.GONE);
+
+
     }
 
     private void initviews(View root) {
@@ -110,6 +131,9 @@ public class walletviewalltransactonFragment extends Fragment {
                             walletalltransactionwinningcoin.setText(String.valueOf(object.get("Balance_winning")));
                             adapterWalletlasttransactions = new AdapterWalletlasttransactions(object, thiscontext);
                             walletalltransactionrecycler.setAdapter(adapterWalletlasttransactions);
+
+                            stopshimmer();
+
                         } catch (Exception exception) {
                             exception.printStackTrace();
                         }
@@ -117,5 +141,12 @@ public class walletviewalltransactonFragment extends Fragment {
                 });
             }
         });
+    }
+
+    private void stopshimmer() {
+        mywallettranssshimmer.setVisibility(View.GONE);
+        mywallettranssshimmer.stopShimmer();
+        transfirstlayout.setVisibility(View.VISIBLE);
+        walletalltransactionrecycler.setVisibility(View.VISIBLE);
     }
 }

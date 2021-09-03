@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.Gamernation" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
@@ -15,4 +15,23 @@
         <!-- Status bar color. -->
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="expandtoolbar" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+
+        <item name="android:textSize">0sp</item>
+        <item name="android:textColor">@color/final_secondary</item>
+        <!-- Status bar color. -->
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="collapsedtoolbar" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+
+        <item name="background">@color/final_secondary</item>
+        <!-- Status bar color. -->
+        <!-- Customize your theme here. -->
+    </style>
+
 </resources>

@@ -14,6 +14,8 @@
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/myprofileshimmer"
         android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
         android:layout_height="wrap_content"
         android:layout_below="@id/profiletool"
         android:elevation="10dp">
@@ -24,15 +26,8 @@
             android:orientation="vertical"
             android:padding="4dp">
 
-            <include layout="@layout/shimmernormal" />
+            <include layout="@layout/shimmerprofile" />
 
-            <include layout="@layout/shimmernormal" />
-
-            <include layout="@layout/shimmernormal" />
-
-            <include layout="@layout/shimmernormal" />
-
-            <include layout="@layout/shimmernormal" />
         </LinearLayout>
     </com.facebook.shimmer.ShimmerFrameLayout>
 

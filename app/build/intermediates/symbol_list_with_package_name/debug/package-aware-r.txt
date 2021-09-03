@@ -913,6 +913,26 @@ attr shapeAppearanceLargeComponent
 attr shapeAppearanceMediumComponent
 attr shapeAppearanceOverlay
 attr shapeAppearanceSmallComponent
+attr shimmer_auto_start
+attr shimmer_base_alpha
+attr shimmer_base_color
+attr shimmer_clip_to_children
+attr shimmer_colored
+attr shimmer_direction
+attr shimmer_dropoff
+attr shimmer_duration
+attr shimmer_fixed_height
+attr shimmer_fixed_width
+attr shimmer_height_ratio
+attr shimmer_highlight_alpha
+attr shimmer_highlight_color
+attr shimmer_intensity
+attr shimmer_repeat_count
+attr shimmer_repeat_delay
+attr shimmer_repeat_mode
+attr shimmer_shape
+attr shimmer_tilt
+attr shimmer_width_ratio
 attr shouldDisableView
 attr showAnimationBehavior
 attr showAsAction
@@ -1374,6 +1394,8 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color shimmer_primary
+color shimmer_secondary
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -2195,6 +2217,7 @@ id botnav_menu_contact_us
 id botnav_menu_home
 id botnav_menu_my_leagues
 id bottom
+id bottom_to_top
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2336,6 +2359,7 @@ id home_pager
 id homegamesimg
 id homegamesitemcontainer
 id homegamesname
+id homeslidershimmer
 id hometool
 id honorRequest
 id horizontal_only
@@ -2368,6 +2392,8 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutbottompprofile
+id leadappbar
 id leaderboard1strankcoinswon
 id leaderboard1strankdp
 id leaderboard1strankname
@@ -2386,6 +2412,7 @@ id leaderboardrecyclerview
 id leaderboardswitch
 id left
 id leftToRight
+id left_to_right
 id legacy
 id line1
 id line3
@@ -2531,6 +2558,7 @@ id myprofile_sharerefferalcodebot
 id myprofile_updatebiocredsbot
 id myprofile_updatebirthdatebot
 id myprofile_updatepanno
+id myprofileshimmer
 id mystat_dp
 id mystat_email
 id mystat_gamingcontests
@@ -2545,6 +2573,9 @@ id mystat_quizlosses
 id mystat_quizwins
 id mystat_username
 id mystatsFragment
+id mystatsshimmer
+id mywalletshimmer
+id mywallettranssshimmer
 id nav_controller_view_tag
 id nav_dp
 id nav_email
@@ -2607,6 +2638,7 @@ id progressBar
 id progressBar2
 id progress_circular
 id progress_horizontal
+id radial
 id radio
 id ratio
 id rectangles
@@ -2628,6 +2660,7 @@ id referralbot
 id referralfrag
 id referralmoreshare
 id referralreferraallcode
+id referralshimmer
 id referralviewfriends
 id referralwhatsappshare
 id restart
@@ -2637,6 +2670,7 @@ id right
 id rightToLeft
 id right_icon
 id right_side
+id right_to_left
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -2666,6 +2700,7 @@ id selected
 id selection_type
 id sharedValueSet
 id sharedValueUnset
+id shimmerhomegames
 id shortcut
 id showCustom
 id showHome
@@ -2764,7 +2799,9 @@ id toolwithbackbothead
 id toolwithbackbotheadbot
 id top
 id topPanel
+id top_to_bottom
 id touch_outside
+id transfirstlayout
 id transitionToEnd
 id transitionToStart
 id transition_current_scene
@@ -3021,6 +3058,10 @@ layout referaaltool
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout shimmerhomegames
+layout shimmerprofile
+layout shimmerrecyclerfull
+layout shimmerwalletalltran
 layout slider_layout
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
@@ -3927,6 +3968,8 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style collapsedtoolbar
+style expandtoolbar
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -4069,6 +4112,7 @@ styleable SearchView android_focusable android_maxWidth android_inputType androi
 styleable SeekBarPreference android_layout android_max adjustable min seekBarIncrement showSeekBarValue updatesContinuously
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
+styleable ShimmerFrameLayout shimmer_auto_start shimmer_base_alpha shimmer_base_color shimmer_clip_to_children shimmer_colored shimmer_direction shimmer_dropoff shimmer_duration shimmer_fixed_height shimmer_fixed_width shimmer_height_ratio shimmer_highlight_alpha shimmer_highlight_color shimmer_intensity shimmer_repeat_count shimmer_repeat_delay shimmer_repeat_mode shimmer_shape shimmer_tilt shimmer_width_ratio
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth

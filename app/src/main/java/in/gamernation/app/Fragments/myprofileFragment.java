@@ -53,6 +53,8 @@ public class myprofileFragment extends Fragment {
     private static ProgressBar progressBar2;
     private static CircleImageView myprofile_dp;
     private static SharedPreferences sharedPreferences;
+
+
     //    private static MyProfileResponse myProfileResponse;
     private ShimmerFrameLayout shimmerFrameLayout;
     private ConstraintLayout profilemain;
@@ -131,6 +133,7 @@ public class myprofileFragment extends Fragment {
 
 
         shimmerFrameLayout = root.findViewById(R.id.myprofileshimmer);
+        shimmerFrameLayout.setVisibility(View.VISIBLE);
         profilemain = root.findViewById(R.id.profilemain);
         layoutbottompprofile = root.findViewById(R.id.layoutbottompprofile);
         profilemain.setVisibility(View.GONE);

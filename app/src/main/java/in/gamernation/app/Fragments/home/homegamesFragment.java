@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -37,17 +39,28 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
     private AdapterHomeFragGamesItem adapter;
     private List<GamesResponse> list;
 
+    private ShimmerFrameLayout shimmerhomegames;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_homegames, container, false);
+        initshimmer(root);
         initviews(root);
         initmethods();
         return root;
     }
 
-    private void initviews(View root) {
+    private void initshimmer(View root) {
+        shimmerhomegames = root.findViewById(R.id.shimmerhomegames);
+        shimmerhomegames.setVisibility(View.VISIBLE);
         homerecycler = root.findViewById(R.id.HomeRecycler);
+
+        homerecycler.setVisibility(View.GONE);
+        shimmerhomegames.startShimmer();
+    }
+
+    private void initviews(View root) {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 2, GridLayoutManager.VERTICAL, false);
         homerecycler.setLayoutManager(gridLayoutManager);
         homerecycler.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_2));
@@ -78,6 +91,8 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
                     assert list != null;
                     adapter = new AdapterHomeFragGamesItem(list, homegamesFragment.this);
                     homerecycler.setAdapter(adapter);
+                    stopshimmer();
+
 
                 }
             }
@@ -195,5 +210,11 @@ public class homegamesFragment extends Fragment implements ClicksHomeFraggames {
         });
 
     }*/
+
+    private void stopshimmer() {
+        shimmerhomegames.hideShimmer();
+        shimmerhomegames.setVisibility(View.GONE);
+        homerecycler.setVisibility(View.VISIBLE);
+    }
 
 }

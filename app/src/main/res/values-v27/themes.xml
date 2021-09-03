@@ -9,4 +9,23 @@
         <item name="android:statusBarColor">#00000000</item>
         <!-- Secondary brand color. -->
     </style>
+
+
+    <style name="expandtoolbar" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+
+        <item name="android:textSize">0sp</item>
+        <item name="android:textColor">@color/final_secondary</item>
+        <!-- Status bar color. -->
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="collapsedtoolbar" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+
+        <item name="background">@color/final_secondary</item>
+        <!-- Status bar color. -->
+        <!-- Customize your theme here. -->
+    </style>
+
 </resources>

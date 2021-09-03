@@ -9,11 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -39,14 +42,32 @@ public class invitefriendsFragment extends Fragment {
     private String usrtoken;
 
 
+    private ShimmerFrameLayout referralshimmer;
+    private LinearLayout referaalheader;
+    private LinearLayout referaalfooter;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_invitefriends, container, false);
         initscreen();
+        initshimmer(root);
         initviews(root);
         return root;
+    }
+
+    private void initshimmer(View root) {
+        referralshimmer = root.findViewById(R.id.referralshimmer);
+        referaalheader = root.findViewById(R.id.referaalheader);
+        referaalfooter = root.findViewById(R.id.referaalfooter);
+
+        referaalfooter.setVisibility(View.GONE);
+
+        referralshimmer.setVisibility(View.VISIBLE);
+        referralshimmer.startShimmer();
+
     }
 
     @Override
@@ -109,6 +130,8 @@ public class invitefriendsFragment extends Fragment {
                                 referralreferraallcode.setText(code);
                                 sharewhatsppbotpressed(code, msg);
                                 sharewallbotpressed(code, msg);
+
+                                stopShimmer();
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -120,6 +143,13 @@ public class invitefriendsFragment extends Fragment {
                 });
             }
         });
+    }
+
+    private void stopShimmer() {
+        referaalfooter.setVisibility(View.VISIBLE);
+
+        referralshimmer.setVisibility(View.GONE);
+        referralshimmer.stopShimmer();
     }
 
     private void sharewallbotpressed(String code, String msg) {

@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
+
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,14 +41,39 @@ public class walletFragment extends Fragment {
     private LinearLayout walletfragmentaddcoinsbot, walletfragmentwithdrawcoinsbot;
     private AdapterWalletlasttransactions adapterWalletlasttransactions;
 
+
+    private ShimmerFrameLayout mywalletshimmer;
+    private TextView textView;
+    private LinearLayout linearLayout3, arcadeopenedbottomlinearlayout;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_wallet, container, false);
         initscreen();
+        initshimmer(root);
         initviews(root);
         return root;
+    }
+
+    private void initshimmer(View root) {
+        mywalletshimmer = root.findViewById(R.id.mywalletshimmer);
+
+
+        walletfragmentrecyclerview = root.findViewById(R.id.walletfragmentrecyclerview);
+        linearLayout3 = root.findViewById(R.id.linearLayout3);
+        arcadeopenedbottomlinearlayout = root.findViewById(R.id.arcadeopenedbottomlinearlayout);
+        textView = root.findViewById(R.id.textView);
+
+        mywalletshimmer.setVisibility(View.VISIBLE);
+        mywalletshimmer.startShimmer();
+        walletfragmentrecyclerview.setVisibility(View.GONE);
+        linearLayout3.setVisibility(View.GONE);
+        arcadeopenedbottomlinearlayout.setVisibility(View.GONE);
+        textView.setVisibility(View.GONE);
+
+
     }
 
     @Override
@@ -76,7 +103,6 @@ public class walletFragment extends Fragment {
 
         toolwithbackbothead.setText("My Wallet");
 
-        walletfragmentrecyclerview = root.findViewById(R.id.walletfragmentrecyclerview);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 1, GridLayoutManager.VERTICAL, false);
         walletfragmentrecyclerview.setLayoutManager(gridLayoutManager);
         walletfragmentrecyclerview.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_2));
@@ -187,10 +213,20 @@ public class walletFragment extends Fragment {
             adapterWalletlasttransactions = new AdapterWalletlasttransactions(object, thiscontext);
             walletfragmentrecyclerview.setAdapter(adapterWalletlasttransactions);
 
+            removeshimmer();
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    private void removeshimmer() {
+        mywalletshimmer.stopShimmer();
+        mywalletshimmer.setVisibility(View.GONE);
+        walletfragmentrecyclerview.setVisibility(View.VISIBLE);
+        linearLayout3.setVisibility(View.VISIBLE);
+        arcadeopenedbottomlinearlayout.setVisibility(View.VISIBLE);
+        textView.setVisibility(View.VISIBLE);
     }
 
 

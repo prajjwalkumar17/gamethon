@@ -15,6 +15,7 @@ MERGED from [androidx.appcompat:appcompat:1.3.1] /Users/hangsai/.gradle/caches/t
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/6e6b2202c5487b92a37f9fbb3f25b45b/circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/fb1b7547383b0b439da17748889a73d0/stetho-okhttp3-1.5.1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.shimmer:shimmer:0.5.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/07e2e8ad3fbcbc2bea18b950ff4995f2/shimmer-0.5.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.media:media:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/1e1f894f3187e0e4737e7e00626d423c/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/b913b577636afb646741ffd904028e15/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/a51e1b63de109d5a073479324f6b9a1c/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -177,6 +178,8 @@ MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches
 MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/fb1b7547383b0b439da17748889a73d0/stetho-okhttp3-1.5.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/fb1b7547383b0b439da17748889a73d0/stetho-okhttp3-1.5.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.shimmer:shimmer:0.5.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/07e2e8ad3fbcbc2bea18b950ff4995f2/shimmer-0.5.0/AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.shimmer:shimmer:0.5.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/07e2e8ad3fbcbc2bea18b950ff4995f2/shimmer-0.5.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.media:media:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/1e1f894f3187e0e4737e7e00626d423c/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/1e1f894f3187e0e4737e7e00626d423c/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/b913b577636afb646741ffd904028e15/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44

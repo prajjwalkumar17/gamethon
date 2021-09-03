@@ -7,429 +7,441 @@
     android:background="@color/final_master"
     tools:context=".Fragments.leaderboardFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/myleaguesheader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/cardbotcurved"
-        android:backgroundTint="@color/final_secondary"
-        android:elevation="2dp">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Leaderboardbackbot"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/backbot"
-            android:backgroundTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView5"
-            app:layout_constraintHorizontal_bias=".1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.01" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/baloo_bhaina"
-            android:text="LEADERBOARD"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/crown1img"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/crown1img"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="11dp"
-            android:elevation="2dp"
-            android:src="@drawable/crowncurved"
-            app:layout_constraintBottom_toTopOf="@+id/leaderboard1strankdp"
-            app:layout_constraintEnd_toEndOf="@+id/leaderboard1strankdp"
-            app:layout_constraintStart_toStartOf="@+id/leaderboard1strankdp"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/leaderboard1strankdp"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginEnd="84dp"
-            android:background="@drawable/circleback"
-            android:elevation="2dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/splash_logo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/leaderboard3rdrankdp"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias=".3" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/leaderboard1strankdp"
-            app:layout_constraintStart_toStartOf="@+id/leaderboard1strankdp"
-            app:layout_constraintTop_toBottomOf="@id/leaderboard1strankdp"
-            app:layout_constraintVertical_bias="0.02">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1."
-                android:textColor="@color/white"
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/leaderboard1strankname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Winner1"
-                android:textColor="@color/white"
-                android:textSize="10sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/leaderboard1strankdp"
-            app:layout_constraintStart_toStartOf="@+id/leaderboard1strankdp"
-            app:layout_constraintTop_toBottomOf="@id/leaderboard1strankdp"
-            app:layout_constraintVertical_bias="0.07">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Won: "
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/leaderboard1strankcoinswon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="2dp"
-                android:text="41402 coins"
-                android:textSize="10sp" />
-
-        </LinearLayout>
-
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/leaderboard3rdrankdp"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:background="@drawable/circleback"
-            android:elevation="2dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/splash_logo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias=".75" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/leaderboard3rdrankdp"
-            app:layout_constraintStart_toStartOf="@+id/leaderboard3rdrankdp"
-            app:layout_constraintTop_toBottomOf="@+id/leaderboard3rdrankdp"
-            app:layout_constraintVertical_bias="0.02">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3."
-                android:textColor="@color/white"
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/leaderboard3rdrankname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Winner3"
-                android:textColor="@color/white"
-                android:textSize="10sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/leaderboard3rdrankdp"
-            app:layout_constraintStart_toStartOf="@+id/leaderboard3rdrankdp"
-            app:layout_constraintTop_toBottomOf="@+id/leaderboard3rdrankdp"
-            app:layout_constraintVertical_bias="0.2">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Won: "
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/leaderboard3rdrankcoinswon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="41402 coins"
-                android:textSize="10sp" />
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/white"
-            android:elevation="2dp"
-            android:src="@drawable/crowncurvedwhite"
-            app:layout_constraintBottom_toTopOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintEnd_toEndOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="1" />
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/leaderboard2ndrankdp"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:background="@drawable/circleback"
-            android:elevation="2dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/splash_logo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/leaderboard3rdrankdp"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias=".75" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintTop_toBottomOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintVertical_bias="0.02">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2."
-                android:textColor="@color/white"
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/leaderboard2ndrankname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Winner2"
-                android:textColor="@color/white"
-                android:textSize="10sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintTop_toBottomOf="@+id/leaderboard2ndrankdp"
-            app:layout_constraintVertical_bias="0.2">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Won: "
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/leaderboard2ndrankcoinswon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="41402 coins"
-                android:textSize="10sp" />
-
-        </LinearLayout>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
-        android:id="@+id/myleaguesbotgrp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/myleaguesheader"
-        android:orientation="horizontal"
-        android:weightSum="6">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Leaderboardfreefirebot"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="3dp"
-            android:layout_weight="1"
-            android:background="@drawable/outlinedbot"
-            android:text="FREE FIRE"
-            android:textColor="@color/final_secondary"
-            android:textSize="10sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Leaderboardludobot"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:background="@drawable/outlinedbot"
-            android:text="LUDO"
-            android:textColor="@color/final_secondary"
-            android:textSize="10sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Leaderboardclashsquadbot"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:background="@drawable/outlinedbot"
-            android:text="CLASH SQUAD"
-            android:textColor="@color/final_secondary"
-            android:textSize="10sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Leaderboardquizbot"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:background="@drawable/outlinedbot"
-            android:text="QUIZ"
-            android:textColor="@color/final_secondary"
-            android:textSize="10sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Leaderboardfanbattlebot"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:background="@drawable/outlinedbot"
-            android:text="FAN BATTLE"
-            android:textColor="@color/final_secondary"
-            android:textSize="10sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Leaderboardbgmibot"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="3dp"
-            android:layout_weight="1"
-            android:background="@drawable/outlinedbot"
-            android:text="BGMI"
-            android:textColor="@color/final_secondary"
-            android:textSize="10sp" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/myleaguesfooter"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/leadappbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/myleaguesbotgrp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical">
+        android:backgroundTint="@color/final_master">
 
-        <LinearLayout
-            android:id="@+id/myleaguesswitchgrp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/leaderboardswitch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:padding="5dp"
-                android:text="All" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Monthly"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <ScrollView
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="3dp">
+            android:layout_height="wrap_content"
+            android:background="@color/final_master"
+            android:backgroundTint="@color/final_master">
 
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/leaderboardrecyclerview"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp" />
-        </ScrollView>
-    </LinearLayout>
+                android:layout_marginBottom="5dp"
+                android:background="@color/final_master"
+                android:backgroundTint="@color/final_master"
+                app:collapsedTitleGravity="center_horizontal"
+                app:collapsedTitleTextAppearance="@style/collapsedtoolbar"
+                app:contentScrim="@color/final_secondary"
+                app:expandedTitleTextAppearance="@style/expandtoolbar"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                app:title="LEADERBOARD">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:elevation="10dp"
+                    app:layout_collapseMode="pin">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/Leaderboardbackbot"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/backbot"
+                        android:backgroundTint="@color/white"
+                        android:elevation="10dp" />
+
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/myleaguesheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/cardbotcurved"
+                    android:backgroundTint="@color/final_secondary"
+                    android:elevation="2dp">
+
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/baloo_bhaina"
+                        android:text="LEADERBOARD"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toTopOf="@+id/crown1img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/crown1img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="11dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/crowncurved"
+                        app:layout_constraintBottom_toTopOf="@+id/leaderboard1strankdp"
+                        app:layout_constraintEnd_toEndOf="@+id/leaderboard1strankdp"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard1strankdp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/leaderboard1strankdp"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginEnd="84dp"
+                        android:background="@drawable/circleback"
+                        android:elevation="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/leaderboard3rdrankdp"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias=".3" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/leaderboard1strankdp"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard1strankdp"
+                        app:layout_constraintTop_toBottomOf="@id/leaderboard1strankdp"
+                        app:layout_constraintVertical_bias="0.02">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1."
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/leaderboard1strankname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Winner1"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/leaderboard1strankdp"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard1strankdp"
+                        app:layout_constraintTop_toBottomOf="@id/leaderboard1strankdp"
+                        app:layout_constraintVertical_bias="0.07">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Won: "
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/leaderboard1strankcoinswon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="41402 coins"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/leaderboard3rdrankdp"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/circleback"
+                        android:elevation="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias=".75" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/leaderboard3rdrankdp"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard3rdrankdp"
+                        app:layout_constraintTop_toBottomOf="@+id/leaderboard3rdrankdp"
+                        app:layout_constraintVertical_bias="0.02">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3."
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/leaderboard3rdrankname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Winner3"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/leaderboard3rdrankdp"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard3rdrankdp"
+                        app:layout_constraintTop_toBottomOf="@+id/leaderboard3rdrankdp"
+                        app:layout_constraintVertical_bias="0.2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Won: "
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/leaderboard3rdrankcoinswon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="41402 coins"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:backgroundTint="@color/white"
+                        android:elevation="2dp"
+                        android:src="@drawable/crowncurvedwhite"
+                        app:layout_constraintBottom_toTopOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintEnd_toEndOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5"
+                        app:layout_constraintVertical_bias="1" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/leaderboard2ndrankdp"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/circleback"
+                        android:elevation="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/leaderboard3rdrankdp"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias=".75" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintTop_toBottomOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintVertical_bias="0.02">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2."
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/leaderboard2ndrankname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Winner2"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintTop_toBottomOf="@+id/leaderboard2ndrankdp"
+                        app:layout_constraintVertical_bias="0.2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Won: "
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/leaderboard2ndrankcoinswon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="41402 coins"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/myleaguesbotgrp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/leadappbar"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/Leaderboardfreefirebot"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outlinedbot"
+                        android:text="FREE FIRE"
+                        android:textColor="@color/final_secondary"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/Leaderboardludobot"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outlinedbot"
+                        android:text="LUDO"
+                        android:textColor="@color/final_secondary"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/Leaderboardclashsquadbot"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outlinedbot"
+                        android:text="CLASH SQUAD"
+                        android:textColor="@color/final_secondary"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/Leaderboardquizbot"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outlinedbot"
+                        android:text="QUIZ"
+                        android:textColor="@color/final_secondary"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/Leaderboardfanbattlebot"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outlinedbot"
+                        android:text="FAN BATTLE"
+                        android:textColor="@color/final_secondary"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/Leaderboardbgmibot"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outlinedbot"
+                        android:text="BGMI"
+                        android:textColor="@color/final_secondary"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/myleaguesfooter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/myleaguesbotgrp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/myleaguesswitchgrp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/leaderboardswitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:padding="5dp"
+                            android:text="All" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Monthly"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/leaderboardrecyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp" />
+                    </ScrollView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </RelativeLayout>
-
-
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:layout_marginStart="10dp"-->
-    <!--        android:layout_marginEnd="10dp"-->
-    <!--        android:orientation="vertical">-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-    <!--        <include layout="@layout/leaderboarditems" />-->
-
-
-    <!--    </LinearLayout>-->
