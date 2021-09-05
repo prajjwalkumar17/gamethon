@@ -1,5 +1,7 @@
 package in.gamernation.app.Startup;
 
+import static in.gamernation.app.Utils.Constants.SPLASH_TIMEOUT;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,8 +14,6 @@ import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.Constants;
 
-import static in.gamernation.app.Utils.Constants.SPLASH_TIMEOUT;
-
 public class Splash extends AppCompatActivity {
 
 
@@ -25,6 +25,7 @@ public class Splash extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
 
+        fetchmetalinks();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -40,6 +41,10 @@ public class Splash extends AppCompatActivity {
             }
         }, SPLASH_TIMEOUT);
     }
+
+    private void fetchmetalinks() {
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
