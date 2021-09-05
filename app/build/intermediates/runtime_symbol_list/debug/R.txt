@@ -2403,11 +2403,14 @@ int id leaderboard3rdrankcoinswon 0x7f0a0162
 int id leaderboard3rdrankdp 0x7f0a0163
 int id leaderboard3rdrankname 0x7f0a0164
 int id leaderboardFragment 0x7f0a0165
+int id leaderboardnestedscroll 0x7f0a0320
 int id leaderboardrecyclercoinswon 0x7f0a0166
 int id leaderboardrecyclerdp 0x7f0a0167
 int id leaderboardrecyclername 0x7f0a0168
 int id leaderboardrecyclerrank 0x7f0a0169
 int id leaderboardrecyclerview 0x7f0a016a
+int id leaderboardsecondappbar 0x7f0a0321
+int id leaderboardshimmer 0x7f0a0322
 int id leaderboardswitch 0x7f0a016b
 int id left 0x7f0a016c
 int id leftToRight 0x7f0a016d
@@ -3967,8 +3970,8 @@ int style Widget_MaterialComponents_Toolbar_PrimarySurface 0x7f1402f2
 int style Widget_MaterialComponents_Toolbar_Surface 0x7f1402f3
 int style Widget_MaterialComponents_Tooltip 0x7f1402f4
 int style Widget_Support_CoordinatorLayout 0x7f1402f5
-int style collapsedtoolbar 0x7f1402f7
-int style expandtoolbar 0x7f1402f6
+int style collapsedtoolbar 0x7f1402f6
+int style expandtoolbar 0x7f1402f7
 int[] styleable ActionBar { 0x7f040047, 0x7f04004e, 0x7f04004f, 0x7f0400f6, 0x7f0400f7, 0x7f0400f8, 0x7f0400f9, 0x7f0400fa, 0x7f0400fb, 0x7f040121, 0x7f04013e, 0x7f04013f, 0x7f04015a, 0x7f0401b9, 0x7f0401c0, 0x7f0401c6, 0x7f0401c7, 0x7f0401ca, 0x7f0401dc, 0x7f0401f0, 0x7f040266, 0x7f0402d0, 0x7f040308, 0x7f040319, 0x7f04031a, 0x7f040391, 0x7f040395, 0x7f040405, 0x7f040411 }
 int styleable ActionBar_background 0
 int styleable ActionBar_backgroundSplit 1

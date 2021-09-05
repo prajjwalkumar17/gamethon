@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/fragment_leaderboard.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_leaderboard.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_mystats.xml" value="0.2246376811594203" />
+        <entry key="app/src/main/res/layout/fragment_walletviewalltransacton.xml" value="0.15806159420289856" />
+        <entry key="app/src/main/res/layout/shimmerwalletalltran.xml" value="0.15806159420289856" />
       </map>
     </option>
   </component>

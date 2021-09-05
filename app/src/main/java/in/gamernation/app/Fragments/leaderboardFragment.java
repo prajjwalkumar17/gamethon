@@ -1,5 +1,7 @@
 package in.gamernation.app.Fragments;
 
+import static in.gamernation.app.R.layout;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,10 +13,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.material.appbar.AppBarLayout;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
@@ -35,8 +40,6 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-import static in.gamernation.app.R.layout;
-
 public class leaderboardFragment extends Fragment {
     private CircleImageView leaderboard1strankdp, leaderboard3rdrankdp, leaderboard2ndrankdp;
     private TextView leaderboard1strankname, leaderboard1strankcoinswon, leaderboard3rdrankname, leaderboard3rdrankcoinswon, leaderboard2ndrankname, leaderboard2ndrankcoinswon;
@@ -49,14 +52,34 @@ public class leaderboardFragment extends Fragment {
     private AdapterLeaderboard adapterLeaderboard;
 
 
+    private ShimmerFrameLayout leaderboardshimmer;
+    private NestedScrollView leaderboardnestedscroll;
+    private AppBarLayout leaderboardsecondappbar;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(layout.fragment_leaderboard, container, false);
         initscreen();
+        leaderboardshimmer = root.findViewById(R.id.leaderboardshimmer);
+        leaderboardnestedscroll = root.findViewById(R.id.leaderboardnestedscroll);
+        leaderboardsecondappbar = root.findViewById(R.id.leaderboardsecondappbar);
+        shimmersetup();
         initviews(root);
         return root;
+    }
+
+    private void shimmersetup() {
+
+
+        leaderboardshimmer.setVisibility(View.VISIBLE);
+        leaderboardshimmer.startShimmer();
+        leaderboardnestedscroll.setVisibility(View.GONE);
+        leaderboardsecondappbar.setVisibility(View.GONE);
+
+
     }
 
     @Override
@@ -111,6 +134,7 @@ public class leaderboardFragment extends Fragment {
         });
 
 
+        shimmersetup();
         fetchdata(Constants.leaderboardfiltergame + "FREE_FIRE");
         showdataaccordingtobotpresssed();
 
@@ -122,6 +146,7 @@ public class leaderboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.white));
+                shimmersetup();
                 fetchdata(Constants.leaderboardfiltergame + "FREE_FIRE");
 
                 Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
@@ -135,6 +160,7 @@ public class leaderboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Leaderboardludobot.setTextColor(getResources().getColor(R.color.white));
+                shimmersetup();
                 fetchdata(Constants.leaderboardfiltergame + "LUDO");
 
                 Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
@@ -148,6 +174,7 @@ public class leaderboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.white));
+                shimmersetup();
                 fetchdata(Constants.leaderboardfiltergame + "CLASHSQUAD");
 
                 Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
@@ -174,6 +201,7 @@ public class leaderboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.white));
+                shimmersetup();
                 fetchdata(Constants.leaderboardfiltergame + "CRICKET_LEAGUE");
 
                 Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
@@ -187,6 +215,7 @@ public class leaderboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.white));
+                shimmersetup();
                 fetchdata(Constants.leaderboardfiltergame + "BGMI");
 
                 Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
@@ -219,6 +248,7 @@ public class leaderboardFragment extends Fragment {
                             setTopPositiondata(responsez);
                             adapterLeaderboard = new AdapterLeaderboard(responsez);
                             leaderboardrecyclerview.setAdapter(adapterLeaderboard);
+                            stopshimmer();
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -226,6 +256,16 @@ public class leaderboardFragment extends Fragment {
                 });
             }
         });
+    }
+
+    private void stopshimmer() {
+
+        leaderboardshimmer.setVisibility(View.GONE);
+        leaderboardshimmer.stopShimmer();
+        leaderboardnestedscroll.setVisibility(View.VISIBLE);
+        leaderboardsecondappbar.setVisibility(View.VISIBLE);
+
+
     }
 
     private void setTopPositiondata(JSONObject responsez) throws JSONException {
@@ -281,8 +321,6 @@ public class leaderboardFragment extends Fragment {
 
 
 }
-
-
 
 /*
         retrofit2.Call<JSONObject> call = APICallsRetrofit.getuserdataleaderboard().fetchleaderboardusers(Constants.leaderboardfiltergame+"FREE_FIRE", Constants.AuthBearer + usrtoken);

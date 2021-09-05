@@ -2404,11 +2404,14 @@ id leaderboard3rdrankcoinswon
 id leaderboard3rdrankdp
 id leaderboard3rdrankname
 id leaderboardFragment
+id leaderboardnestedscroll
 id leaderboardrecyclercoinswon
 id leaderboardrecyclerdp
 id leaderboardrecyclername
 id leaderboardrecyclerrank
 id leaderboardrecyclerview
+id leaderboardsecondappbar
+id leaderboardshimmer
 id leaderboardswitch
 id left
 id leftToRight

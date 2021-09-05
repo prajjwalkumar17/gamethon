@@ -22,7 +22,7 @@
 15        android:allowBackup="true"
 15-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.5.0] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/cc5e9dcdc56dc39042f72c501235e83f/core-1.5.0/AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.5.0] /Users/hangsai/.gradle/caches/transforms-3/255d63c0f9f8f5d12ab3191ffb377750/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 17        android:debuggable="true"
 18        android:extractNativeLibs="false"
 19        android:icon="@drawable/splash_logo"
@@ -71,13 +71,13 @@
 39-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:29:13-54
 40
 41        <provider
-41-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:8:9-11:40
+41-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:8:9-11:40
 42            android:name="com.squareup.picasso.PicassoProvider"
-42-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:9:13-64
+42-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:9:13-64
 43            android:authorities="in.gamernation.app.com.squareup.picasso"
-43-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:10:13-72
+43-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:10:13-72
 44            android:exported="false" />
-44-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-2/files-2.1/5ec8ef568aef29538e78c2fdcb41df0e/picasso-2.71828/AndroidManifest.xml:11:13-37
+44-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:11:13-37
 45    </application>
 46
 47</manifest>
