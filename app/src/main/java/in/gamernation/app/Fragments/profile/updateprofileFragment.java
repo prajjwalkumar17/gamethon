@@ -133,19 +133,19 @@ public class updateprofileFragment extends Fragment {
 
     }
 
-//    private void fetchdataandsettoviewsintially() {
-//        SharedPreferences preferences=getActivity().getSharedPreferences(Constants.MYPROFILEPREF,Context.MODE_PRIVATE);
-//        String gender =preferences.getString(Constants.myprofileGender,"Data not found");
-//        String name =preferences.getString(Constants.myprofilename,"Data not found");
-//        String username =preferences.getString(Constants.myprofileUsername,"Data not found");
-//        String profilepic =preferences.getString(Constants.myprofileProfile_Picture,"Data not found");
-//        String email =preferences.getString(Constants.myprofileEmail,"Data not found");
-//        String state =preferences.getString(Constants.myprofilestate,"Data not found");
-//        String sountry =preferences.getString(Constants.myprofileCountry,"Data not found");
-//
-//        CommonMethods.LOGthesite(Constants.LOG,name);
-//
-//    }
+    private void fetchdataandsettoviewsintially() {
+        SharedPreferences preferences = getActivity().getSharedPreferences(Constants.MYPROFILEPREF, Context.MODE_PRIVATE);
+        String gender = preferences.getString(Constants.myprofileGender, "Data not found");
+        String name = preferences.getString(Constants.myprofilename, "Data not found");
+        String username = preferences.getString(Constants.myprofileUsername, "Data not found");
+        String profilepic = preferences.getString(Constants.myprofileProfile_Picture, "Data not found");
+        String email = preferences.getString(Constants.myprofileEmail, "Data not found");
+        String state = preferences.getString(Constants.myprofilestate, "Data not found");
+        String sountry = preferences.getString(Constants.myprofileCountry, "Data not found");
+
+        CommonMethods.LOGthesite(Constants.LOG, name);
+
+    }
 
     private void initscreen() {
         ((HomeActivity) getActivity()).setToolbarInvisible();
