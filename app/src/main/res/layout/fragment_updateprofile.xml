@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/final_master"
+    tools:context=".Fragments.profile.updateprofileFragment">
+
+    <include
+        android:id="@+id/updateprofiletool"
+        layout="@layout/toolbarwithbackandbell" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/profileupdateshimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateprofiletool"
+        android:layout_marginTop="30dp"
+        android:elevation="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <include layout="@layout/shimmerprofile" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/myprofilelin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateprofiletool"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/myprofiledpbot"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/splash_logo" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/myprofileuploadpicbot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_weight="1"
+            android:background="@color/final_secondary"
+            android:text="UPLOAD" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linlayoutsecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myprofilelin1"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/myprofileedittextname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/myprofileedittextusername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myprofileedittextname"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:hint="username" />
+
+        <EditText
+            android:id="@+id/myprofileedittextemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myprofileedittextusername"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:hint="Email" />
+
+
+        <RadioGroup
+            android:id="@+id/myprofilelin2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myprofileedittextemail"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/myprofilemaleradio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/myprofilefemaleradio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:text="Female" />
+
+
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/myprofileedittstate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myprofilelin2"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:hint="City" />
+
+        <EditText
+            android:id="@+id/myprofileedittextcountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myprofileedittstate"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:hint="Country" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/myprofileupdatebot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myprofileedittextcountry"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curvedradiusblackbg"
+            android:backgroundTint="@color/final_secondary"
+            android:text="UPDATE" />
+    </LinearLayout>
+
+
+</RelativeLayout>

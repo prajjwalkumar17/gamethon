@@ -60,7 +60,6 @@ public class walletFragment extends Fragment {
     private void initshimmer(View root) {
         mywalletshimmer = root.findViewById(R.id.mywalletshimmer);
 
-
         walletfragmentrecyclerview = root.findViewById(R.id.walletfragmentrecyclerview);
         linearLayout3 = root.findViewById(R.id.linearLayout3);
         arcadeopenedbottomlinearlayout = root.findViewById(R.id.arcadeopenedbottomlinearlayout);
@@ -107,22 +106,39 @@ public class walletFragment extends Fragment {
         walletfragmentrecyclerview.setLayoutManager(gridLayoutManager);
         walletfragmentrecyclerview.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_2));
 
+        addcoins();
+        withdrawcoins();
         fetchwallet();
         viewalltransaction();
         showpaymenthistory();
-        addcoins();
-        withdrawcoins();
+
     }
 
     private void addcoins() {
         //TODO ADDCOINS WEBVIEW HERE
+        walletfragmentaddcoinsbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new walletAddCoinFragment()).addToBackStack(null).commit();
 
+            }
+        });
 
     }
 
     private void withdrawcoins() {
 
         //TODO WITHDRAWCOINS WEBVIEW HERE
+
+        walletfragmentwithdrawcoinsbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new walletwithdrawcoinsFragment()).addToBackStack(null).commit();
+
+            }
+        });
 
     }
 
@@ -144,7 +160,6 @@ public class walletFragment extends Fragment {
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragmentContainerView, new walletpaymenthistoryFragment()).addToBackStack(null).commit();
-
 
             }
         });

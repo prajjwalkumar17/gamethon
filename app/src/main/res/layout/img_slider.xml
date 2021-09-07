@@ -3,16 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <!--
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0" />-->
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/sliderpager"
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/sliderpageree"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0" />
+
 
     <LinearLayout
         android:id="@+id/sliderdotcontainer"
@@ -21,10 +31,10 @@
         android:elevation="5dp"
         android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/sliderpager"
+        app:layout_constraintBottom_toBottomOf="@+id/sliderpageree"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sliderpager"
+        app:layout_constraintTop_toTopOf="@+id/sliderpageree"
         app:layout_constraintVertical_bias="0.9">
 
     </LinearLayout>

@@ -560,6 +560,17 @@ attr insetForeground
 attr isLightTheme
 attr isMaterialTheme
 attr isPreferenceVisible
+attr iss_auto_cycle
+attr iss_corner_radius
+attr iss_delay
+attr iss_error_image
+attr iss_indicator_align
+attr iss_period
+attr iss_placeholder
+attr iss_selected_dot
+attr iss_text_align
+attr iss_title_background
+attr iss_unselected_dot
 attr itemBackground
 attr itemFillColor
 attr itemHorizontalPadding
@@ -1280,8 +1291,10 @@ color final_secondary
 color foreground_material_dark
 color foreground_material_light
 color green
+color grey_font
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_font
 color master_pale
 color master_primary
 color master_secondary
@@ -1406,6 +1419,8 @@ color teal_200
 color teal_700
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
+color text_shadow
+color text_shadow_white
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -1954,6 +1969,8 @@ drawable createteam
 drawable crowncurved
 drawable crowncurvedwhite
 drawable curvedradiusblackbg
+drawable default_selected_dot
+drawable default_unselected_dot
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -1962,7 +1979,9 @@ drawable design_snackbar_background
 drawable door
 drawable dperror
 drawable edit
+drawable error
 drawable forwardbot
+drawable gradient
 drawable ic_arrow_down_24dp
 drawable ic_baseline_add_24
 drawable ic_clock_black_24dp
@@ -1976,6 +1995,7 @@ drawable ic_mtrl_chip_close_circle
 drawable layoutbg
 drawable layoutbg2
 drawable linearback
+drawable loading
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2130,6 +2150,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addcoinswalletwebview
 id alertTitle
 id aligned
 id all
@@ -2251,6 +2272,7 @@ id commontoolbar_fragname
 id completebotnav
 id confirm_button
 id constraint
+id contactuswebview
 id container
 id content
 id contentPanel
@@ -2371,6 +2393,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id image_view
 id immediateStop
 id included
 id info
@@ -2424,6 +2447,8 @@ id linearLayout
 id linearLayout2
 id linearLayout3
 id linearLayout4
+id linear_layout
+id linlayoutsecond
 id listMode
 id list_item
 id loginbot
@@ -2561,7 +2586,19 @@ id myprofile_sharerefferalcodebot
 id myprofile_updatebiocredsbot
 id myprofile_updatebirthdatebot
 id myprofile_updatepanno
+id myprofiledpbot
+id myprofileedittextcountry
+id myprofileedittextemail
+id myprofileedittextname
+id myprofileedittextusername
+id myprofileedittstate
+id myprofilefemaleradio
+id myprofilelin1
+id myprofilelin2
+id myprofilemaleradio
 id myprofileshimmer
+id myprofileupdatebot
+id myprofileuploadpicbot
 id mystat_dp
 id mystat_email
 id mystat_gamingcontests
@@ -2620,6 +2657,7 @@ id outline
 id outward
 id overshoot
 id packed
+id pager_dots
 id pan
 id parallax
 id parent
@@ -2637,6 +2675,7 @@ id position
 id postLayout
 id profilemain
 id profiletool
+id profileupdateshimmer
 id progressBar
 id progressBar2
 id progress_circular
@@ -2715,7 +2754,7 @@ id slide
 id slider
 id sliderdotcontainer
 id sliderimg
-id sliderpager
+id sliderpageree
 id snackbar_action
 id snackbar_text
 id snap
@@ -2785,6 +2824,7 @@ id textView5
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_view
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2817,9 +2857,11 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id updateprofiletool
 id useLogo
 id vertical_only
 id view_offset_helper
+id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -2840,8 +2882,10 @@ id walletfragmentwinningcoins
 id walletfragmentwithdrawcoinsbot
 id walletpaymenthistoryrecycler
 id walletpaymenthistorywinningcoin
+id walletviewpaymenthistorywebview
 id west
 id withText
+id withdrawwalletwebview
 id withinBounds
 id wrap
 id wrap_content
@@ -2966,11 +3010,15 @@ layout fragment_mystats
 layout fragment_playedquizzes
 layout fragment_referrals
 layout fragment_tutorials
+layout fragment_updateprofile
 layout fragment_wallet
+layout fragment_wallet_add_coin
 layout fragment_walletpaymenthistory
 layout fragment_walletviewalltransacton
+layout fragment_walletwithdrawcoins
 layout hometoolbar
 layout image_frame
+layout image_slider
 layout img_slider
 layout material_chip_input_combo
 layout material_clock_display
@@ -3031,6 +3079,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout pager_row
 layout preference
 layout preference_category
 layout preference_category_material
@@ -3139,6 +3188,7 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string left
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -4040,6 +4090,7 @@ styleable FragmentNavigator android_name
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc blendSrc brightness contrast crossfade imagePanX imagePanY imageRotate imageZoom overlay round roundPercent saturation warmth
+styleable ImageSlider iss_auto_cycle iss_corner_radius iss_delay iss_error_image iss_indicator_align iss_period iss_placeholder iss_selected_dot iss_text_align iss_title_background iss_unselected_dot
 styleable Insets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets paddingTopSystemWindowInsets
 styleable KeyAttribute android_alpha android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition motionProgress motionTarget transformPivotTarget transitionEasing transitionPathRotate
 styleable KeyCycle android_alpha android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition motionProgress motionTarget transitionEasing transitionPathRotate waveOffset wavePeriod wavePhase waveShape waveVariesBy
@@ -4146,6 +4197,7 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml network_security_config
 xml root_preferences
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end

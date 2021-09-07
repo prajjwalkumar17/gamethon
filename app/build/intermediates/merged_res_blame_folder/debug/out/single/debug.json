@@ -92,6 +92,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/share.xml"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_fragment_walletwithdrawcoins.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_walletwithdrawcoins.xml"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/drawable_progress_circle.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/progress_circle.xml"
     },
@@ -202,6 +206,10 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_recyclerleaderboarditems.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/recyclerleaderboarditems.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/xml_network_security_config.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/xml/network_security_config.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/drawable_cardbotcurved.xml.flat",
@@ -428,6 +436,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable-v24/crd2.jpg"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_fragment_updateprofile.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_updateprofile.xml"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/activity_main.xml"
     },
@@ -526,6 +538,10 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/drawable_outlinedbotfull.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/outlinedbotfull.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_fragment_wallet_add_coin.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_wallet_add_coin.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_toolbarwithbackandbell.xml.flat",

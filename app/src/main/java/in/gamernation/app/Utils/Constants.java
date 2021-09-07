@@ -1,6 +1,8 @@
 package in.gamernation.app.Utils;
 
 public class Constants {
+    public static final String METAPTEF = "metapref";
+    public static final String MYPROFILEPREF = "MYPROFILEPREF";
     public static int SPLASH_TIMEOUT = 3000;
     public static String LOGINPREFS = "LOGINPREFS";
     public static String TOKENUSINGPREFS = "token";
@@ -48,4 +50,26 @@ public class Constants {
     public static String navheaddp = "nav dpp";
     public static String navprogressbar = "navprogress";
     public static String navemail = "nav email";
+
+
+    public static String metasignup = "metasignup";
+    public static String login_url = "metalogin_url";
+    public static String contactUs = "metacontactUs";
+    public static String add_money = "metaadd_money";
+    public static String payment_gateway = "metapayment_gateway";
+    public static String transaction_history = "metatransaction_history";
+    public static String payment_history = "metapayment_history";
+    public static String withdraw = "metawithdraw";
+    public static String withdraw_history = "metawithdraw_history";
+    public static String add_bank_account = "metaadd_bank_account";
+    public static String delete_linked_account = "metadelete_linked_account";
+    public static String withdraw_coins = "metawithdraw_coins";
+
+    public static String myprofileGender = "myprofileGender";
+    public static String myprofilename = "myprofilename";
+    public static String myprofileUsername = "myprofileUsername";
+    public static String myprofileProfile_Picture = "myprofileProfile_Picture";
+    public static String myprofileEmail = "myprofileEmail";
+    public static String myprofilestate = "myprofilestate";
+    public static String myprofileCountry = "myprofileCountry";
 }

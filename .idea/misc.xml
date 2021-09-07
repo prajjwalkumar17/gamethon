@@ -3,10 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout-v28/fragment_myprofile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_contactus.xml" value="0.16576086956521738" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16168478260869565" />
         <entry key="app/src/main/res/layout/fragment_leaderboard.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_mystats.xml" value="0.2246376811594203" />
+        <entry key="app/src/main/res/layout/fragment_updateprofile.xml" value="0.27844311377245506" />
+        <entry key="app/src/main/res/layout/fragment_wallet.xml" value="0.16168478260869565" />
+        <entry key="app/src/main/res/layout/fragment_wallet_add_coin.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/fragment_walletpaymenthistory.xml" value="0.17798913043478262" />
         <entry key="app/src/main/res/layout/fragment_walletviewalltransacton.xml" value="0.15806159420289856" />
+        <entry key="app/src/main/res/layout/fragment_walletwithdrawcoins.xml" value="0.22708333333333333" />
+        <entry key="app/src/main/res/layout/img_slider.xml" value="0.2246376811594203" />
         <entry key="app/src/main/res/layout/shimmerwalletalltran.xml" value="0.15806159420289856" />
+        <entry key="app/src/main/res/layout/toolbarwithbackandbell.xml" value="0.21603260869565216" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.17798913043478262" />
       </map>
     </option>
   </component>

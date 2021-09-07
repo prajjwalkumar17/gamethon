@@ -40,7 +40,7 @@ public class AdapterHomeSlider extends RecyclerView.Adapter<AdapterHomeSlider.My
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            view = itemView.findViewById(R.id.sliderpager);
+            view = itemView.findViewById(R.id.sliderpageree);
         }
     }
 }

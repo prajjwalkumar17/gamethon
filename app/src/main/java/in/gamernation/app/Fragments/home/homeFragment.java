@@ -1,9 +1,7 @@
 package in.gamernation.app.Fragments.home;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,14 +15,25 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.denzcoskun.imageslider.ImageSlider;
 import com.google.android.material.tabs.TabLayout;
 
-import java.util.Timer;
+import org.json.JSONArray;
+import org.json.JSONException;
 
+import java.io.IOException;
+
+import in.gamernation.app.APICalls.APICallsOkHttp;
 import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.Adapters.AdapterHomeActivitySlider;
 import in.gamernation.app.Adapters.AdapterHomeSlider;
+import in.gamernation.app.Adapters.Adapterhometopimgslider;
 import in.gamernation.app.R;
+import in.gamernation.app.Utils.CommonMethods;
+import in.gamernation.app.Utils.Constants;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 public class homeFragment extends Fragment {
     final int noofimganddots = 5;
@@ -33,11 +42,11 @@ public class homeFragment extends Fragment {
     AdapterHomeActivitySlider adapterHomeActivitySlider;
     LinearLayout dotlayout;
     AdapterHomeSlider adapterHomeSlider;
-    ViewPager2 sliderpager;
-    Drawable[] sliderimg;
+    ImageSlider sliderpager;
+    /*    Drawable[] sliderimg;
+        Timer timer;
+        Handler handler;*/
     TextView[] dot;
-    Timer timer;
-    Handler handler;
     private FragmentActivity myContext;
 
     @Override
@@ -48,7 +57,7 @@ public class homeFragment extends Fragment {
         ((HomeActivity) getActivity()).setbotVisible();
 
         muticals(root);
-
+        fetchhomeslider();
         return root;
     }
     @Override
@@ -68,7 +77,8 @@ public class homeFragment extends Fragment {
         managetabs(tabLayout);
         swipemanagerforpager(homepager, tabLayout);
         dotlayout = root.findViewById(R.id.sliderdotcontainer);
-        sliderpager = root.findViewById(R.id.sliderpager);
+        sliderpager = root.findViewById(R.id.sliderpageree);
+
 //        timer = new Timer();
 //        handler = new Handler();
 //        timer.schedule(new TimerTask() {
@@ -92,13 +102,41 @@ public class homeFragment extends Fragment {
 //        }, 4000, 5000);
 //
 
-        dot = new TextView[noofimganddots];
-        imageofslider(sliderimg, dot);
+//        dot = new TextView[noofimganddots];
+//        imageofslider(sliderimg, dot);
 
 
     }
 
-    private void imageofslider(Drawable[] sliderimgs, TextView[] dot) {
+    private void fetchhomeslider() {
+        String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "games/slider");
+        APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requesthttpwithoutauth(url)).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                CommonMethods.DisplayLongTOAST(getContext(), e.getMessage());
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+
+                final String responsez = response.body().string();
+//                CommonMethods.LOGthesite(Constants.LOG,responsez);
+                try {
+                    JSONArray object = new JSONArray(responsez);
+                    Adapterhometopimgslider adapterhometopimgslider = new Adapterhometopimgslider(object);
+
+//                    sliderpager.setAdapter(adapterhometopimgslider);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+    }
+
+
+/*    private void imageofslider(Drawable[] sliderimgs, TextView[] dot) {
         sliderimgs = new Drawable[noofimganddots];
         sliderimgs[0] = getResources().getDrawable(R.drawable.pager1);
         sliderimgs[1] = getResources().getDrawable(R.drawable.pager2);
@@ -116,7 +154,7 @@ public class homeFragment extends Fragment {
                 super.onPageSelected(position);
             }
         });
-    }
+    }*/
 
     private void selectedIndicator(int position) {
         for (int i = 0; i < noofimganddots; i++) {

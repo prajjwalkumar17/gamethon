@@ -188,6 +188,8 @@ public class leaderboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Leaderboardquizbot.setTextColor(getResources().getColor(R.color.white));
+
+                shimmersetup();
                 fetchdata(Constants.leaderboardfiltergame + "QUIZ");
 
                 Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));

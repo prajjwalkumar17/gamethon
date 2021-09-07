@@ -34,11 +34,32 @@ public class APICallsOkHttp {
                 .build();
     }
 
+    public static Request requesthttpwithoutauth(String url) {
+        return new Request.Builder()
+                .url(url)
+                .build();
+    }
+
+    public static Request requesthttpwithoutauthandwithbody(String url, RequestBody requestBody) {
+        return new Request.Builder()
+                .url(url)
+                .post(requestBody)
+                .build();
+    }
+
     public static Request requestwithpost(String url, String usrauthtoken, RequestBody requestBody) {
         return new Request.Builder()
                 .header("Authorization", Constants.AuthBearer + usrauthtoken)
                 .url(url)
                 .post(requestBody)
+                .build();
+    }
+
+    public static Request requestwithpatch(String url, String usrauthtoken, RequestBody requestBody) {
+        return new Request.Builder()
+                .header("Authorization", Constants.AuthBearer + usrauthtoken)
+                .url(url)
+                .patch(requestBody)
                 .build();
     }
 
@@ -67,7 +88,6 @@ public class APICallsOkHttp {
                 .addFormDataPart("teamName", teamname)
                 .build();
     }
-
 
 }
 

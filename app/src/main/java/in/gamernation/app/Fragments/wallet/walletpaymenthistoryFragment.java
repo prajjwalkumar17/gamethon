@@ -1,34 +1,25 @@
 package in.gamernation.app.Fragments.wallet;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import in.gamernation.app.APICalls.APICallsOkHttp;
-import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.Adapters.AdapterWalletpaymenthistory;
-import in.gamernation.app.Decoration.DecorationHomeRecyclerGamesItem;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.Constants;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Response;
 
 
 public class walletpaymenthistoryFragment extends Fragment {
@@ -40,18 +31,34 @@ public class walletpaymenthistoryFragment extends Fragment {
     private RecyclerView walletpaymenthistoryrecycler;
     private AdapterWalletpaymenthistory adapterWalletpaymenthistory;
 
+    WebView walletviewpaymenthistorywebview;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_walletpaymenthistory, container, false);
-        initScreen();
-        initviews(root);
-        fetchwallet();
+//        initScreen();
+//        initviews(root);
+//        fetchwallet();
+
+        walletviewpaymenthistorywebview = root.findViewById(R.id.walletviewpaymenthistorywebview);
+        WebSettings settings = walletviewpaymenthistorywebview.getSettings();
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.METAPTEF, MODE_PRIVATE);
+        settings.setJavaScriptEnabled(true);
+        walletviewpaymenthistorywebview.setWebViewClient(new Callback());
+        walletviewpaymenthistorywebview.loadUrl(sharedPreferences.getString(Constants.payment_history, "data not found"));
+
         return root;
     }
 
-
+    private class Callback extends WebViewClient {
+        @Override
+        public boolean shouldOverrideKeyEvent(WebView view, KeyEvent event) {
+            return false;
+        }
+    }
+/*
     @Override
     public void onAttach(@NonNull @NotNull Context context) {
         super.onAttach(context);
@@ -113,7 +120,7 @@ public class walletpaymenthistoryFragment extends Fragment {
                             JSONArray listarray = object.getJSONArray("Payment_history");
 //                            JSONObject list=listarray.getJSONObject(0);
 
-                      /*      String type=list.getString("type");
+                      *//*      String type=list.getString("type");
                             String _id=list.getString("_id");
                             String amount=list.getString("amount");
                             String order=list.getString("order");
@@ -123,7 +130,7 @@ public class walletpaymenthistoryFragment extends Fragment {
                             CommonMethods.LOGthesite(Constants.LOG,"_id "+_id);
                             CommonMethods.LOGthesite(Constants.LOG,"order "+order);
                             CommonMethods.LOGthesite(Constants.LOG,"status "+status);
-                            CommonMethods.LOGthesite(Constants.LOG,"amount "+amount);*/
+                            CommonMethods.LOGthesite(Constants.LOG,"amount "+amount);*//*
 
                             adapterWalletpaymenthistory = new AdapterWalletpaymenthistory(object);
                             walletpaymenthistoryrecycler.setAdapter(adapterWalletpaymenthistory);
@@ -134,5 +141,5 @@ public class walletpaymenthistoryFragment extends Fragment {
                 });
             }
         });
-    }
+    }*/
 }
