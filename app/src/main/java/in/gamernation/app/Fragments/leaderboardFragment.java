@@ -213,20 +213,20 @@ public class leaderboardFragment extends Fragment {
                 Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
             }
         });
-        Leaderboardbgmibot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.white));
-                shimmersetup();
-                fetchdata(Constants.leaderboardfiltergame + "BGMI");
-
-                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
-            }
-        });
+//        Leaderboardbgmibot.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.white));
+//                shimmersetup();
+//                fetchdata(Constants.leaderboardfiltergame + "BGMI");
+//
+//                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//            }
+//        });
 
 
     }
