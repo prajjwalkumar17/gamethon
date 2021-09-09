@@ -72,4 +72,5 @@ public class Constants {
     public static String myprofileEmail = "myprofileEmail";
     public static String myprofilestate = "myprofilestate";
     public static String myprofileCountry = "myprofileCountry";
+    public static String shouldopenmyprofile = "0";
 }

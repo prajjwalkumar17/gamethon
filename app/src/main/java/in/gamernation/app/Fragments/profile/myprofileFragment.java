@@ -81,8 +81,10 @@ public class myprofileFragment extends Fragment {
         myprofile_updatebiocredsbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, new updateprofileFragment()).addToBackStack(null).commit();
+                Intent intent = new Intent(getActivity(), updatemyprofileActivity.class);
+                startActivity(intent);
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.fragmentContainerView, new updatemyprofileActivity()).addToBackStack(null).commit();
             }
         });
     }

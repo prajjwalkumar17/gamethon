@@ -85,6 +85,15 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
 
         fetchprofiledata();
 
+
+        SharedPreferences preferences = this.getSharedPreferences(Constants.MYPROFILEPREF, Context.MODE_PRIVATE);
+        String s1 = preferences.getString(Constants.shouldopenmyprofile, "0");
+
+        if (s1.equals("1")) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString(Constants.shouldopenmyprofile, "0").apply();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new myprofileFragment()).addToBackStack(null).commit();
+        }
     }
 
     private void fetchprofiledata() {

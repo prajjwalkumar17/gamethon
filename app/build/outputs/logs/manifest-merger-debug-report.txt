@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-33:12
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-36:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/2893e729c5889eabb3500a137711c83e/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.preference:preference:1.1.1] /Users/hangsai/.gradle/caches/transforms-3/f8d126b40aae360114d9628e980e032a/transformed/preference-1.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] /Users/hangsai/.gradle/caches/transforms-3/e8717e30bbc4cf00dfb30661685e96da/transformed/navigation-ui-2.3.5/AndroidManifest.xml:17:1-24:12
@@ -12,6 +12,8 @@ MERGED from [com.google.android.material:material:1.4.0] /Users/hangsai/.gradle/
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] /Users/hangsai/.gradle/caches/transforms-3/30cd54daafe7a974d174a79718a8a305/transformed/navigation-fragment-2.3.5/AndroidManifest.xml:17:1-24:12
 MERGED from [com.airbnb.android:lottie:3.4.0] /Users/hangsai/.gradle/caches/transforms-3/a7566235268d5f81cc9d217dfeb8baf6/transformed/lottie-3.4.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /Users/hangsai/.gradle/caches/transforms-3/603d5b366cec0e2b4f7a40320b7dc059/transformed/constraintlayout-2.1.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:2:1-42:12
+MERGED from [com.github.yalantis:ucrop:2.2.6] /Users/hangsai/.gradle/caches/transforms-3/9d06136c4ff5ae015f53fde841c4624f/transformed/ucrop-2.2.6/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] /Users/hangsai/.gradle/caches/transforms-3/4ecd700c773cf5624732e3577602f1ea/transformed/appcompat-1.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-3/5d9957564178c1b006bd153cda170e71/transformed/circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:2:1-14:12
@@ -35,6 +37,7 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/hangsai/.gradle/ca
 MERGED from [androidx.customview:customview:1.1.0] /Users/hangsai/.gradle/caches/transforms-3/e5e0c0efed2f07eedef297bbad53835e/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] /Users/hangsai/.gradle/caches/transforms-3/187da96e77f680812e4b3603b7834520/transformed/navigation-runtime-2.3.5/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] /Users/hangsai/.gradle/caches/transforms-3/a2fec87436ed4b48e2cd27f2bec00bd8/transformed/activity-1.2.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.3.2] /Users/hangsai/.gradle/caches/transforms-3/8a69537a78199e71e8094ebe610214a4/transformed/core-ktx-1.3.2/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/cc799678192709bceae81fa20a37187c/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/7f12bd1a771dd87c830f5d5a90fbdbe2/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/4666547609bee097a70e3acc6d3c3166/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -46,7 +49,8 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hangsai/.gradle/
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/hangsai/.gradle/caches/transforms-3/c2a2b216c41ef64c23b5a2261da3c566/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/hangsai/.gradle/caches/transforms-3/467a835b52a179222c9cd595c4b15361/transformed/savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/hangsai/.gradle/caches/transforms-3/9f2676b1c0969ec8c1ba6828bf396548/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/989dfec6fc7a4daefb140f0c011fcef1/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/hangsai/.gradle/caches/transforms-3/17ad01691cbb414260d4c3eb2b753a61/transformed/exifinterface-1.3.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/hangsai/.gradle/caches/transforms-3/b4758c1e85bbff39286812dabea79f71/transformed/documentfile-1.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/8ca7186ef83368b8549809152ed428ce/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/485578c608519582fc751ff2f7c88476/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/140757696eca7ec1efbdf7371a4acde0/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -58,20 +62,20 @@ MERGED from [androidx.tracing:tracing:1.0.0] /Users/hangsai/.gradle/caches/trans
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/18e5cb54f886f7aa7e26ad4e22b3ac23/transformed/annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:exifinterface:27.1.0] /Users/hangsai/.gradle/caches/transforms-3/85858523d3280996520ff77582e64eed/transformed/exifinterface-27.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.stetho:stetho:1.5.1] /Users/hangsai/.gradle/caches/transforms-3/4d45c2bab06748f71b7ca9c6ac6351a9/transformed/stetho-1.5.1/AndroidManifest.xml:2:1-13:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:3:5-33
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-33:12
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-36:12
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-33:12
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:1-36:12
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:2:11-69
@@ -84,13 +88,15 @@ ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/Android
 	android:name
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:8:5-31:19
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:8:5-34:19
 MERGED from [com.google.android.material:material:1.4.0] /Users/hangsai/.gradle/caches/transforms-3/25012fcc08d4c5cf5a2844c1a21a6fbe/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] /Users/hangsai/.gradle/caches/transforms-3/25012fcc08d4c5cf5a2844c1a21a6fbe/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.airbnb.android:lottie:3.4.0] /Users/hangsai/.gradle/caches/transforms-3/a7566235268d5f81cc9d217dfeb8baf6/transformed/lottie-3.4.0/AndroidManifest.xml:9:5-20
 MERGED from [com.airbnb.android:lottie:3.4.0] /Users/hangsai/.gradle/caches/transforms-3/a7566235268d5f81cc9d217dfeb8baf6/transformed/lottie-3.4.0/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /Users/hangsai/.gradle/caches/transforms-3/603d5b366cec0e2b4f7a40320b7dc059/transformed/constraintlayout-2.1.0/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /Users/hangsai/.gradle/caches/transforms-3/603d5b366cec0e2b4f7a40320b7dc059/transformed/constraintlayout-2.1.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:21:5-40:19
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:21:5-40:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-3/5d9957564178c1b006bd153cda170e71/transformed/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-3/5d9957564178c1b006bd153cda170e71/transformed/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:7:5-12:19
@@ -108,53 +114,59 @@ MERGED from [com.facebook.stetho:stetho:1.5.1] /Users/hangsai/.gradle/caches/tra
 	android:supportsRtl
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:12:9-41
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:11:9-41
 	android:roundIcon
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:11:9-45
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:10:9-45
 	android:allowBackup
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:9-49
 	android:networkSecurityConfig
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:9:9-69
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:12:9-69
+activity#in.gamernation.app.Fragments.profile.updatemyprofileActivity
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:9-18:39
+	android:exported
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:18:13-36
+	android:name
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:13-70
 activity#in.gamernation.app.Startup.Login
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:9-60
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:9-51
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:19-48
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:19-48
 activity#in.gamernation.app.ZTest.TestActivity
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:9-56
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:9-56
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:19-53
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:19-53
 activity#in.gamernation.app.Activities.HomeActivity
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:18:9-61
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:9-61
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:18:19-58
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:19-58
 activity#in.gamernation.app.Startup.Splash
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:9-25:20
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:22:9-28:20
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:19-49
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:22:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:13-24:29
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:17-69
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:25-66
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:23:17-77
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:23:27-74
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:27-74
 activity#in.gamernation.app.MainActivity
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:9-50
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:29:9-50
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:19-47
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:29:19-47
 meta-data#preloaded_fonts
-ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:28:9-30:57
+ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:31:9-33:57
 	android:resource
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:30:13-54
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:33:13-54
 	android:name
-		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:29:13-43
+		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:32:13-43
 uses-sdk
 INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
@@ -175,6 +187,10 @@ MERGED from [com.airbnb.android:lottie:3.4.0] /Users/hangsai/.gradle/caches/tran
 MERGED from [com.airbnb.android:lottie:3.4.0] /Users/hangsai/.gradle/caches/transforms-3/a7566235268d5f81cc9d217dfeb8baf6/transformed/lottie-3.4.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /Users/hangsai/.gradle/caches/transforms-3/603d5b366cec0e2b4f7a40320b7dc059/transformed/constraintlayout-2.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /Users/hangsai/.gradle/caches/transforms-3/603d5b366cec0e2b4f7a40320b7dc059/transformed/constraintlayout-2.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.yalantis:ucrop:2.2.6] /Users/hangsai/.gradle/caches/transforms-3/9d06136c4ff5ae015f53fde841c4624f/transformed/ucrop-2.2.6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6] /Users/hangsai/.gradle/caches/transforms-3/9d06136c4ff5ae015f53fde841c4624f/transformed/ucrop-2.2.6/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] /Users/hangsai/.gradle/caches/transforms-3/4ecd700c773cf5624732e3577602f1ea/transformed/appcompat-1.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] /Users/hangsai/.gradle/caches/transforms-3/4ecd700c773cf5624732e3577602f1ea/transformed/appcompat-1.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/hangsai/.gradle/caches/transforms-3/5d9957564178c1b006bd153cda170e71/transformed/circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
@@ -221,6 +237,8 @@ MERGED from [androidx.navigation:navigation-runtime:2.3.5] /Users/hangsai/.gradl
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] /Users/hangsai/.gradle/caches/transforms-3/187da96e77f680812e4b3603b7834520/transformed/navigation-runtime-2.3.5/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] /Users/hangsai/.gradle/caches/transforms-3/a2fec87436ed4b48e2cd27f2bec00bd8/transformed/activity-1.2.4/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] /Users/hangsai/.gradle/caches/transforms-3/a2fec87436ed4b48e2cd27f2bec00bd8/transformed/activity-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.3.2] /Users/hangsai/.gradle/caches/transforms-3/8a69537a78199e71e8094ebe610214a4/transformed/core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.2] /Users/hangsai/.gradle/caches/transforms-3/8a69537a78199e71e8094ebe610214a4/transformed/core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.loader:loader:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/cc799678192709bceae81fa20a37187c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/cc799678192709bceae81fa20a37187c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/7f12bd1a771dd87c830f5d5a90fbdbe2/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
@@ -243,8 +261,10 @@ MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/hangsai/.gradle/caches
 MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/hangsai/.gradle/caches/transforms-3/467a835b52a179222c9cd595c4b15361/transformed/savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/hangsai/.gradle/caches/transforms-3/9f2676b1c0969ec8c1ba6828bf396548/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/hangsai/.gradle/caches/transforms-3/9f2676b1c0969ec8c1ba6828bf396548/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/989dfec6fc7a4daefb140f0c011fcef1/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/989dfec6fc7a4daefb140f0c011fcef1/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/hangsai/.gradle/caches/transforms-3/17ad01691cbb414260d4c3eb2b753a61/transformed/exifinterface-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/hangsai/.gradle/caches/transforms-3/17ad01691cbb414260d4c3eb2b753a61/transformed/exifinterface-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/hangsai/.gradle/caches/transforms-3/b4758c1e85bbff39286812dabea79f71/transformed/documentfile-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/hangsai/.gradle/caches/transforms-3/b4758c1e85bbff39286812dabea79f71/transformed/documentfile-1.0.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/8ca7186ef83368b8549809152ed428ce/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/8ca7186ef83368b8549809152ed428ce/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/hangsai/.gradle/caches/transforms-3/485578c608519582fc751ff2f7c88476/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
@@ -277,6 +297,52 @@ INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/Andr
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 		ADDED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml
+queries
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:9:5-19:15
+intent#action:name:android.media.action.IMAGE_CAPTURE
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:12:9-14:18
+action#android.media.action.IMAGE_CAPTURE
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:13:13-73
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:13:21-70
+intent#action:name:android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:16:9-18:18
+action#android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:17:13-79
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:17:21-76
+activity#com.github.dhaval2404.imagepicker.ImagePickerActivity
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:22:9-25:68
+	android:screenOrientation
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:24:13-52
+	android:theme
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:25:13-65
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:23:13-81
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:26:9-29:72
+	android:screenOrientation
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:28:13-49
+	android:theme
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:27:13-60
+provider#com.github.dhaval2404.imagepicker.ImagePickerFileProvider
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:31:9-39:20
+	android:grantUriPermissions
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:35:13-47
+	android:authorities
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:33:13-72
+	android:exported
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:32:13-85
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:36:13-38:71
+	android:resource
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:38:17-68
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:37:17-67
 provider#com.squareup.picasso.PicassoProvider
 ADDED from [com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:8:9-11:40
 	android:authorities

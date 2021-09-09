@@ -66,11 +66,28 @@
                         "endOffsets": "173,261,338,485,654,735,813"
                     },
                     "to": {
-                        "startLines": "39,41,92,94,97,98,99",
+                        "startLines": "39,41,92,94,97,101,102",
                         "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "3474,3612,7714,7870,8201,8370,8451",
+                        "startOffsets": "3474,3612,7714,7870,8201,8548,8629",
                         "endColumns": "72,87,76,146,168,80,77",
-                        "endOffsets": "3542,3695,7786,8012,8365,8446,8524"
+                        "endOffsets": "3542,3695,7786,8012,8365,8624,8702"
+                    }
+                },
+                {
+                    "source": "/Users/hangsai/.gradle/caches/transforms-3/9d06136c4ff5ae015f53fde841c4624f/transformed/ucrop-2.2.6/res/values-sk/values-sk.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,182",
+                        "endColumns": "69,56,50",
+                        "endOffsets": "120,177,228"
+                    },
+                    "to": {
+                        "startLines": "98,99,100",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "8370,8440,8497",
+                        "endColumns": "69,56,50",
+                        "endOffsets": "8435,8492,8543"
                     }
                 },
                 {

@@ -1,7 +1,9 @@
 package in.gamernation.app.Fragments.profile;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +15,12 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
@@ -58,9 +62,9 @@ public class updateprofileFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_updateprofile, container, false);
         initscreen();
         shimmersetup(root);
-        imguploadbot();
         shimmerstart();
         initviews(root);
+        imguploadbot();
 
         return root;
     }
@@ -69,9 +73,33 @@ public class updateprofileFragment extends Fragment {
         myprofileuploadpicbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ImagePicker.with(getActivity())
+                        .galleryOnly()
+                        .compress(1024)
+                        .maxResultSize(1080, 1080)
+                        .start();
+
 
             }
         });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == getActivity().RESULT_OK) {
+            Uri uri = data.getData();
+            CommonMethods.LOGthesite(Constants.LOG, uri.toString());
+            Picasso.get()
+                    .load(uri)
+                    .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.dperror)
+                    .into(myprofiledpbot);
+        } else if (resultCode == ImagePicker.RESULT_ERROR) {
+            CommonMethods.DisplayShortTOAST(thiscontext, ImagePicker.getError(data));
+        } else {
+            CommonMethods.DisplayShortTOAST(thiscontext, "Task Cancelled");
+        }
     }
 
     private void shimmerstart() {

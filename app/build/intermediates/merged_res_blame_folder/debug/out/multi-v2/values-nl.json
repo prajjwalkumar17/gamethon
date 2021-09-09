@@ -4,6 +4,23 @@
             "outputFile": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml",
             "map": [
                 {
+                    "source": "/Users/hangsai/.gradle/caches/transforms-3/9d06136c4ff5ae015f53fde841c4624f/transformed/ucrop-2.2.6/res/values-nl/values-nl.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,120,179",
+                        "endColumns": "64,58,54",
+                        "endOffsets": "115,174,229"
+                    },
+                    "to": {
+                        "startLines": "96,97,98",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "8329,8394,8453",
+                        "endColumns": "64,58,54",
+                        "endOffsets": "8389,8448,8503"
+                    }
+                },
+                {
                     "source": "/Users/hangsai/.gradle/caches/transforms-3/f8d126b40aae360114d9628e980e032a/transformed/preference-1.1.1/res/values-nl/values-nl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
@@ -13,11 +30,11 @@
                         "endOffsets": "172,262,342,488,657,737,814"
                     },
                     "to": {
-                        "startLines": "37,39,90,92,95,96,97",
+                        "startLines": "37,39,90,92,95,99,100",
                         "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "3377,3513,7665,7830,8160,8329,8409",
+                        "startOffsets": "3377,3513,7665,7830,8160,8508,8588",
                         "endColumns": "71,89,79,145,168,79,76",
-                        "endOffsets": "3444,3598,7740,7971,8324,8404,8481"
+                        "endOffsets": "3444,3598,7740,7971,8324,8583,8660"
                     }
                 },
                 {

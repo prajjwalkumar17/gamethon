@@ -17,68 +17,128 @@
 12-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:6:5-79
 12-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:6:22-76
 13
-14    <application
-14-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:8:5-31:19
-15        android:allowBackup="true"
-15-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:10:9-35
-16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.5.0] /Users/hangsai/.gradle/caches/transforms-3/255d63c0f9f8f5d12ab3191ffb377750/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
-17        android:debuggable="true"
-18        android:extractNativeLibs="false"
-19        android:icon="@drawable/splash_logo"
-19-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:11:9-45
-20        android:label="@string/app_name"
-20-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:12:9-41
-21        android:networkSecurityConfig="@xml/network_security_config"
-21-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:9:9-69
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:13:9-54
-23        android:supportsRtl="true"
-23-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:14:9-35
-24        android:theme="@style/Theme.Gamernation" >
-24-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:9-49
-25        <activity android:name="in.gamernation.app.Startup.Login" />
-25-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:9-60
-25-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:19-48
-26        <activity android:name="in.gamernation.app.ZTest.TestActivity" />
-26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:9-56
-26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:19-53
-27        <activity android:name="in.gamernation.app.Activities.HomeActivity" />
-27-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:18:9-61
-27-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:18:19-58
-28        <activity android:name="in.gamernation.app.Startup.Splash" >
-28-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:9-25:20
-28-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:19-49
-29            <intent-filter>
-29-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:13-24:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:17-69
-30-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:23:17-77
-32-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:23:27-74
-33            </intent-filter>
-34        </activity>
-35        <activity android:name="in.gamernation.app.MainActivity" />
-35-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:9-50
-35-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:19-47
-36
-37        <meta-data
-37-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:28:9-30:57
-38            android:name="preloaded_fonts"
-38-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:29:13-43
-39            android:resource="@array/preloaded_fonts" />
-39-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:30:13-54
-40
-41        <provider
-41-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:8:9-11:40
-42            android:name="com.squareup.picasso.PicassoProvider"
-42-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:9:13-64
-43            android:authorities="in.gamernation.app.com.squareup.picasso"
-43-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:10:13-72
-44            android:exported="false" />
-44-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:11:13-37
-45    </application>
-46
-47</manifest>
+14    <queries>
+14-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:9:5-19:15
+15
+16        <!-- Query Camera Packages -->
+17        <intent>
+17-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:12:9-14:18
+18            <action android:name="android.media.action.IMAGE_CAPTURE" />
+18-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:13:13-73
+18-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:13:21-70
+19        </intent>
+20        <!-- Query Open Document -->
+21        <intent>
+21-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:16:9-18:18
+22            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+22-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:17:13-79
+22-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:17:21-76
+23        </intent>
+24    </queries>
+25
+26    <application
+26-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:8:5-34:19
+27        android:allowBackup="true"
+27-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:9:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.5.0] /Users/hangsai/.gradle/caches/transforms-3/255d63c0f9f8f5d12ab3191ffb377750/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+29        android:debuggable="true"
+30        android:extractNativeLibs="false"
+31        android:icon="@drawable/splash_logo"
+31-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:10:9-45
+32        android:label="@string/app_name"
+32-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:11:9-41
+33        android:networkSecurityConfig="@xml/network_security_config"
+33-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:12:9-69
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:13:9-54
+35        android:supportsRtl="true"
+35-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:14:9-35
+36        android:testOnly="true"
+37        android:theme="@style/Theme.Gamernation" >
+37-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:15:9-49
+38        <activity
+38-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:16:9-18:39
+39            android:name="in.gamernation.app.Fragments.profile.updatemyprofileActivity"
+39-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:17:13-70
+40            android:exported="true" />
+40-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:18:13-36
+41        <activity android:name="in.gamernation.app.Startup.Login" />
+41-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:9-51
+41-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:19:19-48
+42        <activity android:name="in.gamernation.app.ZTest.TestActivity" />
+42-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:9-56
+42-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:20:19-53
+43        <activity android:name="in.gamernation.app.Activities.HomeActivity" />
+43-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:9-61
+43-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:21:19-58
+44        <activity android:name="in.gamernation.app.Startup.Splash" >
+44-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:22:9-28:20
+44-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:22:19-49
+45            <intent-filter>
+45-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:23:13-27:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:24:17-69
+46-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:24:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:17-77
+48-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:26:27-74
+49            </intent-filter>
+50        </activity>
+51        <activity android:name="in.gamernation.app.MainActivity" />
+51-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:29:9-50
+51-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:29:19-47
+52
+53        <meta-data
+53-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:31:9-33:57
+54            android:name="preloaded_fonts"
+54-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:32:13-43
+55            android:resource="@array/preloaded_fonts" />
+55-->/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/AndroidManifest.xml:33:13-54
+56
+57        <activity
+57-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:22:9-25:68
+58            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+58-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:23:13-81
+59            android:screenOrientation="unspecified"
+59-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:24:13-52
+60            android:theme="@style/Theme.Transparent.ImagePicker" />
+60-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:25:13-65
+61        <activity
+61-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:26:9-29:72
+62            android:name="com.yalantis.ucrop.UCropActivity"
+62-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:27:13-60
+63            android:screenOrientation="portrait"
+63-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:28:13-49
+64            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+64-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:29:13-69
+65
+66        <provider
+66-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:31:9-39:20
+67            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
+67-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:32:13-85
+68            android:authorities="in.gamernation.app.imagepicker.provider"
+68-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:33:13-72
+69            android:exported="false"
+69-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:34:13-37
+70            android:grantUriPermissions="true" >
+70-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:35:13-47
+71            <meta-data
+71-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:36:13-38:71
+72                android:name="android.support.FILE_PROVIDER_PATHS"
+72-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:37:17-67
+73                android:resource="@xml/image_picker_provider_paths" />
+73-->[com.github.dhaval2404:imagepicker:2.1] /Users/hangsai/.gradle/caches/transforms-3/507060281b8e7cc5b0c62298311db375/transformed/imagepicker-2.1/AndroidManifest.xml:38:17-68
+74        </provider>
+75        <provider
+75-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:8:9-11:40
+76            android:name="com.squareup.picasso.PicassoProvider"
+76-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:9:13-64
+77            android:authorities="in.gamernation.app.com.squareup.picasso"
+77-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:10:13-72
+78            android:exported="false" />
+78-->[com.squareup.picasso:picasso:2.71828] /Users/hangsai/.gradle/caches/transforms-3/2ef524465739ecad89cdeeaa28db3da7/transformed/picasso-2.71828/AndroidManifest.xml:11:13-37
+79    </application>
+80
+81</manifest>
