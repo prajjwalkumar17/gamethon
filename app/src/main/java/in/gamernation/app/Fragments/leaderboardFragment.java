@@ -142,77 +142,77 @@ public class leaderboardFragment extends Fragment {
 
     private void showdataaccordingtobotpresssed() {
 
-        Leaderboardfreefirebot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.white));
-                shimmersetup();
-                fetchdata(Constants.leaderboardfiltergame + "FREE_FIRE");
-
-                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
-            }
-        });
-        Leaderboardludobot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Leaderboardludobot.setTextColor(getResources().getColor(R.color.white));
-                shimmersetup();
-                fetchdata(Constants.leaderboardfiltergame + "LUDO");
-
-                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
-            }
-        });
-        Leaderboardclashsquadbot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.white));
-                shimmersetup();
-                fetchdata(Constants.leaderboardfiltergame + "CLASHSQUAD");
-
-                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
-            }
-        });
-        Leaderboardquizbot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.white));
-
-                shimmersetup();
-                fetchdata(Constants.leaderboardfiltergame + "QUIZ");
-
-                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
-            }
-        });
-        Leaderboardfanbattlebot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.white));
-                shimmersetup();
-                fetchdata(Constants.leaderboardfiltergame + "CRICKET_LEAGUE");
-
-                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
-                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
-            }
-        });
+//        Leaderboardfreefirebot.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.white));
+//                shimmersetup();
+//                fetchdata(Constants.leaderboardfiltergame + "FREE_FIRE");
+//
+//                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
+//            }
+//        });
+//        Leaderboardludobot.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Leaderboardludobot.setTextColor(getResources().getColor(R.color.white));
+//                shimmersetup();
+//                fetchdata(Constants.leaderboardfiltergame + "LUDO");
+//
+//                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
+//            }
+//        });
+//        Leaderboardclashsquadbot.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.white));
+//                shimmersetup();
+//                fetchdata(Constants.leaderboardfiltergame + "CLASHSQUAD");
+//
+//                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
+//            }
+//        });
+//        Leaderboardquizbot.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.white));
+//
+//                shimmersetup();
+//                fetchdata(Constants.leaderboardfiltergame + "QUIZ");
+//
+//                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
+//            }
+//        });
+//        Leaderboardfanbattlebot.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Leaderboardfanbattlebot.setTextColor(getResources().getColor(R.color.white));
+//                shimmersetup();
+//                fetchdata(Constants.leaderboardfiltergame + "CRICKET_LEAGUE");
+//
+//                Leaderboardludobot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardclashsquadbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardquizbot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardfreefirebot.setTextColor(getResources().getColor(R.color.final_secondary));
+//                Leaderboardbgmibot.setTextColor(getResources().getColor(R.color.final_secondary));
+//            }
+//        });
 //        Leaderboardbgmibot.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
