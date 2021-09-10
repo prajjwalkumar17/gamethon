@@ -3,6 +3,7 @@ package in.gamernation.app.Fragments.profile;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -12,6 +13,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -85,23 +87,23 @@ public class updatemyprofileActivity extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (resultCode == this.RESULT_OK) {
-//            Uri uri = data.getData();
-//            CommonMethods.LOGthesite(Constants.LOG, uri.toString());
-//            Picasso.get()
-//                    .load(uri)
-//                    .placeholder(R.drawable.placeholder)
-//                    .error(R.drawable.dperror)
-//                    .into(myprofiledpbot);
-//        } else if (resultCode == ImagePicker.RESULT_ERROR) {
-//            CommonMethods.DisplayShortTOAST(this, ImagePicker.getError(data));
-//        } else {
-//            CommonMethods.DisplayShortTOAST(this, "Task Cancelled");
-//        }
-//    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == this.RESULT_OK) {
+            Uri uri = data.getData();
+            CommonMethods.LOGthesite(Constants.LOG, uri.toString());
+            Picasso.get()
+                    .load(uri)
+                    .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.dperror)
+                    .into(myprofiledpbot);
+        } else if (resultCode == ImagePicker.RESULT_ERROR) {
+            CommonMethods.DisplayShortTOAST(this, ImagePicker.getError(data));
+        } else {
+            CommonMethods.DisplayShortTOAST(this, "Task Cancelled");
+        }
+    }
 
     private void shimmerstart() {
         profileupdateshimmer.setVisibility(View.VISIBLE);
