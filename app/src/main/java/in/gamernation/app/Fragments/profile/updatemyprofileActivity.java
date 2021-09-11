@@ -29,7 +29,6 @@ import java.io.IOException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.gamernation.app.APICalls.APICallsOkHttp;
-import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -106,64 +105,64 @@ public class updatemyprofileActivity extends AppCompatActivity {
         }
     }
 
-    private void shimmerstart() {
-        profileupdateshimmer.setVisibility(View.VISIBLE);
-        profileupdateshimmer.startShimmer();
-        linlayoutsecond.setVisibility(View.INVISIBLE);
-        myprofilelin1.setVisibility(View.INVISIBLE);
-    }
-
-    private void shimmersetup() {
-        profileupdateshimmer = findViewById(R.id.profileupdateshimmer);
-        profileupdateshimmer.setVisibility(View.VISIBLE);
-        profileupdateshimmer.startShimmer();
-
-
-        linlayoutsecond = findViewById(R.id.linlayoutsecond);
-        myprofilelin1 = findViewById(R.id.myprofilelin1);
-
-        linlayoutsecond.setVisibility(View.INVISIBLE);
-        myprofilelin1.setVisibility(View.INVISIBLE);
-
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(updatemyprofileActivity.this, HomeActivity.class);
-        startActivity(intent);
-    }
-
-    private void initviews() {
-        toolwithbackbotheadbot = findViewById(R.id.toolwithbackbotheadbot);
-        toolwithbackbothead = findViewById(R.id.toolwithbackbothead);
-        toolwithbackbothead.setText("Update Profile");
-        toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(updatemyprofileActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        myprofileedittextname = findViewById(R.id.myprofileedittextname);
-        myprofileedittextusername = findViewById(R.id.myprofileedittextusername);
-        myprofileedittextemail = findViewById(R.id.myprofileedittextemail);
-        myprofileedittstate = findViewById(R.id.myprofileedittstate);
-        myprofileedittextcountry = findViewById(R.id.myprofileedittextcountry);
-        myprofileuploadpicbot = findViewById(R.id.myprofileuploadpicbot);
-        myprofileupdatebot = findViewById(R.id.myprofileupdatebot);
-        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
-        myprofilefemaleradio = findViewById(R.id.myprofilefemaleradio);
-        myprofiledpbot = findViewById(R.id.myprofiledpbot);
-        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
-        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
-
-
-//        fetchdataandsettoviewsintially();
-
-
-    }
+//    private void shimmerstart() {
+//        profileupdateshimmer.setVisibility(View.VISIBLE);
+//        profileupdateshimmer.startShimmer();
+//        linlayoutsecond.setVisibility(View.INVISIBLE);
+//        myprofilelin1.setVisibility(View.INVISIBLE);
+//    }
+//
+//    private void shimmersetup() {
+//        profileupdateshimmer = findViewById(R.id.profileupdateshimmer);
+//        profileupdateshimmer.setVisibility(View.VISIBLE);
+//        profileupdateshimmer.startShimmer();
+//
+//
+//        linlayoutsecond = findViewById(R.id.linlayoutsecond);
+//        myprofilelin1 = findViewById(R.id.myprofilelin1);
+//
+//        linlayoutsecond.setVisibility(View.INVISIBLE);
+//        myprofilelin1.setVisibility(View.INVISIBLE);
+//
+//
+//    }
+//
+//    @Override
+//    public void onBackPressed() {
+//        Intent intent = new Intent(updatemyprofileActivity.this, HomeActivity.class);
+//        startActivity(intent);
+//    }
+//
+//    private void initviews() {
+//        toolwithbackbotheadbot = findViewById(R.id.toolwithbackbotheadbot);
+//        toolwithbackbothead = findViewById(R.id.toolwithbackbothead);
+//        toolwithbackbothead.setText("Update Profile");
+//        toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(updatemyprofileActivity.this, HomeActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        myprofileedittextname = findViewById(R.id.myprofileedittextname);
+//        myprofileedittextusername = findViewById(R.id.myprofileedittextusername);
+//        myprofileedittextemail = findViewById(R.id.myprofileedittextemail);
+//        myprofileedittstate = findViewById(R.id.myprofileedittstate);
+//        myprofileedittextcountry = findViewById(R.id.myprofileedittextcountry);
+//        myprofileuploadpicbot = findViewById(R.id.myprofileuploadpicbot);
+//        myprofileupdatebot = findViewById(R.id.myprofileupdatebot);
+//        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
+//        myprofilefemaleradio = findViewById(R.id.myprofilefemaleradio);
+//        myprofiledpbot = findViewById(R.id.myprofiledpbot);
+//        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
+//        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
+//
+//
+////        fetchdataandsettoviewsintially();
+//
+//
+//    }
 
 //    private void fetchdataandsettoviewsintially() {
 //        SharedPreferences preferences = getActivity().getSharedPreferences(Constants.MYPROFILEPREF, Context.MODE_PRIVATE);
