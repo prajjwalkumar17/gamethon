@@ -99,6 +99,7 @@ public class updatemyprofileActivity extends AppCompatActivity {
                     .error(R.drawable.dperror)
                     .into(myprofiledpbot);
         } else if (resultCode == ImagePicker.RESULT_ERROR) {
+
             CommonMethods.DisplayShortTOAST(this, ImagePicker.getError(data));
         } else {
             CommonMethods.DisplayShortTOAST(this, "Task Cancelled");
