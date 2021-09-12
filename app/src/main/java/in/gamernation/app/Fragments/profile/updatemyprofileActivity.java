@@ -3,7 +3,6 @@ package in.gamernation.app.Fragments.profile;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -13,7 +12,6 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -29,6 +27,7 @@ import java.io.IOException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.gamernation.app.APICalls.APICallsOkHttp;
+import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -86,25 +85,25 @@ public class updatemyprofileActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == this.RESULT_OK) {
-            Uri uri = data.getData();
-            CommonMethods.LOGthesite(Constants.LOG, uri.toString());
-            Picasso.get()
-                    .load(uri)
-                    .placeholder(R.drawable.placeholder)
-                    .error(R.drawable.dperror)
-                    .into(myprofiledpbot);
-        } else if (resultCode == ImagePicker.RESULT_ERROR) {
-
-            CommonMethods.DisplayShortTOAST(this, ImagePicker.getError(data));
-        } else {
-            CommonMethods.DisplayShortTOAST(this, "Task Cancelled");
-        }
-    }
-
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (resultCode == this.RESULT_OK) {
+//            Uri uri = data.getData();
+//            CommonMethods.LOGthesite(Constants.LOG, uri.toString());
+//            Picasso.get()
+//                    .load(uri)
+//                    .placeholder(R.drawable.placeholder)
+//                    .error(R.drawable.dperror)
+//                    .into(myprofiledpbot);
+//        } else if (resultCode == ImagePicker.RESULT_ERROR) {
+//
+//            CommonMethods.DisplayShortTOAST(this, ImagePicker.getError(data));
+//        } else {
+//            CommonMethods.DisplayShortTOAST(this, "Task Cancelled");
+//        }
+//    }
+//
 //    private void shimmerstart() {
 //        profileupdateshimmer.setVisibility(View.VISIBLE);
 //        profileupdateshimmer.startShimmer();
@@ -132,37 +131,37 @@ public class updatemyprofileActivity extends AppCompatActivity {
 //        Intent intent = new Intent(updatemyprofileActivity.this, HomeActivity.class);
 //        startActivity(intent);
 //    }
-//
-//    private void initviews() {
-//        toolwithbackbotheadbot = findViewById(R.id.toolwithbackbotheadbot);
-//        toolwithbackbothead = findViewById(R.id.toolwithbackbothead);
-//        toolwithbackbothead.setText("Update Profile");
-//        toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(updatemyprofileActivity.this, HomeActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        myprofileedittextname = findViewById(R.id.myprofileedittextname);
-//        myprofileedittextusername = findViewById(R.id.myprofileedittextusername);
-//        myprofileedittextemail = findViewById(R.id.myprofileedittextemail);
-//        myprofileedittstate = findViewById(R.id.myprofileedittstate);
-//        myprofileedittextcountry = findViewById(R.id.myprofileedittextcountry);
-//        myprofileuploadpicbot = findViewById(R.id.myprofileuploadpicbot);
-//        myprofileupdatebot = findViewById(R.id.myprofileupdatebot);
-//        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
-//        myprofilefemaleradio = findViewById(R.id.myprofilefemaleradio);
-//        myprofiledpbot = findViewById(R.id.myprofiledpbot);
-//        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
-//        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
-//
-//
-////        fetchdataandsettoviewsintially();
-//
-//
-//    }
+
+    private void initviews() {
+        toolwithbackbotheadbot = findViewById(R.id.toolwithbackbotheadbot);
+        toolwithbackbothead = findViewById(R.id.toolwithbackbothead);
+        toolwithbackbothead.setText("Update Profile");
+        toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(updatemyprofileActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        myprofileedittextname = findViewById(R.id.myprofileedittextname);
+        myprofileedittextusername = findViewById(R.id.myprofileedittextusername);
+        myprofileedittextemail = findViewById(R.id.myprofileedittextemail);
+        myprofileedittstate = findViewById(R.id.myprofileedittstate);
+        myprofileedittextcountry = findViewById(R.id.myprofileedittextcountry);
+        myprofileuploadpicbot = findViewById(R.id.myprofileuploadpicbot);
+        myprofileupdatebot = findViewById(R.id.myprofileupdatebot);
+        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
+        myprofilefemaleradio = findViewById(R.id.myprofilefemaleradio);
+        myprofiledpbot = findViewById(R.id.myprofiledpbot);
+        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
+        myprofilemaleradio = findViewById(R.id.myprofilemaleradio);
+
+
+//        fetchdataandsettoviewsintially();
+
+
+    }
 
 //    private void fetchdataandsettoviewsintially() {
 //        SharedPreferences preferences = getActivity().getSharedPreferences(Constants.MYPROFILEPREF, Context.MODE_PRIVATE);
