@@ -2972,6 +2972,12 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id updatepanbot
+id updatepanname
+id updatepannumber
+id updatepanpic
+id updatepantext
+id updatepantool
 id updateprofiletool
 id useLogo
 id vertical_only
@@ -3087,6 +3093,7 @@ layout activity_login
 layout activity_main
 layout activity_splash
 layout activity_test
+layout activity_update_panactivity
 layout activity_updatemyprofile
 layout commontoolbar
 layout custom_dialog

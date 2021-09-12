@@ -9,17 +9,25 @@
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="400dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:gravity="center"
-        android:background="@color/final_secondary">
+        android:background="@color/final_secondary"
+        android:gravity="center">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginStart="20dp"
-            android:text="add all the text here"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="20dp"
+            android:text="HEY CHAMP!\nWANT TO REFER &amp; EARN?\n\nNow you can!\n\nFrom the leisure of your home.
+You can avail Refferal coins IMMEDIATELY
+in Your DEPOSIT Wallet\n\nThis offer is available to you for Every successful Refferal that a Friend of yours Adds.
+Out of the Amount in his/her DEPOSIT, You, yes you will be able to avail 2% of that amount
+directly in Your DEPOSIT Wallet without any time boundations.\n\n
+LET US TAKE AN EXAMPLE
+If 5 OF YOUR Refferal Friends Add 1000 each in his/her Deposit
+You will get 2% of ₹5,000 = 100 Directly in Your DEPOSIT Wallet at the same time.\n\nSo get started Player! And start the refferal process to earn from the leisure of your home."
             android:textColor="@color/white" />
 
     </LinearLayout>

@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamernation">
         <activity
+            android:name=".Fragments.profile.UpdatePANActivity"
+            android:exported="true" />
+        <activity
             android:name=".Fragments.profile.updatemyprofileActivity"
             android:exported="true" />
         <activity android:name=".Startup.Login" />

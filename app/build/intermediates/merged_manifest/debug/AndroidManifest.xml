@@ -36,6 +36,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Gamernation" >
         <activity
+            android:name="in.gamernation.app.Fragments.profile.UpdatePANActivity"
+            android:exported="true" />
+        <activity
             android:name="in.gamernation.app.Fragments.profile.updatemyprofileActivity"
             android:exported="true" />
         <activity android:name="in.gamernation.app.Startup.Login" />

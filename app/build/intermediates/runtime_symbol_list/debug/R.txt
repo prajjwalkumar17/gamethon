@@ -2971,6 +2971,12 @@ int id unchecked 0x7f0a032e
 int id uniform 0x7f0a032f
 int id unlabeled 0x7f0a0330
 int id up 0x7f0a0331
+int id updatepanbot 0x7f0a035f
+int id updatepanname 0x7f0a035b
+int id updatepannumber 0x7f0a035c
+int id updatepanpic 0x7f0a035d
+int id updatepantext 0x7f0a0360
+int id updatepantool 0x7f0a035e
 int id updateprofiletool 0x7f0a0332
 int id useLogo 0x7f0a0333
 int id vertical_only 0x7f0a0334
@@ -3086,6 +3092,7 @@ int layout activity_login 0x7f0d001d
 int layout activity_main 0x7f0d001e
 int layout activity_splash 0x7f0d001f
 int layout activity_test 0x7f0d0020
+int layout activity_update_panactivity 0x7f0d00d0
 int layout activity_updatemyprofile 0x7f0d00cf
 int layout commontoolbar 0x7f0d0021
 int layout custom_dialog 0x7f0d0022

@@ -64,7 +64,6 @@ public class myprofileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_myprofile, container, false);
-
         allfunctions(root);
         return root;
     }
@@ -72,9 +71,20 @@ public class myprofileFragment extends Fragment {
     private void allfunctions(View root) {
         findviews(root);
         updatebot();
+        updatepan();
         initscreen();
         initializers();
         initfunctions();
+    }
+
+    private void updatepan() {
+        myprofile_updatepanno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), UpdatePANActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void updatebot() {
@@ -83,8 +93,6 @@ public class myprofileFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), updatemyprofileActivity.class);
                 startActivity(intent);
-//                getActivity().getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.fragmentContainerView, new updatemyprofileActivity()).addToBackStack(null).commit();
             }
         });
     }
