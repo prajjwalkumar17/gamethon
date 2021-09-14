@@ -80,6 +80,16 @@ public class APICallsOkHttp {
                 .build();
     }
 
+    public static RequestBody buildforpanupdate(String picuri, String panno, String pananame) {
+        return new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("pic", picuri)
+                .addFormDataPart("name", pananame)
+                .addFormDataPart("pan_no", panno)
+                .build();
+    }
+
+
     public static RequestBody buildrequestbodyforusernameandpasswordteamname(String username, String userid, String teamname) {
         return new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)

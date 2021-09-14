@@ -443,18 +443,18 @@ public class arcadeopenedFragment extends Fragment {
         APICallsOkHttp.okhttpmaster().newCall(
                 APICallsOkHttp.requestwithpost(APICallsOkHttp.urlbuilderforhttp(url),
                         usrtoken,
-                        APICallsOkHttp.buildrequestbodyforusernameandpasswordteamid(username, userId, teamid))
-        ).enqueue(new Callback() {
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                CommonMethods.DisplayShortTOAST(thiscontext, e.getMessage());
-            }
-
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                final String myResponse = response.body().string();
-                getActivity().runOnUiThread(new Runnable() {
+                        APICallsOkHttp.buildrequestbodyforusernameandpasswordteamid(username, userId, teamid)))
+                .enqueue(new Callback() {
                     @Override
+                    public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                        CommonMethods.DisplayShortTOAST(thiscontext, e.getMessage());
+                    }
+
+                    @Override
+                    public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                        final String myResponse = response.body().string();
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
                     public void run() {
                         try {
                             JSONObject responsez = new JSONObject(myResponse);
@@ -466,6 +466,7 @@ public class arcadeopenedFragment extends Fragment {
                                 String trueobj = responsez.optString("message");
                                 CommonMethods.DisplayLongTOAST(thiscontext, trueobj);
                             }
+
                         /*
                             if (response.code() == 409) {
                                 CommonMethods.LOGthesite(Constants.LOG, responsez.getString("error"));
@@ -474,6 +475,7 @@ public class arcadeopenedFragment extends Fragment {
                                 CommonMethods.LOGthesite(Constants.LOG, responsez.getString("message"));
                                 CommonMethods.LOGthesite(Constants.LOG, String.valueOf(response.code()));
                             }*/
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

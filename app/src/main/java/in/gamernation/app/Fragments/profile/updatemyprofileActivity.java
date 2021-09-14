@@ -265,10 +265,6 @@ public class updatemyprofileActivity extends AppCompatActivity {
     }
 
     private void geteditedtexts() {
-
-        //pic will not work in update
-
-        //name username not empty
         myprofileupdatebot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -285,7 +281,6 @@ public class updatemyprofileActivity extends AppCompatActivity {
                 } else {
                     Gender = "Female";
                 }
-
 
                 //normalurl
 

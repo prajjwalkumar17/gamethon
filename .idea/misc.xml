@@ -12,6 +12,8 @@
         <entry key="app/src/main/res/layout-v28/fragment_myprofile.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_update_panactivity.xml" value="0.24114583333333334" />
         <entry key="app/src/main/res/layout/activity_updatemyprofile.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/dialogarcadecreateteam.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/dialogchangepassword.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_contactus.xml" value="0.16576086956521738" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16168478260869565" />
         <entry key="app/src/main/res/layout/fragment_invitefriends.xml" value="0.20652173913043478" />

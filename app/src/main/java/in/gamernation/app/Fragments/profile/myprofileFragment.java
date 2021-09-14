@@ -8,12 +8,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
@@ -75,6 +78,60 @@ public class myprofileFragment extends Fragment {
         initscreen();
         initializers();
         initfunctions();
+        clickchangepasswordbot();
+    }
+
+    private void clickchangepasswordbot() {
+        myprofile_passwordchangebot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(thiscontext);
+                View layout = LayoutInflater.from(thiscontext).inflate(R.layout.dialogchangepassword, null);
+
+                EditText changepassworddialoggamename = layout.findViewById(R.id.changepassworddialoggamename);
+                EditText changepassworddialoggameId = layout.findViewById(R.id.changepassworddialoggameId);
+                EditText changepassworddialogteamname = layout.findViewById(R.id.changepassworddialogteamname);
+
+
+                AppCompatButton changepassworddialogcancelbot = layout.findViewById(R.id.changepassworddialogcancelbot);
+                AppCompatButton changepassworddialogjoinbot = layout.findViewById(R.id.changepassworddialogjoinbot);
+
+                builder.setView(layout);
+                final AlertDialog d = builder.show();
+                changepassworddialogjoinbot.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String OLDPassword = changepassworddialoggamename.getText().toString();
+                        String NEWPassword = changepassworddialoggameId.getText().toString();
+                        String RETYPENewPassword = changepassworddialogteamname.getText().toString();
+
+                        if (OLDPassword.isEmpty() || NEWPassword.isEmpty() || RETYPENewPassword.isEmpty()) {
+                            CommonMethods.DisplayLongTOAST(thiscontext, "Fill OLD-Password , NEW-Password and RETYPE it to continue");
+                        } else if (NEWPassword.equals(RETYPENewPassword)) {
+                            changepassword(OLDPassword, NEWPassword, RETYPENewPassword, d);
+                            d.dismiss();
+                        } else {
+                            CommonMethods.DisplayLongTOAST(thiscontext, "Passwords Don't Match");
+
+                        }
+                    }
+                });
+                changepassworddialogcancelbot.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        d.dismiss();
+                    }
+                });
+
+
+            }
+        });
+
+    }
+
+    private void changepassword(String oldPassword, String newPassword, String retypeNewPassword, AlertDialog d) {
+
+
     }
 
     private void updatepan() {

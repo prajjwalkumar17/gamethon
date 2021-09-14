@@ -30,8 +30,6 @@ import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class UpdatePANActivity extends AppCompatActivity {
@@ -40,15 +38,74 @@ public class UpdatePANActivity extends AppCompatActivity {
     private static EditText updatepanname, updatepannumber;
     private static ImageView updatepanpic, toolwithbackbotheadbot;
     SharedPreferences preferences;
+    Uri uri;
+    private SharedPreferences sharedPreferences;
+    private String usrtoken;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_update_panactivity);
+
         toloadthemyprofile();
         initviews();
         uploadpic();
+        clickpanbutton();
+    }
+
+    private void clickpanbutton() {
+        updatepanbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String panname = updatepanname.getText().toString();
+                String panno = updatepannumber.getText().toString();
+
+                if (panname.isEmpty() || panno.isEmpty() || uri == null) {
+                    CommonMethods.DisplayLongTOAST(UpdatePANActivity.this, "PAN Name and PAN number field can't be empty");
+                } else {
+                    getpanandupload(panname, panno, uri.toString());
+                }
+            }
+        });
+    }
+
+
+    private void getpanandupload(String panname, String panno, String picuri) {
+        String url = Constants.w3devbaseurl + "user/my_profile/update_pan";
+        APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp
+                .requestwithpatch(APICallsOkHttp.urlbuilderforhttp(url)
+                        , usrtoken
+                        , APICallsOkHttp.buildforpanupdate(picuri, panno, panname)
+                )).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                CommonMethods.DisplayLongTOAST(getApplicationContext(), e.getMessage());
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                final String myResponse = response.body().string();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            JSONObject responsez = new JSONObject(myResponse);
+                            if (responsez.has("error")) {
+                                String erroralreadyjoined = responsez.optString("error");
+                                CommonMethods.DisplayLongTOAST(UpdatePANActivity.this, erroralreadyjoined);
+                                CommonMethods.LOGthesite(Constants.LOG, erroralreadyjoined);
+                            } else {
+                                String msg = responsez.getString("message");
+                                CommonMethods.DisplayLongTOAST(UpdatePANActivity.this, msg);
+
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        });
     }
 
     private void uploadpic() {
@@ -68,7 +125,7 @@ public class UpdatePANActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             updatepantext.setVisibility(View.GONE);
-            Uri uri = null;
+            uri = null;
             if (data != null) {
                 uri = data.getData();
                 CommonMethods.LOGthesite(Constants.LOG, uri.toString());
@@ -96,6 +153,10 @@ public class UpdatePANActivity extends AppCompatActivity {
         updatepanname = findViewById(R.id.updatepanname);
         updatepantext = findViewById(R.id.updatepantext);
         updatepannumber = findViewById(R.id.updatepannumber);
+
+        sharedPreferences = this.getSharedPreferences(Constants.LOGINPREFS, Context.MODE_PRIVATE);
+        usrtoken = sharedPreferences.getString(Constants.TOKENUSINGPREFS, "No data found!!!");
+
         toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,100 +177,6 @@ public class UpdatePANActivity extends AppCompatActivity {
         preferences = this.getSharedPreferences(Constants.MYPROFILEPREF, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(Constants.shouldopenmyprofile, "1").apply();
-    }
-
-    private void geteditedtexts() {
-
-        //pic will not work in update
-
-        //name username not empty
-        myprofileupdatebot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String editedname = myprofileedittextname.getText().toString();
-                String editedusername = myprofileedittextusername.getText().toString();
-//       String editedemail=myprofileedittextemail.getText().toString();
-                myprofileedittextemail.setEnabled(false);
-                String editedstate = myprofileedittstate.getText().toString();
-                String editedcountry = myprofileedittextcountry.getText().toString();
-
-                if (myprofilemaleradio.isChecked()) {
-                    Gender = "Male";
-                } else {
-                    Gender = "Female";
-                }
-
-
-                //normalurl
-
-
-                if (editedname.isEmpty() || editedusername.isEmpty()) {
-                    CommonMethods.DisplayLongTOAST(updatemyprofileActivity.this, "Name & Username field can't be empty");
-                } else {
-                    shimmerstart();
-
-                    JSONObject object = new JSONObject();
-                    try {
-                        object.put("name", editedname);
-                        object.put("username", editedusername);
-//                        object.put("email",editedemail);
-                        object.put("state", editedstate);
-                        object.put("country", editedcountry);
-                        object.put("gender", Gender);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-
-                    String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/my_profile/update");
-                    MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-                    // put your json here
-                    RequestBody body = RequestBody.create(JSON, object.toString());
-                    APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestwithpatch(url, usrtoken, body)).enqueue(
-                            new Callback() {
-                                @Override
-                                public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                                    CommonMethods.DisplayLongTOAST(updatemyprofileActivity.this, e.getMessage().toString());
-                                }
-
-                                @Override
-                                public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                                    final String responsez = response.body().string();
-                                    runOnUiThread(new Runnable() {
-
-                                        JSONObject object1;
-
-                                        {
-                                            try {
-                                                object1 = new JSONObject(responsez);
-
-
-                                                msg = object1.getString("message");
-                                            } catch (JSONException e) {
-                                                e.printStackTrace();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void run() {
-                                            stopshimmer();
-                                            CommonMethods.DisplayLongTOAST(updatemyprofileActivity.this, msg);
-                                        }
-
-                                    });
-
-                                }
-                            }
-                    );
-                }
-            }
-        });
-
-
-        //TODO variable names
-
-
     }
 
 
