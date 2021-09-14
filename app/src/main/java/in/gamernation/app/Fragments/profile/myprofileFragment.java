@@ -84,6 +84,7 @@ public class myprofileFragment extends Fragment {
         initializers();
         initfunctions();
         clickchangepasswordbot();
+
         clickchangebirthdaybot();
     }
 
