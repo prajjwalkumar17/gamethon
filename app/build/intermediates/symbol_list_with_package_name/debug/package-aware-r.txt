@@ -2341,6 +2341,11 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id changepassworddialogcancelbot
+id changepassworddialoggameId
+id changepassworddialoggamename
+id changepassworddialogjoinbot
+id changepassworddialogteamname
 id checkbox
 id checked
 id chip
@@ -2401,6 +2406,8 @@ id dialogitemcreateteammsgresponse
 id dialogitemcreateteammteamcode
 id dialogitemcreateteamname
 id dialogtotalwalletbalbrac
+id dialogupdatedobdatepicker
+id dialogupdatedobokbot
 id dialogwalletresultmessage
 id dilogmyleaguecancelbot
 id dilogmyleaguecopybot
@@ -3118,6 +3125,8 @@ layout dialogarcadecreateteamresponse
 layout dialogarcadejoingames
 layout dialogarcadejointeam
 layout dialogarcadejoinwalletoptions
+layout dialogchangedob
+layout dialogchangepassword
 layout dialogmyleagueliveromeidandpass
 layout expand_button
 layout fragment_arcadegame

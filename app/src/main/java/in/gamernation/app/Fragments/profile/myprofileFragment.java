@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -36,6 +37,11 @@ import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 
 public class myprofileFragment extends Fragment {
@@ -45,10 +51,9 @@ public class myprofileFragment extends Fragment {
     //TODO
 
     private static Context thiscontext;
-    private static String usrtoken, Invitation_code;
+    private static String usrtoken, Invitation_code, msgee, msgdob;
     private static ImageView commontoolbar_backbot;
     private static ImageView myprofile_sharerefferalcodebot;
-    private static TextView commontoolbar_fragname;
     private static FloatingActionButton myprofile_updatebiocredsbot;
     private static TextView myprofile_name, myprofile_username, myprofile_email, myprofile_place,
             myprofile_phoneno, myprofile_password, myprofile_birthdate, myprofile_panno, myprofile_refferalcode;
@@ -79,6 +84,93 @@ public class myprofileFragment extends Fragment {
         initializers();
         initfunctions();
         clickchangepasswordbot();
+        clickchangebirthdaybot();
+    }
+
+    private void clickchangebirthdaybot() {
+        myprofile_updatebirthdatebot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(thiscontext);
+                View layout = LayoutInflater.from(thiscontext).inflate(R.layout.dialogchangedob, null);
+
+                DatePicker dialogupdatedobdatepicker = layout.findViewById(R.id.dialogupdatedobdatepicker);
+                AppCompatButton dialogupdatedobokbot = layout.findViewById(R.id.dialogupdatedobokbot);
+                builder.setView(layout);
+                final AlertDialog d = builder.show();
+
+                dialogupdatedobokbot.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        String birth_date = dialogupdatedobdatepicker.getDayOfMonth() + " " + dialogupdatedobdatepicker.getMonth() + " " + dialogupdatedobdatepicker.getYear();
+                        //" " +dialogupdatedobdatepicker.getDayOfMonth() +
+//8 12 2021
+
+                        CommonMethods.LOGthesite(Constants.LOG, birth_date);
+                        updatedob(birth_date, d);
+                        d.dismiss();
+                    }
+                });
+            }
+        });
+    }
+
+    private void updatedob(String birth_date, AlertDialog d) {
+        JSONObject object = new JSONObject();
+        try {
+            object.put("birth_date", birth_date);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/my_profile/update");
+        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+        // put your json here
+        RequestBody body = RequestBody.create(JSON, object.toString());
+        APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestwithpatch(url, usrtoken, body)).enqueue(
+                new Callback() {
+                    @Override
+                    public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                        CommonMethods.DisplayLongTOAST(thiscontext, e.getMessage());
+                    }
+
+                    @Override
+                    public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                        final String responsez = response.body().string();
+                        requireActivity().runOnUiThread(new Runnable() {
+
+                            JSONObject object1;
+
+                            {
+                                try {
+                                    object1 = new JSONObject(responsez);
+                                    if (object1.has("message")) {
+                                        msgdob = object1.getString("message");
+
+                                    } else if (object1.has("error")) {
+                                        msgdob = object1.getString("error");
+
+                                    }
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            @Override
+                            public void run() {
+                                CommonMethods.DisplayLongTOAST(thiscontext, msgdob);
+                            }
+
+                        });
+
+                    }
+                }
+        );
+
+
     }
 
     private void clickchangepasswordbot() {
@@ -130,6 +222,60 @@ public class myprofileFragment extends Fragment {
     }
 
     private void changepassword(String oldPassword, String newPassword, String retypeNewPassword, AlertDialog d) {
+        JSONObject object = new JSONObject();
+        try {
+            object.put("old_password", oldPassword);
+            object.put("password", newPassword);
+            object.put("confirm_password", retypeNewPassword);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/my_profile/change_password");
+        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+        // put your json here
+        RequestBody body = RequestBody.create(JSON, object.toString());
+        APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestwithput(url, usrtoken, body)).enqueue(
+                new Callback() {
+                    @Override
+                    public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                        CommonMethods.DisplayLongTOAST(thiscontext, e.getMessage());
+                    }
+
+                    @Override
+                    public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                        final String responsez = response.body().string();
+                        requireActivity().runOnUiThread(new Runnable() {
+
+                            JSONObject object1;
+
+                            {
+                                try {
+                                    object1 = new JSONObject(responsez);
+
+
+                                    if (object1.has("message")) {
+                                        msgee = object1.getString("message");
+                                    } else {
+                                        msgee = object1.getString("error");
+                                    }
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            @Override
+                            public void run() {
+
+                                CommonMethods.DisplayLongTOAST(thiscontext, msgee);
+                            }
+
+                        });
+
+                    }
+                });
 
 
     }
@@ -161,7 +307,6 @@ public class myprofileFragment extends Fragment {
     }
 
     private void initfunctions() {
-        ontoolbarbackpressed();
         onsharepressed();
     }
 
@@ -204,10 +349,7 @@ public class myprofileFragment extends Fragment {
         myprofile_dp = root.findViewById(R.id.mystat_dp);
         myprofile_refferalcode = root.findViewById(R.id.myprofile_refferalcode);
         myprofile_updatebiocredsbot = root.findViewById(R.id.myprofile_updatebiocredsbot);
-        commontoolbar_backbot = root.findViewById(R.id.toolwithbackbotheadbot);
-        commontoolbar_fragname = root.findViewById(R.id.commontoolbar_fragname);
         myprofile_sharerefferalcodebot = root.findViewById(R.id.myprofile_sharerefferalcodebot);
-        commontoolbar_fragname.setText("My Profile");
 
 
         shimmerFrameLayout = root.findViewById(R.id.myprofileshimmer);
@@ -217,19 +359,23 @@ public class myprofileFragment extends Fragment {
         profilemain.setVisibility(View.GONE);
         layoutbottompprofile.setVisibility(View.GONE);
         shimmerFrameLayout.startShimmer();
-    }
 
-    private void ontoolbarbackpressed() {
-        commontoolbar_backbot.setOnClickListener(new View.OnClickListener() {
+
+        TextView toolwithbackbothead = root.findViewById(R.id.toolwithbackbothead);
+
+        ImageView toolwithbackbotheadbot = root.findViewById(R.id.toolwithbackbotheadbot);
+
+        toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (getFragmentManager().getBackStackEntryCount() != 0) {
-                    getFragmentManager().popBackStackImmediate();
-                } else {
-                    CommonMethods.DisplayLongTOAST(getContext(), "there is no backward stack available");
-                }
+                if (getActivity() != null)
+                    getActivity().getSupportFragmentManager().popBackStackImmediate();
             }
         });
+
+        toolwithbackbothead.setText("My Profile");
+
+
     }
 
     @Override

@@ -10,7 +10,7 @@
 
     <include
         android:id="@+id/profiletool"
-        layout="@layout/commontoolbar" />
+        layout="@layout/toolbarwithbackandbell" />
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/myprofileshimmer"

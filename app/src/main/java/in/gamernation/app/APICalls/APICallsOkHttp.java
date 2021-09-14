@@ -63,6 +63,14 @@ public class APICallsOkHttp {
                 .build();
     }
 
+    public static Request requestwithput(String url, String usrauthtoken, RequestBody requestBody) {
+        return new Request.Builder()
+                .header("Authorization", Constants.AuthBearer + usrauthtoken)
+                .url(url)
+                .put(requestBody)
+                .build();
+    }
+
     public static RequestBody buildrequestbodyforusernameandpassword(String username, String userid) {
         return new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)

@@ -107,15 +107,19 @@ public class mystatsFragment extends Fragment {
         mystat_gaminglosses = root.findViewById(R.id.mystat_gaminglosses);
 
 
-        commontoolbar_fragname = root.findViewById(R.id.commontoolbar_fragname);
-        commontoolbar_fragname.setText("My Stats");
-        toolwithbackbotheadbot = root.findViewById(R.id.toolwithbackbotheadbot);
+        TextView toolwithbackbothead = root.findViewById(R.id.toolwithbackbothead);
+
+        ImageView toolwithbackbotheadbot = root.findViewById(R.id.toolwithbackbotheadbot);
+
         toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().popBackStackImmediate();
+                if (getActivity() != null)
+                    getActivity().getSupportFragmentManager().popBackStackImmediate();
             }
         });
+
+        toolwithbackbothead.setText("My Stats");
 
 
     }

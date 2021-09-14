@@ -76,6 +76,9 @@ public class UpdatePANActivity extends AppCompatActivity {
                 .requestwithpatch(APICallsOkHttp.urlbuilderforhttp(url)
                         , usrtoken
                         , APICallsOkHttp.buildforpanupdate(picuri, panno, panname)
+
+                        //TODO convert to base 64 first
+
                 )).enqueue(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {

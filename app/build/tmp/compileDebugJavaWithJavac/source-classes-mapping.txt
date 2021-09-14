@@ -2,35 +2,32 @@ in/gamernation/app/APInterfaces/APIArcadeSoloParticipantsget.java
  in.gamernation.app.APInterfaces.APIArcadeSoloParticipantsget
 in/gamernation/app/APICalls/APICallsOkHttp.java
  in.gamernation.app.APICalls.APICallsOkHttp
+in/gamernation/app/APIResponses/UserLoginResponse.java
+ in.gamernation.app.APIResponses.UserLoginResponse
 in/gamernation/app/APIResponses/LeaderboardResponse.java
  in.gamernation.app.APIResponses.LeaderboardResponse
  in.gamernation.app.APIResponses.LeaderboardResponse$Leaderboard
  in.gamernation.app.APIResponses.LeaderboardResponse$User
-in/gamernation/app/APIResponses/ArcadeResponse.java
- in.gamernation.app.APIResponses.ArcadeResponse
- in.gamernation.app.APIResponses.ArcadeResponse$League
- in.gamernation.app.APIResponses.ArcadeResponse$PrizePool
 in/gamernation/app/APIRequests/ArcadeSolojoingameRequest.java
  in.gamernation.app.APIRequests.ArcadeSolojoingameRequest
 in/gamernation/app/APInterfaces/APILeaderboarduser.java
  in.gamernation.app.APInterfaces.APILeaderboarduser
 in/gamernation/app/APICalls/APICallsRetrofit.java
  in.gamernation.app.APICalls.APICallsRetrofit
-in/gamernation/app/BuildConfig.java
- in.gamernation.app.BuildConfig
+in/gamernation/app/APInterfaces/APIArcadeviewTeams.java
+ in.gamernation.app.APInterfaces.APIArcadeviewTeams
 in/gamernation/app/Decoration/DecorationHomeRecyclerGamesItem.java
  in.gamernation.app.Decoration.DecorationHomeRecyclerGamesItem
-in/gamernation/app/APIResponses/ArcadeSoloParticipantsResponse.java
- in.gamernation.app.APIResponses.ArcadeSoloParticipantsResponse
- in.gamernation.app.APIResponses.ArcadeSoloParticipantsResponse$Participant
+in/gamernation/app/BuildConfig.java
+ in.gamernation.app.BuildConfig
 in/gamernation/app/RecyclerClickInterfaces/ClicksHomeFraggames.java
  in.gamernation.app.RecyclerClickInterfaces.ClicksHomeFraggames
 in/gamernation/app/APIResponses/ArcadeSolojoinResponse.java
  in.gamernation.app.APIResponses.ArcadeSolojoinResponse
-in/gamernation/app/CommonInterfaces/navController.java
- in.gamernation.app.CommonInterfaces.navController
- in.gamernation.app.CommonInterfaces.navController$drawerControl
- in.gamernation.app.CommonInterfaces.navController$toolbarController
+in/gamernation/app/APIResponses/ArcadeResponse.java
+ in.gamernation.app.APIResponses.ArcadeResponse
+ in.gamernation.app.APIResponses.ArcadeResponse$League
+ in.gamernation.app.APIResponses.ArcadeResponse$PrizePool
 in/gamernation/app/RecyclerClickInterfaces/ClickMyleagueitem.java
  in.gamernation.app.RecyclerClickInterfaces.ClickMyleagueitem
 in/gamernation/app/APIResponses/HomegamesitemResponse.java
@@ -47,28 +44,31 @@ in/gamernation/app/Utils/CommonMethods.java
  in.gamernation.app.Utils.CommonMethods
 in/gamernation/app/APInterfaces/APIHomedashboardgamesItem.java
  in.gamernation.app.APInterfaces.APIHomedashboardgamesItem
-in/gamernation/app/APIResponses/UserLoginResponse.java
- in.gamernation.app.APIResponses.UserLoginResponse
+in/gamernation/app/APIRequests/UserLoginRequest.java
+ in.gamernation.app.APIRequests.UserLoginRequest
 in/gamernation/app/APIResponses/ArcadeViewTeamsResponse.java
  in.gamernation.app.APIResponses.ArcadeViewTeamsResponse
  in.gamernation.app.APIResponses.ArcadeViewTeamsResponse$Team
 in/gamernation/app/APInterfaces/APIArcaderoomsInterface.java
  in.gamernation.app.APInterfaces.APIArcaderoomsInterface
+in/gamernation/app/APIResponses/ArcadeSoloParticipantsResponse.java
+ in.gamernation.app.APIResponses.ArcadeSoloParticipantsResponse
+ in.gamernation.app.APIResponses.ArcadeSoloParticipantsResponse$Participant
 in/gamernation/app/CommonInterfaces/botnavController.java
  in.gamernation.app.CommonInterfaces.botnavController
  in.gamernation.app.CommonInterfaces.botnavController$botVisibilityController
-in/gamernation/app/APInterfaces/APIArcadeviewTeams.java
- in.gamernation.app.APInterfaces.APIArcadeviewTeams
+in/gamernation/app/APInterfaces/APIMyprofileDataFetchInterface.java
+ in.gamernation.app.APInterfaces.APIMyprofileDataFetchInterface
 in/gamernation/app/APInterfaces/APIArcadeSOLOjoinGamepost.java
  in.gamernation.app.APInterfaces.APIArcadeSOLOjoinGamepost
 in/gamernation/app/APIResponses/GamesResponse.java
  in.gamernation.app.APIResponses.GamesResponse
 in/gamernation/app/APInterfaces/APILoginInterfaces.java
  in.gamernation.app.APInterfaces.APILoginInterfaces
-in/gamernation/app/APInterfaces/APIMyprofileDataFetchInterface.java
- in.gamernation.app.APInterfaces.APIMyprofileDataFetchInterface
-in/gamernation/app/APIRequests/UserLoginRequest.java
- in.gamernation.app.APIRequests.UserLoginRequest
+in/gamernation/app/CommonInterfaces/navController.java
+ in.gamernation.app.CommonInterfaces.navController
+ in.gamernation.app.CommonInterfaces.navController$drawerControl
+ in.gamernation.app.CommonInterfaces.navController$toolbarController
 in/gamernation/app/Adapters/Adaptermyleagueshowteam.java
  in.gamernation.app.Adapters.Adaptermyleagueshowteam
  in.gamernation.app.Adapters.Adaptermyleagueshowteam$viewrecycler
@@ -76,15 +76,11 @@ in/gamernation/app/Adapters/AdapterHomeFragGamesItem.java
  in.gamernation.app.Adapters.AdapterHomeFragGamesItem
  in.gamernation.app.Adapters.AdapterHomeFragGamesItem$Myadapter
  in.gamernation.app.Adapters.AdapterHomeFragGamesItem$Myadapter$1
-in/gamernation/app/Fragments/profile/updatemyprofileActivity.java
- in.gamernation.app.Fragments.profile.updatemyprofileActivity
- in.gamernation.app.Fragments.profile.updatemyprofileActivity$1
- in.gamernation.app.Fragments.profile.updatemyprofileActivity$2
- in.gamernation.app.Fragments.profile.updatemyprofileActivity$3
- in.gamernation.app.Fragments.profile.updatemyprofileActivity$3$1
- in.gamernation.app.Fragments.profile.updatemyprofileActivity$4
- in.gamernation.app.Fragments.profile.updatemyprofileActivity$4$1
- in.gamernation.app.Fragments.profile.updatemyprofileActivity$4$1$1
+in/gamernation/app/Fragments/myleagues/myleaguesviewteamFragment.java
+ in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment
+ in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$1
+ in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$2
+ in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$2$1
 in/gamernation/app/Fragments/home/arcadegameshowparticipantsFragment.java
  in.gamernation.app.Fragments.home.arcadegameshowparticipantsFragment
  in.gamernation.app.Fragments.home.arcadegameshowparticipantsFragment$1
@@ -213,11 +209,10 @@ in/gamernation/app/Fragments/contactusFragment.java
  in.gamernation.app.Fragments.contactusFragment
  in.gamernation.app.Fragments.contactusFragment$1
  in.gamernation.app.Fragments.contactusFragment$Callback
-in/gamernation/app/Activities/HomeActivity.java
- in.gamernation.app.Activities.HomeActivity
- in.gamernation.app.Activities.HomeActivity$1
- in.gamernation.app.Activities.HomeActivity$1$1
- in.gamernation.app.Activities.HomeActivity$2
+in/gamernation/app/Adapters/AdapterHomearcade.java
+ in.gamernation.app.Adapters.AdapterHomearcade
+ in.gamernation.app.Adapters.AdapterHomearcade$recyclerlayout
+ in.gamernation.app.Adapters.AdapterHomearcade$recyclerlayout$1
 in/gamernation/app/Fragments/profile/updateprofileFragment.java
  in.gamernation.app.Fragments.profile.updateprofileFragment
  in.gamernation.app.Fragments.profile.updateprofileFragment$1
@@ -241,15 +236,17 @@ in/gamernation/app/Fragments/wallet/walletFragment.java
  in.gamernation.app.Fragments.wallet.walletFragment$4
  in.gamernation.app.Fragments.wallet.walletFragment$5
  in.gamernation.app.Fragments.wallet.walletFragment$5$1
-in/gamernation/app/Fragments/myleagues/myleaguesviewteamFragment.java
- in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment
- in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$1
- in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$2
- in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$2$1
-in/gamernation/app/Adapters/AdapterHomearcade.java
- in.gamernation.app.Adapters.AdapterHomearcade
- in.gamernation.app.Adapters.AdapterHomearcade$recyclerlayout
- in.gamernation.app.Adapters.AdapterHomearcade$recyclerlayout$1
+in/gamernation/app/Fragments/profile/UpdatePANActivity.java
+ in.gamernation.app.Fragments.profile.UpdatePANActivity
+ in.gamernation.app.Fragments.profile.UpdatePANActivity$1
+ in.gamernation.app.Fragments.profile.UpdatePANActivity$2
+ in.gamernation.app.Fragments.profile.UpdatePANActivity$2$1
+ in.gamernation.app.Fragments.profile.UpdatePANActivity$3
+ in.gamernation.app.Fragments.profile.UpdatePANActivity$4
+in/gamernation/app/Adapters/Adaptermyleagues.java
+ in.gamernation.app.Adapters.Adaptermyleagues
+ in.gamernation.app.Adapters.Adaptermyleagues$recyclerviews
+ in.gamernation.app.Adapters.Adaptermyleagues$recyclerviews$1
 in/gamernation/app/Fragments/referrals/referralsFragment.java
  in.gamernation.app.Fragments.referrals.referralsFragment
  in.gamernation.app.Fragments.referrals.referralsFragment$1
@@ -275,19 +272,34 @@ in/gamernation/app/Fragments/home/homeFragment.java
 in/gamernation/app/Adapters/AdapterLeaderboard.java
  in.gamernation.app.Adapters.AdapterLeaderboard
  in.gamernation.app.Adapters.AdapterLeaderboard$recycleritems
-in/gamernation/app/Adapters/Adaptermyleagues.java
- in.gamernation.app.Adapters.Adaptermyleagues
- in.gamernation.app.Adapters.Adaptermyleagues$recyclerviews
- in.gamernation.app.Adapters.Adaptermyleagues$recyclerviews$1
-in/gamernation/app/Fragments/profile/UpdatePANActivity.java
- in.gamernation.app.Fragments.profile.UpdatePANActivity
- in.gamernation.app.Fragments.profile.UpdatePANActivity$1
- in.gamernation.app.Fragments.profile.UpdatePANActivity$2
+in/gamernation/app/Fragments/profile/updatemyprofileActivity.java
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$1
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$2
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$3
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$3$1
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$4
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$4$1
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$4$1$1
+in/gamernation/app/Activities/HomeActivity.java
+ in.gamernation.app.Activities.HomeActivity
+ in.gamernation.app.Activities.HomeActivity$1
+ in.gamernation.app.Activities.HomeActivity$1$1
+ in.gamernation.app.Activities.HomeActivity$2
 in/gamernation/app/Fragments/profile/myprofileFragment.java
  in.gamernation.app.Fragments.profile.myprofileFragment
  in.gamernation.app.Fragments.profile.myprofileFragment$1
+ in.gamernation.app.Fragments.profile.myprofileFragment$1$1
  in.gamernation.app.Fragments.profile.myprofileFragment$2
+ in.gamernation.app.Fragments.profile.myprofileFragment$2$1
  in.gamernation.app.Fragments.profile.myprofileFragment$3
+ in.gamernation.app.Fragments.profile.myprofileFragment$3$1
+ in.gamernation.app.Fragments.profile.myprofileFragment$3$2
  in.gamernation.app.Fragments.profile.myprofileFragment$4
+ in.gamernation.app.Fragments.profile.myprofileFragment$4$1
  in.gamernation.app.Fragments.profile.myprofileFragment$5
- in.gamernation.app.Fragments.profile.myprofileFragment$5$1
+ in.gamernation.app.Fragments.profile.myprofileFragment$6
+ in.gamernation.app.Fragments.profile.myprofileFragment$7
+ in.gamernation.app.Fragments.profile.myprofileFragment$8
+ in.gamernation.app.Fragments.profile.myprofileFragment$9
+ in.gamernation.app.Fragments.profile.myprofileFragment$9$1

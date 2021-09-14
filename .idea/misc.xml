@@ -13,12 +13,13 @@
         <entry key="app/src/main/res/layout/activity_update_panactivity.xml" value="0.24114583333333334" />
         <entry key="app/src/main/res/layout/activity_updatemyprofile.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/dialogarcadecreateteam.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/dialogchangedob.xml" value="0.24114583333333334" />
         <entry key="app/src/main/res/layout/dialogchangepassword.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_contactus.xml" value="0.16576086956521738" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16168478260869565" />
         <entry key="app/src/main/res/layout/fragment_invitefriends.xml" value="0.20652173913043478" />
         <entry key="app/src/main/res/layout/fragment_leaderboard.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_myprofile.xml" value="0.20652173913043478" />
+        <entry key="app/src/main/res/layout/fragment_myprofile.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_mystats.xml" value="0.2246376811594203" />
         <entry key="app/src/main/res/layout/fragment_referrals.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_updateprofile.xml" value="0.27844311377245506" />
@@ -29,6 +30,7 @@
         <entry key="app/src/main/res/layout/fragment_walletwithdrawcoins.xml" value="0.22708333333333333" />
         <entry key="app/src/main/res/layout/img_slider.xml" value="0.2246376811594203" />
         <entry key="app/src/main/res/layout/shimmerwalletalltran.xml" value="0.15806159420289856" />
+        <entry key="app/src/main/res/layout/slider_layout.xml" value="0.11727456940222898" />
         <entry key="app/src/main/res/layout/toolbarwithbackandbell.xml" value="0.21603260869565216" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.17798913043478262" />
       </map>

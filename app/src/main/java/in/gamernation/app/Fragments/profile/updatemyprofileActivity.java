@@ -326,6 +326,14 @@ public class updatemyprofileActivity extends AppCompatActivity {
                                                 object1 = new JSONObject(responsez);
 
 
+                                                if (object1.has("message")) {
+                                                    msg = object1.getString("message");
+
+                                                } else if (object1.has("error")) {
+                                                    msg = object1.getString("error");
+
+                                                }
+
                                                 msg = object1.getString("message");
                                             } catch (JSONException e) {
                                                 e.printStackTrace();
