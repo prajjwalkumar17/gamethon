@@ -3,8 +3,11 @@ package in.gamernation.app.Fragments.profile;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -25,6 +28,7 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -35,8 +39,6 @@ import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class updatemyprofileActivity extends AppCompatActivity {
@@ -48,7 +50,7 @@ public class updatemyprofileActivity extends AppCompatActivity {
     private ImageView toolwithbackbotheadbot;
     private TextView toolwithbackbothead;
     private SharedPreferences sharedPreferences, preferences;
-    private String usrtoken, msg, Gender;
+    private String usrtoken, msg, Gender, encodedString;
     private LinearLayout linlayoutsecond, myprofilelin1;
     private ShimmerFrameLayout profileupdateshimmer;
 
@@ -61,9 +63,56 @@ public class updatemyprofileActivity extends AppCompatActivity {
         shimmersetup();
         shimmerstart();
         initviews();
-        imguploadbot();
+        imgeselector();
+
     }
 
+    private void uploadpic() {
+        myprofileuploadpicbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                String url = Constants.w3devbaseurl + "user/my_profile/update_pic";
+                APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp
+                        .requestwithpatch(APICallsOkHttp.urlbuilderforhttp(url)
+                                , usrtoken
+                                , APICallsOkHttp.buildforuploaddp(encodedString)))
+                        .enqueue(new Callback() {
+                            @Override
+                            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                                CommonMethods.DisplayLongTOAST(getApplicationContext(), e.getMessage());
+                            }
+
+                            @Override
+                            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                                final String myResponse = response.body().string();
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        try {
+                                            JSONObject responsez = new JSONObject(myResponse);
+                                            if (responsez.has("error")) {
+                                                String erroralreadyjoined = responsez.optString("error");
+                                                CommonMethods.DisplayLongTOAST(updatemyprofileActivity.this, erroralreadyjoined);
+                                                CommonMethods.LOGthesite(Constants.LOG, erroralreadyjoined);
+                                            } else {
+                                                String msg = responsez.getString("message");
+                                                CommonMethods.DisplayLongTOAST(updatemyprofileActivity.this, msg);
+                                            }
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                });
+                            }
+                        });
+
+            }
+        });
+
+
+    }
 
     private void toloadthemyprofile() {
         preferences = this.getSharedPreferences(Constants.MYPROFILEPREF, Context.MODE_PRIVATE);
@@ -71,9 +120,8 @@ public class updatemyprofileActivity extends AppCompatActivity {
         editor.putString(Constants.shouldopenmyprofile, "1").apply();
     }
 
-
-    private void imguploadbot() {
-        myprofileuploadpicbot.setOnClickListener(new View.OnClickListener() {
+    private void imgeselector() {
+        myprofiledpbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ImagePicker
@@ -82,6 +130,8 @@ public class updatemyprofileActivity extends AppCompatActivity {
                         .compress(1024)
                         .maxResultSize(1080, 1080)
                         .start();
+
+                uploadpic();
             }
         });
     }
@@ -97,6 +147,24 @@ public class updatemyprofileActivity extends AppCompatActivity {
 
             }
             assert uri != null;
+
+            Bitmap bitmap = null;
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+
+                // initialize byte stream
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                // compress Bitmap
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                // Initialize byte array
+                byte[] bytes = stream.toByteArray();
+                // get base64 encoded string
+                encodedString = Base64.encodeToString(bytes, Base64.DEFAULT);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
             CommonMethods.LOGthesite(Constants.LOG, uri.toString());
             Picasso.get()
                     .load(uri)
@@ -195,7 +263,6 @@ public class updatemyprofileActivity extends AppCompatActivity {
 
     }
 
-
     private void fetchprofiledata() {
         String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/my_profile");
         APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestbuildwithauth(url, usrtoken)).enqueue(new okhttp3.Callback() {
@@ -271,7 +338,6 @@ public class updatemyprofileActivity extends AppCompatActivity {
 
                 String editedname = myprofileedittextname.getText().toString();
                 String editedusername = myprofileedittextusername.getText().toString();
-//       String editedemail=myprofileedittextemail.getText().toString();
                 myprofileedittextemail.setEnabled(false);
                 String editedstate = myprofileedittstate.getText().toString();
                 String editedcountry = myprofileedittextcountry.getText().toString();
@@ -289,12 +355,10 @@ public class updatemyprofileActivity extends AppCompatActivity {
                     CommonMethods.DisplayLongTOAST(updatemyprofileActivity.this, "Name & Username field can't be empty");
                 } else {
                     shimmerstart();
-
                     JSONObject object = new JSONObject();
                     try {
                         object.put("name", editedname);
                         object.put("username", editedusername);
-//                        object.put("email",editedemail);
                         object.put("state", editedstate);
                         object.put("country", editedcountry);
                         object.put("gender", Gender);
@@ -303,11 +367,9 @@ public class updatemyprofileActivity extends AppCompatActivity {
                     }
 
 
-                    String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/my_profile/update");
-                    MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-                    // put your json here
-                    RequestBody body = RequestBody.create(JSON, object.toString());
-                    APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestwithpatch(url, usrtoken, body)).enqueue(
+                    String urll = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/my_profile/update");
+                    CommonMethods.LOGthesite(Constants.LOG, encodedString);
+                    APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestwithpatch(urll, usrtoken, APICallsOkHttp.buildforuploaddp(encodedString))).enqueue(
                             new Callback() {
                                 @Override
                                 public void onFailure(@NonNull Call call, @NonNull IOException e) {

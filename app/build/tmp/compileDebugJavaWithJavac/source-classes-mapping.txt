@@ -1,7 +1,7 @@
 in/gamernation/app/APInterfaces/APIArcadeSoloParticipantsget.java
  in.gamernation.app.APInterfaces.APIArcadeSoloParticipantsget
-in/gamernation/app/APICalls/APICallsOkHttp.java
- in.gamernation.app.APICalls.APICallsOkHttp
+in/gamernation/app/Fragments/tutorialsFragment.java
+ in.gamernation.app.Fragments.tutorialsFragment
 in/gamernation/app/APIResponses/UserLoginResponse.java
  in.gamernation.app.APIResponses.UserLoginResponse
 in/gamernation/app/APIResponses/LeaderboardResponse.java
@@ -76,11 +76,10 @@ in/gamernation/app/Adapters/AdapterHomeFragGamesItem.java
  in.gamernation.app.Adapters.AdapterHomeFragGamesItem
  in.gamernation.app.Adapters.AdapterHomeFragGamesItem$Myadapter
  in.gamernation.app.Adapters.AdapterHomeFragGamesItem$Myadapter$1
-in/gamernation/app/Fragments/myleagues/myleaguesviewteamFragment.java
- in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment
- in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$1
- in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$2
- in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$2$1
+in/gamernation/app/Fragments/contactusFragment.java
+ in.gamernation.app.Fragments.contactusFragment
+ in.gamernation.app.Fragments.contactusFragment$1
+ in.gamernation.app.Fragments.contactusFragment$Callback
 in/gamernation/app/Fragments/home/arcadegameshowparticipantsFragment.java
  in.gamernation.app.Fragments.home.arcadegameshowparticipantsFragment
  in.gamernation.app.Fragments.home.arcadegameshowparticipantsFragment$1
@@ -97,72 +96,47 @@ in/gamernation/app/Fragments/wallet/walletwithdrawcoinsFragment.java
  in.gamernation.app.Fragments.wallet.walletwithdrawcoinsFragment
  in.gamernation.app.Fragments.wallet.walletwithdrawcoinsFragment$1
  in.gamernation.app.Fragments.wallet.walletwithdrawcoinsFragment$Callback
-in/gamernation/app/Fragments/myleagues/myleaguesFragment.java
- in.gamernation.app.Fragments.myleagues.myleaguesFragment
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$1
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$10
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$2
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$3
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$4
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$5
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$6
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$7
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$8
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$8$1
- in.gamernation.app.Fragments.myleagues.myleaguesFragment$9
-in/gamernation/app/Fragments/mystatsFragment.java
- in.gamernation.app.Fragments.mystatsFragment
- in.gamernation.app.Fragments.mystatsFragment$1
- in.gamernation.app.Fragments.mystatsFragment$2
- in.gamernation.app.Fragments.mystatsFragment$2$1
+in/gamernation/app/Adapters/AdapterWalletpaymenthistory.java
+ in.gamernation.app.Adapters.AdapterWalletpaymenthistory
+ in.gamernation.app.Adapters.AdapterWalletpaymenthistory$viewrecycler
+in/gamernation/app/Fragments/home/arcadegameFragment.java
+ in.gamernation.app.Fragments.home.arcadegameFragment
+ in.gamernation.app.Fragments.home.arcadegameFragment$1
+ in.gamernation.app.Fragments.home.arcadegameFragment$2
+ in.gamernation.app.Fragments.home.arcadegameFragment$3
+ in.gamernation.app.Fragments.home.arcadegameFragment$4
 in/gamernation/app/Startup/Login.java
  in.gamernation.app.Startup.Login
  in.gamernation.app.Startup.Login$1
  in.gamernation.app.Startup.Login$2
  in.gamernation.app.Startup.Login$3
-in/gamernation/app/Fragments/wallet/walletviewalltransactonFragment.java
- in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment
- in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment$1
- in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment$2
- in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment$2$1
-in/gamernation/app/Fragments/leaderboardFragment.java
- in.gamernation.app.Fragments.leaderboardFragment
- in.gamernation.app.Fragments.leaderboardFragment$1
- in.gamernation.app.Fragments.leaderboardFragment$2
- in.gamernation.app.Fragments.leaderboardFragment$3
- in.gamernation.app.Fragments.leaderboardFragment$4
- in.gamernation.app.Fragments.leaderboardFragment$5
- in.gamernation.app.Fragments.leaderboardFragment$6
- in.gamernation.app.Fragments.leaderboardFragment$7
- in.gamernation.app.Fragments.leaderboardFragment$8
- in.gamernation.app.Fragments.leaderboardFragment$8$1
-in/gamernation/app/Startup/Splash.java
- in.gamernation.app.Startup.Splash
- in.gamernation.app.Startup.Splash$1
- in.gamernation.app.Startup.Splash$2
+in/gamernation/app/Adapters/Adaptermyleagues.java
+ in.gamernation.app.Adapters.Adaptermyleagues
+ in.gamernation.app.Adapters.Adaptermyleagues$recyclerviews
+ in.gamernation.app.Adapters.Adaptermyleagues$recyclerviews$1
+in/gamernation/app/Adapters/AdapterLeaderboard.java
+ in.gamernation.app.Adapters.AdapterLeaderboard
+ in.gamernation.app.Adapters.AdapterLeaderboard$recycleritems
+in/gamernation/app/Adapters/AdapterHomeSlider.java
+ in.gamernation.app.Adapters.AdapterHomeSlider
+ in.gamernation.app.Adapters.AdapterHomeSlider$MyViewHolder
 in/gamernation/app/Fragments/playedquizzesFragment.java
  in.gamernation.app.Fragments.playedquizzesFragment
 in/gamernation/app/Fragments/wallet/walletAddCoinFragment.java
  in.gamernation.app.Fragments.wallet.walletAddCoinFragment
  in.gamernation.app.Fragments.wallet.walletAddCoinFragment$1
  in.gamernation.app.Fragments.wallet.walletAddCoinFragment$Callback
-in/gamernation/app/Fragments/myleagues/myleaguesshowsololeaderboardFragment.java
- in.gamernation.app.Fragments.myleagues.myleaguesshowsololeaderboardFragment
- in.gamernation.app.Fragments.myleagues.myleaguesshowsololeaderboardFragment$1
- in.gamernation.app.Fragments.myleagues.myleaguesshowsololeaderboardFragment$2
- in.gamernation.app.Fragments.myleagues.myleaguesshowsololeaderboardFragment$2$1
+in/gamernation/app/Fragments/wallet/walletpaymenthistoryFragment.java
+ in.gamernation.app.Fragments.wallet.walletpaymenthistoryFragment
+ in.gamernation.app.Fragments.wallet.walletpaymenthistoryFragment$1
+ in.gamernation.app.Fragments.wallet.walletpaymenthistoryFragment$Callback
 in/gamernation/app/Adapters/AdapterArcadeViewTeams.java
  in.gamernation.app.Adapters.AdapterArcadeViewTeams
  in.gamernation.app.Adapters.AdapterArcadeViewTeams$recylerlist
-in/gamernation/app/Fragments/referrals/invitefriendsFragment.java
- in.gamernation.app.Fragments.referrals.invitefriendsFragment
- in.gamernation.app.Fragments.referrals.invitefriendsFragment$1
- in.gamernation.app.Fragments.referrals.invitefriendsFragment$2
- in.gamernation.app.Fragments.referrals.invitefriendsFragment$2$1
- in.gamernation.app.Fragments.referrals.invitefriendsFragment$3
- in.gamernation.app.Fragments.referrals.invitefriendsFragment$4
- in.gamernation.app.Fragments.referrals.invitefriendsFragment$5
- in.gamernation.app.Fragments.referrals.invitefriendsFragment$5$1
+in/gamernation/app/Adapters/AdapterHomearcade.java
+ in.gamernation.app.Adapters.AdapterHomearcade
+ in.gamernation.app.Adapters.AdapterHomearcade$recyclerlayout
+ in.gamernation.app.Adapters.AdapterHomearcade$recyclerlayout$1
 in/gamernation/app/Adapters/AdapterWalletlasttransactions.java
  in.gamernation.app.Adapters.AdapterWalletlasttransactions
  in.gamernation.app.Adapters.AdapterWalletlasttransactions$recycleviews
@@ -170,17 +144,26 @@ in/gamernation/app/Fragments/home/homequizesFragment.java
  in.gamernation.app.Fragments.home.homequizesFragment
 in/gamernation/app/MainActivity.java
  in.gamernation.app.MainActivity
-in/gamernation/app/Fragments/myleagues/myleagueteamleaderboardFragment.java
- in.gamernation.app.Fragments.myleagues.myleagueteamleaderboardFragment
- in.gamernation.app.Fragments.myleagues.myleagueteamleaderboardFragment$1
- in.gamernation.app.Fragments.myleagues.myleagueteamleaderboardFragment$2
- in.gamernation.app.Fragments.myleagues.myleagueteamleaderboardFragment$2$1
+in/gamernation/app/Fragments/home/multiplayergameFragment.java
+ in.gamernation.app.Fragments.home.multiplayergameFragment
 in/gamernation/app/Adapters/Adapterhometopimgslider.java
  in.gamernation.app.Adapters.Adapterhometopimgslider
  in.gamernation.app.Adapters.Adapterhometopimgslider$MyViewHolder
 in/gamernation/app/ZTest/TestActivity.java
  in.gamernation.app.ZTest.TestActivity
  in.gamernation.app.ZTest.TestActivity$async
+in/gamernation/app/Fragments/referrals/referralsFragment.java
+ in.gamernation.app.Fragments.referrals.referralsFragment
+ in.gamernation.app.Fragments.referrals.referralsFragment$1
+in/gamernation/app/Decoration/Shimmerapplier.java
+ in.gamernation.app.Decoration.Shimmerapplier
+in/gamernation/app/APICalls/APICallsOkHttp.java
+ in.gamernation.app.APICalls.APICallsOkHttp
+in/gamernation/app/Fragments/myleagues/myleagueteamleaderboardFragment.java
+ in.gamernation.app.Fragments.myleagues.myleagueteamleaderboardFragment
+ in.gamernation.app.Fragments.myleagues.myleagueteamleaderboardFragment$1
+ in.gamernation.app.Fragments.myleagues.myleagueteamleaderboardFragment$2
+ in.gamernation.app.Fragments.myleagues.myleagueteamleaderboardFragment$2$1
 in/gamernation/app/Fragments/home/arcadeopenedFragment.java
  in.gamernation.app.Fragments.home.arcadeopenedFragment
  in.gamernation.app.Fragments.home.arcadeopenedFragment$1
@@ -203,16 +186,16 @@ in/gamernation/app/Fragments/home/arcadeopenedFragment.java
  in.gamernation.app.Fragments.home.arcadeopenedFragment$8$2
  in.gamernation.app.Fragments.home.arcadeopenedFragment$9
  in.gamernation.app.Fragments.home.arcadeopenedFragment$9$1
-in/gamernation/app/Decoration/Shimmerapplier.java
- in.gamernation.app.Decoration.Shimmerapplier
-in/gamernation/app/Fragments/contactusFragment.java
- in.gamernation.app.Fragments.contactusFragment
- in.gamernation.app.Fragments.contactusFragment$1
- in.gamernation.app.Fragments.contactusFragment$Callback
-in/gamernation/app/Adapters/AdapterHomearcade.java
- in.gamernation.app.Adapters.AdapterHomearcade
- in.gamernation.app.Adapters.AdapterHomearcade$recyclerlayout
- in.gamernation.app.Adapters.AdapterHomearcade$recyclerlayout$1
+in/gamernation/app/Fragments/myleagues/myleaguesviewteamFragment.java
+ in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment
+ in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$1
+ in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$2
+ in.gamernation.app.Fragments.myleagues.myleaguesviewteamFragment$2$1
+in/gamernation/app/Activities/HomeActivity.java
+ in.gamernation.app.Activities.HomeActivity
+ in.gamernation.app.Activities.HomeActivity$1
+ in.gamernation.app.Activities.HomeActivity$1$1
+ in.gamernation.app.Activities.HomeActivity$2
 in/gamernation/app/Fragments/profile/updateprofileFragment.java
  in.gamernation.app.Fragments.profile.updateprofileFragment
  in.gamernation.app.Fragments.profile.updateprofileFragment$1
@@ -222,12 +205,6 @@ in/gamernation/app/Fragments/profile/updateprofileFragment.java
  in.gamernation.app.Fragments.profile.updateprofileFragment$4
  in.gamernation.app.Fragments.profile.updateprofileFragment$4$1
  in.gamernation.app.Fragments.profile.updateprofileFragment$4$1$1
-in/gamernation/app/Fragments/home/arcadegameFragment.java
- in.gamernation.app.Fragments.home.arcadegameFragment
- in.gamernation.app.Fragments.home.arcadegameFragment$1
- in.gamernation.app.Fragments.home.arcadegameFragment$2
- in.gamernation.app.Fragments.home.arcadegameFragment$3
- in.gamernation.app.Fragments.home.arcadegameFragment$4
 in/gamernation/app/Fragments/wallet/walletFragment.java
  in.gamernation.app.Fragments.wallet.walletFragment
  in.gamernation.app.Fragments.wallet.walletFragment$1
@@ -243,49 +220,75 @@ in/gamernation/app/Fragments/profile/UpdatePANActivity.java
  in.gamernation.app.Fragments.profile.UpdatePANActivity$2$1
  in.gamernation.app.Fragments.profile.UpdatePANActivity$3
  in.gamernation.app.Fragments.profile.UpdatePANActivity$4
-in/gamernation/app/Adapters/Adaptermyleagues.java
- in.gamernation.app.Adapters.Adaptermyleagues
- in.gamernation.app.Adapters.Adaptermyleagues$recyclerviews
- in.gamernation.app.Adapters.Adaptermyleagues$recyclerviews$1
-in/gamernation/app/Fragments/referrals/referralsFragment.java
- in.gamernation.app.Fragments.referrals.referralsFragment
- in.gamernation.app.Fragments.referrals.referralsFragment$1
-in/gamernation/app/Adapters/AdapterWalletpaymenthistory.java
- in.gamernation.app.Adapters.AdapterWalletpaymenthistory
- in.gamernation.app.Adapters.AdapterWalletpaymenthistory$viewrecycler
-in/gamernation/app/Fragments/tutorialsFragment.java
- in.gamernation.app.Fragments.tutorialsFragment
-in/gamernation/app/Fragments/home/multiplayergameFragment.java
- in.gamernation.app.Fragments.home.multiplayergameFragment
-in/gamernation/app/Adapters/AdapterHomeSlider.java
- in.gamernation.app.Adapters.AdapterHomeSlider
- in.gamernation.app.Adapters.AdapterHomeSlider$MyViewHolder
-in/gamernation/app/Fragments/wallet/walletpaymenthistoryFragment.java
- in.gamernation.app.Fragments.wallet.walletpaymenthistoryFragment
- in.gamernation.app.Fragments.wallet.walletpaymenthistoryFragment$1
- in.gamernation.app.Fragments.wallet.walletpaymenthistoryFragment$Callback
+in/gamernation/app/Fragments/referrals/invitefriendsFragment.java
+ in.gamernation.app.Fragments.referrals.invitefriendsFragment
+ in.gamernation.app.Fragments.referrals.invitefriendsFragment$1
+ in.gamernation.app.Fragments.referrals.invitefriendsFragment$2
+ in.gamernation.app.Fragments.referrals.invitefriendsFragment$2$1
+ in.gamernation.app.Fragments.referrals.invitefriendsFragment$3
+ in.gamernation.app.Fragments.referrals.invitefriendsFragment$4
+ in.gamernation.app.Fragments.referrals.invitefriendsFragment$5
+ in.gamernation.app.Fragments.referrals.invitefriendsFragment$5$1
+in/gamernation/app/Fragments/myleagues/myleaguesFragment.java
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$1
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$10
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$2
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$3
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$4
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$5
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$6
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$7
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$8
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$8$1
+ in.gamernation.app.Fragments.myleagues.myleaguesFragment$9
+in/gamernation/app/Fragments/mystatsFragment.java
+ in.gamernation.app.Fragments.mystatsFragment
+ in.gamernation.app.Fragments.mystatsFragment$1
+ in.gamernation.app.Fragments.mystatsFragment$2
+ in.gamernation.app.Fragments.mystatsFragment$2$1
+in/gamernation/app/Fragments/wallet/walletviewalltransactonFragment.java
+ in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment
+ in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment$1
+ in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment$2
+ in.gamernation.app.Fragments.wallet.walletviewalltransactonFragment$2$1
+in/gamernation/app/Fragments/leaderboardFragment.java
+ in.gamernation.app.Fragments.leaderboardFragment
+ in.gamernation.app.Fragments.leaderboardFragment$1
+ in.gamernation.app.Fragments.leaderboardFragment$2
+ in.gamernation.app.Fragments.leaderboardFragment$3
+ in.gamernation.app.Fragments.leaderboardFragment$4
+ in.gamernation.app.Fragments.leaderboardFragment$5
+ in.gamernation.app.Fragments.leaderboardFragment$6
+ in.gamernation.app.Fragments.leaderboardFragment$7
+ in.gamernation.app.Fragments.leaderboardFragment$8
+ in.gamernation.app.Fragments.leaderboardFragment$8$1
+in/gamernation/app/Startup/Splash.java
+ in.gamernation.app.Startup.Splash
+ in.gamernation.app.Startup.Splash$1
+ in.gamernation.app.Startup.Splash$2
 in/gamernation/app/Fragments/home/homeFragment.java
  in.gamernation.app.Fragments.home.homeFragment
  in.gamernation.app.Fragments.home.homeFragment$1
  in.gamernation.app.Fragments.home.homeFragment$2
  in.gamernation.app.Fragments.home.homeFragment$3
-in/gamernation/app/Adapters/AdapterLeaderboard.java
- in.gamernation.app.Adapters.AdapterLeaderboard
- in.gamernation.app.Adapters.AdapterLeaderboard$recycleritems
+in/gamernation/app/Fragments/myleagues/myleaguesshowsololeaderboardFragment.java
+ in.gamernation.app.Fragments.myleagues.myleaguesshowsololeaderboardFragment
+ in.gamernation.app.Fragments.myleagues.myleaguesshowsololeaderboardFragment$1
+ in.gamernation.app.Fragments.myleagues.myleaguesshowsololeaderboardFragment$2
+ in.gamernation.app.Fragments.myleagues.myleaguesshowsololeaderboardFragment$2$1
 in/gamernation/app/Fragments/profile/updatemyprofileActivity.java
  in.gamernation.app.Fragments.profile.updatemyprofileActivity
  in.gamernation.app.Fragments.profile.updatemyprofileActivity$1
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$1$1
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$1$1$1
  in.gamernation.app.Fragments.profile.updatemyprofileActivity$2
  in.gamernation.app.Fragments.profile.updatemyprofileActivity$3
- in.gamernation.app.Fragments.profile.updatemyprofileActivity$3$1
  in.gamernation.app.Fragments.profile.updatemyprofileActivity$4
  in.gamernation.app.Fragments.profile.updatemyprofileActivity$4$1
- in.gamernation.app.Fragments.profile.updatemyprofileActivity$4$1$1
-in/gamernation/app/Activities/HomeActivity.java
- in.gamernation.app.Activities.HomeActivity
- in.gamernation.app.Activities.HomeActivity$1
- in.gamernation.app.Activities.HomeActivity$1$1
- in.gamernation.app.Activities.HomeActivity$2
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$5
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$5$1
+ in.gamernation.app.Fragments.profile.updatemyprofileActivity$5$1$1
 in/gamernation/app/Fragments/profile/myprofileFragment.java
  in.gamernation.app.Fragments.profile.myprofileFragment
  in.gamernation.app.Fragments.profile.myprofileFragment$1

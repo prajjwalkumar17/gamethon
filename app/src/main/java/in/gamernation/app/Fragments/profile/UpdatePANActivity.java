@@ -3,8 +3,11 @@ package in.gamernation.app.Fragments.profile;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -21,6 +24,7 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import in.gamernation.app.APICalls.APICallsOkHttp;
@@ -40,7 +44,7 @@ public class UpdatePANActivity extends AppCompatActivity {
     SharedPreferences preferences;
     Uri uri;
     private SharedPreferences sharedPreferences;
-    private String usrtoken;
+    private String usrtoken, encodedString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +63,10 @@ public class UpdatePANActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String panname = updatepanname.getText().toString();
                 String panno = updatepannumber.getText().toString();
-
-                if (panname.isEmpty() || panno.isEmpty() || uri == null) {
+                if (panname.isEmpty() || panno.isEmpty() || encodedString == null) {
                     CommonMethods.DisplayLongTOAST(UpdatePANActivity.this, "PAN Name and PAN number field can't be empty");
                 } else {
-                    getpanandupload(panname, panno, uri.toString());
+                    getpanandupload(panname, panno, encodedString);
                 }
             }
         });
@@ -71,20 +74,17 @@ public class UpdatePANActivity extends AppCompatActivity {
 
 
     private void getpanandupload(String panname, String panno, String picuri) {
+        CommonMethods.LOGthesite(Constants.LOG, picuri);
         String url = Constants.w3devbaseurl + "user/my_profile/update_pan";
         APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp
                 .requestwithpatch(APICallsOkHttp.urlbuilderforhttp(url)
                         , usrtoken
                         , APICallsOkHttp.buildforpanupdate(picuri, panno, panname)
-
-                        //TODO convert to base 64 first
-
                 )).enqueue(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
                 CommonMethods.DisplayLongTOAST(getApplicationContext(), e.getMessage());
             }
-
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 final String myResponse = response.body().string();
@@ -100,7 +100,6 @@ public class UpdatePANActivity extends AppCompatActivity {
                             } else {
                                 String msg = responsez.getString("message");
                                 CommonMethods.DisplayLongTOAST(UpdatePANActivity.this, msg);
-
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -135,6 +134,23 @@ public class UpdatePANActivity extends AppCompatActivity {
 
             }
             assert uri != null;
+
+            Bitmap bitmap = null;
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+
+                // initialize byte stream
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                // compress Bitmap
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                // Initialize byte array
+                byte[] bytes = stream.toByteArray();
+                // get base64 encoded string
+                encodedString = Base64.encodeToString(bytes, Base64.DEFAULT);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
             Picasso.get()
                     .load(uri)
                     .placeholder(R.drawable.placeholder)

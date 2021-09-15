@@ -97,6 +97,13 @@ public class APICallsOkHttp {
                 .build();
     }
 
+    public static RequestBody buildforuploaddp(String picuri) {
+        return new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("pic", picuri)
+                .build();
+    }
+
 
     public static RequestBody buildrequestbodyforusernameandpasswordteamname(String username, String userid, String teamname) {
         return new MultipartBody.Builder()
