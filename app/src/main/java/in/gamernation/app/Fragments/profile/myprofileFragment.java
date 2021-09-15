@@ -54,6 +54,7 @@ public class myprofileFragment extends Fragment {
     private static String usrtoken, Invitation_code, msgee, msgdob;
     private static ImageView commontoolbar_backbot;
     private static ImageView myprofile_sharerefferalcodebot;
+
     private static FloatingActionButton myprofile_updatebiocredsbot;
     private static TextView myprofile_name, myprofile_username, myprofile_email, myprofile_place,
             myprofile_phoneno, myprofile_password, myprofile_birthdate, myprofile_panno, myprofile_refferalcode;
