@@ -2009,6 +2009,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable backbot
+drawable backgroundyyyyy
 drawable botforward
 drawable botnav_menu_contact_us
 drawable botnav_menu_home
@@ -2785,7 +2786,6 @@ id postLayout
 id profilemain
 id profiletool
 id profileupdateshimmer
-id progressBar
 id progressBar2
 id progress_circular
 id progress_horizontal
@@ -2889,6 +2889,9 @@ id start
 id startHorizontal
 id startToEnd
 id startVertical
+id startupanimation
+id startupsigninbot
+id startupsignupbot
 id state_aspect_ratio
 id state_rotate
 id state_scale
@@ -2988,6 +2991,7 @@ id updatepantool
 id updateprofiletool
 id useLogo
 id vertical_only
+id videoView1
 id view_offset_helper
 id view_overlay
 id view_pager
@@ -3099,6 +3103,7 @@ layout activity_home
 layout activity_login
 layout activity_main
 layout activity_splash
+layout activity_startup
 layout activity_test
 layout activity_update_panactivity
 layout activity_updatemyprofile
@@ -3286,6 +3291,7 @@ mipmap ic_launcher_round
 navigation home_nav
 plurals mtrl_badge_content_description
 raw splash
+raw splash_video_file
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

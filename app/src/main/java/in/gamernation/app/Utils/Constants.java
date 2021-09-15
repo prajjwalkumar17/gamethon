@@ -3,7 +3,7 @@ package in.gamernation.app.Utils;
 public class Constants {
     public static final String METAPTEF = "metapref";
     public static final String MYPROFILEPREF = "MYPROFILEPREF";
-    public static int SPLASH_TIMEOUT = 3000;
+    public static int SPLASH_TIMEOUT = 4000;
     public static String LOGINPREFS = "LOGINPREFS";
     public static String TOKENUSINGPREFS = "token";
     public static String AuthBearer = "bearer ";

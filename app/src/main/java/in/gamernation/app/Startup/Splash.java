@@ -4,9 +4,13 @@ import static in.gamernation.app.Utils.Constants.SPLASH_TIMEOUT;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,12 +31,28 @@ import okhttp3.Response;
 
 public class Splash extends AppCompatActivity {
 
+    VideoView videoView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
+        videoView1 = findViewById(R.id.videoView1);
+        //Creating MediaController
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView1);
+        mediaController.setVisibility(View.GONE);
+
+        //specify the location of media file
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.splash_video_file;
+        Uri uri = Uri.parse(path);
+
+        //Setting MediaController and URI, then starting the videoView
+        videoView1.setMediaController(mediaController);
+        videoView1.setVideoURI(uri);
+        videoView1.requestFocus();
+        videoView1.start();
 
 
         fetchmetalinks();
@@ -44,15 +64,14 @@ public class Splash extends AppCompatActivity {
                 //make changes for onboarding
                 SharedPreferences sharedPreferences = Splash.this.getSharedPreferences(Constants.LOGINPREFS, MODE_PRIVATE);
 
-                if (sharedPreferences.getString(Constants.TOKENUSINGPREFS, "-1") == "-1") {
-                    startActivity(new Intent(getApplicationContext(), Login.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                if (sharedPreferences.getString(Constants.TOKENUSINGPREFS, "-1").equals("-1")) {
+                    startActivity(new Intent(getApplicationContext(), StartupActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 } else {
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 }
             }
         }, SPLASH_TIMEOUT);
     }
-
 
     private void fetchmetalinks() {
         String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "games/meta");
@@ -65,9 +84,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 final String responsez = response.body().string();
-//                CommonMethods.LOGthesite(Constants.LOG,responsez);
                 try {
-
                     JSONObject object = new JSONObject(responsez);
                     JSONObject data = object.getJSONObject("data");
                     String signup_url = data.getString("signup_url");
@@ -84,7 +101,6 @@ public class Splash extends AppCompatActivity {
                     String add_bank_account = wallet.getString("add_bank_account");
                     String delete_linked_account = wallet.getString("delete_linked_account");
                     String withdraw_coins = wallet.getString("withdraw_coins");
-
 
                     SharedPreferences sharedPreferences = getSharedPreferences(Constants.METAPTEF, MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -104,12 +120,8 @@ public class Splash extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
-
             }
         });
-
-
     }
 
     @Override

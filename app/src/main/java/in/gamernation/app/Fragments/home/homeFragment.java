@@ -16,18 +16,20 @@ import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.tabs.TabLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import in.gamernation.app.APICalls.APICallsOkHttp;
 import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.Adapters.AdapterHomeActivitySlider;
 import in.gamernation.app.Adapters.AdapterHomeSlider;
-import in.gamernation.app.Adapters.Adapterhometopimgslider;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -73,7 +75,7 @@ public class homeFragment extends Fragment {
         adapterHomeActivitySlider = new AdapterHomeActivitySlider(fragmentManager, getLifecycle());
         homepager.setAdapter(adapterHomeActivitySlider);
         tabLayout.addTab(tabLayout.newTab().setText("GAMES"));
-        tabLayout.addTab(tabLayout.newTab().setText("QUIZES"));
+        tabLayout.addTab(tabLayout.newTab().setText("QUIZZES"));
         managetabs(tabLayout);
         swipemanagerforpager(homepager, tabLayout);
         dotlayout = root.findViewById(R.id.sliderdotcontainer);
@@ -120,12 +122,21 @@ public class homeFragment extends Fragment {
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
 
                 final String responsez = response.body().string();
-//                CommonMethods.LOGthesite(Constants.LOG,responsez);
+                CommonMethods.LOGthesite(Constants.LOG, responsez);
                 try {
                     JSONArray object = new JSONArray(responsez);
-                    Adapterhometopimgslider adapterhometopimgslider = new Adapterhometopimgslider(object);
-
+//                    Adapterhometopimgslider adapterhometopimgslider = new Adapterhometopimgslider(object);
 //                    sliderpager.setAdapter(adapterhometopimgslider);
+                    List<SlideModel> models = new ArrayList<>();
+//                   models.add( new SlideModel(object.getJSONObject(0).getString("picture"),object.getJSONObject(0).getString("link")));
+
+//                    for(int i=0;i<10;i++) {
+//                        while (object.optJSONObject(i)!=null) {
+////                            object.optJSONObject(i).getString("picture"),object.optJSONObject(i).getString("link")
+//
+//                        }
+//                    }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -199,12 +210,6 @@ public class homeFragment extends Fragment {
 
     private void swipemanagerforpager(ViewPager2 homepager, TabLayout tabLayout) {
         homepager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            /**
-             * This method will be invoked when a new page becomes selected. Animation is not
-             * necessarily complete.
-             *
-             * @param position Position index of the new selected page.
-             */
             @Override
             public void onPageSelected(int position) {
                 tabLayout.selectTab(tabLayout.getTabAt(position));

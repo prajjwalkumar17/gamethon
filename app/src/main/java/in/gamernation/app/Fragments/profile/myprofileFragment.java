@@ -105,7 +105,7 @@ public class myprofileFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
 
-                        String birth_date = dialogupdatedobdatepicker.getDayOfMonth() + "-" + dialogupdatedobdatepicker.getMonth() + "-" + dialogupdatedobdatepicker.getYear();
+                        String birth_date = dialogupdatedobdatepicker.getYear() + "-" + dialogupdatedobdatepicker.getMonth() + "-" + dialogupdatedobdatepicker.getDayOfMonth();
 
                         CommonMethods.LOGthesite(Constants.LOG, birth_date);
                         updatedob(birth_date, d);

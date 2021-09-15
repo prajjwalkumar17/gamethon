@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Base64;
 import android.view.View;
 import android.widget.EditText;
@@ -30,6 +30,7 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.gamernation.app.APICalls.APICallsOkHttp;
@@ -50,7 +51,7 @@ public class updatemyprofileActivity extends AppCompatActivity {
     private ImageView toolwithbackbotheadbot;
     private TextView toolwithbackbothead;
     private SharedPreferences sharedPreferences, preferences;
-    private String usrtoken, msg, Gender, encodedString;
+    private String usrtoken, msg, Gender, encodedString, encodedImage;
     private LinearLayout linlayoutsecond, myprofilelin1;
     private ShimmerFrameLayout profileupdateshimmer;
 
@@ -72,7 +73,7 @@ public class updatemyprofileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
+                CommonMethods.LOGthesite(Constants.LOG, encodedString);
                 String url = Constants.w3devbaseurl + "user/my_profile/update_pic";
                 APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp
                         .requestwithpatch(APICallsOkHttp.urlbuilderforhttp(url)
@@ -136,6 +137,15 @@ public class updatemyprofileActivity extends AppCompatActivity {
         });
     }
 
+    private String encodeImage(Bitmap bm) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bm.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] b = baos.toByteArray();
+        encodedString = "data:image/jpeg;base64," + Base64.encodeToString(b, Base64.DEFAULT);
+
+        return encodedString;
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -150,7 +160,7 @@ public class updatemyprofileActivity extends AppCompatActivity {
 
             Bitmap bitmap = null;
             try {
-                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+ /*               bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
 
                 // initialize byte stream
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -159,7 +169,11 @@ public class updatemyprofileActivity extends AppCompatActivity {
                 // Initialize byte array
                 byte[] bytes = stream.toByteArray();
                 // get base64 encoded string
-                encodedString = Base64.encodeToString(bytes, Base64.DEFAULT);
+                encodedString = Base64.encodeToString(bytes, Base64.DEFAULT);*/
+
+                final InputStream imageStream = getContentResolver().openInputStream(uri);
+                final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+                encodedImage = encodeImage(selectedImage);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -295,8 +309,6 @@ public class updatemyprofileActivity extends AppCompatActivity {
                             } else {
                                 myprofilemaleradio.setChecked(true);
                             }
-
-
                             myprofileedittextname.setText(Name, TextView.BufferType.EDITABLE);
                             myprofileedittextusername.setText(Username, TextView.BufferType.EDITABLE);
                             myprofileedittextemail.setText(Email);
@@ -348,9 +360,6 @@ public class updatemyprofileActivity extends AppCompatActivity {
                     Gender = "Female";
                 }
 
-                //normalurl
-
-
                 if (editedname.isEmpty() || editedusername.isEmpty()) {
                     CommonMethods.DisplayLongTOAST(updatemyprofileActivity.this, "Name & Username field can't be empty");
                 } else {
@@ -365,7 +374,6 @@ public class updatemyprofileActivity extends AppCompatActivity {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
 
                     String urll = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/my_profile/update");
                     CommonMethods.LOGthesite(Constants.LOG, encodedString);
@@ -416,10 +424,6 @@ public class updatemyprofileActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-        //TODO variable names
-
 
     }
 
