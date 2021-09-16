@@ -40,6 +40,7 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         videoView1 = findViewById(R.id.videoView1);
         //Creating MediaController
+
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView1);
         mediaController.setVisibility(View.GONE);
