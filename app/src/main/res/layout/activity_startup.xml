@@ -9,14 +9,14 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/startupanimation"
-        android:layout_width="200dp"
-        android:layout_height="400dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:elevation="5dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/splash" />
+        app:lottie_rawRes="@raw/game1" />
 
     <LinearLayout
         android:layout_width="match_parent"

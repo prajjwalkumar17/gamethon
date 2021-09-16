@@ -1251,6 +1251,10 @@ int color bright_foreground_inverse_material_dark 0x7f060024
 int color bright_foreground_inverse_material_light 0x7f060025
 int color bright_foreground_material_dark 0x7f060026
 int color bright_foreground_material_light 0x7f060027
+int color browser_actions_bg_grey 0x7f060102
+int color browser_actions_divider_color 0x7f060103
+int color browser_actions_text_color 0x7f060104
+int color browser_actions_title_color 0x7f060105
 int color button_material_dark 0x7f060028
 int color button_material_light 0x7f060029
 int color cardview_dark_background 0x7f06002a
@@ -1552,6 +1556,8 @@ int dimen abc_text_size_title_material 0x7f07004f
 int dimen abc_text_size_title_material_toolbar 0x7f070050
 int dimen action_bar_size 0x7f070051
 int dimen appcompat_dialog_background_inset 0x7f070052
+int dimen browser_actions_context_menu_max_width 0x7f0701c9
+int dimen browser_actions_context_menu_min_padding 0x7f0701ca
 int dimen cardview_compat_inset_shadow 0x7f070053
 int dimen cardview_default_elevation 0x7f070054
 int dimen cardview_default_radius 0x7f070055
@@ -2331,6 +2337,11 @@ int id bounce 0x7f0a00ad
 int id bounceBoth 0x7f0a00ae
 int id bounceEnd 0x7f0a00af
 int id bounceStart 0x7f0a00b0
+int id browser_actions_header_text 0x7f0a036b
+int id browser_actions_menu_item_icon 0x7f0a036c
+int id browser_actions_menu_item_text 0x7f0a036d
+int id browser_actions_menu_items 0x7f0a036e
+int id browser_actions_menu_view 0x7f0a036f
 int id buttonPanel 0x7f0a00b1
 int id cache_measures 0x7f0a00b2
 int id cancel_action 0x7f0a00b3
@@ -3106,6 +3117,8 @@ int layout activity_startup 0x7f0d0020
 int layout activity_test 0x7f0d0021
 int layout activity_update_panactivity 0x7f0d0022
 int layout activity_updatemyprofile 0x7f0d0023
+int layout browser_actions_context_menu_page 0x7f0d00d4
+int layout browser_actions_context_menu_row 0x7f0d00d5
 int layout commontoolbar 0x7f0d0024
 int layout custom_dialog 0x7f0d0025
 int layout design_bottom_navigation_item 0x7f0d0026
@@ -3289,8 +3302,12 @@ int mipmap ic_launcher 0x7f0f0000
 int mipmap ic_launcher_round 0x7f0f0001
 int navigation home_nav 0x7f100000
 int plurals mtrl_badge_content_description 0x7f110000
+int raw game 0x7f120003
+int raw game1 0x7f120005
 int raw splash 0x7f120000
 int raw splash_video_file 0x7f120001
+int raw starter 0x7f120002
+int raw victory 0x7f120004
 int string abc_action_bar_home_description 0x7f130000
 int string abc_action_bar_up_description 0x7f130001
 int string abc_action_menu_overflow_description 0x7f130002
@@ -3332,6 +3349,7 @@ int string character_counter_pattern 0x7f130025
 int string chip_text 0x7f130026
 int string clear_text_end_icon_content_description 0x7f130027
 int string copy 0x7f130028
+int string copy_toast_msg 0x7f130090
 int string error_camera_app_not_found 0x7f130029
 int string error_failed_pick_gallery_image 0x7f13002a
 int string error_failed_to_compress_image 0x7f13002b
@@ -3343,6 +3361,9 @@ int string expand_button_title 0x7f130030
 int string exposed_dropdown_menu_content_description 0x7f130031
 int string fab_transformation_scrim_behavior 0x7f130032
 int string fab_transformation_sheet_behavior 0x7f130033
+int string fallback_menu_item_copy_link 0x7f130091
+int string fallback_menu_item_open_in_browser 0x7f130092
+int string fallback_menu_item_share_link 0x7f130093
 int string hello_blank_fragment 0x7f130034
 int string hide_bottom_view_on_scroll_behavior 0x7f130035
 int string icon_content_description 0x7f130036
@@ -6345,6 +6366,7 @@ int styleable ucrop_UCropView_ucrop_show_frame 10
 int styleable ucrop_UCropView_ucrop_show_grid 11
 int styleable ucrop_UCropView_ucrop_show_oval_crop_frame 12
 int xml image_picker_provider_paths 0x7f160000
+int xml image_share_filepaths 0x7f160008
 int xml network_security_config 0x7f160001
 int xml root_preferences 0x7f160002
 int xml standalone_badge 0x7f160003

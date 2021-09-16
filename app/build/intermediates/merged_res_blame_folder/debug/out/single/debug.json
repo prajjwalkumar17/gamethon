@@ -112,6 +112,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_playedquizzes.xml"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/raw_game1.json.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/raw/game1.json"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/font_baloo_bhaina.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/font/baloo_bhaina.xml"
     },
@@ -234,6 +238,10 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_activity_startup.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/activity_startup.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/raw_game.json.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/raw/game.json"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_dialogchangepassword.xml.flat",
@@ -544,6 +552,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/placeholder.xml"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/raw_victory.json.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/raw/victory.json"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/drawable_circleback.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/circleback.xml"
     },
@@ -590,5 +602,9 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_fragment_myleaguesshowsololeaderboard.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_myleaguesshowsololeaderboard.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/raw_starter.json.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/raw/starter.json"
     }
 ]

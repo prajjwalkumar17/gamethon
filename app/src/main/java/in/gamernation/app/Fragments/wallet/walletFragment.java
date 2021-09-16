@@ -1,7 +1,9 @@
 package in.gamernation.app.Fragments.wallet;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -119,13 +123,28 @@ public class walletFragment extends Fragment {
         walletfragmentaddcoinsbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, new walletAddCoinFragment()).addToBackStack(null).commit();
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.fragmentContainerView, new walletAddCoinFragment()).addToBackStack(null).commit();
+                SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.METAPTEF, Context.MODE_PRIVATE);
+                CustomTabsIntent.Builder customtabintent = new CustomTabsIntent.Builder();
+                opencustomtabyyy(getActivity(), customtabintent.build(), Uri.parse(sharedPreferences.getString(Constants.add_money, "data not found")));
+
 
             }
         });
 
     }
+
+    private void opencustomtabyyy(FragmentActivity activity, CustomTabsIntent build, Uri uri) {
+        String PackageName = "com.android.chrome";
+        if (PackageName != null) {
+            build.intent.setPackage(PackageName);
+            build.launchUrl(activity, uri);
+        } else {
+            getActivity().startActivity(new Intent(Intent.ACTION_VIEW, uri));
+        }
+    }
+
 
     private void withdrawcoins() {
 
@@ -134,8 +153,13 @@ public class walletFragment extends Fragment {
         walletfragmentwithdrawcoinsbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, new walletwithdrawcoinsFragment()).addToBackStack(null).commit();
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.fragmentContainerView, new walletwithdrawcoinsFragment()).addToBackStack(null).commit();
+
+                SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.METAPTEF, Context.MODE_PRIVATE);
+                CustomTabsIntent.Builder customtabintent = new CustomTabsIntent.Builder();
+                opencustomtabyyy(getActivity(), customtabintent.build(), Uri.parse(sharedPreferences.getString(Constants.withdraw, "data not found")));
+
 
             }
         });
@@ -148,7 +172,6 @@ public class walletFragment extends Fragment {
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragmentContainerView, new walletviewalltransactonFragment()).addToBackStack(null).commit();
-
             }
         });
 
@@ -158,9 +181,13 @@ public class walletFragment extends Fragment {
         walletfragmentviewpaymenthistorybot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, new walletpaymenthistoryFragment()).addToBackStack(null).commit();
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.fragmentContainerView, new walletpaymenthistoryFragment()).addToBackStack(null).commit();
 
+
+                SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.METAPTEF, Context.MODE_PRIVATE);
+                CustomTabsIntent.Builder customtabintent = new CustomTabsIntent.Builder();
+                opencustomtabyyy(getActivity(), customtabintent.build(), Uri.parse(sharedPreferences.getString(Constants.payment_history, "data not found")));
             }
         });
     }

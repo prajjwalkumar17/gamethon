@@ -2,7 +2,9 @@ package in.gamernation.app.Activities;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +17,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -37,7 +40,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import in.gamernation.app.APICalls.APICallsOkHttp;
 import in.gamernation.app.CommonInterfaces.botnavController;
 import in.gamernation.app.CommonInterfaces.navController;
-import in.gamernation.app.Fragments.contactusFragment;
 import in.gamernation.app.Fragments.home.homeFragment;
 import in.gamernation.app.Fragments.leaderboardFragment;
 import in.gamernation.app.Fragments.myleagues.myleaguesFragment;
@@ -179,12 +181,26 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new homeFragment()).addToBackStack(null).commit();
                         break;
                     case R.id.botnav_menu_contact_us:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new contactusFragment()).addToBackStack(null).commit();
+                        SharedPreferences sharedPreferences = HomeActivity.this.getSharedPreferences(Constants.METAPTEF, MODE_PRIVATE);
+//                      getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new contactusFragment()).addToBackStack(null).commit();
+                        CustomTabsIntent.Builder customtabintent = new CustomTabsIntent.Builder();
+//                      customtabintent.setToolbarColor(Color.parseColor("#0080000"));
+                        opencustomtabyy(HomeActivity.this, customtabintent.build(), Uri.parse(sharedPreferences.getString(Constants.contactUs, "data not found")));
                         break;
                 }
                 return true;
             }
         });
+    }
+
+    private void opencustomtabyy(HomeActivity homeActivity, CustomTabsIntent intent, Uri uri) {
+        String PackageName = "com.android.chrome";
+        if (PackageName != null) {
+            intent.intent.setPackage(PackageName);
+            intent.launchUrl(homeActivity, uri);
+        } else {
+            homeActivity.startActivity(new Intent(Intent.ACTION_VIEW, uri));
+        }
     }
 
     private void defaultfragmentonstartup(Bundle savedInstanceState) {

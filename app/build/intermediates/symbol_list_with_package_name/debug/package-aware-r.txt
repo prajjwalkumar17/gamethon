@@ -1252,6 +1252,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -1553,6 +1557,8 @@ dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -2332,6 +2338,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -3107,6 +3118,8 @@ layout activity_startup
 layout activity_test
 layout activity_update_panactivity
 layout activity_updatemyprofile
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout commontoolbar
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3290,8 +3303,12 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation home_nav
 plurals mtrl_badge_content_description
+raw game
+raw game1
 raw splash
 raw splash_video_file
+raw starter
+raw victory
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3333,6 +3350,7 @@ string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
 string copy
+string copy_toast_msg
 string error_camera_app_not_found
 string error_failed_pick_gallery_image
 string error_failed_to_compress_image
@@ -3344,6 +3362,9 @@ string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
@@ -4380,6 +4401,7 @@ styleable include constraintSet
 styleable ucrop_AspectRatioTextView ucrop_artv_ratio_title ucrop_artv_ratio_x ucrop_artv_ratio_y
 styleable ucrop_UCropView ucrop_aspect_ratio_x ucrop_aspect_ratio_y ucrop_circle_dimmed_layer ucrop_dimmed_color ucrop_frame_color ucrop_frame_stroke_size ucrop_grid_color ucrop_grid_column_count ucrop_grid_row_count ucrop_grid_stroke_size ucrop_show_frame ucrop_show_grid ucrop_show_oval_crop_frame
 xml image_picker_provider_paths
+xml image_share_filepaths
 xml network_security_config
 xml root_preferences
 xml standalone_badge

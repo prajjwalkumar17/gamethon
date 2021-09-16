@@ -1,31 +1,66 @@
 package in.gamernation.app.Startup;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.browser.customtabs.CustomTabsIntent;
 
 import in.gamernation.app.R;
+import in.gamernation.app.Utils.Constants;
 
 public class StartupActivity extends AppCompatActivity {
 
-    AppCompatButton startupsigninbot;
+    AppCompatButton startupsigninbot, startupsignupbot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup);
+
         startupsigninbot = findViewById(R.id.startupsigninbot);
+        startupsignupbot = findViewById(R.id.startupsignupbot);
 
         startupsigninbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), Login.class));
+
+//                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(Constants.METAPTEF, Context.MODE_PRIVATE);
+//                CustomTabsIntent.Builder customtabintent=new CustomTabsIntent.Builder();
+//                opencustomtabyy(StartupActivity.this,customtabintent.build(), Uri.parse(sharedPreferences.getString(Constants.login_url, "data not found")));
+
+
+            }
+        });
+        startupsignupbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                startActivity(new Intent(getApplicationContext(), Login.class));
+
+                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(Constants.METAPTEF, Context.MODE_PRIVATE);
+                CustomTabsIntent.Builder customtabintent = new CustomTabsIntent.Builder();
+                opencustomtabyy(StartupActivity.this, customtabintent.build(), Uri.parse(sharedPreferences.getString(Constants.metasignup, "data not found")));
+
+
             }
         });
 
 
+    }
+
+    private void opencustomtabyy(StartupActivity startupActivity, CustomTabsIntent build, Uri uri) {
+        String PackageName = "com.android.chrome";
+        if (PackageName != null) {
+            build.intent.setPackage(PackageName);
+            build.launchUrl(startupActivity, uri);
+        } else {
+            startActivity(new Intent(Intent.ACTION_VIEW, uri));
+        }
     }
 }
