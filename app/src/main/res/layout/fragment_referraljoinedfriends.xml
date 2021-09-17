@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundyyyyy"
+    tools:context=".Fragments.referrals.referraljoinedfriendsFragment">
+
+    <include
+        android:id="@+id/referaaltool"
+        layout="@layout/toolbarwithbackandbell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:id="@+id/lio"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/referaaltool"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:background="@color/final_secondary"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/whitebordered"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/referraljoinedearned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earned through\nFriends\n0"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/whitebordered"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/referraljoinedjoined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Friends\nJoined\n0"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/referralshowusersrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lio"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="35dp" />
+
+</RelativeLayout>

@@ -14,15 +14,39 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0" />-->
 
-    <com.denzcoskun.imageslider.ImageSlider
+    <com.smarteist.autoimageslider.SliderView
         android:id="@+id/sliderpageree"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:sliderAnimationDuration="900"
+        app:sliderAutoCycleDirection="right"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="900"
+        app:sliderIndicatorEnabled="true"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="@color/final_secondary"
+        app:sliderIndicatorUnselectedColor="@color/final_master"
+        app:sliderScrollTimeInSec="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
+        app:sliderStartAutoCycle="true" />
+
+    <!--  <com.denzcoskun.imageslider.ImageSlider
+          android:id="@+id/sliderpageree"
+          android:layout_width="match_parent"
+          android:layout_height="160dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0" />-->
 
 
     <LinearLayout

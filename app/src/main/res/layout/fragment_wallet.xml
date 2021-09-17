@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/final_master"
+    android:background="@drawable/backgroundyyyyy"
     android:orientation="vertical"
     android:weightSum="12"
     tools:context=".Fragments.wallet.walletFragment">
@@ -161,7 +161,7 @@
         android:layout_margin="10dp"
         android:layout_marginTop="30dp"
         android:text="My Recent Transactions"
-        android:textColor="@color/final_secondary"
+        android:textColor="@color/final_master"
         android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@+id/arcadeopenedbottomlinearlayout" />
 

@@ -849,6 +849,22 @@ attr percentX
 attr percentY
 attr perpendicularPath_percent
 attr persistent
+attr piv_animationDuration
+attr piv_animationType
+attr piv_autoVisibility
+attr piv_count
+attr piv_dynamicCount
+attr piv_interactiveAnimation
+attr piv_orientation
+attr piv_padding
+attr piv_radius
+attr piv_rtl_mode
+attr piv_scaleFactor
+attr piv_select
+attr piv_selectedColor
+attr piv_strokeWidth
+attr piv_unselectedColor
+attr piv_viewPager
 attr pivotAnchor
 attr placeholderText
 attr placeholderTextAppearance
@@ -962,6 +978,25 @@ attr singleLine
 attr singleLineTitle
 attr singleSelection
 attr sizePercent
+attr sliderAnimationDuration
+attr sliderAutoCycleDirection
+attr sliderAutoCycleEnabled
+attr sliderIndicatorAnimationDuration
+attr sliderIndicatorEnabled
+attr sliderIndicatorGravity
+attr sliderIndicatorMargin
+attr sliderIndicatorMarginBottom
+attr sliderIndicatorMarginLeft
+attr sliderIndicatorMarginRight
+attr sliderIndicatorMarginTop
+attr sliderIndicatorOrientation
+attr sliderIndicatorPadding
+attr sliderIndicatorRadius
+attr sliderIndicatorRtlMode
+attr sliderIndicatorSelectedColor
+attr sliderIndicatorUnselectedColor
+attr sliderScrollTimeInSec
+attr sliderStartAutoCycle
 attr sliderStyle
 attr snackbarButtonStyle
 attr snackbarStyle
@@ -2160,6 +2195,7 @@ drawable ucrop_vector_loader
 drawable ucrop_vector_loader_animated
 drawable ucrop_wrapper_controls_shape
 drawable walleticon
+drawable whitebordered
 font baloo_bhaina
 id ALT
 id BOTTOM_END
@@ -2322,6 +2358,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id automatic
+id back_and_forth
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2373,6 +2410,7 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id color
 id commontoolbar_fragname
 id completebotnav
 id confirm_button
@@ -2442,6 +2480,7 @@ id dragRight
 id dragStart
 id dragUp
 id drawer
+id drop
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -2470,6 +2509,8 @@ id forever
 id fragmentContainerView
 id fragment_container_view_tag
 id frost
+id gameshimmer
+id gamesshimmer
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2493,6 +2534,7 @@ id homegamesname
 id homeslidershimmer
 id hometool
 id honorRequest
+id horizontal
 id horizontal_only
 id httpcheck
 id icon
@@ -2566,6 +2608,7 @@ id linearLayout3
 id linearLayout4
 id linear_layout
 id linlayoutsecond
+id lio
 id listMode
 id list_item
 id loginbot
@@ -2820,9 +2863,12 @@ id referaalheader
 id referaaltool
 id referralbot
 id referralfrag
+id referraljoinedearned
+id referraljoinedjoined
 id referralmoreshare
 id referralreferraallcode
 id referralshimmer
+id referralshowusersrecyclerview
 id referralviewfriends
 id referralwhatsappshare
 id restart
@@ -2836,10 +2882,12 @@ id right_to_left
 id rotate_scroll_wheel
 id rounded
 id row_index_key
+id rulesbot
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scale_down
 id scale_scroll_wheel
 id screen
 id scroll
@@ -2875,6 +2923,7 @@ id skipped
 id slide
 id slider
 id sliderdotcontainer
+id sliderimage
 id sliderimg
 id sliderpageree
 id snackbar_action
@@ -2919,6 +2968,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id swap
 id switchWidget
 id tabMode
 id tab_layout
@@ -2962,6 +3012,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id thinWorm
 id time
 id title
 id titleDividerNoCustom
@@ -3001,6 +3052,7 @@ id updatepantext
 id updatepantool
 id updateprofiletool
 id useLogo
+id vertical
 id vertical_only
 id videoView1
 id view_offset_helper
@@ -3031,6 +3083,7 @@ id west
 id withText
 id withdrawwalletwebview
 id withinBounds
+id worm
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -3165,6 +3218,7 @@ layout fragment_myleagueteamleaderboard
 layout fragment_myprofile
 layout fragment_mystats
 layout fragment_playedquizzes
+layout fragment_referraljoinedfriends
 layout fragment_referrals
 layout fragment_tutorials
 layout fragment_updateprofile
@@ -3267,11 +3321,12 @@ layout referaaltool
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout shimmergames
 layout shimmerhomegames
 layout shimmerprofile
-layout shimmerrecyclerfull
 layout shimmerwalletalltran
 layout slider_layout
+layout slideritem
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -3303,11 +3358,9 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation home_nav
 plurals mtrl_badge_content_description
-raw game
 raw game1
 raw splash
 raw splash_video_file
-raw starter
 raw victory
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -4348,6 +4401,7 @@ styleable NavigationView android_background android_fitsSystemWindows android_ma
 styleable Navigator android_label android_id
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
+styleable PageIndicatorView piv_animationDuration piv_animationType piv_autoVisibility piv_count piv_dynamicCount piv_interactiveAnimation piv_orientation piv_padding piv_radius piv_rtl_mode piv_scaleFactor piv_select piv_selectedColor piv_strokeWidth piv_unselectedColor piv_viewPager
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable Preference android_icon android_persistent android_enabled android_layout android_title android_selectable android_key android_summary android_order android_widgetLayout android_dependency android_defaultValue android_shouldDisableView android_fragment android_singleLineTitle android_iconSpaceReserved allowDividerAbove allowDividerBelow defaultValue dependency enableCopying enabled fragment icon iconSpaceReserved isPreferenceVisible key layout order persistent selectable shouldDisableView singleLineTitle summary title widgetLayout
@@ -4369,6 +4423,7 @@ styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottom
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
 styleable ShimmerFrameLayout shimmer_auto_start shimmer_base_alpha shimmer_base_color shimmer_clip_to_children shimmer_colored shimmer_direction shimmer_dropoff shimmer_duration shimmer_fixed_height shimmer_fixed_width shimmer_height_ratio shimmer_highlight_alpha shimmer_highlight_color shimmer_intensity shimmer_repeat_count shimmer_repeat_delay shimmer_repeat_mode shimmer_shape shimmer_tilt shimmer_width_ratio
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
+styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAutoCycleEnabled sliderIndicatorAnimationDuration sliderIndicatorEnabled sliderIndicatorGravity sliderIndicatorMargin sliderIndicatorMarginBottom sliderIndicatorMarginLeft sliderIndicatorMarginRight sliderIndicatorMarginTop sliderIndicatorOrientation sliderIndicatorPadding sliderIndicatorRadius sliderIndicatorRtlMode sliderIndicatorSelectedColor sliderIndicatorUnselectedColor sliderScrollTimeInSec sliderStartAutoCycle
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme

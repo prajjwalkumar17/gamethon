@@ -88,6 +88,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/pager2.jpg"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_slideritem.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/slideritem.xml"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/drawable_share.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/share.xml"
     },
@@ -148,10 +152,6 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/nav_menu_myreferrals.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_shimmerrecyclerfull.xml.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/shimmerrecyclerfull.xml"
-    },
-    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_img_slider.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/img_slider.xml"
     },
@@ -166,6 +166,10 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/drawable_tool_navicon.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/tool_navicon.xml"
+    },
+    {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_shimmergames.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/shimmergames.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_recyclerwalletlasttransactionitem.xml.flat",
@@ -240,8 +244,8 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/activity_startup.xml"
     },
     {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/raw_game.json.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/raw/game.json"
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_fragment_referraljoinedfriends.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_referraljoinedfriends.xml"
     },
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_dialogchangepassword.xml.flat",
@@ -480,6 +484,10 @@
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/drawable_whitebordered.xml.flat",
+        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/whitebordered.xml"
+    },
+    {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/drawable_normalcurvedbot.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/drawable/normalcurvedbot.xml"
     },
@@ -602,9 +610,5 @@
     {
         "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/layout_fragment_myleaguesshowsololeaderboard.xml.flat",
         "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/layout/fragment_myleaguesshowsololeaderboard.xml"
-    },
-    {
-        "merged": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/merged_res/debug/raw_starter.json.flat",
-        "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/raw/starter.json"
     }
 ]

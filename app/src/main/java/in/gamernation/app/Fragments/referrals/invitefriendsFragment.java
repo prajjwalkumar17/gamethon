@@ -19,7 +19,6 @@ import androidx.fragment.app.Fragment;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -85,12 +84,20 @@ public class invitefriendsFragment extends Fragment {
     }
 
     private void initviews(View root) {
-        toolwithbackbothead = root.findViewById(R.id.toolwithbackbothead);
         referralwhatsappshare = root.findViewById(R.id.referralwhatsappshare);
         referralmoreshare = root.findViewById(R.id.referralmoreshare);
         referralviewfriends = root.findViewById(R.id.referralviewfriends);
         referralreferraallcode = root.findViewById(R.id.referralreferraallcode);
+        toolwithbackbothead = root.findViewById(R.id.toolwithbackbothead);
         ImageView toolwithbackbotheadbot = root.findViewById(R.id.toolwithbackbotheadbot);
+
+        referralviewfriends.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new referraljoinedfriendsFragment()).addToBackStack(null).commit();
+
+            }
+        });
 
         toolwithbackbotheadbot.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,7 +109,6 @@ public class invitefriendsFragment extends Fragment {
 
         toolwithbackbothead.setText("Referrals");
         fetchandshowdata();
-        joinedfriends();
     }
 
 
@@ -178,38 +184,5 @@ public class invitefriendsFragment extends Fragment {
         });
     }
 
-    private void joinedfriends() {
-        String url = APICallsOkHttp.urlbuilderforhttp(Constants.w3devbaseurl + "user/referal/my_referals");
-        APICallsOkHttp.okhttpmaster().newCall(APICallsOkHttp.requestbuildwithauth(url, usrtoken)).enqueue(new Callback() {
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                CommonMethods.DisplayLongTOAST(thiscontext, e.getMessage());
-            }
-
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            final String responsez = response.body().string();
-                            try {
-                                JSONObject object = new JSONObject(responsez);
-                                String totalfriendsjoined = object.getString("Total_friends_joined");
-                                String Earned_through_friends = object.getString("Earned_through_friends");
-                                JSONArray friends = object.getJSONArray("user");
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-                });
-            }
-        });
-    }
 
 }

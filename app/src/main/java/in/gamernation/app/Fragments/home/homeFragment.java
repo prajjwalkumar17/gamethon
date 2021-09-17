@@ -15,21 +15,20 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.denzcoskun.imageslider.ImageSlider;
-import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.tabs.TabLayout;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import in.gamernation.app.APICalls.APICallsOkHttp;
 import in.gamernation.app.Activities.HomeActivity;
 import in.gamernation.app.Adapters.AdapterHomeActivitySlider;
 import in.gamernation.app.Adapters.AdapterHomeSlider;
+import in.gamernation.app.Adapters.AdapterSlidernew;
 import in.gamernation.app.R;
 import in.gamernation.app.Utils.CommonMethods;
 import in.gamernation.app.Utils.Constants;
@@ -44,7 +43,7 @@ public class homeFragment extends Fragment {
     AdapterHomeActivitySlider adapterHomeActivitySlider;
     LinearLayout dotlayout;
     AdapterHomeSlider adapterHomeSlider;
-    ImageSlider sliderpager;
+    SliderView sliderpager;
     /*    Drawable[] sliderimg;
         Timer timer;
         Handler handler;*/
@@ -67,6 +66,7 @@ public class homeFragment extends Fragment {
         myContext = (HomeActivity) context;
         super.onAttach(context);
     }
+
 
     private void muticals(View root) {
         tabLayout = root.findViewById(R.id.tab_layout);
@@ -122,12 +122,22 @@ public class homeFragment extends Fragment {
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
 
                 final String responsez = response.body().string();
-                CommonMethods.LOGthesite(Constants.LOG, responsez);
-                try {
-                    JSONArray object = new JSONArray(responsez);
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        CommonMethods.LOGthesite(Constants.LOG, responsez);
+                        try {
+                            JSONArray array = new JSONArray(responsez);
+                            AdapterSlidernew adapterSlidernew = new AdapterSlidernew(array, myContext, getActivity());
+                            sliderpager.setSliderAdapter(adapterSlidernew);
+                            sliderpager.setIndicatorAnimation(IndicatorAnimationType.WORM);
+                            sliderpager.startAutoCycle();
+
+
 //                    Adapterhometopimgslider adapterhometopimgslider = new Adapterhometopimgslider(object);
 //                    sliderpager.setAdapter(adapterhometopimgslider);
-                    List<SlideModel> models = new ArrayList<>();
+//                    List<SlideModel> models = new ArrayList<>();
 //                   models.add( new SlideModel(object.getJSONObject(0).getString("picture"),object.getJSONObject(0).getString("link")));
 
 //                    for(int i=0;i<10;i++) {
@@ -137,10 +147,12 @@ public class homeFragment extends Fragment {
 //                        }
 //                    }
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 
+                    }
+                });
             }
         });
 

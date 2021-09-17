@@ -37,7 +37,7 @@ public class AdapterHomeArcadesoloParticipants extends RecyclerView.Adapter<Adap
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull recyclerlayout holder, int position) {
-        holder.arcadeparticipantsolousernamename.setText(list.get(position).getPicture());
+//        holder.arcadeparticipantsolousernamename.setText(list.get(position).getPicture());
         holder.arcadeparticipantsoloname.setText(list.get(position).getName());
         holder.arcadeparticipantsolousernamename.setText(list.get(position).getUsername());
         Picasso.get()

@@ -13,6 +13,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -39,6 +41,7 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
     private List<ArcadeResponse.League> leagueList;
     private String id, thumb, name, entrycoins, prizescoins, killcoins, filled, totalparticipants, map, startdate, league_pic;
     private Integer bonus;
+    private ShimmerFrameLayout gameshimmer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,8 +49,16 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
         View root = inflater.inflate(R.layout.fragment_arcadegame, container, false);
         initlayout();
         initviews(root);
+        shimmersetup();
         allmethods();
         return root;
+    }
+
+    private void shimmersetup() {
+        arcadegamerecyclerview.setVisibility(View.GONE);
+        gameshimmer.setVisibility(View.VISIBLE);
+        gameshimmer.startShimmer();
+
     }
 
 
@@ -62,6 +73,7 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
         arcadeduobot = root.findViewById(R.id.arcadeduobot);
         arcadesquadbot = root.findViewById(R.id.arcadesquadbot);
         arcadegamerecyclerview = root.findViewById(R.id.arcadegamerecyclerview);
+        gameshimmer = root.findViewById(R.id.gameshimmer);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(thiscontext, 1, GridLayoutManager.VERTICAL, false);
         arcadegamerecyclerview.setLayoutManager(gridLayoutManager);
         arcadegamerecyclerview.addItemDecoration(new DecorationHomeRecyclerGamesItem(thiscontext, R.dimen.dp_15));
@@ -90,6 +102,7 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
                     leagueList = response.body().getLeagues();
                     AdapterHomearcade adapterHomearcade = new AdapterHomearcade(leagueList, arcadegameFragment.this);
                     arcadegamerecyclerview.setAdapter(adapterHomearcade);
+                    stopshimmer();
                 }
             }
 
@@ -103,8 +116,10 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
 
     private String changedatasetonclicks() {
         arcadesolobot.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gamemode = "SOLO";
                 fetchallarcadegames(gamemode);
                 arcadesolobot.setTextColor(getResources().getColor(R.color.black));
@@ -116,6 +131,7 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
         arcadeduobot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gamemode = "DUO";
                 fetchallarcadegames(gamemode);
                 arcadeduobot.setTextColor(getResources().getColor(R.color.black));
@@ -128,6 +144,7 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
         arcadesquadbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gamemode = "SQUAD";
                 fetchallarcadegames(gamemode);
                 arcadesquadbot.setTextColor(getResources().getColor(R.color.black));
@@ -183,6 +200,13 @@ public class arcadegameFragment extends Fragment implements ClickArcadeGameItem 
         editor.putString(Constants.arcadeopenedbonus, bonus.toString()).apply();
         editor.putString(Constants.arcadeopenedgametype, gamemode).apply();
         editor.putString(Constants.myleaguedatafetched, "null").apply();
+
+    }
+
+    private void stopshimmer() {
+        arcadegamerecyclerview.setVisibility(View.VISIBLE);
+        gameshimmer.setVisibility(View.GONE);
+        gameshimmer.stopShimmer();
 
     }
 }

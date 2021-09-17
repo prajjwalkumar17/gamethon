@@ -1,8 +1,6 @@
 package in.gamernation.app.Startup;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +10,6 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.browser.customtabs.CustomTabsIntent;
 
 import in.gamernation.app.R;
-import in.gamernation.app.Utils.Constants;
 
 public class StartupActivity extends AppCompatActivity {
 
@@ -42,10 +39,11 @@ public class StartupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                startActivity(new Intent(getApplicationContext(), Login.class));
-
-                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(Constants.METAPTEF, Context.MODE_PRIVATE);
-                CustomTabsIntent.Builder customtabintent = new CustomTabsIntent.Builder();
-                opencustomtabyy(StartupActivity.this, customtabintent.build(), Uri.parse(sharedPreferences.getString(Constants.metasignup, "data not found")));
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, new LoginWebviewFragment()).addToBackStack(null).commit();
+//                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(Constants.METAPTEF, Context.MODE_PRIVATE);
+//                CustomTabsIntent.Builder customtabintent = new CustomTabsIntent.Builder();
+//                opencustomtabyy(StartupActivity.this, customtabintent.build(), Uri.parse(sharedPreferences.getString(Constants.metasignup, "data not found")));
 
 
             }
@@ -53,6 +51,7 @@ public class StartupActivity extends AppCompatActivity {
 
 
     }
+
 
     private void opencustomtabyy(StartupActivity startupActivity, CustomTabsIntent build, Uri uri) {
         String PackageName = "com.android.chrome";

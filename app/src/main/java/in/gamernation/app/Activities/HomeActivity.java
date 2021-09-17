@@ -47,7 +47,6 @@ import in.gamernation.app.Fragments.mystatsFragment;
 import in.gamernation.app.Fragments.playedquizzesFragment;
 import in.gamernation.app.Fragments.profile.myprofileFragment;
 import in.gamernation.app.Fragments.referrals.referralsFragment;
-import in.gamernation.app.Fragments.settingsFragment;
 import in.gamernation.app.Fragments.tutorialsFragment;
 import in.gamernation.app.Fragments.wallet.walletFragment;
 import in.gamernation.app.R;
@@ -279,7 +278,6 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
             case R.id.nav_menu_mywallet:
                 //TODO change
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new walletFragment()).addToBackStack(null).commit();
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new arcadegameFragment()).addToBackStack(null).commit();
                 break;
             case R.id.nav_menu_leaderboard:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new leaderboardFragment()).addToBackStack(null).commit();
@@ -291,7 +289,7 @@ public class HomeActivity extends AppCompatActivity implements navController.dra
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new referralsFragment()).addToBackStack(null).commit();
                 break;
             case R.id.nav_menu_settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new settingsFragment()).addToBackStack(null).commit();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new settingsFragment()).addToBackStack(null).commit();
                 break;
             case R.id.nav_menu_tutorial:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new tutorialsFragment()).addToBackStack(null).commit();

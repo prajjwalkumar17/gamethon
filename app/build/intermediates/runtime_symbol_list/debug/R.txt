@@ -848,6 +848,22 @@ int attr percentX 0x7f040303
 int attr percentY 0x7f040304
 int attr perpendicularPath_percent 0x7f040305
 int attr persistent 0x7f040306
+int attr piv_animationDuration 0x7f04046e
+int attr piv_animationType 0x7f04046f
+int attr piv_autoVisibility 0x7f040470
+int attr piv_count 0x7f040471
+int attr piv_dynamicCount 0x7f040472
+int attr piv_interactiveAnimation 0x7f040473
+int attr piv_orientation 0x7f040474
+int attr piv_padding 0x7f040475
+int attr piv_radius 0x7f040476
+int attr piv_rtl_mode 0x7f040477
+int attr piv_scaleFactor 0x7f040478
+int attr piv_select 0x7f040479
+int attr piv_selectedColor 0x7f04047a
+int attr piv_strokeWidth 0x7f04047b
+int attr piv_unselectedColor 0x7f04047c
+int attr piv_viewPager 0x7f04047d
 int attr pivotAnchor 0x7f040307
 int attr placeholderText 0x7f040308
 int attr placeholderTextAppearance 0x7f040309
@@ -961,6 +977,25 @@ int attr singleLine 0x7f040374
 int attr singleLineTitle 0x7f040375
 int attr singleSelection 0x7f040376
 int attr sizePercent 0x7f040377
+int attr sliderAnimationDuration 0x7f04047e
+int attr sliderAutoCycleDirection 0x7f04047f
+int attr sliderAutoCycleEnabled 0x7f040480
+int attr sliderIndicatorAnimationDuration 0x7f040481
+int attr sliderIndicatorEnabled 0x7f040482
+int attr sliderIndicatorGravity 0x7f040483
+int attr sliderIndicatorMargin 0x7f040484
+int attr sliderIndicatorMarginBottom 0x7f040485
+int attr sliderIndicatorMarginLeft 0x7f040486
+int attr sliderIndicatorMarginRight 0x7f040487
+int attr sliderIndicatorMarginTop 0x7f040488
+int attr sliderIndicatorOrientation 0x7f040489
+int attr sliderIndicatorPadding 0x7f04048a
+int attr sliderIndicatorRadius 0x7f04048b
+int attr sliderIndicatorRtlMode 0x7f04048c
+int attr sliderIndicatorSelectedColor 0x7f04048d
+int attr sliderIndicatorUnselectedColor 0x7f04048e
+int attr sliderScrollTimeInSec 0x7f04048f
+int attr sliderStartAutoCycle 0x7f040490
 int attr sliderStyle 0x7f040378
 int attr snackbarButtonStyle 0x7f040379
 int attr snackbarStyle 0x7f04037a
@@ -2159,6 +2194,7 @@ int drawable ucrop_vector_loader 0x7f0800e6
 int drawable ucrop_vector_loader_animated 0x7f0800e7
 int drawable ucrop_wrapper_controls_shape 0x7f0800e8
 int drawable walleticon 0x7f0800e9
+int drawable whitebordered 0x7f0800ea
 int font baloo_bhaina 0x7f090000
 int id ALT 0x7f0a0000
 int id BOTTOM_END 0x7f0a0001
@@ -2321,6 +2357,7 @@ int id autoComplete 0x7f0a009d
 int id autoCompleteToEnd 0x7f0a009e
 int id autoCompleteToStart 0x7f0a009f
 int id automatic 0x7f0a00a0
+int id back_and_forth 0x7f0a0377
 int id barrier 0x7f0a00a1
 int id baseline 0x7f0a00a2
 int id beginOnFirstDraw 0x7f0a00a3
@@ -2372,6 +2409,7 @@ int id clip_vertical 0x7f0a00cb
 int id clockwise 0x7f0a00cc
 int id closest 0x7f0a00cd
 int id collapseActionView 0x7f0a00ce
+int id color 0x7f0a0378
 int id commontoolbar_fragname 0x7f0a00cf
 int id completebotnav 0x7f0a00d0
 int id confirm_button 0x7f0a00d1
@@ -2441,6 +2479,7 @@ int id dragRight 0x7f0a0110
 int id dragStart 0x7f0a0111
 int id dragUp 0x7f0a0112
 int id drawer 0x7f0a0113
+int id drop 0x7f0a0379
 int id dropdown_menu 0x7f0a0114
 int id easeIn 0x7f0a0115
 int id easeInOut 0x7f0a0116
@@ -2469,6 +2508,8 @@ int id forever 0x7f0a012c
 int id fragmentContainerView 0x7f0a012d
 int id fragment_container_view_tag 0x7f0a012e
 int id frost 0x7f0a012f
+int id gameshimmer 0x7f0a0371
+int id gamesshimmer 0x7f0a0370
 int id ghost_view 0x7f0a0130
 int id ghost_view_holder 0x7f0a0131
 int id gone 0x7f0a0132
@@ -2492,6 +2533,7 @@ int id homegamesname 0x7f0a0143
 int id homeslidershimmer 0x7f0a0144
 int id hometool 0x7f0a0145
 int id honorRequest 0x7f0a0146
+int id horizontal 0x7f0a037a
 int id horizontal_only 0x7f0a0147
 int id httpcheck 0x7f0a0148
 int id icon 0x7f0a0149
@@ -2565,6 +2607,7 @@ int id linearLayout3 0x7f0a018c
 int id linearLayout4 0x7f0a018d
 int id linear_layout 0x7f0a018e
 int id linlayoutsecond 0x7f0a018f
+int id lio 0x7f0a0375
 int id listMode 0x7f0a0190
 int id list_item 0x7f0a0191
 int id loginbot 0x7f0a0192
@@ -2819,9 +2862,12 @@ int id referaalheader 0x7f0a028a
 int id referaaltool 0x7f0a028b
 int id referralbot 0x7f0a028c
 int id referralfrag 0x7f0a028d
+int id referraljoinedearned 0x7f0a0372
+int id referraljoinedjoined 0x7f0a0373
 int id referralmoreshare 0x7f0a028e
 int id referralreferraallcode 0x7f0a028f
 int id referralshimmer 0x7f0a0290
+int id referralshowusersrecyclerview 0x7f0a0376
 int id referralviewfriends 0x7f0a0291
 int id referralwhatsappshare 0x7f0a0292
 int id restart 0x7f0a0293
@@ -2835,10 +2881,12 @@ int id right_to_left 0x7f0a029a
 int id rotate_scroll_wheel 0x7f0a029b
 int id rounded 0x7f0a029c
 int id row_index_key 0x7f0a029d
+int id rulesbot 0x7f0a0374
 int id save_non_transition_alpha 0x7f0a029e
 int id save_overlay_view 0x7f0a029f
 int id sawtooth 0x7f0a02a0
 int id scale 0x7f0a02a1
+int id scale_down 0x7f0a037b
 int id scale_scroll_wheel 0x7f0a02a2
 int id screen 0x7f0a02a3
 int id scroll 0x7f0a02a4
@@ -2874,6 +2922,7 @@ int id skipped 0x7f0a02c1
 int id slide 0x7f0a02c2
 int id slider 0x7f0a02c3
 int id sliderdotcontainer 0x7f0a02c4
+int id sliderimage 0x7f0a037c
 int id sliderimg 0x7f0a02c5
 int id sliderpageree 0x7f0a02c6
 int id snackbar_action 0x7f0a02c7
@@ -2918,6 +2967,7 @@ int id stretch 0x7f0a02ed
 int id submenuarrow 0x7f0a02ee
 int id submit_area 0x7f0a02ef
 int id supportScrollUp 0x7f0a02f0
+int id swap 0x7f0a037d
 int id switchWidget 0x7f0a02f1
 int id tabMode 0x7f0a02f2
 int id tab_layout 0x7f0a02f3
@@ -2961,6 +3011,7 @@ int id textinput_helper_text 0x7f0a0318
 int id textinput_placeholder 0x7f0a0319
 int id textinput_prefix_text 0x7f0a031a
 int id textinput_suffix_text 0x7f0a031b
+int id thinWorm 0x7f0a037e
 int id time 0x7f0a031c
 int id title 0x7f0a031d
 int id titleDividerNoCustom 0x7f0a031e
@@ -3000,6 +3051,7 @@ int id updatepantext 0x7f0a033f
 int id updatepantool 0x7f0a0340
 int id updateprofiletool 0x7f0a0341
 int id useLogo 0x7f0a0342
+int id vertical 0x7f0a037f
 int id vertical_only 0x7f0a0343
 int id videoView1 0x7f0a0344
 int id view_offset_helper 0x7f0a0345
@@ -3030,6 +3082,7 @@ int id west 0x7f0a035d
 int id withText 0x7f0a035e
 int id withdrawwalletwebview 0x7f0a035f
 int id withinBounds 0x7f0a0360
+int id worm 0x7f0a0380
 int id wrap 0x7f0a0361
 int id wrap_content 0x7f0a0362
 int id wrap_content_constrained 0x7f0a0363
@@ -3164,6 +3217,7 @@ int layout fragment_myleagueteamleaderboard 0x7f0d004d
 int layout fragment_myprofile 0x7f0d004e
 int layout fragment_mystats 0x7f0d004f
 int layout fragment_playedquizzes 0x7f0d0050
+int layout fragment_referraljoinedfriends 0x7f0d00d7
 int layout fragment_referrals 0x7f0d0051
 int layout fragment_tutorials 0x7f0d0052
 int layout fragment_updateprofile 0x7f0d0053
@@ -3266,11 +3320,12 @@ int layout referaaltool 0x7f0d00b3
 int layout select_dialog_item_material 0x7f0d00b4
 int layout select_dialog_multichoice_material 0x7f0d00b5
 int layout select_dialog_singlechoice_material 0x7f0d00b6
+int layout shimmergames 0x7f0d00d6
 int layout shimmerhomegames 0x7f0d00b7
 int layout shimmerprofile 0x7f0d00b8
-int layout shimmerrecyclerfull 0x7f0d00b9
 int layout shimmerwalletalltran 0x7f0d00ba
 int layout slider_layout 0x7f0d00bb
+int layout slideritem 0x7f0d00d8
 int layout support_simple_spinner_dropdown_item 0x7f0d00bc
 int layout test_action_chip 0x7f0d00bd
 int layout test_chip_zero_corner_radius 0x7f0d00be
@@ -3302,11 +3357,9 @@ int mipmap ic_launcher 0x7f0f0000
 int mipmap ic_launcher_round 0x7f0f0001
 int navigation home_nav 0x7f100000
 int plurals mtrl_badge_content_description 0x7f110000
-int raw game 0x7f120003
 int raw game1 0x7f120005
 int raw splash 0x7f120000
 int raw splash_video_file 0x7f120001
-int raw starter 0x7f120002
 int raw victory 0x7f120004
 int string abc_action_bar_home_description 0x7f130000
 int string abc_action_bar_up_description 0x7f130001
@@ -5833,6 +5886,23 @@ int styleable OnSwipe_springStopThreshold 15
 int styleable OnSwipe_touchAnchorId 16
 int styleable OnSwipe_touchAnchorSide 17
 int styleable OnSwipe_touchRegionId 18
+int[] styleable PageIndicatorView { 0x7f04046e, 0x7f04046f, 0x7f040470, 0x7f040471, 0x7f040472, 0x7f040473, 0x7f040474, 0x7f040475, 0x7f040476, 0x7f040477, 0x7f040478, 0x7f040479, 0x7f04047a, 0x7f04047b, 0x7f04047c, 0x7f04047d }
+int styleable PageIndicatorView_piv_animationDuration 0
+int styleable PageIndicatorView_piv_animationType 1
+int styleable PageIndicatorView_piv_autoVisibility 2
+int styleable PageIndicatorView_piv_count 3
+int styleable PageIndicatorView_piv_dynamicCount 4
+int styleable PageIndicatorView_piv_interactiveAnimation 5
+int styleable PageIndicatorView_piv_orientation 6
+int styleable PageIndicatorView_piv_padding 7
+int styleable PageIndicatorView_piv_radius 8
+int styleable PageIndicatorView_piv_rtl_mode 9
+int styleable PageIndicatorView_piv_scaleFactor 10
+int styleable PageIndicatorView_piv_select 11
+int styleable PageIndicatorView_piv_selectedColor 12
+int styleable PageIndicatorView_piv_strokeWidth 13
+int styleable PageIndicatorView_piv_unselectedColor 14
+int styleable PageIndicatorView_piv_viewPager 15
 int[] styleable PopupWindow { 0x01010176, 0x010102c9, 0x7f0402ed }
 int styleable PopupWindow_android_popupBackground 0
 int styleable PopupWindow_android_popupAnimationStyle 1
@@ -6036,6 +6106,26 @@ int styleable Slider_trackColor 18
 int styleable Slider_trackColorActive 19
 int styleable Slider_trackColorInactive 20
 int styleable Slider_trackHeight 21
+int[] styleable SliderView { 0x7f04047e, 0x7f04047f, 0x7f040480, 0x7f040481, 0x7f040482, 0x7f040483, 0x7f040484, 0x7f040485, 0x7f040486, 0x7f040487, 0x7f040488, 0x7f040489, 0x7f04048a, 0x7f04048b, 0x7f04048c, 0x7f04048d, 0x7f04048e, 0x7f04048f, 0x7f040490 }
+int styleable SliderView_sliderAnimationDuration 0
+int styleable SliderView_sliderAutoCycleDirection 1
+int styleable SliderView_sliderAutoCycleEnabled 2
+int styleable SliderView_sliderIndicatorAnimationDuration 3
+int styleable SliderView_sliderIndicatorEnabled 4
+int styleable SliderView_sliderIndicatorGravity 5
+int styleable SliderView_sliderIndicatorMargin 6
+int styleable SliderView_sliderIndicatorMarginBottom 7
+int styleable SliderView_sliderIndicatorMarginLeft 8
+int styleable SliderView_sliderIndicatorMarginRight 9
+int styleable SliderView_sliderIndicatorMarginTop 10
+int styleable SliderView_sliderIndicatorOrientation 11
+int styleable SliderView_sliderIndicatorPadding 12
+int styleable SliderView_sliderIndicatorRadius 13
+int styleable SliderView_sliderIndicatorRtlMode 14
+int styleable SliderView_sliderIndicatorSelectedColor 15
+int styleable SliderView_sliderIndicatorUnselectedColor 16
+int styleable SliderView_sliderScrollTimeInSec 17
+int styleable SliderView_sliderStartAutoCycle 18
 int[] styleable Snackbar { 0x7f040379, 0x7f04037a, 0x7f04037b }
 int styleable Snackbar_snackbarButtonStyle 0
 int styleable Snackbar_snackbarStyle 1

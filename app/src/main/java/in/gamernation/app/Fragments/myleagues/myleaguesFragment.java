@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
+
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -57,6 +59,8 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
     private TextView dilogmyleagueroomid, dilogmyleagueroompass;
     private AppCompatButton dilogmyleaguecancelbot, dilogmyleaguecopybot;
 
+    private ShimmerFrameLayout gamesshimmer;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,7 +69,15 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         View root = inflater.inflate(R.layout.fragment_myleagues, container, false);
         initscreen();
         initviews(root);
+        shimmersetup();
         return root;
+    }
+
+    private void shimmersetup() {
+        myleagurecycler.setVisibility(View.GONE);
+        gamesshimmer.setVisibility(View.VISIBLE);
+        gamesshimmer.startShimmer();
+
     }
 
 
@@ -92,6 +104,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         myleagulivechangebot = root.findViewById(R.id.myleagulivechangebot);
         myleagulupcomingchangebot = root.findViewById(R.id.myleagulupcomingchangebot);
         myleagulpastchangebot = root.findViewById(R.id.myleagulpastchangebot);
+        gamesshimmer = root.findViewById(R.id.gamesshimmer);
 
 
         myleagurecycler = root.findViewById(R.id.myleagurecycler);
@@ -108,10 +121,13 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         getgamename("Free_Fire");
         gettypename("upcoming");
 
+
         fetchdata(reaturnedgametype, returnedgamenamee);
         myleagufreefirebot.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gamenamee = "Free_Fire";
                 getgamename(gamenamee);
                 gettypename("upcoming");
@@ -121,6 +137,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         myleagufreefireclashsquadbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gamenamee = "Free_Fire_Clash_Squad";
                 getgamename(gamenamee);
                 gettypename("upcoming");
@@ -130,6 +147,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         myleagubgmibot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gamenamee = "BGMI";
                 getgamename(gamenamee);
                 gettypename("upcoming");
@@ -139,6 +157,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         myleagutdmbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gamenamee = "BGMI_Team_Death_Match";
                 getgamename(gamenamee);
                 gettypename("upcoming");
@@ -151,6 +170,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         myleagulivechangebot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gametype = "live";
                 gettypename(gametype);
                 fetchdata(reaturnedgametype, returnedgamenamee);
@@ -160,6 +180,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         myleagulpastchangebot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gametype = "past";
                 gettypename(gametype);
                 fetchdata(reaturnedgametype, returnedgamenamee);
@@ -169,6 +190,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
         myleagulupcomingchangebot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shimmersetup();
                 gametype = "upcoming";
                 gettypename(gametype);
                 fetchdata(reaturnedgametype, returnedgamenamee);
@@ -260,6 +282,7 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
 //                            CommonMethods.LOGthesite(Constants.LOG,game_type);
                                 adaptermyleagues = new Adaptermyleagues(object, thiscontext, gametype, myleaguesFragment.this);
                                 myleagurecycler.setAdapter(adaptermyleagues);
+                                stopshimmer();
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -281,6 +304,12 @@ public class myleaguesFragment extends Fragment implements ClickMyleagueitem {
                 }
             }
         });
+    }
+
+    private void stopshimmer() {
+        myleagurecycler.setVisibility(View.VISIBLE);
+        gamesshimmer.setVisibility(View.GONE);
+        gamesshimmer.stopShimmer();
     }
 
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/final_master"
+    android:background="@drawable/backgroundyyyyy"
     android:orientation="vertical"
     tools:context=".Fragments.wallet.walletviewalltransactonFragment">
 
@@ -55,7 +55,7 @@
         android:id="@+id/transfirstlayout"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@color/final_master"
+        android:background="@color/final_secondary"
         android:elevation="10dp"
         android:orientation="vertical">
 
