@@ -7,7 +7,6 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.browser.customtabs.CustomTabsIntent;
 
 import in.gamernation.app.R;
 
@@ -38,9 +37,9 @@ public class StartupActivity extends AppCompatActivity {
         startupsignupbot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(getApplicationContext(), Login.class));
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, new LoginWebviewFragment()).addToBackStack(null).commit();
+                startActivity(new Intent(getApplicationContext(), LoginwebviewActivity.class));
+//                getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.fragmentContainerView, new LoginWebviewFragment()).addToBackStack(null).commit();
 //                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(Constants.METAPTEF, Context.MODE_PRIVATE);
 //                CustomTabsIntent.Builder customtabintent = new CustomTabsIntent.Builder();
 //                opencustomtabyy(StartupActivity.this, customtabintent.build(), Uri.parse(sharedPreferences.getString(Constants.metasignup, "data not found")));
@@ -53,13 +52,5 @@ public class StartupActivity extends AppCompatActivity {
     }
 
 
-    private void opencustomtabyy(StartupActivity startupActivity, CustomTabsIntent build, Uri uri) {
-        String PackageName = "com.android.chrome";
-        if (PackageName != null) {
-            build.intent.setPackage(PackageName);
-            build.launchUrl(startupActivity, uri);
-        } else {
-            startActivity(new Intent(Intent.ACTION_VIEW, uri));
-        }
-    }
+
 }

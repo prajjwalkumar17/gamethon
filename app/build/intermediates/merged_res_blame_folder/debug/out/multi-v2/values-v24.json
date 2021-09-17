@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/Users/hangsai/AndroidStudioProjects/latest gamernation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/Users/hangsai/.gradle/caches/transforms-3/d7d68196ec2a152fae1fbc3cdeb8417c/transformed/media-1.0.0/res/values-v24/values-v24.xml",

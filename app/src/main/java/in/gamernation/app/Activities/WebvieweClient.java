@@ -27,14 +27,14 @@ public class WebvieweClient extends WebViewClient {
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
         String url = view.getUrl();
-        CommonMethods.LOGthesite(Constants.LOG, "old URL    " + url);
+        CommonMethods.LOGthesite(Constants.LOG,"old URL    " +url);
         return false;
     }
 
     public static class MyJavaScriptInterface {
         @JavascriptInterface
         public void onUrlChange(String url) {
-            CommonMethods.LOGthesite(Constants.LOG, "new URL    " + url);
+            CommonMethods.LOGthesite(Constants.LOG,"new URL    " + url);
         }
     }
 

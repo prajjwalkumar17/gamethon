@@ -3,68 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/cardbg.xml" value="0.25333333333333335" />
-        <entry key="app/src/main/res/drawable/cardbotcurved.xml" value="0.25333333333333335" />
-        <entry key="app/src/main/res/drawable/circleback.xml" value="0.25333333333333335" />
-        <entry key="app/src/main/res/drawable/crdbond.xml" value="0.25333333333333335" />
-        <entry key="app/src/main/res/drawable/createteam.xml" value="0.25333333333333335" />
-        <entry key="app/src/main/res/drawable/curvedradiusblackbg.xml" value="0.25333333333333335" />
-        <entry key="app/src/main/res/drawable/layoutbg.xml" value="0.321025641025641" />
-        <entry key="app/src/main/res/drawable/whitebordered.xml" value="0.321025641025641" />
-        <entry key="app/src/main/res/layout-v28/fragment_myprofile.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.16394927536231885" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/activity_startup.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_test.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/activity_update_panactivity.xml" value="0.24114583333333334" />
-        <entry key="app/src/main/res/layout/activity_updatemyprofile.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/dialogarcadecreateteam.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/dialogarcadejoinwalletoptions.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/dialogchangedob.xml" value="0.24114583333333334" />
-        <entry key="app/src/main/res/layout/dialogchangepassword.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_arcadegame.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/fragment_arcadegameshowparticipants.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/fragment_arcadeopened.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/fragment_contactus.xml" value="0.16576086956521738" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16168478260869565" />
-        <entry key="app/src/main/res/layout/fragment_homequizes.xml" value="0.1816123188405797" />
-        <entry key="app/src/main/res/layout/fragment_invitefriends.xml" value="0.20652173913043478" />
-        <entry key="app/src/main/res/layout/fragment_leaderboard.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_login_webview.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_myleagues.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/fragment_myprofile.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_mystats.xml" value="0.2246376811594203" />
-        <entry key="app/src/main/res/layout/fragment_playedquizzes.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/fragment_referraljoinedfriends.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_referrals.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_tutorials.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_updateprofile.xml" value="0.27844311377245506" />
-        <entry key="app/src/main/res/layout/fragment_wallet.xml" value="0.22933463637671672" />
-        <entry key="app/src/main/res/layout/fragment_wallet_add_coin.xml" value="0.24114583333333334" />
-        <entry key="app/src/main/res/layout/fragment_walletpaymenthistory.xml" value="0.17798913043478262" />
-        <entry key="app/src/main/res/layout/fragment_walletviewalltransacton.xml" value="0.15806159420289856" />
-        <entry key="app/src/main/res/layout/fragment_walletwithdrawcoins.xml" value="0.22708333333333333" />
-        <entry key="app/src/main/res/layout/img_slider.xml" value="0.2246376811594203" />
-        <entry key="app/src/main/res/layout/recyclerarcadeleaguescarditem.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/recyclerarcadeparticipantsitem.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/recyclerarcadeviewteams.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/recyclermyleaguesitem.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/shimmergames.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/shimmerhomegames.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/shimmerprofile.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/shimmerrecyclerfull.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/shimmerwalletalltran.xml" value="0.15806159420289856" />
-        <entry key="app/src/main/res/layout/slider_layout.xml" value="0.11727456940222898" />
-        <entry key="app/src/main/res/layout/slideritem.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/toolbarwithbackandbell.xml" value="0.21603260869565216" />
-        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.17798913043478262" />
-        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_loginwebview.xml" value="0.3098958333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

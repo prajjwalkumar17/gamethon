@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
+            "outputFile": "/Users/hangsai/AndroidStudioProjects/latest gamernation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
             "map": [
                 {
                     "source": "/Users/hangsai/.gradle/caches/transforms-3/e8717e30bbc4cf00dfb30661685e96da/transformed/navigation-ui-2.3.5/res/values-az/values-az.xml",

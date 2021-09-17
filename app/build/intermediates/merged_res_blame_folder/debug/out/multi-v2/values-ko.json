@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml",
+            "outputFile": "/Users/hangsai/AndroidStudioProjects/latest gamernation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml",
             "map": [
                 {
                     "source": "/Users/hangsai/.gradle/caches/transforms-3/9d06136c4ff5ae015f53fde841c4624f/transformed/ucrop-2.2.6/res/values-ko/values-ko.xml",

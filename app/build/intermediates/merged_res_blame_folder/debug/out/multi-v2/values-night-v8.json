@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/hangsai/AndroidStudioProjects/gamernation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/hangsai/AndroidStudioProjects/latest gamernation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "/Users/hangsai/.gradle/caches/transforms-3/25012fcc08d4c5cf5a2844c1a21a6fbe/transformed/material-1.4.0/res/values-night-v8/values-night-v8.xml",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/hangsai/AndroidStudioProjects/gamernation/app/src/main/res/values-night/themes.xml",
+                    "source": "/Users/hangsai/AndroidStudioProjects/latest gamernation/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2,28,19",
                         "startColumns": "4,4,4",
