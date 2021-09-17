@@ -35,6 +35,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Gamernation" >
+        <activity android:name="in.gamernation.app.Startup.LoginwebviewActivity" />
         <activity
             android:name="in.gamernation.app.Startup.StartupActivity"
             android:exported="true" />
