@@ -38,6 +38,7 @@ public class StartupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), LoginwebviewActivity.class));
+
 //                getSupportFragmentManager().beginTransaction()
 //                        .replace(R.id.fragmentContainerView, new LoginWebviewFragment()).addToBackStack(null).commit();
 //                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(Constants.METAPTEF, Context.MODE_PRIVATE);
